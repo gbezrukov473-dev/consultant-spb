@@ -1,0 +1,46 @@
+    <header class="sticky top-0 z-40 w-full bg-white/95 backdrop-blur-sm border-b border-gray-100 shadow-sm transition-all duration-300">
+        <div class="container mx-auto h-20 flex items-center justify-between">
+            <a href="/" class="flex-shrink-0" aria-label="На главную">
+                <img src="/img/logo-kplus.png" alt="КонсультантПлюс" class="h-10 w-auto" width="180" height="40">
+            </a>
+
+            <nav class="hidden lg:flex items-center gap-6 xl:gap-8" aria-label="Главное меню">
+                <a href="/systems/" class="text-sm font-medium text-gray-700 hover:text-brand-orange transition-colors">Системы</a>
+                <a href="/services/" class="text-sm font-medium text-gray-700 hover:text-brand-orange transition-colors">Сервис</a>
+                <a href="/consult/" class="text-sm font-medium text-gray-700 hover:text-brand-orange transition-colors">Консультации</a>
+                <a href="/news/" class="text-sm font-medium text-gray-700 hover:text-brand-orange transition-colors">Новости</a>
+                <a href="/contacts/" class="text-sm font-medium text-gray-700 hover:text-brand-orange transition-colors">Контакты</a>
+            </nav>
+
+            <div class="hidden lg:flex items-center gap-4">
+                <div class="text-right leading-tight">
+                    <a href="tel:+78123344481" class="block font-bold text-brand-blue hover:opacity-80 transition-opacity">8 812 334-44-81</a>
+                    <span class="text-xs text-gray-500">пн-пт, 09:00-19:00</span>
+                </div>
+                <a href="/o-sisteme-konsultantplyus/dostup-konsultantplyus-na-2-dnya/" class="px-5 py-2.5 bg-brand-orange text-white text-sm font-semibold rounded-full shadow-md hover:bg-orange-600 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300">
+                    Тест-драйв
+                </a>
+            </div>
+
+            <button id="mobile-menu-btn" class="lg:hidden p-2 text-gray-600 focus:outline-none" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-menu">
+                <div class="flex flex-col justify-center gap-1.5 w-6 h-6">
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                </div>
+            </button>
+        </div>
+        
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white border-b border-gray-100 shadow-xl py-4 px-6 flex-col gap-4 lg:hidden">
+            <nav class="flex flex-col gap-3">
+                <a href="/systems/" class="text-lg font-medium text-gray-800">Системы</a>
+                <a href="/services/" class="text-lg font-medium text-gray-800">Сервис</a>
+                <a href="/consult/" class="text-lg font-medium text-gray-800">Линия консультаций</a>
+                <a href="/contacts/" class="text-lg font-medium text-gray-800">Контакты</a>
+            </nav>
+            <div class="border-t border-gray-100 pt-4">
+                <a href="tel:+78123344481" class="block text-xl font-bold text-brand-blue mb-2">8 812 334-44-81</a>
+                <a href="#" class="block w-full text-center px-4 py-3 bg-brand-orange text-white font-semibold rounded-lg">Получить доступ</a>
+            </div>
+        </div>
+    </header>
