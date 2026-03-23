@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <?php include 'includes/favicons.php'; ?>
+  <meta name="description" content="Линия консультаций КонсультантПлюс — экспертные ответы по бухучету, налогам и праву от ЧДК-Право" />
+  <title>Линия консультаций — КонсультантПлюс</title>
+  <link rel="stylesheet" href="./styles/global.css" />
+  <link rel="stylesheet" href="./styles/ui-kit.css" />
+  <link rel="stylesheet" href="./styles/blocks.css" />
+  <link rel="stylesheet" href="./styles/pages/buy.css" />
+  <link rel="stylesheet" href="./styles/pages/consultation.css" />
+</head>
+<body>
+
+<?php include 'includes/header.php'; ?>
+
+
+<!-- ====== ХЛЕБНЫЕ КРОШКИ ====== -->
+<!-- Битрикс: bitrix:breadcrumb -->
+<nav class="breadcrumbs" aria-label="Хлебные крошки">
+  <div class="breadcrumbs__inner">
+    <a href="/" class="breadcrumbs__link">Главная</a>
+    <span class="breadcrumbs__sep">&gt;</span>
+    <a href="/services/" class="breadcrumbs__link">Сервис</a>
+    <span class="breadcrumbs__sep">&gt;</span>
+    <span class="breadcrumbs__current">Линия консультаций</span>
+  </div>
+</nav>
+
+
+<!-- ====== HERO ====== -->
+<!-- Битрикс: bitrix:news.detail или включаемая область -->
+<section class="lk-hero reveal">
+  <div class="lk-hero__inner">
+    <div class="lk-hero__content">
+      <h1 class="lk-hero__title">Линия <span class="lk-hero__title-accent">консультаций</span></h1>
+      <p class="lk-hero__text">Нужна консультация по&nbsp;бухучету, налогам или&nbsp;праву? Обратитесь на&nbsp;Линию консультаций.</p>
+      <p class="lk-hero__subtext">Эксперты оперативно проанализируют ваш&nbsp;вопрос и&nbsp;предоставят краткий ответ со&nbsp;ссылками на&nbsp;актуальные нормативные акты и&nbsp;документы из&nbsp;системы КонсультантПлюс.</p>
+      <a href="#lk-form" class="btn btn--purple lk-hero__btn">Задать вопрос</a>
+    </div>
+    <div class="lk-hero__visual">
+      <img src="/img/lk-laptop.png" alt="Линия консультаций КонсультантПлюс" class="lk-hero__img" loading="lazy" />
+    </div>
+  </div>
+</section>
+
+
+<!-- ====== ПРЕИМУЩЕСТВА ЛК ====== -->
+<!-- Битрикс: bitrix:news.list, iblock="advantages_lk" -->
+<section class="lk-adv reveal">
+  <div class="lk-adv__inner">
+    <div class="lk-adv__grid">
+      <div class="lk-adv__item reveal reveal--delay-1">
+        <div class="lk-adv__number lk-adv__number--purple">01</div>
+        <p class="lk-adv__text">99% клиентов удовлетворены ответами</p>
+      </div>
+      <div class="lk-adv__item reveal reveal--delay-2">
+        <div class="lk-adv__number lk-adv__number--orange">02</div>
+        <p class="lk-adv__text">25 тем консультирования: бухгалтерские, юридические, кадровые</p>
+      </div>
+
+      <div class="lk-adv__center">
+        <img src="/img/rab-1996.png" alt="Работаем с 1996 года" class="lk-adv__center-img" loading="lazy" />
+      </div>
+
+      <div class="lk-adv__item reveal reveal--delay-3">
+        <div class="lk-adv__number lk-adv__number--purple">03</div>
+        <p class="lk-adv__text">Быстрые ответы: короткие сроки предоставления информации</p>
+      </div>
+      <div class="lk-adv__item reveal reveal--delay-4">
+        <div class="lk-adv__number lk-adv__number--orange">04</div>
+        <p class="lk-adv__text">Подробные разъяснения для коммерческих и&nbsp;бюджетных организаций</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ====== ЧТО МОЖЕТ ЛИНИЯ КОНСУЛЬТАЦИЙ ====== -->
+<!-- Битрикс: bitrix:news.list, iblock="lk_services" -->
+<section class="lk-services reveal">
+  <div class="lk-services__inner">
+    <h2 class="lk-services__title">Что может Линия консультаций</h2>
+    <p class="lk-services__subtitle">Услуги доступны всем пользователям КонсультантПлюс – клиентам ЧДК-Право</p>
+
+    <div class="lk-services__grid">
+      <div class="lk-services__card reveal reveal--delay-1">
+        <img src="/img/gor-lin.svg" alt="" class="lk-services__card-icon" />
+        <div class="lk-services__card-body">
+          <h3 class="lk-services__card-title">Горячая линия</h3>
+          <p class="lk-services__card-text">Быстрые ответы в&nbsp;чате онлайн-диалога в&nbsp;системе КонсультантПлюс</p>
+        </div>
+      </div>
+
+      <div class="lk-services__card reveal reveal--delay-2">
+        <img src="/img/pis-kons.svg" alt="" class="lk-services__card-icon" />
+        <div class="lk-services__card-body">
+          <h3 class="lk-services__card-title">Устные и&nbsp;письменные консультации</h3>
+          <p class="lk-services__card-text">Ответы на&nbsp;вопросы от&nbsp;ведущих специалистов по&nbsp;бухгалтерии, юриспруденции и&nbsp;налогам</p>
+        </div>
+      </div>
+
+      <div class="lk-services__card reveal reveal--delay-3">
+        <img src="/img/sprav-inf.svg" alt="" class="lk-services__card-icon" />
+        <div class="lk-services__card-body">
+          <h3 class="lk-services__card-title">Справочная информация</h3>
+          <p class="lk-services__card-text">Подбор материалов из&nbsp;системы КонсультантПлюс по&nbsp;Вашему запросу</p>
+        </div>
+      </div>
+
+      <div class="lk-services__card reveal reveal--delay-4">
+        <img src="/img/doc-zapr.svg" alt="" class="lk-services__card-icon" />
+        <div class="lk-services__card-body">
+          <h3 class="lk-services__card-title">Документы по&nbsp;запросу</h3>
+          <p class="lk-services__card-text">Поиск и&nbsp;предоставление документов, которых нет&nbsp;в&nbsp;Вашем комплекте</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ====== КАК ОБРАТИТЬСЯ ====== -->
+<!-- Битрикс: включаемая область или custom component -->
+<section class="lk-howto reveal">
+  <div class="lk-howto__inner">
+    <h2 class="lk-howto__title">Как обратиться на&nbsp;Линию консультаций</h2>
+
+    <div class="lk-howto__body">
+      <div class="lk-howto__left">
+        <div class="lk-howto__screenshot-wrap">
+          <img src="/img/lk-screenshot.png" alt="Скриншот — кнопка «Задать вопрос» в программе КонсультантПлюс" class="lk-howto__screenshot" loading="lazy" />
+        </div>
+        <p class="lk-howto__caption">При помощи кнопки "Задать вопрос" в&nbsp;правом верхнем углу программы КонсультантПлюс</p>
+      </div>
+
+      <div class="lk-howto__right">
+        <div class="lk-howto__feature reveal reveal--delay-1">
+          <div class="lk-howto__feature-circle lk-howto__feature-circle--purple">
+            <img src="/img/check-circle.svg" alt="" />
+          </div>
+          <span class="lk-howto__feature-text">Быстро</span>
+        </div>
+        <div class="lk-howto__feature reveal reveal--delay-2">
+          <div class="lk-howto__feature-circle lk-howto__feature-circle--orange">
+            <img src="/img/check-circle.svg" alt="" />
+          </div>
+          <span class="lk-howto__feature-text">Надежные ответы</span>
+        </div>
+        <div class="lk-howto__feature reveal reveal--delay-3">
+          <div class="lk-howto__feature-circle lk-howto__feature-circle--purple">
+            <img src="/img/check-circle.svg" alt="" />
+          </div>
+          <span class="lk-howto__feature-text">Экспертность</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ====== НАШИ ЭКСПЕРТЫ ====== -->
+<!-- Битрикс: bitrix:news.list, iblock="experts" -->
+<section class="lk-experts reveal">
+  <div class="lk-experts__inner">
+    <div class="lk-experts__header">
+      <h2 class="lk-experts__title">Наши эксперты</h2>
+      <div class="lk-experts__nav">
+        <button class="lk-experts__btn lk-experts__btn--prev" aria-label="Предыдущий эксперт">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M15 19L8 12L15 5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="lk-experts__btn lk-experts__btn--next" aria-label="Следующий эксперт">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M9 5L16 12L9 19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="lk-experts__viewport">
+      <div class="lk-experts__track">
+            <div class="lk-experts__slide" data-index="0">
+              <div class="lk-experts__card">
+                <img src="/img/expert-1-melnikova.png" alt="Мельникова Ольга Геннадьевна" class="lk-experts__photo" loading="lazy" />
+                <div class="lk-experts__info">
+                  <h3 class="lk-experts__name lk-experts__name--purple">Мельникова Ольга Геннадьевна</h3>
+                  <p class="lk-experts__desc">Ведущий эксперт-бухгалтер. Опыт более 20&nbsp;лет. Имеет публикации в&nbsp;КонсультантПлюс.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="lk-experts__slide" data-index="1">
+              <div class="lk-experts__card">
+                <img src="/img/expert-2-chepurina.png" alt="Чепурина Надежда Павловна" class="lk-experts__photo" loading="lazy" />
+                <div class="lk-experts__info">
+                  <h3 class="lk-experts__name lk-experts__name--orange">Чепурина Надежда Павловна</h3>
+                  <p class="lk-experts__desc">Ведущий эксперт-бухгалтер. Опыт работы более 30&nbsp;лет. Является автором публикаций в&nbsp;КонсультантПлюс.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="lk-experts__slide" data-index="2">
+              <div class="lk-experts__card">
+                <img src="/img/expert-3-zertsalova.png" alt="Зерцалова Елена Геннадьевна" class="lk-experts__photo" loading="lazy" />
+                <div class="lk-experts__info">
+                  <h3 class="lk-experts__name lk-experts__name--purple">Зерцалова Елена Геннадьевна</h3>
+                  <p class="lk-experts__desc">Ведущий эксперт-бухгалтер. Опыт более 20&nbsp;лет. Имеет публикации в&nbsp;КонсультантПлюс.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="lk-experts__slide" data-index="3">
+              <div class="lk-experts__card">
+                <img src="/img/expert-4-kushcheva.png" alt="Кущева Олеся Владимировна" class="lk-experts__photo" loading="lazy" />
+                <div class="lk-experts__info">
+                  <h3 class="lk-experts__name lk-experts__name--orange">Кущева Олеся Владимировна</h3>
+                  <p class="lk-experts__desc">Ведущий юрист. Опыт работы более 17&nbsp;лет. Является автором публикаций в&nbsp;КонсультантПлюс.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="lk-experts__slide" data-index="4">
+              <div class="lk-experts__card">
+                <img src="/img/expert-5-nebsova.png" alt="Небесова Марина Валерьевна" class="lk-experts__photo" loading="lazy" />
+                <div class="lk-experts__info">
+                  <h3 class="lk-experts__name lk-experts__name--purple">Небесова Марина Валерьевна</h3>
+                  <p class="lk-experts__desc">Ведущий юрист. Опыт работы более 20&nbsp;лет. Является автором публикаций в&nbsp;КонсультантПлюс.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="lk-experts__slide" data-index="5">
+              <div class="lk-experts__card">
+                <img src="/img/expert-6-noverskaya.png" alt="Новерская Алина Валерьевна" class="lk-experts__photo" loading="lazy" />
+                <div class="lk-experts__info">
+                  <h3 class="lk-experts__name lk-experts__name--orange">Новерская Алина Валерьевна</h3>
+                  <p class="lk-experts__desc">Ведущий юрист. Опыт работы более 25&nbsp;лет. Является автором публикаций в&nbsp;КонсультантПлюс.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="lk-experts__slide" data-index="6">
+              <div class="lk-experts__card">
+                <img src="/img/expert-7-polyakova.png" alt="Полякова Ирина Олеговна" class="lk-experts__photo" loading="lazy" />
+                <div class="lk-experts__info">
+                  <h3 class="lk-experts__name lk-experts__name--purple">Полякова Ирина Олеговна</h3>
+                  <p class="lk-experts__desc">Ведущий эксперт-бухгалтер. Опыт работы более 15&nbsp;лет. Является автором публикаций в&nbsp;КонсультантПлюс.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="lk-experts__slide" data-index="7">
+              <div class="lk-experts__card">
+                <img src="/img/expert-8-tarasova.png" alt="Тарасова Ирина Викторовна" class="lk-experts__photo" loading="lazy" />
+                <div class="lk-experts__info">
+                  <h3 class="lk-experts__name lk-experts__name--orange">Тарасова Ирина Викторовна</h3>
+                  <p class="lk-experts__desc">ВрИО руководителя Линии консультаций. Опыт работы более 17&nbsp;лет. Является автором публикаций в&nbsp;КонсультантПлюс.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</section>
+
+
+<!-- ====== ОТЗЫВЫ КЛИЕНТОВ ====== -->
+<!-- Битрикс: bitrix:news.list, iblock="reviews_lk" -->
+<section class="reviews reveal">
+  <div class="reviews__container">
+    <div class="reviews__inner">
+      <h2 class="reviews__title">Отзывы клиентов</h2>
+
+      <div class="reviews__carousel">
+        <button class="reviews__btn reviews__btn--prev" aria-label="Предыдущий отзыв">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15 19L8 12L15 5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+
+        <div class="reviews__viewport">
+          <div class="reviews__track">
+            <div class="reviews__slide" data-index="0">
+              <div class="reviews__card">
+                <img src="/img/otz-lk-1.png" alt="Отзыв клиента" class="reviews__card-img" loading="lazy" />
+              </div>
+            </div>
+            <div class="reviews__slide" data-index="1">
+              <div class="reviews__card">
+                <img src="/img/otz-lk-2.png" alt="Отзыв клиента" class="reviews__card-img" loading="lazy" />
+              </div>
+            </div>
+            <div class="reviews__slide" data-index="2">
+              <div class="reviews__card">
+                <img src="/img/otz-lk-3.png" alt="Отзыв клиента" class="reviews__card-img" loading="lazy" />
+              </div>
+            </div>
+            <div class="reviews__slide" data-index="3">
+              <div class="reviews__card">
+                <img src="/img/otz-lk-4.png" alt="Отзыв клиента" class="reviews__card-img" loading="lazy" />
+              </div>
+            </div>
+            <div class="reviews__slide" data-index="4">
+              <div class="reviews__card">
+                <img src="/img/otz-lk-5.png" alt="Отзыв клиента" class="reviews__card-img" loading="lazy" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="reviews__btn reviews__btn--next" aria-label="Следующий отзыв">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 5L16 12L9 19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ====== ФОРМА ====== -->
+<!-- Битрикс: bitrix:form.result.new, form_id="lk_question" -->
+<section class="lk-form reveal" id="lk-form">
+  <div class="lk-form__inner">
+    <div class="lk-form__bg">
+      <span class="lk-form__deco lk-form__deco--big">?</span>
+      <span class="lk-form__deco lk-form__deco--small">?</span>
+
+      <div class="lk-form__content">
+        <h2 class="lk-form__title">Задайте первый вопрос бесплатно</h2>
+        <p class="lk-form__text">Мы предлагаем Вам уникальную возможность – задать бесплатный вопрос на&nbsp;Линию консультаций в&nbsp;рамках пробного периода.<br><br>Заполните форму и&nbsp;оцените экспертный уровень нашей поддержки.</p>
+      </div>
+
+      <div class="lk-form__card">
+        <form class="lk-form__card-inner js-lead-form" action="/api/lead.php" method="POST" novalidate data-form-id="lk-question" data-thanks="/thanks.html">
+          <input type="text" name="name" class="lk-form__input" placeholder="Ваше Имя" />
+          <p class="form-field-error hidden" data-error-for="name"></p>
+          <input type="tel" name="phone" class="lk-form__input mask-phone" placeholder="+7 (9__) ___ - __ - __" required />
+          <p class="form-field-error hidden" data-error-for="phone"></p>
+          <input type="email" name="email" class="lk-form__input" placeholder="Электронная почта" />
+          <p class="form-field-error hidden" data-error-for="email"></p>
+          <button type="submit" class="btn btn--purple lk-form__submit">Попробовать</button>
+          <label class="lk-form__checkbox">
+            <input type="checkbox" name="consent" required />
+            <span>Я ознакомлен с&nbsp;<a href="/polzovatelskoe_soglashenie.php">политикой конфиденциальности</a> и&nbsp;даю согласие на&nbsp;обработку персональных данных</span>
+          </label>
+          <p class="form-field-error hidden" data-error-for="consent"></p>
+          <div class="form-error-box hidden" data-form-error></div>
+          <input type="hidden" name="form_id" value="lk-question" />
+          <input type="hidden" name="page" value="/consultation.html" />
+          <input type="hidden" name="fill_time_ms" value="" />
+          <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ====== ПОДВАЛ ====== -->
+<!-- Битрикс: bitrix:main.include, area_id="footer" -->
+<?php include 'includes/footer.php'; ?>
+
+
+<?php $suffix = '-lk'; $page = '/consultation.html'; include 'includes/modals.php'; ?>
+
+<script type="module" src="./js/main.js"></script>
+</body>
+</html>

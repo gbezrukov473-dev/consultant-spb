@@ -1,0 +1,663 @@
+/* =====================================================
+   UI KIT — КОМПОНЕНТЫ ДИЗАЙН-СИСТЕМЫ
+   BEM-методология, все стили через CSS Custom Properties
+   ===================================================== */
+
+/* =====================================================
+   БАЗОВАЯ КНОПКА (.btn)
+   ===================================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1;
+  border: none;
+  border-radius: var(--radius-btn);
+  padding: 16px 46px;
+  cursor: pointer;
+  white-space: nowrap;
+  text-decoration: none;
+  transition:
+    background-color var(--transition-base),
+    color var(--transition-base),
+    transform var(--transition-fast);
+}
+
+.btn:active:not(:disabled):not(.is-disabled) {
+  transform: scale(0.97);
+}
+
+.btn:disabled,
+.btn.is-disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* --- Размеры --- */
+.btn--lg {
+  font-size: 18px;
+  padding: 20px 54px;
+  border-radius: var(--radius-btn-lg);
+}
+
+.btn--sm {
+  font-size: 14px;
+  padding: 12px 30px;
+  border-radius: var(--radius-btn-sm);
+}
+
+/* =====================================================
+   БЛОК 1: Кнопка «Узнать цену» (на фиолетовом фоне)
+   .btn--yellow-on-purple
+   Normal:   Оранжевый фон, белый текст
+   Hover:    Белый фон, оранжевый текст
+   Disabled: Светло-серый фон, белый текст
+   ===================================================== */
+.btn--yellow-on-purple {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.btn--yellow-on-purple:hover {
+  background-color: var(--color-white);
+  color: var(--color-primary);
+}
+
+.btn--yellow-on-purple:disabled,
+.btn--yellow-on-purple.is-disabled {
+  background-color: var(--color-gray);
+  color: var(--color-white);
+}
+
+/* =====================================================
+   БЛОК 2: Кнопка «Купить Консультант Плюс»
+   .btn--yellow
+   Normal:   Оранжевый фон, белый текст
+   Hover:    Фиолетовый фон, белый текст
+   Disabled: Светло-серый фон, белый текст
+   ===================================================== */
+.btn--yellow {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.btn--yellow:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+}
+
+.btn--yellow:disabled,
+.btn--yellow.is-disabled {
+  background-color: var(--color-gray);
+  color: var(--color-white);
+}
+
+/* =====================================================
+   БЛОК 2: Кнопка «Попробовать бесплатно»
+   .btn--gray
+   Normal:   Серый фон (#D8D8D8), чёрный текст
+   Hover:    Оранжевый фон, чёрный текст
+   Disabled: Светло-серый фон, белый текст
+   ===================================================== */
+.btn--gray {
+  background-color: var(--color-gray);
+  color: var(--color-black);
+}
+
+.btn--gray:hover {
+  background-color: var(--color-primary);
+  color: var(--color-black);
+}
+
+.btn--gray:disabled,
+.btn--gray.is-disabled {
+  background-color: var(--color-gray-light);
+  color: var(--color-white);
+}
+
+/* =====================================================
+   .btn--outline-purple
+   Normal:   Белый фон, фиолетовая рамка, фиолетовый текст
+   Hover:    Фиолетовый фон, белый текст
+   Disabled: Светло-серый фон, белый текст
+   ===================================================== */
+.btn--outline-purple {
+  background-color: var(--color-white);
+  color: var(--color-secondary);
+}
+
+.btn--outline-purple:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+}
+
+.btn--outline-purple:disabled,
+.btn--outline-purple.is-disabled {
+  background-color: var(--color-gray);
+  color: var(--color-white);
+}
+
+/* =====================================================
+   БЛОК 3: Фиолетовая кнопка «Узнать цену»
+   .btn--purple
+   Normal:   Фиолетовый фон, белый текст
+   Hover:    Оранжевый фон, белый текст
+   Disabled: Светло-серый фон, белый текст
+   ===================================================== */
+.btn--purple {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+}
+
+.btn--purple:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.btn--purple:disabled,
+.btn--purple.is-disabled {
+  background-color: var(--color-gray);
+  color: var(--color-white);
+}
+
+/* =====================================================
+   БЛОК 4: Оранжевая кнопка «Узнать цену»
+   .btn--yellow-alt (на белом фоне, hover → фиолетовый)
+   Совпадает с .btn--yellow, используем тот же класс
+   ===================================================== */
+
+/* =====================================================
+   БЛОК 3: Текстовая ссылка «Подробнее» (фиолетовая)
+   .btn--link-purple
+   Normal:   Фиолетовый текст + фиолетовая стрелка →
+   Hover:    Оранжевый текст + оранжевая стрелка (сдвиг вправо)
+   Disabled: Светло-серый текст + серая стрелка
+   ===================================================== */
+.btn--link-purple {
+  background: none;
+  color: var(--color-secondary);
+  border: none;
+  padding: 0;
+  font-weight: 600;
+  border-radius: 0;
+}
+
+.btn--link-purple::after {
+  content: '→';
+  margin-left: 4px;
+  display: inline-block;
+  transition:
+    transform var(--transition-base),
+    color var(--transition-base);
+}
+
+.btn--link-purple:hover {
+  color: var(--color-primary);
+}
+
+.btn--link-purple:hover::after {
+  transform: translateX(3px);
+}
+
+.btn--link-purple:disabled,
+.btn--link-purple.is-disabled {
+  color: var(--color-gray);
+}
+
+/* =====================================================
+   БЛОК 4: Текстовая ссылка «Подробнее» (оранжевая)
+   .btn--link-yellow
+   Normal:   Оранжевый текст + оранжевая стрелка →
+   Hover:    Фиолетовый текст + фиолетовая стрелка (сдвиг вправо)
+   Disabled: Светло-серый текст + серая стрелка
+   ===================================================== */
+.btn--link-yellow {
+  background: none;
+  color: var(--color-primary);
+  border: none;
+  padding: 0;
+  font-weight: 600;
+  border-radius: 0;
+}
+
+.btn--link-yellow::after {
+  content: '→';
+  margin-left: 4px;
+  display: inline-block;
+  transition:
+    transform var(--transition-base),
+    color var(--transition-base);
+}
+
+.btn--link-yellow:hover {
+  color: var(--color-secondary);
+}
+
+.btn--link-yellow:hover::after {
+  transform: translateX(3px);
+}
+
+.btn--link-yellow:disabled,
+.btn--link-yellow.is-disabled {
+  color: var(--color-gray);
+}
+
+/* =====================================================
+   БЛОК 5: Поле ввода (Input)
+   ===================================================== */
+.input {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--color-text);
+  background: var(--color-white);
+  border: 1.5px solid var(--color-gray);
+  border-radius: var(--radius-input);
+  padding: 16px 20px;
+  width: 100%;
+  outline: none;
+  transition: border-color var(--transition-base);
+}
+
+.input::placeholder {
+  color: var(--color-gray-placeholder);
+}
+
+.input:focus {
+  border-color: var(--color-secondary);
+}
+
+.input--error,
+.input.input-error {
+  border-color: var(--color-error);
+  color: var(--color-error);
+}
+
+.input--error::placeholder {
+  color: var(--color-error);
+}
+
+/* =====================================================
+   БЛОК 6: Круглые кнопки навигации слайдера
+   .slider-btn
+   Normal:   Фиолетовый фон, белая стрелка
+   Hover:    Оранжевый фон, белая стрелка
+   ===================================================== */
+.slider-btn {
+  width: var(--reviews-btn-size);
+  height: var(--reviews-btn-size);
+  border-radius: 50%;
+  background: var(--color-secondary);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  padding: 0;
+  flex-shrink: 0;
+  transition:
+    background-color var(--transition-base),
+    transform var(--transition-base);
+}
+
+.slider-btn:hover {
+  background-color: var(--color-primary);
+}
+
+.slider-btn:active {
+  transform: scale(0.93);
+}
+
+.slider-btn svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* =====================================================
+   БЛОК 7: Телефонный номер
+   .phone-block
+   Normal:   Белая иконка + белый номер
+   Hover:    Оранжевая иконка + оранжевый номер
+   ===================================================== */
+.phone-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  background-color: var(--color-white);
+  -webkit-mask: url('/img/phone-icon.svg') no-repeat center / contain;
+  mask: url('/img/phone-icon.svg') no-repeat center / contain;
+  transition: background-color var(--transition-base);
+}
+
+.phone-block {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.phone-block:hover .phone-icon {
+  background-color: var(--color-primary);
+}
+
+.phone-block:hover .phone-block__number {
+  color: var(--color-primary);
+}
+
+.phone-block__number {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.2;
+  color: var(--color-white);
+  white-space: nowrap;
+  transition: color var(--transition-base);
+}
+
+.phone-block__hours {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--color-white);
+}
+
+/* =====================================================
+   БЛОК 8: Карточки ЧДК-Право
+   .chdk-card
+   ===================================================== */
+.chdk-card {
+  background: var(--color-white);
+  border-radius: var(--radius-card-sm);
+  padding: 32px 28px 36px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-card);
+  transition: background-color var(--transition-card);
+}
+
+.chdk-card__title {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 1.25;
+  text-transform: uppercase;
+  margin-bottom: auto;
+  min-height: 60px;
+  transition: color var(--transition-card);
+}
+
+.chdk-card__title--yellow {
+  color: var(--color-primary);
+}
+
+.chdk-card__title--purple {
+  color: var(--color-secondary);
+}
+
+.chdk-card__text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-text);
+  margin-top: 20px;
+  margin-bottom: 24px;
+  transition: color var(--transition-card);
+}
+
+.chdk-card__actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: nowrap;
+  margin-top: auto;
+}
+
+/* --- Жёлтая кнопка внутри карточки --- */
+.chdk-card__btn--yellow {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  transition:
+    background-color var(--transition-card),
+    color var(--transition-card);
+}
+
+.chdk-card__btn--yellow:hover {
+  background-color: var(--color-primary-hover);
+}
+
+/* --- Фиолетовая кнопка внутри карточки --- */
+.chdk-card__btn--purple {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  transition:
+    background-color var(--transition-card),
+    color var(--transition-card);
+}
+
+.chdk-card__btn--purple:hover {
+  background-color: var(--color-secondary-hover);
+}
+
+.chdk-card__link {
+  transition: color var(--transition-card);
+}
+
+/* -------------------------------------------------
+   ХОВЕР ЖЁЛТАЯ КАРТОЧКА
+   Normal:  Белый фон, заголовок оранжевый, текст тёмный,
+            кнопка оранжевая, ссылка оранжевая
+   Hover:   Оранжевый фон, заголовок белый, текст белый,
+            кнопка белая с оранжевым текстом, ссылка белая
+   ------------------------------------------------- */
+.chdk-card--yellow:hover {
+  background-color: var(--color-primary);
+}
+
+.chdk-card--yellow:hover .chdk-card__title {
+  color: var(--color-white);
+}
+
+.chdk-card--yellow:hover .chdk-card__text {
+  color: var(--color-white);
+}
+
+.chdk-card--yellow:hover .chdk-card__btn--yellow {
+  background-color: var(--color-white);
+  color: var(--color-primary);
+}
+
+.chdk-card--yellow:hover .chdk-card__btn--yellow:hover {
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+.chdk-card--yellow:hover .chdk-card__link {
+  color: var(--color-white);
+}
+
+.chdk-card--yellow:hover .chdk-card__link:hover {
+  opacity: 0.8;
+}
+
+/* -------------------------------------------------
+   ХОВЕР ФИОЛЕТОВАЯ КАРТОЧКА
+   Normal:  Белый фон, заголовок фиолетовый, текст тёмный,
+            кнопка фиолетовая, ссылка фиолетовая
+   Hover:   Фиолетовый фон, заголовок белый, текст белый,
+            кнопка белая с фиолетовым текстом, ссылка белая
+   ------------------------------------------------- */
+.chdk-card--purple:hover {
+  background-color: var(--color-secondary);
+}
+
+.chdk-card--purple:hover .chdk-card__title {
+  color: var(--color-white);
+}
+
+.chdk-card--purple:hover .chdk-card__text {
+  color: var(--color-white);
+}
+
+.chdk-card--purple:hover .chdk-card__btn--purple {
+  background-color: var(--color-white);
+  color: var(--color-secondary);
+}
+
+.chdk-card--purple:hover .chdk-card__btn--purple:hover {
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+.chdk-card--purple:hover .chdk-card__link {
+  color: var(--color-white);
+}
+
+.chdk-card--purple:hover .chdk-card__link:hover {
+  opacity: 0.8;
+}
+
+/* =====================================================
+   SK-КАРТОЧКИ (Смарт-комплекты)
+   Чередование кнопок: нечётные — фиолетовые, чётные — оранжевые
+   ===================================================== */
+.sk-card {
+  border-radius: var(--radius-card);
+  padding: 32px 28px 36px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.sk-card--purple {
+  background-color: var(--color-bg-purple);
+}
+
+.sk-card--orange {
+  background-color: var(--color-bg-orange);
+}
+
+/* Нечётные: фиолетовая кнопка → при hover оранжевая */
+.sk-card:nth-child(odd) .btn--yellow.btn--sm {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+}
+
+.sk-card:nth-child(odd) .btn--yellow.btn--sm:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+/* Чётные: оранжевая кнопка → при hover фиолетовая */
+.sk-card:nth-child(even) .btn--yellow.btn--sm {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.sk-card:nth-child(even) .btn--yellow.btn--sm:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+}
+
+/* Текстовые ссылки «Подробнее»: чередование */
+.sk-card:nth-child(odd) .btn--link-yellow {
+  color: var(--color-secondary);
+}
+
+.sk-card:nth-child(odd) .btn--link-yellow:hover {
+  color: var(--color-primary);
+}
+
+.sk-card:nth-child(even) .btn--link-yellow {
+  color: var(--color-primary);
+}
+
+.sk-card:nth-child(even) .btn--link-yellow:hover {
+  color: var(--color-secondary);
+}
+
+/* =====================================================
+   ЧЕКБОКСЫ
+   ===================================================== */
+.checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--color-text-muted);
+  cursor: pointer;
+}
+
+.checkbox input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin-top: 1px;
+  flex-shrink: 0;
+  accent-color: var(--color-secondary);
+  cursor: pointer;
+}
+
+.checkbox__policy-link {
+  color: var(--color-secondary);
+  text-decoration: underline;
+  transition: color var(--transition-base);
+}
+
+.checkbox__policy-link:hover {
+  color: var(--color-secondary-hover);
+}
+
+/* =====================================================
+   ОШИБКИ ФОРМ
+   ===================================================== */
+.form-field-error {
+  font-size: 13px;
+  line-height: 1.3;
+  color: var(--color-error);
+  margin-top: -8px;
+}
+
+.form-error-box {
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--color-error);
+  background: #FFF0F0;
+  border-radius: 8px;
+  padding: 12px 16px;
+}
+
+.form-error-box a {
+  color: var(--color-secondary);
+  text-decoration: underline;
+}
+
+.form-success-box {
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--color-secondary);
+  background: var(--color-bg-purple);
+  border-radius: 8px;
+  padding: 12px 16px;
+}
+
+/* =====================================================
+   МЕССЕНДЖЕРЫ
+   ===================================================== */
+.messenger-link {
+  display: flex;
+  transition:
+    opacity var(--transition-base),
+    transform var(--transition-base);
+}
+
+.messenger-link:hover {
+  opacity: 1;
+  transform: scale(1.15);
+}
+
+.messenger-icon {
+  width: 32px;
+  height: 32px;
+}

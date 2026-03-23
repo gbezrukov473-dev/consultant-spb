@@ -1,0 +1,411 @@
+/* =====================================================
+   СТРАНИЦА «СЕМИНАРЫ-ТРЕНИНГИ»
+   Все блоки через CSS Custom Properties
+   Готово для нарезки на Битрикс-компоненты
+   ===================================================== */
+
+.breadcrumbs__current {
+  color: var(--color-secondary);
+  font-weight: 600;
+}
+
+
+/* ====================================================
+   HERO (.st-hero)
+   Оранжевый градиент + изображение справа
+   ==================================================== */
+.st-hero {
+  padding: 20px var(--side-padding) 0;
+}
+
+.st-hero__inner {
+  max-width: calc(var(--container-max) - 2 * var(--side-padding));
+  margin: 0 auto;
+  background: linear-gradient(56deg, var(--color-bg-orange) 0%, var(--color-bg-orange-deep) 99%);
+  border-radius: 40px;
+  display: flex;
+  align-items: stretch;
+  overflow: hidden;
+  min-height: 506px;
+  position: relative;
+}
+
+.st-hero__inner::before {
+  content: '';
+  position: absolute;
+  right: 20%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 840px;
+  height: 740px;
+  background: url('/img/hero-chdk-watermark-white.svg') no-repeat center / contain;
+  opacity: 0.28;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.st-hero__content {
+  flex: 0 0 50%;
+  min-width: 0;
+  padding: 80px 40px 60px 58px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  z-index: 1;
+}
+
+.st-hero__title {
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 1.21;
+  color: var(--color-black);
+  margin-bottom: 24px;
+}
+
+.st-hero__title-accent {
+  color: var(--color-secondary);
+}
+
+.st-hero__text {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.19;
+  color: var(--color-black);
+  max-width: 593px;
+  margin-bottom: 12px;
+}
+
+.st-hero__subtext {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-black);
+  max-width: 593px;
+  margin-bottom: 40px;
+}
+
+.st-hero__btn {
+  align-self: flex-start;
+}
+
+.st-hero__visual {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  overflow: visible;
+  z-index: 1;
+  padding-right: 0;
+}
+
+.st-hero__img {
+  max-width: 620px;
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(0 16px 32px rgba(0, 0, 0, 0.2));
+}
+
+
+/* ====================================================
+   4 ПРИЧИНЫ (.st-features)
+   Фиолетовый скруглённый фон, белые карточки
+   ==================================================== */
+.st-features {
+  padding: 80px var(--side-padding) 0;
+}
+
+.st-features__inner {
+  max-width: calc(var(--container-max) - 2 * var(--side-padding));
+  margin: 0 auto;
+  background: var(--color-secondary);
+  border-radius: 40px;
+  padding: 60px var(--side-padding) 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.st-features__title {
+  font-weight: 600;
+  font-size: clamp(28px, 2vw + 10px, 36px);
+  line-height: 1.19;
+  color: var(--color-white);
+  margin-bottom: 16px;
+}
+
+.st-features__subtitle {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.16;
+  color: var(--color-white);
+  margin-bottom: 48px;
+}
+
+.st-features__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.st-features__card {
+  background: var(--color-white);
+  border-radius: 40px;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: transform var(--transition-card), box-shadow var(--transition-card);
+}
+
+.st-features__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+}
+
+.st-features__icon {
+  width: 40px;
+  height: 40px;
+}
+
+.st-features__body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.st-features__name {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.19;
+  color: var(--color-black);
+  text-transform: uppercase;
+}
+
+.st-features__desc {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.18;
+  color: var(--color-black);
+}
+
+
+/* ====================================================
+   КАК ЗАПИСАТЬСЯ (.st-howto)
+   Слева скриншот, справа фичи с check-circle
+   ==================================================== */
+.st-howto {
+  padding: 80px var(--side-padding) 0;
+}
+
+.st-howto__inner {
+  max-width: calc(var(--container-max) - 2 * var(--side-padding));
+  margin: 0 auto;
+}
+
+.st-howto__title {
+  font-weight: 600;
+  font-size: clamp(28px, 2vw + 10px, 36px);
+  line-height: 1.19;
+  color: var(--color-black);
+  margin-bottom: 48px;
+}
+
+.st-howto__body {
+  display: grid;
+  grid-template-columns: 55% 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.st-howto__screenshot-wrap {
+  border-radius: 40px;
+  overflow: hidden;
+  box-shadow: 1px 5px 12px rgba(0, 0, 0, 0.16);
+}
+
+.st-howto__screenshot {
+  width: 100%;
+  display: block;
+}
+
+.st-howto__caption {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.16;
+  color: rgba(36, 39, 42, 0.7);
+  margin-top: 16px;
+}
+
+.st-howto__right {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.st-howto__feature {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.st-howto__feature-circle {
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.st-howto__feature-circle--purple { background: var(--color-secondary); }
+.st-howto__feature-circle--orange { background: var(--color-primary); }
+
+.st-howto__feature-circle img {
+  width: 40px;
+  height: 40px;
+}
+
+.st-howto__feature-text {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.19;
+  color: var(--color-black);
+}
+
+
+/* ====================================================
+   RESPONSIVE
+   ==================================================== */
+@media (max-width: 1024px) {
+  .st-hero__inner {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .st-hero__content {
+    flex: none;
+    padding: 48px 32px;
+  }
+
+  .st-hero__title {
+    font-size: 36px;
+  }
+
+  .st-hero__visual {
+    padding: 0 32px 0;
+  }
+
+  .st-hero__img {
+    max-width: 400px;
+  }
+
+  .st-features__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .st-features__name {
+    font-size: 20px;
+  }
+
+  .st-features__desc {
+    font-size: 17px;
+  }
+
+  .st-howto__body {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .st-hero__content {
+    padding: 36px 20px;
+  }
+
+  .st-hero__title {
+    font-size: 28px;
+  }
+
+  .st-hero__text {
+    font-size: 17px;
+  }
+
+  .st-hero__visual {
+    padding: 0 20px 0;
+  }
+
+  .st-hero__img {
+    max-width: 320px;
+  }
+
+  .st-hero__inner::before {
+    width: 400px;
+    height: 350px;
+    right: -20%;
+    opacity: 0.16;
+  }
+
+  .st-features {
+    padding-top: 48px;
+  }
+
+  .st-features__inner {
+    padding: 40px 20px 48px;
+    border-radius: 24px;
+  }
+
+  .st-features__card {
+    border-radius: 24px;
+    padding: 28px 20px;
+  }
+
+  .st-features__name {
+    font-size: 18px;
+  }
+
+  .st-features__desc {
+    font-size: 16px;
+  }
+
+  .st-howto {
+    padding-top: 48px;
+  }
+
+  .st-howto__feature-circle {
+    width: 64px;
+    height: 64px;
+  }
+
+  .st-howto__feature-circle img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .st-howto__feature-text {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .st-hero__title {
+    font-size: 24px;
+  }
+
+  .st-hero__text {
+    font-size: 16px;
+  }
+
+  .st-hero__subtext {
+    font-size: 14px;
+  }
+
+  .st-howto__feature-text {
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,280 @@
+/* =====================================================
+   СТРАНИЦА «ПЕРСОНАЛЬНЫЙ МЕНЕДЖЕР»
+   Все блоки через CSS Custom Properties
+   Готово для нарезки на Битрикс-компоненты
+   ===================================================== */
+
+.breadcrumbs__current {
+  color: var(--color-secondary);
+  font-weight: 600;
+}
+
+
+/* ====================================================
+   HERO (.pm-hero)
+   Оранжевый градиент + MacBook справа
+   ==================================================== */
+.pm-hero {
+  padding: 20px var(--side-padding) 0;
+}
+
+.pm-hero__inner {
+  max-width: calc(var(--container-max) - 2 * var(--side-padding));
+  margin: 0 auto;
+  background: linear-gradient(56deg, var(--color-bg-orange) 0%, var(--color-bg-orange-deep) 99%);
+  border-radius: 40px;
+  display: flex;
+  align-items: stretch;
+  overflow: hidden;
+  min-height: 506px;
+  position: relative;
+}
+
+.pm-hero__inner::before {
+  content: '';
+  position: absolute;
+  right: 20%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 840px;
+  height: 740px;
+  background: url('/img/hero-chdk-watermark-white.svg') no-repeat center / contain;
+  opacity: 0.28;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.pm-hero__content {
+  flex: 0 0 50%;
+  min-width: 0;
+  padding: 80px 40px 60px 58px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  z-index: 1;
+}
+
+.pm-hero__title {
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 1.21;
+  color: var(--color-black);
+  margin-bottom: 24px;
+}
+
+.pm-hero__title-accent {
+  color: var(--color-secondary);
+}
+
+.pm-hero__text {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.19;
+  color: var(--color-black);
+  max-width: 560px;
+  margin-bottom: 12px;
+}
+
+.pm-hero__subtext {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-black);
+  max-width: 560px;
+  margin-bottom: 40px;
+}
+
+.pm-hero__btn {
+  align-self: flex-start;
+}
+
+.pm-hero__visual {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  overflow: visible;
+  z-index: 1;
+  padding-right: 0;
+}
+
+.pm-hero__img {
+  max-width: 620px;
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(0 16px 32px rgba(0, 0, 0, 0.2));
+}
+
+.pm-hero__shadow {
+  display: none;
+}
+
+
+/* ====================================================
+   ЧТО МОЖЕТ МЕНЕДЖЕР (.pm-features)
+   Фиолетовый фон, 2×2 grid белых карточек
+   Формат: иконка сверху, текст ниже (как lk-services)
+   ==================================================== */
+.pm-features {
+  padding: 80px var(--side-padding) 0;
+}
+
+.pm-features__inner {
+  max-width: calc(var(--container-max) - 2 * var(--side-padding));
+  margin: 0 auto;
+}
+
+.pm-features__title {
+  font-weight: 700;
+  font-size: clamp(28px, 2vw + 10px, 40px);
+  line-height: 1.2;
+  color: var(--color-black);
+  margin-bottom: 16px;
+}
+
+.pm-features__subtitle {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.16;
+  color: var(--color-text-muted);
+  margin-bottom: 48px;
+}
+
+.pm-features__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.pm-features__card {
+  background: var(--color-white);
+  border-radius: 24px;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  transition: transform var(--transition-card), box-shadow var(--transition-card);
+}
+
+.pm-features__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.14);
+}
+
+.pm-features__icon {
+  width: 40px;
+  height: 40px;
+}
+
+.pm-features__body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pm-features__name {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.3;
+  color: var(--color-black);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.pm-features__desc {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.45;
+  color: var(--color-text-muted);
+}
+
+
+/* ====================================================
+   RESPONSIVE
+   ==================================================== */
+@media (max-width: 1024px) {
+  .pm-hero__inner {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .pm-hero__content {
+    flex: none;
+    padding: 48px 32px;
+  }
+
+  .pm-hero__title {
+    font-size: 36px;
+  }
+
+  .pm-hero__visual {
+    padding: 0 32px 0;
+  }
+
+  .pm-hero__img {
+    max-width: 400px;
+  }
+
+  .pm-features__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .pm-hero__content {
+    padding: 36px 20px;
+  }
+
+  .pm-hero__title {
+    font-size: 28px;
+  }
+
+  .pm-hero__text {
+    font-size: 17px;
+  }
+
+  .pm-hero__visual {
+    padding: 0 20px 0;
+  }
+
+  .pm-hero__img {
+    max-width: 320px;
+  }
+
+  .pm-hero__inner::before {
+    width: 400px;
+    height: 350px;
+    right: -20%;
+    opacity: 0.16;
+  }
+
+  .pm-features {
+    padding-top: 48px;
+  }
+
+  .pm-features__card {
+    border-radius: 20px;
+    padding: 28px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pm-hero__title {
+    font-size: 24px;
+  }
+
+  .pm-hero__text {
+    font-size: 16px;
+  }
+
+  .pm-hero__subtext {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,364 @@
+/* =====================================================
+   СТРАНИЦА «ПРАВОВЫЕ СБОРНИКИ»
+   Все блоки через CSS Custom Properties
+   Готово для нарезки на Битрикс-компоненты
+   ===================================================== */
+
+.breadcrumbs__current {
+  color: var(--color-secondary);
+  font-weight: 600;
+}
+
+/* ====================================================
+   HERO (.col-hero)
+   Orange gradient like trial.html / consultation.html
+   ==================================================== */
+.col-hero {
+  padding: 20px var(--side-padding) 0;
+}
+
+.col-hero__inner {
+  max-width: calc(var(--container-max) - 2 * var(--side-padding));
+  margin: 0 auto;
+  background: linear-gradient(56deg, var(--color-bg-orange) 0%, var(--color-bg-orange-deep) 99%);
+  border-radius: 40px;
+  display: flex;
+  align-items: stretch;
+  overflow: hidden;
+  min-height: 506px;
+  position: relative;
+}
+
+.col-hero__inner::before {
+  content: '';
+  position: absolute;
+  right: 20%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 840px;
+  height: 740px;
+  background: url('/img/hero-chdk-watermark-white.svg') no-repeat center / contain;
+  opacity: 0.28;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.col-hero__content {
+  flex: 0 0 50%;
+  min-width: 0;
+  padding: 94px 40px 60px 58px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  z-index: 1;
+}
+
+.col-hero__title {
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 1.21;
+  color: var(--color-black);
+  margin-bottom: 24px;
+}
+
+.col-hero__title-accent {
+  color: var(--color-secondary);
+}
+
+.col-hero__text {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.19;
+  color: var(--color-black);
+  max-width: 593px;
+  margin-bottom: 12px;
+}
+
+.col-hero__subtext {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.4;
+  color: var(--color-black);
+  max-width: 593px;
+  margin-bottom: 40px;
+}
+
+.col-hero__btn {
+  align-self: flex-start;
+}
+
+.col-hero__visual {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: visible;
+  z-index: 1;
+}
+
+.col-hero__img {
+  max-width: 110%;
+  max-height: 110%;
+  object-fit: contain;
+  position: relative;
+  z-index: 1;
+  transform: translateX(-25px) scale(0.85);
+  transform-origin: center center;
+}
+
+.col-hero__shadow {
+  position: absolute;
+  bottom: 8%;
+  left: 50%;
+  transform: translateX(calc(-50% - 25px)) scale(0.85);
+  width: 70%;
+  max-width: 420px;
+  height: 18px;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.18) 0%, transparent 72%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ====================================================
+   КАТАЛОГ (.col-catalog)
+   Title, pill tabs, 3x2 card grid
+   ==================================================== */
+.col-catalog {
+  padding: 80px var(--side-padding) 0;
+}
+
+.col-catalog__inner {
+  max-width: calc(var(--container-max) - 2 * var(--side-padding));
+  margin: 0 auto;
+}
+
+.col-catalog__title {
+  font-weight: 600;
+  font-size: clamp(28px, 2vw + 10px, 36px);
+  line-height: 1.19;
+  color: var(--color-black);
+  margin-bottom: 40px;
+}
+
+.col-catalog__tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 48px;
+}
+
+.col-catalog__tab {
+  padding: 12px 20px;
+  border-radius: 76px;
+  border: none;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color var(--transition-base), color var(--transition-base);
+  background: #F5F5F5;
+  color: var(--color-black);
+}
+
+.col-catalog__tab:hover {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.col-catalog__tab.is-active {
+  background: var(--color-secondary);
+  color: var(--color-white);
+}
+
+.col-catalog__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* ====================================================
+   КАРТОЧКА СБОРНИКА (.col-card)
+   ==================================================== */
+.col-card {
+  background: var(--color-white);
+  border-radius: 40px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow var(--transition-base), transform var(--transition-base);
+}
+
+.col-card:hover {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  transform: translateY(-4px);
+}
+
+.col-card__cover {
+  padding: 16px 16px 0;
+}
+
+.col-card__img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 24px;
+  display: block;
+}
+
+.col-card__body {
+  padding: 20px 16px 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.col-card__title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--color-black);
+  margin-bottom: 12px;
+}
+
+.col-card__text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.3;
+  color: var(--color-black);
+  flex: 1;
+  margin-bottom: 20px;
+}
+
+.col-card__actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 0 28px;
+}
+
+.col-card__btn {
+  padding: 12px 40px;
+}
+
+.col-card__link {
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--transition-base);
+}
+
+.col-card__link:hover {
+  color: var(--color-secondary);
+}
+
+/* Форма — блок .trial с главной (styles/blocks.css) */
+.page-collections .trial {
+  padding-bottom: 80px;
+}
+
+/* ====================================================
+   RESPONSIVE
+   ==================================================== */
+@media (max-width: 1024px) {
+  .col-hero__inner {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .col-hero__content {
+    flex: auto;
+    padding: 60px 40px 40px;
+  }
+
+  .col-hero__visual {
+    height: 300px;
+    justify-content: center;
+  }
+
+  .col-hero__img {
+    max-width: 80%;
+    transform: translateX(-20px) scale(0.85);
+  }
+
+  .col-hero__shadow {
+    transform: translateX(calc(-50% - 20px)) scale(0.85);
+  }
+
+  .col-catalog__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .col-hero {
+    padding: 12px 16px 0;
+  }
+
+  .col-hero__inner::before {
+    width: 300px;
+    height: 260px;
+    opacity: 0.2;
+    right: 5%;
+  }
+
+  .col-hero__content {
+    padding: 40px 24px 30px;
+  }
+
+  .col-hero__title { font-size: 32px; }
+  .col-hero__text { font-size: 16px; }
+  .col-hero__subtext { font-size: 15px; }
+
+  .col-catalog {
+    padding: 40px 16px 0;
+  }
+
+  .col-catalog__tabs {
+    gap: 8px;
+    margin-bottom: 32px;
+  }
+
+  .col-catalog__tab {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+
+  .col-card {
+    border-radius: 24px;
+  }
+
+  .col-card__img {
+    border-radius: 16px;
+    height: 160px;
+  }
+
+  .page-collections .trial {
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .col-hero__inner::before {
+    width: 180px;
+    height: 150px;
+    opacity: 0.15;
+  }
+
+  .col-hero__visual { height: 200px; }
+
+  .col-catalog__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .col-card__actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 0;
+  }
+}

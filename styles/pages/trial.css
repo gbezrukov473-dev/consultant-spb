@@ -1,0 +1,693 @@
+/* =====================================================
+   СТРАНИЦА «ПРОБНЫЙ ДОСТУП»
+   Все блоки через CSS Custom Properties
+   Готово для нарезки на Битрикс-компоненты
+   ===================================================== */
+
+/* ====================================================
+   HERO (.tp-hero)
+   Figma: x:60 y:284 w:1320 h:506 border-radius:40px
+   Orange gradient + macbook/box image справа
+   ==================================================== */
+.tp-hero {
+  padding: 20px var(--side-padding) 0;
+}
+
+.tp-hero__inner {
+  max-width: calc(var(--container-max) - 2 * var(--side-padding));
+  margin: 0 auto;
+  background: linear-gradient(56deg, var(--color-bg-orange) 0%, var(--color-bg-orange-deep) 99%);
+  border-radius: 40px;
+  display: flex;
+  align-items: stretch;
+  overflow: hidden;
+  min-height: 506px;
+  position: relative;
+}
+
+.tp-hero__inner::before {
+  content: '';
+  position: absolute;
+  right: 20%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 840px;
+  height: 740px;
+  background: url('/img/hero-chdk-watermark-white.svg') no-repeat center / contain;
+  opacity: 0.28;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.tp-hero__content {
+  flex: 1;
+  min-width: 0;
+  padding: 90px 40px 60px 58px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: relative;
+  z-index: 1;
+}
+
+.tp-hero__title {
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 1.21;
+  color: var(--color-black);
+  margin-bottom: 32px;
+}
+
+.tp-hero__text {
+  font-size: 20px;
+  line-height: 1.16;
+  color: var(--color-black);
+  margin-bottom: 12px;
+  max-width: 526px;
+}
+
+.tp-hero__text:last-of-type {
+  margin-bottom: 40px;
+}
+
+.tp-hero__btn {
+  align-self: flex-start;
+}
+
+.tp-hero__image {
+  flex: 0 0 48%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: visible;
+}
+
+.tp-hero__img {
+  max-width: 110%;
+  max-height: 110%;
+  object-fit: contain;
+  position: relative;
+  right: -20px;
+}
+
+/* ====================================================
+   БАННЕР (.tp-banner)
+   Figma: x:60 y:890 w:1320 h:257 border-radius:40px
+   Purple gradient, большой заголовок, badge-pill, кнопка, macbook справа
+   ==================================================== */
+.tp-banner {
+  padding: 100px var(--side-padding) 0;
+}
+
+.tp-banner__inner {
+  max-width: calc(var(--container-max) - 2 * var(--side-padding));
+  margin: 0 auto;
+  background: var(--gradient-trial);
+  border-radius: 40px;
+  position: relative;
+  overflow: hidden;
+  height: 340px;
+}
+
+.tp-banner__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60%;
+  height: 100%;
+  padding: 40px 0 40px 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 1;
+}
+
+.tp-banner__title {
+  font-weight: 500;
+  font-size: clamp(24px, 3.3vw, 48px);
+  line-height: 1.18;
+  color: var(--color-white);
+  text-transform: uppercase;
+  max-width: 860px;
+}
+
+.tp-banner__badge {
+  display: inline-block;
+  background: var(--color-white);
+  color: var(--color-primary);
+  font-weight: 700;
+  font-size: 24px;
+  text-transform: uppercase;
+  padding: 12px 36px;
+  border-radius: 64.44px;
+  margin-top: 12px;
+  transform: rotate(-3.45deg);
+  align-self: flex-start;
+}
+
+.tp-banner__row {
+  margin-top: 14px;
+}
+
+.tp-banner__image {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 34%;
+  z-index: 0;
+}
+
+.tp-banner__img {
+  width: 110%;
+  display: block;
+}
+
+/* ====================================================
+   ЧТО ВЫ УСПЕЕТЕ ЗА 2 ДНЯ (.tp-days)
+   Figma: y:1147 h:520 (встык к banner), white bg
+   НЕТ карточек — icon 80x80 + текст, 2x2 сетка
+   ==================================================== */
+.tp-days {
+  padding: 100px var(--side-padding) 0;
+}
+
+.tp-days__inner {
+  max-width: calc(var(--container-max) - 2 * var(--side-padding));
+  margin: 0 auto;
+}
+
+.tp-days__title {
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 1.19;
+  color: var(--color-black);
+  margin-bottom: 24px;
+}
+
+.tp-days__subtitle {
+  font-size: 20px;
+  line-height: 1.16;
+  color: var(--color-black);
+  margin-bottom: 64px;
+}
+
+.tp-days__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 80px;
+  row-gap: 30px;
+}
+
+.tp-days__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.tp-days__icon {
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tp-days__icon--purple {
+  background: var(--color-secondary);
+}
+
+.tp-days__icon--yellow {
+  background: var(--color-primary);
+}
+
+.tp-days__icon img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.tp-days__item-body {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tp-days__item-title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.19;
+  text-transform: uppercase;
+  color: var(--color-black);
+}
+
+.tp-days__item-text {
+  font-size: 16px;
+  line-height: 1.16;
+  color: var(--color-black);
+  opacity: 0.8;
+}
+
+/* ====================================================
+   ФОРМА ЗАЯВКИ (.tp-form)
+   Figma: y:1707 h:626 (gap 40px от tp-days)
+   Purple gradient, изображение слева, форма справа
+   ==================================================== */
+.tp-form {
+  padding: 80px var(--side-padding) 0;
+}
+
+.tp-form__inner {
+  max-width: calc(var(--container-max) - 2 * var(--side-padding));
+  margin: 0 auto;
+  background: var(--gradient-trial);
+  border-radius: 40px;
+  display: flex;
+  align-items: stretch;
+  overflow: hidden;
+  position: relative;
+  min-height: 626px;
+}
+
+.tp-form__image {
+  flex: 0 0 46%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.tp-form__img {
+  max-width: 100%;
+  max-height: 600px;
+  object-fit: contain;
+}
+
+.tp-form__right {
+  flex: 1;
+  min-width: 0;
+  padding: 60px 60px 60px 0;
+}
+
+.tp-form__title {
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 1.19;
+  color: var(--color-white);
+  margin-bottom: 16px;
+}
+
+.tp-form__desc {
+  font-size: 20px;
+  line-height: 1.16;
+  color: var(--color-white);
+  margin-bottom: 32px;
+}
+
+.tp-form__card {
+  background: var(--color-gray-light);
+  border-radius: 40px;
+  padding: 40px;
+  box-shadow: 0 2px 6.5px rgba(0, 0, 0, 0.15);
+}
+
+.tp-form__input {
+  display: block;
+  width: 100%;
+  padding: 20px 32px;
+  border: 1px solid #D9D9D9;
+  border-radius: var(--radius-input);
+  font-family: var(--font-family);
+  font-size: 16px;
+  color: var(--color-black);
+  background: var(--color-white);
+  outline: none;
+  transition: border-color var(--transition-base);
+  margin-bottom: 12px;
+  box-sizing: border-box;
+}
+
+.tp-form__input:focus {
+  border-color: var(--color-secondary);
+}
+
+.tp-form__input::placeholder {
+  color: #686868;
+}
+
+.tp-form__input.input-error {
+  border-color: var(--color-error);
+  color: var(--color-error);
+}
+
+.tp-form__row {
+  display: flex;
+  gap: 12px;
+}
+
+.tp-form__row .tp-form__input {
+  flex: 1;
+  min-width: 0;
+}
+
+.tp-form__checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  line-height: 1.16;
+  color: var(--color-black);
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+
+.tp-form__checkbox input[type="checkbox"] {
+  margin-top: 2px;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  accent-color: var(--color-secondary);
+}
+
+.tp-form__checkbox a {
+  color: var(--color-secondary);
+  text-decoration: underline;
+}
+
+.tp-form__submit {
+  display: block;
+  width: 100%;
+  padding: 20px;
+  background: var(--color-primary);
+  color: var(--color-white);
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 16px;
+  border: none;
+  border-radius: var(--radius-btn);
+  cursor: pointer;
+  transition: background-color var(--transition-base);
+}
+
+.tp-form__submit:hover {
+  background: var(--color-primary-hover);
+}
+
+/* ====================================================
+   ПОЧЕМУ СТОИТ ВЫБРАТЬ (.tp-adv)
+   Figma: y:2373 h:783 (gap 40px от формы)
+   Карточки 427px, padding 40px 30px, radius 40px
+   ==================================================== */
+.tp-adv {
+  padding: 40px var(--side-padding) 0;
+}
+
+.tp-adv__inner {
+  max-width: calc(var(--container-max) - 2 * var(--side-padding));
+  margin: 0 auto;
+  padding: 100px 0 80px;
+}
+
+.tp-adv__title {
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 1.19;
+  color: var(--color-black);
+  margin-bottom: 40px;
+}
+
+.tp-adv__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.tp-adv__card {
+  background: var(--color-white);
+  border-radius: 40px;
+  padding: 40px 30px;
+  box-shadow: 1px 5px 12px rgba(0, 0, 0, 0.16);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.tp-adv__icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.tp-adv__text {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.18;
+  color: var(--color-black);
+}
+
+.tp-adv__accent--purple {
+  color: var(--color-secondary);
+  font-weight: 600;
+}
+
+.tp-adv__accent--yellow {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+/* ====================================================
+   АДАПТИВНОСТЬ — СТРАНИЦА «ПРОБНЫЙ ДОСТУП»
+   ==================================================== */
+@media (max-width: 1100px) {
+  .tp-banner__badge {
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: 900px) {
+  .tp-hero__inner {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .tp-hero__inner::before {
+    width: 320px;
+    height: 270px;
+    opacity: 0.2;
+    right: 5%;
+  }
+
+  .tp-hero__content {
+    padding: 40px 28px 32px;
+  }
+
+  .tp-hero__title {
+    font-size: 32px;
+  }
+
+  .tp-hero__image {
+    flex: none;
+    padding: 0 28px 28px;
+    justify-content: center;
+  }
+
+  .tp-hero__img {
+    max-width: 80%;
+    max-height: 280px;
+    right: 0;
+  }
+
+  .tp-banner {
+    padding-top: 60px;
+  }
+
+  .tp-banner__inner {
+    height: auto;
+    min-height: 200px;
+  }
+
+  .tp-banner__content {
+    position: relative;
+    width: 100%;
+    padding: 32px 28px;
+  }
+
+  .tp-banner__badge {
+    align-self: flex-start;
+    font-size: 18px;
+    transform: rotate(-2deg);
+  }
+
+  .tp-banner__image {
+    position: relative;
+    top: auto;
+    right: auto;
+    transform: none;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0 20px 20px;
+  }
+
+  .tp-banner__img {
+    width: 70%;
+    max-width: 360px;
+  }
+
+  .tp-days {
+    padding-top: 60px;
+  }
+
+  .tp-days__grid {
+    grid-template-columns: 1fr;
+    row-gap: 40px;
+  }
+
+  .tp-form__inner {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .tp-form__image {
+    flex: none;
+    order: -1;
+    padding: 32px 32px 0;
+  }
+
+  .tp-form__img {
+    max-height: 240px;
+  }
+
+  .tp-form__right {
+    padding: 24px 28px 40px;
+  }
+
+  .tp-adv__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .tp-hero {
+    padding-top: 12px;
+  }
+
+  .tp-hero__inner::before {
+    width: 180px;
+    height: 150px;
+    opacity: 0.15;
+  }
+
+  .tp-hero__title {
+    font-size: 26px;
+  }
+
+  .tp-hero__content {
+    padding: 28px 20px 24px;
+  }
+
+  .tp-hero__text {
+    font-size: 16px;
+  }
+
+  .tp-banner {
+    padding-top: 40px;
+  }
+
+  .tp-banner__title {
+    font-size: 20px;
+  }
+
+  .tp-banner__badge {
+    font-size: 14px;
+    padding: 8px 18px;
+    transform: rotate(-2deg);
+  }
+
+  .tp-days {
+    padding-top: 40px;
+  }
+
+  .tp-days__title {
+    font-size: 26px;
+  }
+
+  .tp-days__subtitle {
+    margin-bottom: 32px;
+  }
+
+  .tp-days__icon {
+    width: 56px;
+    height: 56px;
+  }
+
+  .tp-days__icon img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .tp-days__item-title {
+    font-size: 18px;
+  }
+
+  .tp-days__item-text {
+    font-size: 14px;
+  }
+
+  .tp-form {
+    padding-top: 32px;
+  }
+
+  .tp-form__title {
+    font-size: 24px;
+  }
+
+  .tp-form__desc {
+    font-size: 16px;
+  }
+
+  .tp-form__card {
+    padding: 20px;
+    border-radius: 24px;
+  }
+
+  .tp-form__input {
+    padding: 16px 20px;
+  }
+
+  .tp-form__row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .tp-adv {
+    padding-top: 32px;
+  }
+
+  .tp-adv__inner {
+    padding: 48px 0 48px;
+  }
+
+  .tp-adv__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tp-adv__title {
+    font-size: 24px;
+  }
+
+  .tp-adv__card {
+    border-radius: 24px;
+    padding: 28px 20px;
+  }
+
+  .tp-adv__text {
+    font-size: 16px;
+  }
+}

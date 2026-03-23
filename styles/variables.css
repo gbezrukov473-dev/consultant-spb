@@ -1,0 +1,68 @@
+/* =====================================================
+   DESIGN SYSTEM — CSS Custom Properties
+   Источник: Figma UI Kit + D:\spb-cons (эталон)
+   ===================================================== */
+:root {
+  /* --- Цветовая палитра --- */
+  --color-primary:       #EDA700;
+  --color-primary-hover:  #D49500;
+  --color-secondary:      #6263A5;
+  --color-secondary-hover:#4E4F8A;
+
+  --color-black:          #24272A;
+  --color-text:           #333333;
+  --color-text-muted:     #555555;
+  --color-white:          #FFFFFF;
+
+  --color-gray:           #D8D8D8;
+  --color-gray-bg:        #F0F0F0;
+  --color-gray-placeholder:#999999;
+  --color-gray-muted:     #BBBBBB;
+  --color-gray-light:     #F2F2F2;
+  --color-gray-disabled:  #B0B0B0;
+
+  --color-bg-orange:      #FFDBBA;
+  --color-bg-orange-deep: #FDB97A;
+  --color-bg-purple:      #E4E4FF;
+
+  --color-error:          #D00000;
+
+  /* --- Градиенты --- */
+  --gradient-trial:       linear-gradient(135deg, #6263A5 0%, #8A8CEB 100%);
+  --gradient-reviews:     linear-gradient(to right, #FFDBBA, #FDB97A);
+  --gradient-reviews-mob: linear-gradient(to bottom, #FFDBBA, #FDB97A);
+
+  /* --- Типографика --- */
+  --font-family:          'Gilroy', sans-serif;
+
+  /* --- Контейнер и отступы --- */
+  --container-max:        1440px;
+  --side-padding:         60px;
+
+  /* --- Скругления --- */
+  --radius-btn:           12px;
+  --radius-btn-sm:        10px;
+  --radius-btn-lg:        14px;
+  --radius-input:         12px;
+  --radius-card:          24px;
+  --radius-card-sm:       20px;
+  --radius-section:       32px;
+  --radius-modal:         30px;
+
+  /* --- Тени --- */
+  --shadow-card:          0 4px 24px rgba(0, 0, 0, 0.12);
+  --shadow-dropdown:      0 4px 20px rgba(0, 0, 0, 0.25);
+  --shadow-review:        0 4px 20px rgba(0, 0, 0, 0.1);
+
+  /* --- Переходы --- */
+  --transition-fast:      0.15s ease;
+  --transition-base:      0.2s ease;
+  --transition-card:      0.3s ease;
+  --transition-slide:     0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+  /* --- Отзывы (карусель) --- */
+  --reviews-radius:       32px;
+  --reviews-btn-size:     48px;
+  --reviews-gap:          16px;
+  --reviews-padding:      52px;
+}

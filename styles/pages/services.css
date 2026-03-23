@@ -1,0 +1,370 @@
+/* =====================================================
+   СТРАНИЦА «СЕРВИС ЧДК-ПРАВО» (агрегатор)
+   Все блоки через CSS Custom Properties
+   Готово для нарезки на Битрикс-компоненты
+   ===================================================== */
+
+
+/* ====================================================
+   HERO (.sv-hero)
+   Оранжевый градиент + изображение справа
+   ==================================================== */
+.sv-hero {
+  padding: 20px var(--side-padding) 0;
+}
+
+.sv-hero__inner {
+  max-width: calc(var(--container-max) - 2 * var(--side-padding));
+  margin: 0 auto;
+  background: linear-gradient(56deg, var(--color-bg-orange) 0%, var(--color-bg-orange-deep) 99%);
+  border-radius: 40px;
+  display: flex;
+  align-items: stretch;
+  overflow: hidden;
+  min-height: 506px;
+  position: relative;
+}
+
+.sv-hero__inner::before {
+  content: '';
+  position: absolute;
+  right: 20%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 840px;
+  height: 740px;
+  background: url('/img/hero-chdk-watermark-white.svg') no-repeat center / contain;
+  opacity: 0.28;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.sv-hero__content {
+  flex: 0 0 50%;
+  min-width: 0;
+  padding: 80px 40px 60px 58px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  z-index: 1;
+}
+
+.sv-hero__title {
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 1.21;
+  color: var(--color-black);
+  margin-bottom: 24px;
+}
+
+.sv-hero__title-accent {
+  color: var(--color-secondary);
+}
+
+.sv-hero__text {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.19;
+  color: var(--color-black);
+  max-width: 617px;
+  margin-bottom: 12px;
+}
+
+.sv-hero__subtext {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-black);
+  max-width: 617px;
+  margin-bottom: 40px;
+}
+
+.sv-hero__btn {
+  align-self: flex-start;
+}
+
+.sv-hero__visual {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  overflow: visible;
+  z-index: 1;
+  padding-right: 0;
+}
+
+.sv-hero__img {
+  max-width: 640px;
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(0 16px 32px rgba(0, 0, 0, 0.2));
+}
+
+
+/* ====================================================
+   КОНТЕКСТ БЛОКА .chdk НА СТРАНИЦЕ СЕРВИСА
+   Переопределяем подзаголовок (.sv-chdk)
+   ==================================================== */
+.sv-chdk {
+  padding-top: 80px;
+}
+
+
+/* ====================================================
+   ЛИЧНЫЙ КАБИНЕТ (.sv-lk)
+   Фиолетовый градиент + MacBook справа
+   ==================================================== */
+.sv-lk {
+  padding: 80px var(--side-padding) 80px;
+}
+
+.sv-lk__inner {
+  max-width: calc(var(--container-max) - 2 * var(--side-padding));
+  margin: 0 auto;
+  background: linear-gradient(100deg, var(--color-secondary) 0%, #8A8CEB 100%);
+  border-radius: 40px;
+  display: flex;
+  align-items: stretch;
+  overflow: hidden;
+  position: relative;
+}
+
+.sv-lk__content {
+  flex: 0 0 65%;
+  min-width: 0;
+  padding: 40px 20px 40px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  z-index: 1;
+}
+
+.sv-lk__title {
+  font-weight: 500;
+  font-size: clamp(32px, 3vw + 8px, 48px);
+  line-height: 1.1;
+  color: var(--color-white);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.sv-lk__title strong {
+  font-weight: 700;
+}
+
+.sv-lk__badge-wrap {
+  margin-bottom: 20px;
+}
+
+.sv-lk__badge {
+  display: inline-block;
+  background: var(--color-white);
+  color: var(--color-primary);
+  font-weight: 700;
+  font-size: 24px;
+  text-transform: uppercase;
+  padding: 12px 36px;
+  border-radius: 64px;
+  transform: rotate(-3.45deg);
+}
+
+.sv-lk__text {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.4;
+  color: var(--color-white);
+  margin-bottom: 32px;
+}
+
+.sv-lk__text strong {
+  font-weight: 700;
+}
+
+.sv-lk__text p + p {
+  margin-top: 16px;
+}
+
+.sv-lk__buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.sv-lk__btn--outline {
+  background: var(--color-white);
+  color: var(--color-primary);
+  font-weight: 600;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-size: 16px;
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.sv-lk__btn--outline:hover {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.sv-lk__visual {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  min-height: 340px;
+}
+
+.sv-lk__img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+  object-position: right center;
+}
+
+
+/* ====================================================
+   RESPONSIVE
+   ==================================================== */
+@media (max-width: 1024px) {
+  .sv-hero__inner {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .sv-hero__content {
+    flex: none;
+    padding: 48px 32px;
+  }
+
+  .sv-hero__title {
+    font-size: 36px;
+  }
+
+  .sv-hero__visual {
+    padding: 0 32px 0;
+  }
+
+  .sv-hero__img {
+    max-width: 400px;
+  }
+
+  .sv-lk__inner {
+    flex-direction: column;
+  }
+
+  .sv-lk__content {
+    flex: none;
+    padding: 40px 32px;
+  }
+
+  .sv-lk__visual {
+    padding: 0 32px 32px;
+    justify-content: center;
+    overflow: visible;
+  }
+
+  .sv-lk__img {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .sv-hero__content {
+    padding: 36px 20px;
+  }
+
+  .sv-hero__title {
+    font-size: 28px;
+  }
+
+  .sv-hero__text {
+    font-size: 17px;
+  }
+
+  .sv-hero__visual {
+    padding: 0 20px 0;
+  }
+
+  .sv-hero__img {
+    max-width: 320px;
+  }
+
+  .sv-hero__inner::before {
+    width: 400px;
+    height: 350px;
+    right: -20%;
+    opacity: 0.16;
+  }
+
+  .sv-lk {
+    padding: 48px var(--side-padding) 48px;
+  }
+
+  .sv-lk__content {
+    padding: 32px 20px;
+  }
+
+  .sv-lk__inner {
+    border-radius: 24px;
+  }
+
+  .sv-lk__title {
+    font-size: 28px;
+  }
+
+  .sv-lk__badge {
+    font-size: 18px;
+    padding: 8px 24px;
+  }
+
+  .sv-lk__text {
+    font-size: 17px;
+  }
+
+  .sv-lk__img {
+    max-width: 360px;
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .sv-hero__title {
+    font-size: 24px;
+  }
+
+  .sv-hero__text {
+    font-size: 16px;
+  }
+
+  .sv-hero__subtext {
+    font-size: 14px;
+  }
+
+  .sv-lk__title {
+    font-size: 24px;
+  }
+
+  .sv-lk__text {
+    font-size: 16px;
+  }
+
+  .sv-lk__buttons {
+    flex-direction: column;
+  }
+}

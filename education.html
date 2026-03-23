@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <?php include 'includes/favicons.php'; ?>
+  <meta name="description" content="Обучение работе с КонсультантПлюс — бесплатные курсы для клиентов ЧДК-Право в Санкт-Петербурге." />
+  <title>Обучение КонсультантПлюс — КонсультантПлюс СПБ</title>
+  <link rel="stylesheet" href="./styles/global.css" />
+  <link rel="stylesheet" href="./styles/ui-kit.css" />
+  <link rel="stylesheet" href="./styles/blocks.css" />
+  <link rel="stylesheet" href="./styles/pages/buy.css" />
+  <link rel="stylesheet" href="./styles/pages/education.css" />
+</head>
+<body>
+
+<?php include 'includes/header.php'; ?>
+
+
+<!-- ====== ХЛЕБНЫЕ КРОШКИ ====== -->
+<!-- Битрикс: bitrix:breadcrumb -->
+<nav class="breadcrumbs" aria-label="Хлебные крошки">
+  <div class="breadcrumbs__inner">
+    <a href="/" class="breadcrumbs__link">Главная</a>
+    <span class="breadcrumbs__sep">&gt;</span>
+    <a href="/services/" class="breadcrumbs__link">Сервис</a>
+    <span class="breadcrumbs__sep">&gt;</span>
+    <span class="breadcrumbs__current">Обучение КонсультантПлюс</span>
+  </div>
+</nav>
+
+
+<!-- ====== HERO ====== -->
+<!-- Битрикс: произвольный компонент -->
+<section class="edu-hero reveal">
+  <div class="edu-hero__inner">
+    <div class="edu-hero__content">
+      <h1 class="edu-hero__title"><span class="edu-hero__title-accent">Обучение</span> КонсультантПлюс</h1>
+      <p class="edu-hero__text">КонсультантПлюс&nbsp;&mdash; мощный инструмент, который раскрывается в&nbsp;руках опытного пользователя.</p>
+      <p class="edu-hero__subtext">Обучение поможет вам освоить базовые и&nbsp;расширенные возможности системы, чтобы работать быстрее, находить точные ответы и&nbsp;использовать все преимущества профессиональной правовой поддержки.</p>
+      <a href="#" class="btn btn--purple edu-hero__btn" data-open-modal="modalPrice">Заказать</a>
+    </div>
+    <div class="edu-hero__visual">
+      <img src="/img/obuch-KP-hero.png" alt="Обучение КонсультантПлюс" class="edu-hero__img" loading="lazy" />
+    </div>
+  </div>
+</section>
+
+
+<!-- ====== 4 ПРИЧИНЫ ПРОЙТИ ОБУЧЕНИЕ ====== -->
+<!-- Битрикс: bitrix:news.list, iblock="edu_features" -->
+<section class="edu-features reveal">
+  <div class="edu-features__inner">
+    <h2 class="edu-features__title">4&nbsp;причины пройти обучение КонсультантПлюс</h2>
+    <p class="edu-features__subtitle">Обучение бесплатно для&nbsp;пользователей КонсультантПлюс&nbsp;&mdash; клиентов ЧДК-Право</p>
+
+    <div class="edu-features__grid">
+      <div class="edu-features__card reveal reveal--delay-1">
+        <img src="/img/obuch-KP-prof.svg" alt="" class="edu-features__icon" />
+        <div class="edu-features__body">
+          <h3 class="edu-features__name">Работайте как&nbsp;профессионал</h3>
+          <p class="edu-features__desc">Освойте все&nbsp;инструменты КонсультантПлюс&nbsp;&mdash; от&nbsp;быстрого поиска до&nbsp;глубокой аналитики и&nbsp;судебной практики</p>
+        </div>
+      </div>
+      <div class="edu-features__card reveal reveal--delay-2">
+        <img src="/img/obuch-KP-kurs.svg" alt="" class="edu-features__icon" />
+        <div class="edu-features__body">
+          <h3 class="edu-features__name">Курсы под&nbsp;ваши задачи</h3>
+          <p class="edu-features__desc">Обучение для&nbsp;бухгалтеров, юристов, руководителей и&nbsp;других специалистов с&nbsp;учётом особенностей именно вашей работы</p>
+        </div>
+      </div>
+      <div class="edu-features__card reveal reveal--delay-3">
+        <img src="/img/obuch-KP-praktika.svg" alt="" class="edu-features__icon" />
+        <div class="edu-features__body">
+          <h3 class="edu-features__name">Практика на&nbsp;реальных примерах</h3>
+          <p class="edu-features__desc">Разбираем ситуации, с&nbsp;которыми вы&nbsp;сталкиваетесь каждый день, и&nbsp;учим приёмам, экономящим часы поиска</p>
+        </div>
+      </div>
+      <div class="edu-features__card reveal reveal--delay-4">
+        <img src="/img/obuch-KP-kvalif.svg" alt="" class="edu-features__icon" />
+        <div class="edu-features__body">
+          <h3 class="edu-features__name">Подтвердите квалификацию</h3>
+          <p class="edu-features__desc">По&nbsp;итогам обучения выдаём официальный документ, подтверждающий ваши навыки работы с&nbsp;КонсультантПлюс</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ====== БЕСПЛАТНЫЙ ДОСТУП ====== -->
+<!-- Битрикс: bitrix:form.result.new, form_id="trial-edu" -->
+<section class="trial reveal" id="edu-form">
+  <div class="trial__inner">
+    <div class="trial__card">
+      <div class="trial__left">
+        <h2 class="trial__title">
+          Получите бесплатный <span class="trial__title--orange">пробный доступ</span> и&nbsp;откройте все возможности системы <span class="trial__title--orange">КонсультантПлюс</span>
+        </h2>
+
+        <div class="trial__features">
+          <div class="trial__feature trial__feature--orange">
+            <div class="trial__feature-icon">
+              <img src="/img/logo-consultant-crop.svg" alt="" />
+            </div>
+            <div class="trial__feature-info">
+              <span class="trial__feature-name">Система КонсультантПлюс</span>
+              <span class="trial__feature-desc">Полный доступ на 2 дня</span>
+            </div>
+          </div>
+
+          <div class="trial__feature trial__feature--purple">
+            <div class="trial__feature-icon">
+              <img src="/img/lk-icon-big.svg" alt="" />
+            </div>
+            <div class="trial__feature-info">
+              <span class="trial__feature-name">Личный кабинет ЧДК-Онлайн</span>
+              <span class="trial__feature-desc">Эксклюзивный сервис для клиентов</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="trial__right">
+        <form class="trial__form js-lead-form" action="/api/lead.php" method="POST" novalidate data-form-id="trial-edu" data-thanks="/thanks.html">
+          <input type="text" name="name" class="trial__input" placeholder="Ваше Имя" />
+          <p class="form-field-error hidden" data-error-for="name"></p>
+          <div class="trial__row">
+            <input type="tel" name="phone" class="trial__input mask-phone" placeholder="+7 (9__) ___-__-__" required />
+            <input type="email" name="email" class="trial__input" placeholder="Электронная почта" />
+          </div>
+          <p class="form-field-error hidden" data-error-for="phone"></p>
+          <label class="trial__checkbox">
+            <input type="checkbox" name="consent" required />
+            <span>Я ознакомлен с <a href="/polzovatelskoe_soglashenie.php" class="trial__policy-link">политикой конфиденциальности</a> и&nbsp;даю согласие на&nbsp;обработку персональных данных</span>
+          </label>
+          <p class="form-field-error hidden" data-error-for="consent"></p>
+          <div class="form-error-box hidden" data-form-error></div>
+          <div class="form-success-box hidden" data-form-success></div>
+          <input type="hidden" name="form_id" value="trial-edu" />
+          <input type="hidden" name="page" value="/education.html" />
+          <input type="hidden" name="fill_time_ms" value="" />
+          <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <button type="submit" class="trial__submit">Попробовать бесплатно</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<?php include 'includes/footer.php'; ?>
+
+<?php $suffix = '-edu'; $page = '/education.html'; include 'includes/modals.php'; ?>
+
+<script type="module" src="./js/main.js"></script>
+</body>
+</html>

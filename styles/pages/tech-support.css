@@ -1,0 +1,406 @@
+/* =====================================================
+   СТРАНИЦА «ТЕХНИЧЕСКАЯ ПОДДЕРЖКА»
+   Все блоки через CSS Custom Properties
+   Готово для нарезки на Битрикс-компоненты
+   ===================================================== */
+
+
+/* ====================================================
+   HERO (.ts-hero)
+   Оранжевый градиент + изображение справа
+   ==================================================== */
+.ts-hero {
+  padding: 20px var(--side-padding) 0;
+}
+
+.ts-hero__inner {
+  max-width: calc(var(--container-max) - 2 * var(--side-padding));
+  margin: 0 auto;
+  background: linear-gradient(56deg, var(--color-bg-orange) 0%, var(--color-bg-orange-deep) 99%);
+  border-radius: 40px;
+  display: flex;
+  align-items: stretch;
+  overflow: hidden;
+  min-height: 506px;
+  position: relative;
+}
+
+.ts-hero__inner::before {
+  content: '';
+  position: absolute;
+  right: 20%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 840px;
+  height: 740px;
+  background: url('/img/hero-chdk-watermark-white.svg') no-repeat center / contain;
+  opacity: 0.28;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.ts-hero__content {
+  flex: 0 0 50%;
+  min-width: 0;
+  padding: 80px 40px 60px 58px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  z-index: 1;
+}
+
+.ts-hero__title {
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 1.21;
+  color: var(--color-black);
+  margin-bottom: 24px;
+}
+
+.ts-hero__title-accent {
+  color: var(--color-secondary);
+}
+
+.ts-hero__text {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.19;
+  color: var(--color-black);
+  max-width: 593px;
+  margin-bottom: 12px;
+}
+
+.ts-hero__subtext {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-black);
+  max-width: 593px;
+  margin-bottom: 40px;
+}
+
+.ts-hero__btn {
+  align-self: flex-start;
+}
+
+.ts-hero__visual {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  overflow: visible;
+  z-index: 1;
+  padding-right: 0;
+}
+
+.ts-hero__img {
+  max-width: 620px;
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(0 16px 32px rgba(0, 0, 0, 0.2));
+}
+
+
+/* ====================================================
+   КАРТОЧКИ ПРЕИМУЩЕСТВ (.ts-features)
+   Фиолетовый скруглённый фон, белые карточки
+   ==================================================== */
+.ts-features {
+  padding: 80px var(--side-padding) 0;
+}
+
+.ts-features__inner {
+  max-width: calc(var(--container-max) - 2 * var(--side-padding));
+  margin: 0 auto;
+  background: var(--color-secondary);
+  border-radius: 40px;
+  padding: 60px var(--side-padding) 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.ts-features__title {
+  font-weight: 600;
+  font-size: clamp(28px, 2vw + 10px, 36px);
+  line-height: 1.19;
+  color: var(--color-white);
+  margin-bottom: 16px;
+}
+
+.ts-features__subtitle {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.16;
+  color: var(--color-white);
+  margin-bottom: 48px;
+}
+
+.ts-features__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.ts-features__card {
+  background: var(--color-white);
+  border-radius: 40px;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: transform var(--transition-card), box-shadow var(--transition-card);
+}
+
+.ts-features__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+}
+
+.ts-features__icon {
+  width: 40px;
+  height: 40px;
+}
+
+.ts-features__body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ts-features__name {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.19;
+  color: var(--color-black);
+  text-transform: uppercase;
+}
+
+.ts-features__desc {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.18;
+  color: var(--color-black);
+}
+
+
+/* ====================================================
+   КАК ОБРАТИТЬСЯ (.ts-howto)
+   Слева скриншот, справа фичи с check-circle
+   ==================================================== */
+.ts-howto {
+  padding: 80px var(--side-padding) 0;
+}
+
+.ts-howto__inner {
+  max-width: calc(var(--container-max) - 2 * var(--side-padding));
+  margin: 0 auto;
+}
+
+.ts-howto__title {
+  font-weight: 600;
+  font-size: clamp(28px, 2vw + 10px, 36px);
+  line-height: 1.19;
+  color: var(--color-black);
+  margin-bottom: 48px;
+}
+
+.ts-howto__body {
+  display: grid;
+  grid-template-columns: 55% 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.ts-howto__screenshot-wrap {
+  border-radius: 40px;
+  overflow: hidden;
+  box-shadow: 1px 5px 12px rgba(0, 0, 0, 0.16);
+}
+
+.ts-howto__screenshot {
+  width: 100%;
+  display: block;
+}
+
+.ts-howto__caption {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.16;
+  color: rgba(36, 39, 42, 0.7);
+  margin-top: 16px;
+}
+
+.ts-howto__right {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.ts-howto__feature {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.ts-howto__feature-circle {
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ts-howto__feature-circle--purple { background: var(--color-secondary); }
+.ts-howto__feature-circle--orange { background: var(--color-primary); }
+
+.ts-howto__feature-circle img {
+  width: 40px;
+  height: 40px;
+}
+
+.ts-howto__feature-text {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.19;
+  color: var(--color-black);
+}
+
+
+/* ====================================================
+   RESPONSIVE
+   ==================================================== */
+@media (max-width: 1024px) {
+  .ts-hero__inner {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .ts-hero__content {
+    flex: none;
+    padding: 48px 32px;
+  }
+
+  .ts-hero__title {
+    font-size: 36px;
+  }
+
+  .ts-hero__visual {
+    padding: 0 32px 0;
+  }
+
+  .ts-hero__img {
+    max-width: 400px;
+  }
+
+  .ts-features__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ts-features__name {
+    font-size: 20px;
+  }
+
+  .ts-features__desc {
+    font-size: 17px;
+  }
+
+  .ts-howto__body {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ts-hero__content {
+    padding: 36px 20px;
+  }
+
+  .ts-hero__title {
+    font-size: 28px;
+  }
+
+  .ts-hero__text {
+    font-size: 17px;
+  }
+
+  .ts-hero__visual {
+    padding: 0 20px 0;
+  }
+
+  .ts-hero__img {
+    max-width: 320px;
+  }
+
+  .ts-hero__inner::before {
+    width: 400px;
+    height: 350px;
+    right: -20%;
+    opacity: 0.16;
+  }
+
+  .ts-features {
+    padding-top: 48px;
+  }
+
+  .ts-features__inner {
+    padding: 40px 20px 48px;
+    border-radius: 24px;
+  }
+
+  .ts-features__card {
+    border-radius: 24px;
+    padding: 28px 20px;
+  }
+
+  .ts-features__name {
+    font-size: 18px;
+  }
+
+  .ts-features__desc {
+    font-size: 16px;
+  }
+
+  .ts-howto {
+    padding-top: 48px;
+  }
+
+  .ts-howto__feature-circle {
+    width: 64px;
+    height: 64px;
+  }
+
+  .ts-howto__feature-circle img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .ts-howto__feature-text {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ts-hero__title {
+    font-size: 24px;
+  }
+
+  .ts-hero__text {
+    font-size: 16px;
+  }
+
+  .ts-hero__subtext {
+    font-size: 14px;
+  }
+
+  .ts-howto__feature-text {
+    font-size: 18px;
+  }
+}

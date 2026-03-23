@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <?php include 'includes/favicons.php'; ?>
+  <meta name="description" content="Проверка контрагента — оцените риски сотрудничества с компанией или ИП через сервис ЧДК-Право для клиентов КонсультантПлюс." />
+  <title>Проверка контрагента — КонсультантПлюс СПБ</title>
+  <link rel="stylesheet" href="./styles/global.css" />
+  <link rel="stylesheet" href="./styles/ui-kit.css" />
+  <link rel="stylesheet" href="./styles/blocks.css" />
+  <link rel="stylesheet" href="./styles/pages/buy.css" />
+  <link rel="stylesheet" href="./styles/pages/counterparty-check.css" />
+</head>
+<body>
+
+<?php include 'includes/header.php'; ?>
+
+
+<!-- ====== ХЛЕБНЫЕ КРОШКИ ====== -->
+<!-- Битрикс: bitrix:breadcrumb -->
+<nav class="breadcrumbs" aria-label="Хлебные крошки">
+  <div class="breadcrumbs__inner">
+    <a href="/" class="breadcrumbs__link">Главная</a>
+    <span class="breadcrumbs__sep">&gt;</span>
+    <a href="/services/" class="breadcrumbs__link">Сервис</a>
+    <span class="breadcrumbs__sep">&gt;</span>
+    <span class="breadcrumbs__current">Проверка контрагента</span>
+  </div>
+</nav>
+
+
+<!-- ====== HERO ====== -->
+<!-- Битрикс: произвольный компонент -->
+<section class="pk-hero reveal">
+  <div class="pk-hero__inner">
+    <div class="pk-hero__content">
+      <h1 class="pk-hero__title"><span class="pk-hero__title-accent">Проверка</span> контрагента</h1>
+      <p class="pk-hero__text">Прежде чем начать работу с&nbsp;контрагентом, оцените риски возможного сотрудничества.</p>
+      <p class="pk-hero__subtext">Финансовая отчётность, арбитражные дела, связи и&nbsp;госзакупки&nbsp;&mdash; получите все данные о&nbsp;компании или ИП из&nbsp;официальных источников в&nbsp;рамках вашего обслуживания.</p>
+      <a href="#" class="btn btn--purple pk-hero__btn" data-open-modal="modalPrice">Проверить</a>
+    </div>
+    <div class="pk-hero__visual">
+      <img src="/img/proverka-kontr-hero.png" alt="Проверка контрагента — КонсультантПлюс" class="pk-hero__img" loading="lazy" />
+    </div>
+  </div>
+</section>
+
+
+<!-- ====== ЧТО ВЫ УЗНАЕТЕ О КОНТРАГЕНТЕ ====== -->
+<!-- Битрикс: bitrix:news.list, iblock="pk_features" -->
+<section class="pk-features reveal">
+  <div class="pk-features__inner">
+    <h2 class="pk-features__title">Что вы&nbsp;узнаете о&nbsp;контрагенте с&nbsp;ЧДК-Право</h2>
+    <p class="pk-features__subtitle">Сервис доступен для&nbsp;пользователей КонсультантПлюс&nbsp;&ndash; клиентов ЧДК-Право</p>
+
+    <div class="pk-features__grid">
+      <div class="pk-features__card reveal reveal--delay-1">
+        <img src="/img/PrKon-finsost.svg" alt="" class="pk-features__icon" />
+        <div class="pk-features__body">
+          <h3 class="pk-features__name">Финансовое состояние</h3>
+          <p class="pk-features__desc">Бухгалтерская отчётность, выручка и&nbsp;прибыль, оценка платёжеспособности</p>
+        </div>
+      </div>
+      <div class="pk-features__card reveal reveal--delay-2">
+        <img src="/img/PrKon-sudrisk.svg" alt="" class="pk-features__icon" />
+        <div class="pk-features__body">
+          <h3 class="pk-features__name">Судебные риски и&nbsp;долги</h3>
+          <p class="pk-features__desc">Арбитражные дела, исполнительные производства, сообщения о&nbsp;банкротстве</p>
+        </div>
+      </div>
+      <div class="pk-features__card reveal reveal--delay-3">
+        <img src="/img/PrKon-blagonad.svg" alt="" class="pk-features__icon" />
+        <div class="pk-features__body">
+          <h3 class="pk-features__name">Связи и&nbsp;благонадёжность</h3>
+          <p class="pk-features__desc">Аффилированность, связи по&nbsp;директору и&nbsp;учредителям, лицензии, товарные знаки</p>
+        </div>
+      </div>
+      <div class="pk-features__card reveal reveal--delay-4">
+        <img src="/img/PrKon-kontr.svg" alt="" class="pk-features__icon" />
+        <div class="pk-features__body">
+          <h3 class="pk-features__name">Госзакупки и&nbsp;контракты</h3>
+          <p class="pk-features__desc">Заключённые госконтракты в&nbsp;качестве заказчика и&nbsp;поставщика, суммы и&nbsp;объёмы</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ====== КАК ПРОВЕРИТЬ НАДЕЖНОСТЬ КОНТРАГЕНТА ====== -->
+<!-- Битрикс: включаемая область или custom component -->
+<section class="pk-howto reveal">
+  <div class="pk-howto__inner">
+    <h2 class="pk-howto__title">Как проверить надежность контрагента</h2>
+
+    <div class="pk-howto__body">
+      <div class="pk-howto__left">
+        <div class="pk-howto__screenshot-wrap">
+          <img src="/img/kak-prov-ka.png" alt="Скриншот — проверка контрагента в личном кабинете ЧДК-Онлайн" class="pk-howto__screenshot" loading="lazy" />
+        </div>
+        <p class="pk-howto__caption">При помощи сервиса в&nbsp;личном кабинете ЧДК-Онлайн</p>
+      </div>
+
+      <div class="pk-howto__right">
+        <div class="pk-howto__step reveal reveal--delay-1">
+          <div class="pk-howto__step-circle pk-howto__step-circle--purple">
+            <span class="pk-howto__step-num">1</span>
+          </div>
+          <span class="pk-howto__step-text">Введите ИНН, ОГРН или ОГРНИП контрагента</span>
+        </div>
+        <div class="pk-howto__step reveal reveal--delay-2">
+          <div class="pk-howto__step-circle pk-howto__step-circle--orange">
+            <span class="pk-howto__step-num">2</span>
+          </div>
+          <span class="pk-howto__step-text">Выберите необходимые дополнительные сведения</span>
+        </div>
+        <div class="pk-howto__step reveal reveal--delay-3">
+          <div class="pk-howto__step-circle pk-howto__step-circle--purple">
+            <span class="pk-howto__step-num">3</span>
+          </div>
+          <span class="pk-howto__step-text">Нажмите &laquo;Проверить&raquo; и&nbsp;получите полный отчет</span>
+        </div>
+        <div class="pk-howto__step reveal reveal--delay-4">
+          <div class="pk-howto__step-circle pk-howto__step-circle--orange">
+            <span class="pk-howto__step-num">4</span>
+          </div>
+          <span class="pk-howto__step-text">Скачайте документ для&nbsp;использования в&nbsp;работе</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ====== БЕСПЛАТНЫЙ ДОСТУП ====== -->
+<!-- Битрикс: bitrix:form.result.new, form_id="trial-pk" -->
+<section class="trial reveal" id="pk-form">
+  <div class="trial__inner">
+    <div class="trial__card">
+      <div class="trial__left">
+        <h2 class="trial__title">
+          Получите бесплатный <span class="trial__title--orange">пробный доступ</span> и&nbsp;откройте все возможности системы <span class="trial__title--orange">КонсультантПлюс</span>
+        </h2>
+
+        <div class="trial__features">
+          <div class="trial__feature trial__feature--orange">
+            <div class="trial__feature-icon">
+              <img src="/img/logo-consultant-crop.svg" alt="" />
+            </div>
+            <div class="trial__feature-info">
+              <span class="trial__feature-name">Система КонсультантПлюс</span>
+              <span class="trial__feature-desc">Полный доступ на 2 дня</span>
+            </div>
+          </div>
+
+          <div class="trial__feature trial__feature--purple">
+            <div class="trial__feature-icon">
+              <img src="/img/lk-icon-big.svg" alt="" />
+            </div>
+            <div class="trial__feature-info">
+              <span class="trial__feature-name">Личный кабинет ЧДК-Онлайн</span>
+              <span class="trial__feature-desc">Эксклюзивный сервис для клиентов</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="trial__right">
+        <form class="trial__form js-lead-form" action="/api/lead.php" method="POST" novalidate data-form-id="trial-pk" data-thanks="/thanks.html">
+          <input type="text" name="name" class="trial__input" placeholder="Ваше Имя" />
+          <p class="form-field-error hidden" data-error-for="name"></p>
+          <div class="trial__row">
+            <input type="tel" name="phone" class="trial__input mask-phone" placeholder="+7 (9__) ___-__-__" required />
+            <input type="email" name="email" class="trial__input" placeholder="Электронная почта" />
+          </div>
+          <p class="form-field-error hidden" data-error-for="phone"></p>
+          <label class="trial__checkbox">
+            <input type="checkbox" name="consent" required />
+            <span>Я ознакомлен с <a href="/polzovatelskoe_soglashenie.php" class="trial__policy-link">политикой конфиденциальности</a> и&nbsp;даю согласие на&nbsp;обработку персональных данных</span>
+          </label>
+          <p class="form-field-error hidden" data-error-for="consent"></p>
+          <div class="form-error-box hidden" data-form-error></div>
+          <div class="form-success-box hidden" data-form-success></div>
+          <input type="hidden" name="form_id" value="trial-pk" />
+          <input type="hidden" name="page" value="/counterparty-check.html" />
+          <input type="hidden" name="fill_time_ms" value="" />
+          <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <button type="submit" class="trial__submit">Попробовать бесплатно</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<?php include 'includes/footer.php'; ?>
+
+<?php $suffix = '-pk'; $page = '/counterparty-check.html'; include 'includes/modals.php'; ?>
+
+<script type="module" src="./js/main.js"></script>
+</body>
+</html>

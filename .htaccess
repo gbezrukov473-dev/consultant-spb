@@ -1,0 +1,8 @@
+RewriteEngine On
+
+# Если запрос не указывает на существующий файл или директорию,
+# и URL не содержит расширения — пробуем добавить .html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !\.
+RewriteRule ^(.+)$ $1.html [L]

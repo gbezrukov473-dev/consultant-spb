@@ -1,0 +1,290 @@
+/* =====================================================
+   СТРАНИЦА «ОБУЧЕНИЕ КОНСУЛЬТАНТПЛЮС»
+   Все блоки через CSS Custom Properties
+   Готово для нарезки на Битрикс-компоненты
+   ===================================================== */
+
+.breadcrumbs__current {
+  color: var(--color-secondary);
+  font-weight: 600;
+}
+
+
+/* ====================================================
+   HERO (.edu-hero)
+   Оранжевый градиент + изображение справа
+   ==================================================== */
+.edu-hero {
+  padding: 20px var(--side-padding) 0;
+}
+
+.edu-hero__inner {
+  max-width: calc(var(--container-max) - 2 * var(--side-padding));
+  margin: 0 auto;
+  background: linear-gradient(56deg, var(--color-bg-orange) 0%, var(--color-bg-orange-deep) 99%);
+  border-radius: 40px;
+  display: flex;
+  align-items: stretch;
+  overflow: hidden;
+  min-height: 506px;
+  position: relative;
+}
+
+.edu-hero__inner::before {
+  content: '';
+  position: absolute;
+  right: 20%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 840px;
+  height: 740px;
+  background: url('/img/hero-chdk-watermark-white.svg') no-repeat center / contain;
+  opacity: 0.28;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.edu-hero__content {
+  flex: 0 0 50%;
+  min-width: 0;
+  padding: 80px 40px 60px 58px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  z-index: 1;
+}
+
+.edu-hero__title {
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 1.21;
+  color: var(--color-black);
+  margin-bottom: 24px;
+}
+
+.edu-hero__title-accent {
+  color: var(--color-secondary);
+}
+
+.edu-hero__text {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.19;
+  color: var(--color-black);
+  max-width: 593px;
+  margin-bottom: 12px;
+}
+
+.edu-hero__subtext {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-black);
+  max-width: 593px;
+  margin-bottom: 40px;
+}
+
+.edu-hero__btn {
+  align-self: flex-start;
+}
+
+.edu-hero__visual {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  overflow: visible;
+  z-index: 1;
+  padding-right: 0;
+}
+
+.edu-hero__img {
+  max-width: 620px;
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(0 16px 32px rgba(0, 0, 0, 0.2));
+}
+
+
+/* ====================================================
+   4 ПРИЧИНЫ (.edu-features)
+   2×2 grid белых карточек с тенями
+   ==================================================== */
+.edu-features {
+  padding: 80px var(--side-padding) 0;
+}
+
+.edu-features__inner {
+  max-width: calc(var(--container-max) - 2 * var(--side-padding));
+  margin: 0 auto;
+}
+
+.edu-features__title {
+  font-weight: 600;
+  font-size: clamp(28px, 2vw + 10px, 36px);
+  line-height: 1.19;
+  color: var(--color-black);
+  margin-bottom: 16px;
+}
+
+.edu-features__subtitle {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.16;
+  color: var(--color-text-muted);
+  margin-bottom: 48px;
+}
+
+.edu-features__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.edu-features__card {
+  background: var(--color-white);
+  border-radius: 40px;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 1px 5px 12px rgba(0, 0, 0, 0.16);
+  transition: transform var(--transition-card), box-shadow var(--transition-card);
+}
+
+.edu-features__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+}
+
+.edu-features__icon {
+  width: 40px;
+  height: 40px;
+}
+
+.edu-features__body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.edu-features__name {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.19;
+  color: var(--color-black);
+  text-transform: uppercase;
+}
+
+.edu-features__desc {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.18;
+  color: var(--color-black);
+}
+
+
+/* ====================================================
+   RESPONSIVE
+   ==================================================== */
+@media (max-width: 1024px) {
+  .edu-hero__inner {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .edu-hero__content {
+    flex: none;
+    padding: 48px 32px;
+  }
+
+  .edu-hero__title {
+    font-size: 36px;
+  }
+
+  .edu-hero__visual {
+    padding: 0 32px 0;
+  }
+
+  .edu-hero__img {
+    max-width: 400px;
+  }
+
+  .edu-features__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .edu-features__name {
+    font-size: 20px;
+  }
+
+  .edu-features__desc {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 768px) {
+  .edu-hero__content {
+    padding: 36px 20px;
+  }
+
+  .edu-hero__title {
+    font-size: 28px;
+  }
+
+  .edu-hero__text {
+    font-size: 17px;
+  }
+
+  .edu-hero__visual {
+    padding: 0 20px 0;
+  }
+
+  .edu-hero__img {
+    max-width: 320px;
+  }
+
+  .edu-hero__inner::before {
+    width: 400px;
+    height: 350px;
+    right: -20%;
+    opacity: 0.16;
+  }
+
+  .edu-features {
+    padding-top: 48px;
+  }
+
+  .edu-features__card {
+    border-radius: 24px;
+    padding: 28px 20px;
+  }
+
+  .edu-features__name {
+    font-size: 18px;
+  }
+
+  .edu-features__desc {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .edu-hero__title {
+    font-size: 24px;
+  }
+
+  .edu-hero__text {
+    font-size: 16px;
+  }
+
+  .edu-hero__subtext {
+    font-size: 14px;
+  }
+}

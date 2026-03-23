@@ -1,0 +1,455 @@
+/* =====================================================
+   СТРАНИЦА «ИИ-ПОМОЩНИК»
+   Все блоки через CSS Custom Properties
+   Готово для нарезки на Битрикс-компоненты
+   ===================================================== */
+
+
+/* ====================================================
+   HERO (.aip-hero)
+   Оранжевый градиент + изображение справа
+   ==================================================== */
+.aip-hero {
+  padding: 20px var(--side-padding) 0;
+}
+
+.aip-hero__inner {
+  max-width: calc(var(--container-max) - 2 * var(--side-padding));
+  margin: 0 auto;
+  background: linear-gradient(56deg, var(--color-bg-orange) 0%, var(--color-bg-orange-deep) 99%);
+  border-radius: 40px;
+  display: flex;
+  align-items: stretch;
+  overflow: hidden;
+  min-height: 506px;
+  position: relative;
+}
+
+.aip-hero__inner::before {
+  content: '';
+  position: absolute;
+  right: 20%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 840px;
+  height: 740px;
+  background: url('/img/hero-chdk-watermark-white.svg') no-repeat center / contain;
+  opacity: 0.28;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.aip-hero__content {
+  flex: 0 0 50%;
+  min-width: 0;
+  padding: 80px 40px 60px 58px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  z-index: 1;
+}
+
+.aip-hero__title {
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 1.21;
+  color: var(--color-black);
+  margin-bottom: 24px;
+}
+
+.aip-hero__title-accent {
+  color: var(--color-secondary);
+}
+
+.aip-hero__text {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.19;
+  color: var(--color-black);
+  max-width: 593px;
+  margin-bottom: 12px;
+}
+
+.aip-hero__subtext {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-black);
+  max-width: 593px;
+  margin-bottom: 40px;
+}
+
+.aip-hero__btn {
+  align-self: flex-start;
+}
+
+.aip-hero__visual {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  overflow: visible;
+  z-index: 1;
+  padding-right: 0;
+}
+
+.aip-hero__img {
+  max-width: 520px;
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(0 16px 32px rgba(0, 0, 0, 0.2));
+}
+
+
+/* ====================================================
+   ВОЗМОЖНОСТИ (.aip-features)
+   Фиолетовый скруглённый фон, белые карточки 2×2
+   ==================================================== */
+.aip-features {
+  padding: 80px var(--side-padding) 0;
+}
+
+.aip-features__inner {
+  max-width: calc(var(--container-max) - 2 * var(--side-padding));
+  margin: 0 auto;
+  background: var(--color-secondary);
+  border-radius: 40px;
+  padding: 60px var(--side-padding) 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.aip-features__title {
+  font-weight: 600;
+  font-size: clamp(28px, 2vw + 10px, 36px);
+  line-height: 1.19;
+  color: var(--color-white);
+  margin-bottom: 16px;
+}
+
+.aip-features__subtitle {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.16;
+  color: var(--color-white);
+  margin-bottom: 48px;
+}
+
+.aip-features__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.aip-features__card {
+  background: var(--color-white);
+  border-radius: 40px;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: transform var(--transition-card), box-shadow var(--transition-card);
+}
+
+.aip-features__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+}
+
+.aip-features__icon {
+  width: 40px;
+  height: 40px;
+}
+
+.aip-features__body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.aip-features__name {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.19;
+  color: var(--color-black);
+  text-transform: uppercase;
+}
+
+.aip-features__desc {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.18;
+  color: var(--color-black);
+}
+
+
+/* ====================================================
+   КАК ПОЛЬЗОВАТЬСЯ (.aip-howto)
+   Слева скриншот, справа 3 нумерованных шага
+   ==================================================== */
+.aip-howto {
+  padding: 80px var(--side-padding) 0;
+}
+
+.aip-howto__inner {
+  max-width: calc(var(--container-max) - 2 * var(--side-padding));
+  margin: 0 auto;
+}
+
+.aip-howto__title {
+  font-weight: 600;
+  font-size: clamp(28px, 2vw + 10px, 36px);
+  line-height: 1.19;
+  color: var(--color-black);
+  margin-bottom: 48px;
+}
+
+.aip-howto__body {
+  display: grid;
+  grid-template-columns: 50% 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.aip-howto__screenshot-wrap {
+  border-radius: 40px;
+  overflow: hidden;
+  box-shadow: 1px 5px 12px rgba(0, 0, 0, 0.16);
+}
+
+.aip-howto__screenshot {
+  width: 100%;
+  display: block;
+}
+
+.aip-howto__right {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.aip-howto__step {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.aip-howto__step-circle {
+  flex-shrink: 0;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aip-howto__step-circle--purple { background: var(--color-secondary); }
+.aip-howto__step-circle--orange { background: var(--color-primary); }
+
+.aip-howto__step-num {
+  font-weight: 600;
+  font-size: 24px;
+  color: var(--color-white);
+}
+
+.aip-howto__step-content {
+  padding-top: 4px;
+}
+
+.aip-howto__step-text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.4;
+  color: var(--color-black);
+}
+
+.aip-howto__step-text strong {
+  font-weight: 700;
+}
+
+.aip-howto__action-btn {
+  align-self: flex-start;
+  margin-top: 8px;
+}
+
+
+/* ====================================================
+   ФОРМА (.trial--aip) — заголовок как в макете Figma
+   ==================================================== */
+.trial--aip .aip-trial__title {
+  margin-bottom: 0;
+}
+
+.trial--aip .aip-trial__line {
+  display: block;
+  font-weight: 500;
+  font-size: clamp(26px, 2vw + 8px, 32px);
+  line-height: 1.25;
+  color: var(--color-white);
+}
+
+.trial--aip .aip-trial__accent {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.trial--aip .aip-trial__sub {
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 32px;
+  font-weight: 400;
+  font-size: clamp(18px, 1.2vw + 10px, 22px);
+  line-height: 1.35;
+  color: var(--color-white);
+}
+
+
+/* ====================================================
+   RESPONSIVE
+   ==================================================== */
+@media (max-width: 1024px) {
+  .aip-hero__inner {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .aip-hero__content {
+    flex: none;
+    padding: 48px 32px;
+  }
+
+  .aip-hero__title {
+    font-size: 36px;
+  }
+
+  .aip-hero__visual {
+    padding: 0 32px 0;
+  }
+
+  .aip-hero__img {
+    max-width: 360px;
+  }
+
+  .aip-features__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .aip-features__name {
+    font-size: 20px;
+  }
+
+  .aip-features__desc {
+    font-size: 17px;
+  }
+
+  .aip-howto__body {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .aip-howto__step-text {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 768px) {
+  .aip-hero__content {
+    padding: 36px 20px;
+  }
+
+  .aip-hero__title {
+    font-size: 28px;
+  }
+
+  .aip-hero__text {
+    font-size: 17px;
+  }
+
+  .aip-hero__visual {
+    padding: 0 20px 0;
+  }
+
+  .aip-hero__img {
+    max-width: 280px;
+  }
+
+  .aip-hero__inner::before {
+    width: 400px;
+    height: 350px;
+    right: -20%;
+    opacity: 0.16;
+  }
+
+  .aip-features {
+    padding-top: 48px;
+  }
+
+  .aip-features__inner {
+    padding: 40px 20px 48px;
+    border-radius: 24px;
+  }
+
+  .aip-features__card {
+    border-radius: 24px;
+    padding: 28px 20px;
+  }
+
+  .aip-features__name {
+    font-size: 18px;
+  }
+
+  .aip-features__desc {
+    font-size: 16px;
+  }
+
+  .aip-howto {
+    padding-top: 48px;
+  }
+
+  .aip-howto__step-circle {
+    width: 52px;
+    height: 52px;
+  }
+
+  .aip-howto__step-num {
+    font-size: 20px;
+  }
+
+  .aip-howto__step-text {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .aip-hero__title {
+    font-size: 24px;
+  }
+
+  .aip-hero__text {
+    font-size: 16px;
+  }
+
+  .aip-hero__subtext {
+    font-size: 14px;
+  }
+
+  .aip-howto__step-circle {
+    width: 44px;
+    height: 44px;
+  }
+
+  .aip-howto__step-num {
+    font-size: 18px;
+  }
+
+  .aip-howto__step-text {
+    font-size: 15px;
+  }
+}

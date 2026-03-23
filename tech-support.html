@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <?php include 'includes/favicons.php'; ?>
+  <meta name="description" content="Техническая поддержка КонсультантПлюс — установка, настройка и обслуживание для клиентов ЧДК-Право в Санкт-Петербурге." />
+  <title>Техническая поддержка — КонсультантПлюс СПБ</title>
+  <link rel="stylesheet" href="./styles/global.css" />
+  <link rel="stylesheet" href="./styles/ui-kit.css" />
+  <link rel="stylesheet" href="./styles/blocks.css" />
+  <link rel="stylesheet" href="./styles/pages/buy.css" />
+  <link rel="stylesheet" href="./styles/pages/tech-support.css" />
+</head>
+<body>
+
+<?php include 'includes/header.php'; ?>
+
+
+<!-- ====== ХЛЕБНЫЕ КРОШКИ ====== -->
+<!-- Битрикс: bitrix:breadcrumb -->
+<nav class="breadcrumbs" aria-label="Хлебные крошки">
+  <div class="breadcrumbs__inner">
+    <a href="/" class="breadcrumbs__link">Главная</a>
+    <span class="breadcrumbs__sep">&gt;</span>
+    <a href="/services/" class="breadcrumbs__link">Сервис</a>
+    <span class="breadcrumbs__sep">&gt;</span>
+    <span class="breadcrumbs__current">Техническая поддержка</span>
+  </div>
+</nav>
+
+
+<!-- ====== HERO ====== -->
+<!-- Битрикс: произвольный компонент -->
+<section class="ts-hero reveal">
+  <div class="ts-hero__inner">
+    <div class="ts-hero__content">
+      <h1 class="ts-hero__title">Техническая <span class="ts-hero__title-accent">поддержка</span></h1>
+      <p class="ts-hero__text">Чтобы система КонсультантПлюс работала без&nbsp;сбоев, а&nbsp;документы всегда были актуальны, не&nbsp;нужно разбираться в&nbsp;технических тонкостях.</p>
+      <p class="ts-hero__subtext">Просто доверьте это нам&nbsp;&mdash; техподдержка ЧДК-Право полностью возьмёт на&nbsp;себя настройку, обновление и&nbsp;обслуживание.</p>
+      <a href="#" class="btn btn--purple ts-hero__btn" data-open-modal="modalPrice">Обратиться</a>
+    </div>
+    <div class="ts-hero__visual">
+      <img src="/img/tech-supp-hero.png" alt="Техническая поддержка КонсультантПлюс" class="ts-hero__img" loading="lazy" />
+    </div>
+  </div>
+</section>
+
+
+<!-- ====== КАК ТЕХПОДДЕРЖКА ЗАБОТИТСЯ О СИСТЕМЕ ====== -->
+<!-- Битрикс: bitrix:news.list, iblock="ts_features" -->
+<section class="ts-features reveal">
+  <div class="ts-features__inner">
+    <h2 class="ts-features__title">Как техподдержка ЧДК-Право заботится о&nbsp;вашей системе</h2>
+    <p class="ts-features__subtitle">Профессиональное обслуживание для&nbsp;пользователей КонсультантПлюс&nbsp;&mdash; клиентов ЧДК-Право</p>
+
+    <div class="ts-features__grid">
+      <div class="ts-features__card reveal reveal--delay-1">
+        <img src="/img/TS-actinf.svg" alt="" class="ts-features__icon" />
+        <div class="ts-features__body">
+          <h3 class="ts-features__name">Всегда актуальная информация</h3>
+          <p class="ts-features__desc">Ежедневное автоматическое обновление системы&nbsp;&mdash; вы&nbsp;всегда получаете свежие документы и&nbsp;изменения в&nbsp;законодательстве</p>
+        </div>
+      </div>
+      <div class="ts-features__card reveal reveal--delay-2">
+        <img src="/img/TS-reshpr.svg" alt="" class="ts-features__icon" />
+        <div class="ts-features__body">
+          <h3 class="ts-features__name">Быстрое решение проблем</h3>
+          <p class="ts-features__desc">Оперативное удалённое подключение, диагностика проблемы и&nbsp;восстановление системы&nbsp;&mdash; без&nbsp;необходимости вашего участия</p>
+        </div>
+      </div>
+      <div class="ts-features__card reveal reveal--delay-3">
+        <img src="/img/TS-servobsl.svg" alt="" class="ts-features__icon" />
+        <div class="ts-features__body">
+          <h3 class="ts-features__name">Комплексное обслуживание</h3>
+          <p class="ts-features__desc">Установка, настройка, модификации, замена информационных банков&nbsp;&mdash; вы&nbsp;просто работаете, а&nbsp;мы&nbsp;берём все технические вопросы на&nbsp;себя</p>
+        </div>
+      </div>
+      <div class="ts-features__card reveal reveal--delay-4">
+        <img src="/img/TS-bezopasn.svg" alt="" class="ts-features__icon" />
+        <div class="ts-features__body">
+          <h3 class="ts-features__name">С&nbsp;заботой о&nbsp;безопасности</h3>
+          <p class="ts-features__desc">Подключение к&nbsp;ПК только с&nbsp;вашего разрешения, многоуровневая защита данных и&nbsp;ежедневный мониторинг работоспособности системы</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ====== КАК ОБРАТИТЬСЯ В ТЕХПОДДЕРЖКУ ====== -->
+<!-- Битрикс: включаемая область или custom component -->
+<section class="ts-howto reveal">
+  <div class="ts-howto__inner">
+    <h2 class="ts-howto__title">Как обратиться в&nbsp;техническую поддержку</h2>
+
+    <div class="ts-howto__body">
+      <div class="ts-howto__left">
+        <div class="ts-howto__screenshot-wrap">
+          <img src="/img/TS-kak-obrat.png" alt="Скриншот — онлайн-чат в личном кабинете ЧДК-Онлайн" class="ts-howto__screenshot" loading="lazy" />
+        </div>
+        <p class="ts-howto__caption">При помощи онлайн-чата в&nbsp;личном кабинете ЧДК-Онлайн</p>
+      </div>
+
+      <div class="ts-howto__right">
+        <div class="ts-howto__feature reveal reveal--delay-1">
+          <div class="ts-howto__feature-circle ts-howto__feature-circle--purple">
+            <img src="/img/check-circle.svg" alt="" />
+          </div>
+          <span class="ts-howto__feature-text">В&nbsp;личном кабинете ЧДК-Онлайн</span>
+        </div>
+        <div class="ts-howto__feature reveal reveal--delay-2">
+          <div class="ts-howto__feature-circle ts-howto__feature-circle--orange">
+            <img src="/img/check-circle.svg" alt="" />
+          </div>
+          <span class="ts-howto__feature-text">Через персонального менеджера</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ====== БЕСПЛАТНЫЙ ДОСТУП ====== -->
+<!-- Битрикс: bitrix:form.result.new, form_id="trial-ts" -->
+<section class="trial reveal" id="ts-form">
+  <div class="trial__inner">
+    <div class="trial__card">
+      <div class="trial__left">
+        <h2 class="trial__title">
+          Получите бесплатный <span class="trial__title--orange">пробный доступ</span> и&nbsp;откройте все возможности системы <span class="trial__title--orange">КонсультантПлюс</span>
+        </h2>
+
+        <div class="trial__features">
+          <div class="trial__feature trial__feature--orange">
+            <div class="trial__feature-icon">
+              <img src="/img/logo-consultant-crop.svg" alt="" />
+            </div>
+            <div class="trial__feature-info">
+              <span class="trial__feature-name">Система КонсультантПлюс</span>
+              <span class="trial__feature-desc">Полный доступ на 2 дня</span>
+            </div>
+          </div>
+
+          <div class="trial__feature trial__feature--purple">
+            <div class="trial__feature-icon">
+              <img src="/img/lk-icon-big.svg" alt="" />
+            </div>
+            <div class="trial__feature-info">
+              <span class="trial__feature-name">Личный кабинет ЧДК-Онлайн</span>
+              <span class="trial__feature-desc">Эксклюзивный сервис для клиентов</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="trial__right">
+        <form class="trial__form js-lead-form" action="/api/lead.php" method="POST" novalidate data-form-id="trial-ts" data-thanks="/thanks.html">
+          <input type="text" name="name" class="trial__input" placeholder="Ваше Имя" />
+          <p class="form-field-error hidden" data-error-for="name"></p>
+          <div class="trial__row">
+            <input type="tel" name="phone" class="trial__input mask-phone" placeholder="+7 (9__) ___-__-__" required />
+            <input type="email" name="email" class="trial__input" placeholder="Электронная почта" />
+          </div>
+          <p class="form-field-error hidden" data-error-for="phone"></p>
+          <label class="trial__checkbox">
+            <input type="checkbox" name="consent" required />
+            <span>Я ознакомлен с <a href="/polzovatelskoe_soglashenie.php" class="trial__policy-link">политикой конфиденциальности</a> и&nbsp;даю согласие на&nbsp;обработку персональных данных</span>
+          </label>
+          <p class="form-field-error hidden" data-error-for="consent"></p>
+          <div class="form-error-box hidden" data-form-error></div>
+          <div class="form-success-box hidden" data-form-success></div>
+          <input type="hidden" name="form_id" value="trial-ts" />
+          <input type="hidden" name="page" value="/tech-support.html" />
+          <input type="hidden" name="fill_time_ms" value="" />
+          <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <button type="submit" class="trial__submit">Попробовать бесплатно</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<?php include 'includes/footer.php'; ?>
+
+<?php $suffix = '-ts'; $page = '/tech-support.html'; include 'includes/modals.php'; ?>
+
+<script type="module" src="./js/main.js"></script>
+</body>
+</html>

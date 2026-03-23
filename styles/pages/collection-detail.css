@@ -1,0 +1,508 @@
+/* =====================================================
+   СТРАНИЦА «ДЕТАЛЬНАЯ СБОРНИКА»
+   Все блоки через CSS Custom Properties
+   Готово для нарезки на Битрикс-компоненты
+   ===================================================== */
+
+
+/* ====================================================
+   HERO (.cd-hero)
+   Фиолетовый градиент + обложка сборника справа
+   ==================================================== */
+.cd-hero {
+  padding: 20px var(--side-padding) 0;
+}
+
+.cd-hero__inner {
+  max-width: calc(var(--container-max) - 2 * var(--side-padding));
+  margin: 0 auto;
+  background: linear-gradient(135deg, #6263A5 0%, #8A8CEB 100%);
+  border-radius: 40px;
+  display: flex;
+  align-items: stretch;
+  overflow: hidden;
+  min-height: 506px;
+  position: relative;
+}
+
+.cd-hero__inner::before {
+  content: '';
+  position: absolute;
+  right: 20%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 840px;
+  height: 740px;
+  background: url('/img/hero-chdk-watermark-white.svg') no-repeat center / contain;
+  opacity: 0.18;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.cd-hero__content {
+  flex: 0 0 52%;
+  min-width: 0;
+  padding: 80px 40px 60px 58px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  z-index: 1;
+}
+
+.cd-hero__title {
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 1.21;
+  color: var(--color-white);
+  margin-bottom: 24px;
+}
+
+.cd-hero__text {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.19;
+  color: var(--color-white);
+  max-width: 560px;
+  margin-bottom: 12px;
+}
+
+.cd-hero__subtext {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 560px;
+  margin-bottom: 40px;
+}
+
+.cd-hero__btn {
+  align-self: flex-start;
+}
+
+.cd-hero__visual {
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+  overflow: visible;
+  z-index: 1;
+}
+
+.cd-hero__img {
+  max-width: 480px;
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.25));
+}
+
+.cd-hero__shadow {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 30px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.18) 0%, transparent 70%);
+  z-index: 0;
+}
+
+
+/* ====================================================
+   ХЛЕБНЫЕ КРОШКИ (.breadcrumbs)
+   ==================================================== */
+.breadcrumbs {
+  padding: 24px var(--side-padding) 0;
+}
+
+.breadcrumbs__inner {
+  max-width: calc(var(--container-max) - 2 * var(--side-padding));
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.breadcrumbs__link {
+  color: var(--color-black);
+  opacity: 0.8;
+  text-decoration: none;
+  transition: color var(--transition-base);
+}
+
+.breadcrumbs__link:hover {
+  color: var(--color-primary);
+}
+
+.breadcrumbs__sep {
+  color: var(--color-black);
+  opacity: 0.5;
+}
+
+.breadcrumbs__current {
+  color: var(--color-secondary);
+  font-weight: 600;
+}
+
+
+/* ====================================================
+   ЧТО ВХОДИТ В СБОРНИК (.cd-contents)
+   White BG with faint watermark, 2 columns
+   ==================================================== */
+.cd-contents {
+  padding: 80px var(--side-padding) 0;
+}
+
+.cd-contents__inner {
+  max-width: calc(var(--container-max) - 2 * var(--side-padding));
+  margin: 0 auto;
+  background: var(--color-white);
+  border-radius: 40px;
+  padding: 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cd-contents__inner::before {
+  content: '';
+  position: absolute;
+  right: -5%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 500px;
+  height: 440px;
+  background: url('/img/hero-chdk-watermark-white.svg') no-repeat center / contain;
+  opacity: 0.07;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.cd-contents__title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.2;
+  color: var(--color-black);
+  margin-bottom: 48px;
+  position: relative;
+  z-index: 1;
+}
+
+.cd-contents__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 60px;
+  position: relative;
+  z-index: 1;
+}
+
+.cd-contents__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 24px 0;
+}
+
+.cd-contents__num {
+  flex-shrink: 0;
+  width: 68px;
+  height: 68px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 28px;
+  background: var(--color-gray-light);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.cd-contents__num--purple {
+  color: var(--color-secondary);
+}
+
+.cd-contents__num--orange {
+  color: var(--color-primary);
+}
+
+.cd-contents__text {
+  font-size: 18px;
+  line-height: 1.45;
+  color: var(--color-black);
+  padding-top: 12px;
+}
+
+
+/* ====================================================
+   КОМУ НЕОБХОДИМ (.cd-audience)
+   Фиолетовый фон, 2×2 grid белых карточек
+   ==================================================== */
+.cd-audience {
+  padding: 80px var(--side-padding) 0;
+}
+
+.cd-audience__inner {
+  max-width: calc(var(--container-max) - 2 * var(--side-padding));
+  margin: 0 auto;
+  background: var(--color-secondary);
+  border-radius: 40px;
+  padding: 60px;
+}
+
+.cd-audience__title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.2;
+  color: var(--color-white);
+  margin-bottom: 48px;
+}
+
+.cd-audience__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.cd-audience__card {
+  background: var(--color-white);
+  border-radius: 40px;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: transform var(--transition-card), box-shadow var(--transition-card);
+}
+
+.cd-audience__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+}
+
+.cd-audience__icon {
+  width: 40px;
+  height: 40px;
+}
+
+.cd-audience__body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cd-audience__name {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.19;
+  color: var(--color-black);
+}
+
+.cd-audience__desc {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.18;
+  color: var(--color-black);
+}
+
+
+/* ====================================================
+   ТАКЖЕ МОГУТ ПРИГОДИТЬСЯ (.cd-related)
+   Reuses .col-card styles from collections.css
+   ==================================================== */
+.cd-related {
+  padding: 80px var(--side-padding) 80px;
+}
+
+.cd-related__inner {
+  max-width: calc(var(--container-max) - 2 * var(--side-padding));
+  margin: 0 auto;
+}
+
+.cd-related__title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.2;
+  color: var(--color-black);
+  margin-bottom: 48px;
+}
+
+
+/* ====================================================
+   RESPONSIVE
+   ==================================================== */
+@media (max-width: 1024px) {
+  .cd-hero__inner {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .cd-hero__content {
+    flex: none;
+    padding: 48px 32px;
+  }
+
+  .cd-hero__title {
+    font-size: 36px;
+  }
+
+  .cd-hero__visual {
+    padding: 0 32px 0;
+  }
+
+  .cd-hero__img {
+    max-width: 360px;
+  }
+
+  .cd-contents__inner {
+    padding: 40px 32px;
+  }
+
+  .cd-contents__title {
+    font-size: 32px;
+  }
+
+  .cd-contents__grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .cd-audience__inner {
+    padding: 40px 32px;
+  }
+
+  .cd-audience__title {
+    font-size: 32px;
+  }
+
+  .cd-audience__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cd-related__title {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cd-hero__content {
+    padding: 36px 20px;
+  }
+
+  .cd-hero__title {
+    font-size: 28px;
+  }
+
+  .cd-hero__text {
+    font-size: 17px;
+  }
+
+  .cd-hero__visual {
+    padding: 0 20px 0;
+  }
+
+  .cd-hero__img {
+    max-width: 280px;
+  }
+
+  .cd-hero__inner::before {
+    width: 400px;
+    height: 350px;
+    right: -20%;
+    opacity: 0.12;
+  }
+
+  .breadcrumbs {
+    padding-top: 16px;
+  }
+
+  .breadcrumbs__inner {
+    flex-wrap: wrap;
+  }
+
+  .cd-contents {
+    padding-top: 48px;
+  }
+
+  .cd-contents__inner {
+    padding: 28px 20px;
+    border-radius: 24px;
+  }
+
+  .cd-contents__title {
+    font-size: 26px;
+    margin-bottom: 32px;
+  }
+
+  .cd-contents__num {
+    width: 44px;
+    height: 44px;
+    font-size: 20px;
+  }
+
+  .cd-contents__text {
+    font-size: 16px;
+    padding-top: 8px;
+  }
+
+  .cd-audience {
+    padding-top: 48px;
+  }
+
+  .cd-audience__inner {
+    padding: 28px 20px;
+    border-radius: 24px;
+  }
+
+  .cd-audience__title {
+    font-size: 26px;
+    margin-bottom: 32px;
+  }
+
+  .cd-audience__card {
+    padding: 30px 20px;
+    border-radius: 24px;
+  }
+
+  .cd-audience__name {
+    font-size: 20px;
+  }
+
+  .cd-audience__desc {
+    font-size: 16px;
+  }
+
+  .cd-related {
+    padding: 48px var(--side-padding) 48px;
+  }
+
+  .cd-related__title {
+    font-size: 26px;
+    margin-bottom: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cd-hero__title {
+    font-size: 24px;
+  }
+
+  .cd-hero__text {
+    font-size: 16px;
+  }
+
+  .cd-hero__subtext {
+    font-size: 14px;
+  }
+
+  .cd-contents__title,
+  .cd-audience__title,
+  .cd-related__title {
+    font-size: 22px;
+  }
+}

@@ -1,0 +1,299 @@
+/* =====================================================
+   СТРАНИЦА «О СПС КОНСУЛЬТАНТПЛЮС»
+   Все блоки через CSS Custom Properties
+   Готово для нарезки на Битрикс-компоненты
+   ===================================================== */
+
+
+/* ====================================================
+   HERO (.sps-hero)
+   Оранжевый градиент + изображение справа
+   ==================================================== */
+.sps-hero {
+  padding: 20px var(--side-padding) 0;
+}
+
+.sps-hero__inner {
+  max-width: calc(var(--container-max) - 2 * var(--side-padding));
+  margin: 0 auto;
+  background: linear-gradient(56deg, var(--color-bg-orange) 0%, var(--color-bg-orange-deep) 99%);
+  border-radius: 40px;
+  display: flex;
+  align-items: stretch;
+  overflow: hidden;
+  min-height: 506px;
+  position: relative;
+}
+
+.sps-hero__inner::before {
+  content: '';
+  position: absolute;
+  right: 20%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 840px;
+  height: 740px;
+  background: url('/img/hero-chdk-watermark-white.svg') no-repeat center / contain;
+  opacity: 0.28;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.sps-hero__content {
+  flex: 0 0 50%;
+  min-width: 0;
+  padding: 80px 40px 60px 58px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  z-index: 1;
+}
+
+.sps-hero__title {
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 1.21;
+  color: var(--color-black);
+  margin-bottom: 24px;
+}
+
+.sps-hero__title-accent {
+  color: var(--color-secondary);
+}
+
+.sps-hero__text {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.19;
+  color: var(--color-black);
+  max-width: 617px;
+  margin-bottom: 12px;
+}
+
+.sps-hero__subtext {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-black);
+  max-width: 617px;
+  margin-bottom: 40px;
+}
+
+.sps-hero__buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.sps-hero__btn--outline {
+  background: var(--color-white);
+  color: var(--color-secondary);
+  font-weight: 600;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-size: 16px;
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.sps-hero__btn--outline:hover {
+  background: var(--color-secondary);
+  color: var(--color-white);
+}
+
+.sps-hero__visual {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  overflow: visible;
+  z-index: 1;
+  padding-right: 0;
+}
+
+.sps-hero__img {
+  max-width: 520px;
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(0 16px 32px rgba(0, 0, 0, 0.2));
+}
+
+
+/* ====================================================
+   ВОЗМОЖНОСТИ (.sps-features)
+   6 белых карточек в сетке 3×2 с тенью
+   ==================================================== */
+.sps-features {
+  padding: 80px var(--side-padding) 0;
+}
+
+.sps-features__inner {
+  max-width: calc(var(--container-max) - 2 * var(--side-padding));
+  margin: 0 auto;
+}
+
+.sps-features__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.sps-features__card {
+  background: var(--color-white);
+  border-radius: 40px;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 1px 5px 12px rgba(0, 0, 0, 0.08);
+  transition: transform var(--transition-card), box-shadow var(--transition-card);
+  text-decoration: none;
+  color: inherit;
+}
+
+.sps-features__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.16);
+}
+
+.sps-features__icon {
+  width: 40px;
+  height: 40px;
+}
+
+.sps-features__body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sps-features__name {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.19;
+  color: var(--color-black);
+  text-transform: uppercase;
+}
+
+.sps-features__desc {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.18;
+  color: var(--color-black);
+}
+
+
+/* ====================================================
+   RESPONSIVE
+   ==================================================== */
+@media (max-width: 1200px) {
+  .sps-features__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 1024px) {
+  .sps-hero__inner {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .sps-hero__content {
+    flex: none;
+    padding: 48px 32px;
+  }
+
+  .sps-hero__title {
+    font-size: 36px;
+  }
+
+  .sps-hero__visual {
+    padding: 0 32px 0;
+  }
+
+  .sps-hero__img {
+    max-width: 360px;
+  }
+
+  .sps-features__name {
+    font-size: 20px;
+  }
+
+  .sps-features__desc {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sps-hero__content {
+    padding: 36px 20px;
+  }
+
+  .sps-hero__title {
+    font-size: 28px;
+  }
+
+  .sps-hero__text {
+    font-size: 17px;
+  }
+
+  .sps-hero__visual {
+    padding: 0 20px 0;
+  }
+
+  .sps-hero__img {
+    max-width: 280px;
+  }
+
+  .sps-hero__inner::before {
+    width: 400px;
+    height: 350px;
+    right: -20%;
+    opacity: 0.16;
+  }
+
+  .sps-features {
+    padding-top: 48px;
+  }
+
+  .sps-features__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sps-features__card {
+    border-radius: 24px;
+    padding: 28px 20px;
+  }
+
+  .sps-features__name {
+    font-size: 18px;
+  }
+
+  .sps-features__desc {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sps-hero__title {
+    font-size: 24px;
+  }
+
+  .sps-hero__text {
+    font-size: 16px;
+  }
+
+  .sps-hero__subtext {
+    font-size: 14px;
+  }
+
+  .sps-hero__buttons {
+    flex-direction: column;
+  }
+}

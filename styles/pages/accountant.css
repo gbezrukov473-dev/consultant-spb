@@ -1,0 +1,664 @@
+/* =====================================================
+   СТРАНИЦА «КОНСУЛЬТАНТПЛЮС ДЛЯ БУХГАЛТЕРА»
+   Все блоки через CSS Custom Properties
+   Готово для нарезки на Битрикс-компоненты
+   ===================================================== */
+
+
+/* ====================================================
+   HERO (.acc-hero)
+   Оранжевый градиент + изображение справа
+   ==================================================== */
+   .acc-hero {
+    padding: 20px var(--side-padding) 0;
+  }
+  
+  .acc-hero__inner {
+    max-width: calc(var(--container-max) - 2 * var(--side-padding));
+    margin: 0 auto;
+    background: linear-gradient(56deg, var(--color-bg-orange) 0%, var(--color-bg-orange-deep) 99%);
+    border-radius: 40px;
+    display: flex;
+    align-items: stretch;
+    overflow: hidden;
+    min-height: 506px;
+    position: relative;
+  }
+  
+  .acc-hero__inner::before {
+    content: '';
+    position: absolute;
+    right: 20%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 840px;
+    height: 740px;
+    background: url('/img/hero-chdk-watermark-white.svg') no-repeat center / contain;
+    opacity: 0.28;
+    pointer-events: none;
+    z-index: 0;
+  }
+  
+  .acc-hero__content {
+    flex: 0 0 50%;
+    min-width: 0;
+    padding: 80px 40px 60px 58px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .acc-hero__title {
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 1.21;
+    color: var(--color-black);
+    margin-bottom: 24px;
+  }
+  
+  .acc-hero__title-accent {
+    color: var(--color-secondary);
+  }
+  
+  .acc-hero__text {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.19;
+    color: var(--color-black);
+    max-width: 617px;
+    margin-bottom: 12px;
+  }
+  
+  .acc-hero__subtext {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--color-black);
+    max-width: 617px;
+    margin-bottom: 40px;
+  }
+  
+  .acc-hero__buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  
+  .acc-hero__btn--outline {
+    background: var(--color-bg-purple);
+    color: var(--color-secondary);
+    font-weight: 600;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 12px;
+    font-size: 16px;
+    transition: background var(--transition-fast), color var(--transition-fast);
+  }
+  
+  .acc-hero__btn--outline:hover {
+    background: var(--color-secondary);
+    color: var(--color-white);
+  }
+  
+  .acc-hero__visual {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    overflow: visible;
+    z-index: 1;
+    padding-right: 20px;
+  }
+  
+  .acc-hero__img {
+    max-width: 320px;
+    width: 100%;
+    height: auto;
+    display: block;
+    position: relative;
+    z-index: 1;
+    filter: drop-shadow(0 16px 32px rgba(0, 0, 0, 0.15));
+    margin-right: 100px;
+  }
+  
+  
+  /* ====================================================
+     ТОП-6 ПРИЧИН (.acc-reasons)
+     3×2 карточки: иконка + текст
+     ==================================================== */
+  .acc-reasons {
+    padding: 80px var(--side-padding) 80px;
+  }
+  
+  .acc-reasons__inner {
+    max-width: calc(var(--container-max) - 2 * var(--side-padding));
+    margin: 0 auto;
+  }
+  
+  .acc-reasons__title {
+    font-weight: 600;
+    font-size: clamp(28px, 2vw + 10px, 36px);
+    line-height: 1.19;
+    color: var(--color-black);
+    margin-bottom: 48px;
+  }
+  
+  .acc-reasons__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .acc-reasons__card {
+    background: var(--color-white);
+    border-radius: 24px;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 20px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+    transition: transform var(--transition-card), box-shadow var(--transition-card);
+  }
+  
+  .acc-reasons__card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.14);
+  }
+  
+  .acc-reasons__icon {
+    width: 48px;
+    height: 48px;
+  }
+  
+  .acc-reasons__text {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.4;
+    color: var(--color-black);
+  }
+  
+  .acc-reasons__accent {
+    font-weight: 600;
+  }
+  
+  .acc-reasons__accent--purple {
+    color: var(--color-secondary);
+  }
+  
+  .acc-reasons__accent--orange {
+    color: var(--color-primary);
+  }
+  
+  
+  /* ====================================================
+     СРАВНЕНИЕ КОМПЛЕКТОВ (.acc-compare)
+     Аккордеон-карточка: шапка + раскрывающиеся секции
+     ==================================================== */
+  .acc-compare {
+    padding: 80px var(--side-padding) 0;
+  }
+  
+  .acc-compare__inner {
+    max-width: calc(var(--container-max) - 2 * var(--side-padding));
+    margin: 0 auto;
+  }
+  
+  .acc-compare__title {
+    font-weight: 600;
+    font-size: clamp(28px, 2vw + 10px, 36px);
+    line-height: 1.19;
+    color: var(--color-black);
+    margin-bottom: 32px;
+  }
+  
+  .acc-compare__box {
+    border: 1px solid var(--color-gray);
+    border-radius: var(--radius-card);
+    overflow: hidden;
+  }
+  
+  /* --- Шапка таблицы (3 колонки) --- */
+  .acc-compare__head {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    padding: 28px 32px;
+    gap: 16px;
+  }
+  
+  .acc-compare__head-label {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.3;
+    color: var(--color-black);
+  }
+  
+  .acc-compare__head-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    text-align: center;
+  }
+  
+  .acc-compare__head-name {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.3;
+    color: var(--color-secondary);
+  }
+  
+  .acc-compare__head-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-primary);
+    color: var(--color-white);
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 14px;
+    padding: 10px 24px;
+    border-radius: var(--radius-btn);
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background var(--transition-fast), color var(--transition-fast);
+  }
+  
+  .acc-compare__head-btn:hover {
+    background: var(--color-secondary);
+    color: var(--color-white);
+  }
+  
+  /* --- Секция аккордеона --- */
+  .acc-compare__section {
+    border-top: 1px solid var(--color-gray);
+  }
+  
+  .acc-compare__section-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 18px 32px;
+    background: var(--color-gray-bg);
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-family);
+    transition: background var(--transition-fast);
+  }
+  
+  .acc-compare__section-btn:hover {
+    background: var(--color-bg-purple);
+  }
+  
+  .acc-compare__section.is-open .acc-compare__section-btn {
+    background: var(--color-secondary);
+  }
+  
+  .acc-compare__section-name {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.3;
+    color: var(--color-black);
+  }
+  
+  .acc-compare__section.is-open .acc-compare__section-name {
+    color: var(--color-white);
+  }
+  
+  .acc-compare__chevron {
+    width: 12px;
+    height: 7px;
+    flex-shrink: 0;
+    color: var(--color-text-muted);
+    transition: transform var(--transition-base);
+  }
+  
+  .acc-compare__section.is-open .acc-compare__chevron {
+    transform: rotate(180deg);
+    color: var(--color-white);
+  }
+  
+  /* --- Тело секции (строки) --- */
+  .acc-compare__section-body {
+    display: none;
+  }
+  
+  .acc-compare__section.is-open .acc-compare__section-body {
+    display: block;
+  }
+  
+  .acc-compare__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    padding: 16px 32px;
+    gap: 16px;
+  }
+  
+  .acc-compare__row--alt {
+    background: var(--color-bg-purple);
+  }
+  
+  .acc-compare__row-label {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.4;
+    color: var(--color-black);
+    padding-left: 16px;
+  }
+  
+  .acc-compare__row-cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .acc-compare__icon {
+    width: 24px;
+    height: 24px;
+  }
+  
+  
+  /* ====================================================
+     СПЕЦПРЕДЛОЖЕНИЕ (.acc-offer)
+     Оранжевый градиент + изображение справа
+     ==================================================== */
+  .acc-offer {
+    padding: 80px var(--side-padding) 0;
+  }
+  
+  .acc-offer__inner {
+    max-width: calc(var(--container-max) - 2 * var(--side-padding));
+    margin: 0 auto;
+    background: linear-gradient(56deg, var(--color-bg-orange) 0%, var(--color-bg-orange-deep) 100%);
+    border-radius: 40px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: stretch;
+    min-height: 260px;
+  }
+  
+  .acc-offer__content {
+    position: relative;
+    z-index: 1;
+    padding: 48px 40px 48px 58px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex: 0 0 55%;
+  }
+  
+  .acc-offer__title {
+    font-weight: 500;
+    font-size: clamp(24px, 3.3vw, 48px);
+    line-height: 1.15;
+    color: var(--color-black);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  
+  .acc-offer__badge {
+    display: inline-block;
+    background: var(--color-white);
+    color: var(--color-secondary);
+    font-weight: 700;
+    font-size: 22px;
+    text-transform: uppercase;
+    padding: 10px 28px;
+    border-radius: 64px;
+    transform: rotate(-3.45deg);
+    margin-bottom: 16px;
+  }
+  
+  .acc-offer__row {
+    margin-top: 8px;
+  }
+  
+  .acc-offer__btn {
+    transition: background var(--transition-fast), color var(--transition-fast);
+  }
+  
+  .acc-offer__image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    z-index: 1;
+    padding-right: 20px;
+  }
+  
+  .acc-offer__img {
+    max-width: 320px;
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.15));
+  }
+  
+  
+  /* ====================================================
+     RESPONSIVE
+     ==================================================== */
+  @media (max-width: 1024px) {
+    .acc-hero__inner {
+      flex-direction: column;
+      min-height: auto;
+    }
+  
+    .acc-hero__content {
+      flex: none;
+      padding: 48px 32px;
+    }
+  
+    .acc-hero__title {
+      font-size: 36px;
+    }
+  
+    .acc-hero__visual {
+      padding: 0 32px 0;
+    }
+  
+    .acc-hero__img {
+      max-width: 260px;
+      margin-right: 0;
+    }
+  
+    .acc-reasons__grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  
+    .acc-offer__inner {
+      flex-direction: column;
+      min-height: auto;
+    }
+  
+    .acc-offer__content {
+      flex: none;
+      padding: 40px 32px;
+    }
+  
+    .acc-offer__image {
+      padding: 0 32px 32px;
+      justify-content: center;
+    }
+  
+    .acc-offer__img {
+      max-width: 260px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .acc-hero__content {
+      padding: 36px 20px;
+    }
+  
+    .acc-hero__title {
+      font-size: 28px;
+    }
+  
+    .acc-hero__text {
+      font-size: 17px;
+    }
+  
+    .acc-hero__visual {
+      padding: 0 20px 0;
+    }
+  
+    .acc-hero__img {
+      max-width: 220px;
+      margin-right: 0;
+    }
+  
+    .acc-hero__inner::before {
+      width: 400px;
+      height: 350px;
+      right: -20%;
+      opacity: 0.16;
+    }
+  
+    .acc-reasons {
+      padding-top: 48px;
+    }
+  
+    .acc-reasons__grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .acc-reasons__card {
+      border-radius: 20px;
+      padding: 28px 24px;
+    }
+  
+    .acc-compare {
+      padding-top: 48px;
+    }
+  
+    .acc-compare__head {
+      grid-template-columns: 1fr;
+      gap: 20px;
+      text-align: center;
+    }
+  
+    .acc-compare__head-label {
+      display: none;
+    }
+  
+    .acc-compare__head-col {
+      flex-direction: row;
+      justify-content: center;
+      gap: 16px;
+    }
+  
+    .acc-compare__row {
+      grid-template-columns: 1fr 1fr 1fr;
+      padding: 14px 16px;
+      gap: 8px;
+    }
+  
+    .acc-compare__row-label {
+      font-size: 13px;
+      padding-left: 0;
+    }
+  
+    .acc-compare__section-btn {
+      padding: 16px 16px;
+    }
+  
+    .acc-compare__section-name {
+      font-size: 15px;
+    }
+  
+    .acc-offer {
+      padding-top: 48px;
+    }
+  
+    .acc-offer__inner {
+      border-radius: 24px;
+    }
+  
+    .acc-offer__title {
+      font-size: 24px;
+    }
+  
+    .acc-offer__badge {
+      font-size: 16px;
+      padding: 8px 20px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .acc-compare__head {
+      padding: 20px 16px;
+    }
+  
+    .acc-compare__head-col {
+      flex-direction: column;
+      gap: 8px;
+    }
+  
+    .acc-compare__head-name {
+      font-size: 14px;
+    }
+  
+    .acc-compare__head-btn {
+      font-size: 12px;
+      padding: 8px 16px;
+    }
+  
+    .acc-compare__row {
+      grid-template-columns: 1.4fr 1fr 1fr;
+      padding: 12px 12px;
+      gap: 4px;
+    }
+  
+    .acc-compare__row-label {
+      font-size: 12px;
+    }
+  
+    .acc-compare__icon {
+      width: 18px;
+      height: 18px;
+    }
+  
+    .acc-compare__section-btn {
+      padding: 14px 12px;
+    }
+  
+    .acc-compare__section-name {
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .acc-hero__title {
+      font-size: 24px;
+    }
+  
+    .acc-hero__text {
+      font-size: 16px;
+    }
+  
+    .acc-hero__subtext {
+      font-size: 14px;
+    }
+  
+    .acc-hero__buttons {
+      flex-direction: column;
+    }
+  
+    .acc-offer__title {
+      font-size: 20px;
+    }
+  }
