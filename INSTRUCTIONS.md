@@ -28,6 +28,10 @@ consultant-spb/
 ├── about-sps.html                # Страница «О СПС КонсультантПлюс»
 ├── ai-assistant.html             # Страница «ИИ-помощник»
 ├── accountant.html               # Страница «КонсультантПлюс для бухгалтера»
+├── lawyer.html                   # «КонсультантПлюс для юриста»
+├── manager.html                  # «КонсультантПлюс для руководителя»
+├── budget.html                   # «КонсультантПлюс для бюджетной организации»
+├── hr.html                       # «КонсультантПлюс для кадрового специалиста»
 ├── thanks.html                   # Страница «Спасибо» (в разработке)
 ├── includes/
 │   ├── header.php                # PHP-шаблон шапки (переиспользуется на всех страницах)
@@ -54,7 +58,8 @@ consultant-spb/
 │       ├── services.css          # Стили страницы «Сервис ЧДК-Право»: sv-hero, sv-chdk (переиспользует .chdk из blocks.css), sv-lk (фиолетовый градиент)
 │       ├── about-sps.css         # Стили страницы «О СПС КонсультантПлюс»: sps-hero (оранжевый градиент, 2 кнопки), sps-features (3×2 белые карточки с тенью) (форма — блок .trial)
 │       ├── ai-assistant.css      # Стили страницы «ИИ-помощник»: aip-hero, aip-features (фиолетовый фон, 2×2), aip-howto (скриншот + 3 шага), trial--aip (заголовок формы с жёлтым акцентом)
-│       └── accountant.css       # Стили страницы «Бухгалтеру»: acc-hero, acc-reasons (3×2 иконки), acc-compare (таблица сравнения), acc-offer (фиолетовый баннер). Реиспользует .tp-banner (trial.css) и .chdk (blocks.css)
+│       ├── accountant.css       # Стили страницы «Бухгалтеру»: acc-hero, acc-reasons (3×2 иконки), acc-compare (таблица сравнения), acc-offer. Реиспользует .tp-banner (trial.css) и .chdk (blocks.css)
+│       └── system-pages.css     # Доп. к accountant: hero с фоновым изображением; сравнение на 4 колонки (3 тарифа) для юрист/руководитель/бюджет
 ├── js/
 │   ├── main.js                   # Точка входа: импорты, бургер, dropdown, scroll reveal, карусель
 │   ├── buy-tabs.js               # Табы готовых комплектов (страница «Купить»)
@@ -205,6 +210,10 @@ Figma: `https://www.figma.com/design/GFmp5kaM7zrQtRMRTzlzYO/СПБКонс`
 | Личный кабинет ЧДК-Онлайн | `lk-online.html` | `/services/chto-delat-onlayn/` | Готова |
 | Сервис ЧДК-Право (агрегатор) | `services.html` | `/services/` | Готова |
 | КонсультантПлюс для бухгалтера | `accountant.html` | `/systems/bukhgalteru/` | Готова |
+| КонсультантПлюс для юриста | `lawyer.html` | `/systems/yuristu/` | Готова |
+| КонсультантПлюс для руководителя | `manager.html` | `/systems/rukovoditelyu/` | Готова |
+| КонсультантПлюс для бюджетной организации | `budget.html` | `/systems/byudzhetnoy-organizatsii/` | Готова |
+| КонсультантПлюс для кадрового специалиста | `hr.html` | (раздел «Кадровику») | Готова |
 | О СПС КонсультантПлюс | `about-sps.html` | `/o-sisteme-konsultantplyus/` | Готова |
 | ИИ-помощник | `ai-assistant.html` | `/o-sisteme-konsultantplyus/ii-pomoshchnik/` | Готова |
 | Спасибо (после формы) | `thanks.html` | `/thanks.html` | В разработке |
@@ -217,9 +226,10 @@ Figma-проект: `GFmp5kaM7zrQtRMRTzlzYO` (СПБКонс)
 |----------|---------------|------------|----------------|
 | Системы КонсультантПлюс | `/systems/` | `936-3331` | Баннер (Попап 1), выбор профиля с фильтрами, 12 комплектов (кнопки «Узнать цену» → Попап 4 + скрытый коммент.) |
 | ~~Бухгалтеру~~ | `/systems/bukhgalteru/` | `694-803` (файл `TWwPbEFDkWDFdJY0mVU40H`) | **Свёрстана** → `accountant.html` |
-| Юристу | `/systems/yuristu/` | — | Аналогична Руководителю |
-| Руководителю | `/systems/rukovoditelyu/` | `850-1901` | Баннер (Попап 1 + Попап 2), причины купить, пробный доступ (Попап 2), сравнение комплектов (Попап 1), сервис ЧДК (Попап 4), спецпредложение (Попап 1) |
-| Бюджету | `/systems/byudzhetnoy-organizatsii/` | `887-2696` | Аналогична Руководителю |
+| ~~Юристу~~ | `/systems/yuristu/` | — | **Свёрстана** → `lawyer.html` |
+| ~~Руководителю~~ | `/systems/rukovoditelyu/` | `850-1901` | **Свёрстана** → `manager.html` |
+| ~~Бюджету~~ | `/systems/byudzhetnoy-organizatsii/` | `887-2696` | **Свёрстана** → `budget.html` |
+| ~~Кадровику~~ | — | — | **Свёрстана** → `hr.html` |
 | О СПС КонсультантПлюс | `/o-sisteme-konsultantplyus/` | `1357-6769` | Баннер (Попап 1 + Попап 2), состав системы (6 мини-блоков с ссылками), пробный доступ (inline-форма `inline/5/gd9kwc`) |
 | ~~ИИ-помощник~~ | `/o-sisteme-konsultantplyus/ii-pomoshchnik-konsultant-plyus/` | `1350-6256` | **Свёрстана** → `ai-assistant.html`. Макет в Figma: файл `RicIF4xm6tmV9vYnQrtbjN` (узел `1350-6256`; ранее `SMGbLwQ1O7mBeZfpsDwCQs`) |
 | ~~Сервис ЧДК-Право (агрегатор)~~ | `/services/` | `1384-8016` | **Свёрстана** → `services.html` |
@@ -281,10 +291,11 @@ Figma-проект: `GFmp5kaM7zrQtRMRTzlzYO` (СПБКонс)
 
 | Пункт | URL |
 |-------|-----|
-| Бухгалтеру | `/systems/bukhgalteru/` |
-| Юристу | `/systems/yuristu/` |
-| Руководителю | `/systems/rukovoditelyu/` |
-| Бюджету | `/systems/byudzhetnoy-organizatsii/` |
+| Бухгалтеру | `/accountant.html` → Битрикс: `/systems/bukhgalteru/` |
+| Юристу | `/lawyer.html` → Битрикс: `/systems/yuristu/` |
+| Руководителю | `/manager.html` → Битрикс: `/systems/rukovoditelyu/` |
+| Бюджету | `/budget.html` → Битрикс: `/systems/byudzhetnoy-organizatsii/` |
+| Кадровику | `/hr.html` |
 | Линия консультаций | `/consultation.html` → Битрикс: `/consult/` |
 | О нас | `/about/` |
 | Новости (dropdown, hover) → Новости | `/news/` |

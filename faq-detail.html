@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <?php include 'includes/favicons.php'; ?>
+  <meta name="description" content="Может ли индивидуальный предприниматель быть самозанятым и уплачивать НПД? Ответ экспертов КонсультантПлюс." />
+  <title>Может ли ИП быть самозанятым и уплачивать НПД? — КонсультантПлюс СПБ</title>
+  <link rel="stylesheet" href="./styles/global.css" />
+  <link rel="stylesheet" href="./styles/ui-kit.css" />
+  <link rel="stylesheet" href="./styles/blocks.css" />
+  <link rel="stylesheet" href="./styles/pages/buy.css" />
+  <link rel="stylesheet" href="./styles/pages/accountant.css" />
+  <link rel="stylesheet" href="./styles/pages/news-detail.css" />
+  <link rel="stylesheet" href="./styles/pages/faq.css" />
+</head>
+<body>
+
+<?php include 'includes/header.php'; ?>
+
+
+<!-- ====== ХЛЕБНЫЕ КРОШКИ ====== -->
+<!-- Битрикс: bitrix:breadcrumb -->
+<nav class="breadcrumbs" aria-label="Хлебные крошки">
+  <div class="breadcrumbs__inner">
+    <a href="/" class="breadcrumbs__link">Главная</a>
+    <span class="breadcrumbs__sep">&gt;</span>
+    <a href="/faq.html" class="breadcrumbs__link">Вопрос-ответ</a>
+    <span class="breadcrumbs__sep">&gt;</span>
+    <span class="breadcrumbs__current">Может ли индивидуальный предприниматель быть самозанятым и уплачивать НПД?</span>
+  </div>
+</nav>
+
+
+<!-- ====== СТАТЬЯ-ОТВЕТ ====== -->
+<!-- Битрикс: bitrix:iblock.element.detail -->
+<article class="na-article reveal">
+  <div class="na-article__inner">
+
+    <h1 class="na-article__title">Может&nbsp;ли индивидуальный предприниматель быть самозанятым и&nbsp;уплачивать НПД?</h1>
+
+    <div class="na-article__body">
+
+      <p><strong>Да, может.</strong></p>
+
+      <p>Действующий ИП&nbsp;может стать самозанятым, а&nbsp;физлицо может зарегистрироваться как ИП&nbsp;и&nbsp;сохранить статус самозанятого.</p>
+
+      <p>«Самозанятый» индивидуальный предприниматель уплачивает налог на&nbsp;профессиональный доход с&nbsp;тех доходов, которые облагаются в&nbsp;рамках этого режима. Это заменяет уплату НДФЛ с&nbsp;таких доходов и&nbsp;НДС (кроме «ввозного» НДС при импорте товаров в&nbsp;РФ).</p>
+
+      <p>При этом предпринимателю нужно платить и&nbsp;другие налоги, если у&nbsp;него есть соответствующие операции или объекты обложения. А&nbsp;вот страховые взносы при НПД ИП&nbsp;платить не&nbsp;обязан.</p>
+
+      <p>При применении этого спецрежима налоговая нагрузка невысокая, а&nbsp;сдавать отчётность не&nbsp;нужно. Однако при НПД нельзя нанимать работников по&nbsp;трудовым договорам, не&nbsp;все доходы можно облагать НПД, кроме того, нужно соблюдать лимит по&nbsp;размеру доходов.</p>
+
+    </div>
+  </div>
+</article>
+
+
+<!-- ====== ОСТАЛИСЬ ВОПРОСЫ? ====== -->
+<!-- Битрикс: произвольный компонент -->
+<section class="acc-offer faq-offer reveal">
+  <div class="acc-offer__inner">
+    <div class="acc-offer__content">
+      <h2 class="acc-offer__title">Остались <strong>вопросы</strong>?</h2>
+      <p class="faq-offer__subtitle">Мы&nbsp;поможем разобраться в&nbsp;праве, бухгалтерии и&nbsp;налогах</p>
+      <span class="acc-offer__badge">напишите нам</span>
+      <div class="acc-offer__row">
+        <a href="/consultation.html" class="btn btn--purple acc-offer__btn">Задать вопрос</a>
+      </div>
+    </div>
+    <div class="acc-offer__image">
+      <img src="/img/faq-question-box.png" alt="Остались вопросы?" class="acc-offer__img faq-offer__img" loading="lazy" />
+    </div>
+  </div>
+</section>
+
+
+<!-- ====== ПОДВАЛ ====== -->
+<?php include 'includes/footer.php'; ?>
+
+
+<?php $suffix = '-faqd'; $page = '/faq-detail.html'; include 'includes/modals.php'; ?>
+
+<script type="module" src="./js/main.js"></script>
+</body>
+</html>

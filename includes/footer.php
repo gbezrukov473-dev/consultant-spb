@@ -41,15 +41,15 @@
         <nav class="footer__nav footer__nav--col1">
           <ul class="footer__nav-list">
             <li><a href="/about-sps.html" class="footer__nav-link">О СПС КонсультантПлюс</a></li>
-            <li><a href="/buy.html" class="footer__nav-link">Системы</a></li>
+            <li><a href="/systems.html" class="footer__nav-link">Системы</a></li>
             <li><a href="/trial.html" class="footer__nav-link">Пробный доступ</a></li>
-            <li class="footer__nav-item--mobile-only"><a href="/contacts/" class="footer__nav-link">Контакты</a></li>
+            <li class="footer__nav-item--mobile-only"><a href="/contacts.html" class="footer__nav-link">Контакты</a></li>
           </ul>
         </nav>
 
         <nav class="footer__nav footer__nav--col2">
           <ul class="footer__nav-list">
-            <li class="footer__nav-item--desktop-only"><a href="/contacts/" class="footer__nav-link">Контакты</a></li>
+            <li class="footer__nav-item--desktop-only"><a href="/contacts.html" class="footer__nav-link">Контакты</a></li>
             <li><a href="/education.html" class="footer__nav-link">Обучение</a></li>
             <li><a href="/services.html" class="footer__nav-link">Сервис для клиентов</a></li>
             <li class="footer__nav-item--mobile-only"><a href="/polzovatelskoe_soglashenie.php" class="footer__nav-link footer__nav-link--muted">Политика конфиденциальности</a></li>

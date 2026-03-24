@@ -41,12 +41,12 @@
   <nav class="header-nav">
     <div class="header-nav__inner">
       <ul class="header-nav__list">
-        <li class="header-nav__item"><a href="/systems/bukhgalteru/" class="header-nav__link">Бухгалтеру</a></li>
-        <li class="header-nav__item"><a href="/systems/yuristu/" class="header-nav__link">Юристу</a></li>
-        <li class="header-nav__item"><a href="/systems/rukovoditelyu/" class="header-nav__link">Руководителю</a></li>
-        <li class="header-nav__item"><a href="/systems/byudzhetnoy-organizatsii/" class="header-nav__link">Бюджету</a></li>
+        <li class="header-nav__item"><a href="/accountant.html" class="header-nav__link">Бухгалтеру</a></li>
+        <li class="header-nav__item"><a href="/lawyer.html" class="header-nav__link">Юристу</a></li>
+        <li class="header-nav__item"><a href="/manager.html" class="header-nav__link">Руководителю</a></li>
+        <li class="header-nav__item"><a href="/budget.html" class="header-nav__link">Бюджету</a></li>
         <li class="header-nav__item"><a href="/consultation.html" class="header-nav__link">Линия консультаций</a></li>
-        <li class="header-nav__item"><a href="/about/" class="header-nav__link">О нас</a></li>
+        <li class="header-nav__item"><a href="/about-company.html" class="header-nav__link">О нас</a></li>
         <li class="header-nav__item header-nav__item--dropdown">
           <button class="header-nav__link header-nav__link--dropdown" aria-expanded="false">
             Новости
@@ -55,12 +55,12 @@
             </svg>
           </button>
           <div class="header-nav__dropdown">
-            <a href="/news/" class="header-nav__dropdown-link">Новости</a>
-            <a href="/faq/" class="header-nav__dropdown-link">Вопрос-ответ</a>
+            <a href="/news.html" class="header-nav__dropdown-link">Новости</a>
+            <a href="/faq.html" class="header-nav__dropdown-link">Вопрос-ответ</a>
             <a href="/collections.html" class="header-nav__dropdown-link">Правовые сборники</a>
           </div>
         </li>
-        <li class="header-nav__item"><a href="/contacts/" class="header-nav__link">Контакты</a></li>
+        <li class="header-nav__item"><a href="/contacts.html" class="header-nav__link">Контакты</a></li>
         <li class="header-nav__item header-nav__item--lk">
           <a href="#" class="header-nav__link header-nav__link--lk">
             <img src="/img/lk-icon.svg" alt="" class="lk-icon" />
@@ -75,16 +75,16 @@
   <div class="mobile-menu">
     <div class="mobile-menu__inner">
       <ul class="mobile-menu__list">
-        <li><a href="/systems/bukhgalteru/" class="mobile-menu__link">Бухгалтеру</a></li>
-        <li><a href="/systems/yuristu/" class="mobile-menu__link">Юристу</a></li>
-        <li><a href="/systems/rukovoditelyu/" class="mobile-menu__link">Руководителю</a></li>
-        <li><a href="/systems/byudzhetnoy-organizatsii/" class="mobile-menu__link">Бюджету</a></li>
+        <li><a href="/accountant.html" class="mobile-menu__link">Бухгалтеру</a></li>
+        <li><a href="/lawyer.html" class="mobile-menu__link">Юристу</a></li>
+        <li><a href="/manager.html" class="mobile-menu__link">Руководителю</a></li>
+        <li><a href="/budget.html" class="mobile-menu__link">Бюджету</a></li>
         <li><a href="/consultation.html" class="mobile-menu__link">Линия консультаций</a></li>
-        <li><a href="/about/" class="mobile-menu__link">О нас</a></li>
-        <li><a href="/news/" class="mobile-menu__link">Новости</a></li>
-        <li><a href="/faq/" class="mobile-menu__link">Вопрос-ответ</a></li>
+        <li><a href="/about-company.html" class="mobile-menu__link">О нас</a></li>
+        <li><a href="/news.html" class="mobile-menu__link">Новости</a></li>
+        <li><a href="/faq.html" class="mobile-menu__link">Вопрос-ответ</a></li>
         <li><a href="/collections.html" class="mobile-menu__link">Правовые сборники</a></li>
-        <li><a href="/contacts/" class="mobile-menu__link">Контакты</a></li>
+        <li><a href="/contacts.html" class="mobile-menu__link">Контакты</a></li>
         <li><a href="#" class="mobile-menu__link mobile-menu__link--lk">Личный кабинет</a></li>
       </ul>
       <div class="mobile-menu__contacts">

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <?php include 'includes/favicons.php'; ?>
+  <meta name="description" content="Контакты ООО «ЧДК-Право» — официальный партнёр КонсультантПлюс в Санкт-Петербурге. Телефон, адрес, e-mail, схема проезда." />
+  <title>Контакты — КонсультантПлюс СПБ</title>
+  <link rel="stylesheet" href="./styles/global.css" />
+  <link rel="stylesheet" href="./styles/ui-kit.css" />
+  <link rel="stylesheet" href="./styles/blocks.css" />
+  <link rel="stylesheet" href="./styles/pages/buy.css" />
+  <link rel="stylesheet" href="./styles/pages/accountant.css" />
+  <link rel="stylesheet" href="./styles/pages/faq.css" />
+  <link rel="stylesheet" href="./styles/pages/contacts.css" />
+</head>
+<body>
+
+<?php include 'includes/header.php'; ?>
+
+
+<!-- ====== ХЛЕБНЫЕ КРОШКИ ====== -->
+<!-- Битрикс: bitrix:breadcrumb -->
+<nav class="breadcrumbs" aria-label="Хлебные крошки">
+  <div class="breadcrumbs__inner">
+    <a href="/" class="breadcrumbs__link">Главная</a>
+    <span class="breadcrumbs__sep">&gt;</span>
+    <span class="breadcrumbs__current">Контакты</span>
+  </div>
+</nav>
+
+
+<!-- ====== ЗАГОЛОВОК ====== -->
+<section class="contacts-header">
+  <div class="contacts-header__inner">
+    <h1 class="contacts-header__title">Контакты</h1>
+  </div>
+</section>
+
+
+<!-- ====== КОНТАКТНАЯ ИНФОРМАЦИЯ + КАРТА ====== -->
+<!-- Битрикс: произвольный компонент -->
+<section class="contacts-info reveal">
+  <div class="contacts-info__inner">
+
+    <div class="contacts-info__details">
+
+      <!-- Телефон -->
+      <div class="contacts-info__block">
+        <a href="tel:+78123344481" class="contacts-info__phone">8 812 334 44 81</a>
+        <span class="contacts-info__schedule">пн-пт 9:00-19:00</span>
+      </div>
+
+      <!-- Мессенджер -->
+      <div class="contacts-info__messengers">
+        <a href="https://max.ru/u/f9LHodD0cOIevbLN7WToeY90aC9RgJCNUl7v8Z3J5L1adS2-OklcZcPVMF8" class="messenger-link" aria-label="MAX" target="_blank" rel="noopener">
+          <img src="/img/logo-max.svg" alt="MAX" class="messenger-icon" />
+        </a>
+      </div>
+
+      <!-- E-mail -->
+      <a href="mailto:info@spbcons.ru" class="contacts-info__email">info@spbcons.ru</a>
+
+      <!-- Адрес -->
+      <div class="contacts-info__block">
+        <h2 class="contacts-info__label">Адрес ООО &laquo;ЧДК-ПРАВО&raquo;</h2>
+        <p class="contacts-info__text">191167, г.&nbsp;Санкт-Петербург, наб.&nbsp;Обводного канала, д.23, лит.Б, пом.1-Н</p>
+      </div>
+
+      <!-- Реквизиты -->
+      <p class="contacts-info__text">ИНН:&nbsp;7842527584<br>ОГРН:&nbsp;1147847321049</p>
+
+      <!-- Соцсети -->
+      <div class="contacts-info__social">
+        <span class="contacts-info__label">Мы в&nbsp;социальных сетях:</span>
+        <a href="https://vk.com/spbcons" class="contacts-info__social-link" aria-label="ВКонтакте" target="_blank" rel="noopener">
+          <img src="/img/icon-vk.svg" alt="ВКонтакте" class="contacts-info__social-icon" />
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Яндекс.Карта -->
+    <div class="contacts-info__map">
+      <div id="contacts-map" class="contacts-info__ymap"></div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ====== ОСТАЛИСЬ ВОПРОСЫ? ====== -->
+<!-- Битрикс: произвольный компонент -->
+<section class="acc-offer contacts-offer reveal">
+  <div class="acc-offer__inner">
+    <div class="acc-offer__content">
+      <h2 class="acc-offer__title">Остались <strong>вопросы</strong>?</h2>
+      <p class="faq-offer__subtitle">Мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время для обсуждения.</p>
+      <span class="acc-offer__badge">напишите нам</span>
+      <div class="acc-offer__row">
+        <a href="/consultation.html" class="btn btn--purple acc-offer__btn">Задать вопрос</a>
+      </div>
+    </div>
+    <div class="acc-offer__image">
+      <img src="/img/faq-question-box.png" alt="Остались вопросы?" class="acc-offer__img faq-offer__img" loading="lazy" />
+    </div>
+  </div>
+</section>
+
+
+<?php include 'includes/footer.php'; ?>
+<?php include 'includes/modals.php'; ?>
+
+<script type="module" src="./js/main.js"></script>
+
+<!-- Яндекс.Карты API -->
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  function initMap() {
+    if (typeof ymaps === 'undefined') return;
+    ymaps.ready(() => {
+      const coords = [59.916437, 30.348934];
+      const map = new ymaps.Map('contacts-map', {
+        center: coords,
+        zoom: 16,
+        controls: ['zoomControl', 'fullscreenControl']
+      });
+
+      const placemark = new ymaps.Placemark(coords, {
+        balloonContentHeader: 'ООО «ЧДК-ПРАВО»',
+        balloonContentBody: 'наб. Обводного канала, д.23, лит.Б, пом.1-Н',
+        balloonContentFooter: '<a href="tel:+78123344481">8 812 334 44 81</a>',
+        hintContent: 'ООО «ЧДК-ПРАВО»'
+      }, {
+        preset: 'islands#violetDotIcon'
+      });
+
+      map.geoObjects.add(placemark);
+      map.behaviors.disable('scrollZoom');
+    });
+  }
+
+  if (typeof ymaps !== 'undefined') {
+    initMap();
+  } else {
+    const script = document.querySelector('script[src*="api-maps.yandex.ru"]');
+    if (script) script.addEventListener('load', initMap);
+  }
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,210 @@
+/* =====================================================
+   СТРАНИЦА «КОНТАКТЫ»
+   ===================================================== */
+
+
+/* ====================================================
+   ЗАГОЛОВОК (.contacts-header)
+   ==================================================== */
+.contacts-header {
+  padding: 32px var(--side-padding) 0;
+}
+
+.contacts-header__inner {
+  max-width: calc(var(--container-max) - 2 * var(--side-padding));
+  margin: 0 auto;
+}
+
+.contacts-header__title {
+  font-weight: 700;
+  font-size: clamp(40px, 4vw + 12px, 64px);
+  line-height: 1.1;
+  color: var(--color-black);
+}
+
+
+/* ====================================================
+   КОНТАКТНАЯ ИНФОРМАЦИЯ (.contacts-info)
+   ==================================================== */
+.contacts-info {
+  padding: 40px var(--side-padding) 80px;
+}
+
+.contacts-info__inner {
+  max-width: calc(var(--container-max) - 2 * var(--side-padding));
+  margin: 0 auto;
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+
+/* --- Левая колонка: данные --- */
+.contacts-info__details {
+  flex: 0 0 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.contacts-info__block {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contacts-info__phone {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.2;
+  color: var(--color-secondary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.contacts-info__phone:hover {
+  color: var(--color-primary);
+}
+
+.contacts-info__schedule {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.16;
+  color: var(--color-black);
+}
+
+.contacts-info__messengers {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.contacts-info__email {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.2;
+  color: var(--color-secondary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.contacts-info__email:hover {
+  color: var(--color-primary);
+}
+
+.contacts-info__label {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.19;
+  color: var(--color-black);
+}
+
+.contacts-info__text {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.16;
+  color: var(--color-black);
+}
+
+
+/* --- Соцсети --- */
+.contacts-info__social {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.contacts-info__social-link {
+  display: inline-flex;
+  transition: opacity var(--transition-fast);
+}
+
+.contacts-info__social-link:hover {
+  opacity: 0.7;
+}
+
+.contacts-info__social-icon {
+  width: 32px;
+  height: 32px;
+}
+
+
+/* --- Правая колонка: карта --- */
+.contacts-info__map {
+  flex: 1;
+  min-width: 0;
+}
+
+.contacts-info__ymap {
+  width: 100%;
+  height: 412px;
+  border-radius: 40px;
+  overflow: hidden;
+}
+
+.contacts-info__map-img {
+  width: 100%;
+  height: auto;
+  border-radius: 40px;
+  display: block;
+}
+
+
+/* ====================================================
+   ПЕРЕОПРЕДЕЛЕНИЯ ДЛЯ БЛОКА «ОСТАЛИСЬ ВОПРОСЫ?»
+   ==================================================== */
+.contacts-offer {
+  margin: 0 auto 80px;
+  max-width: calc(var(--container-max) - 2 * var(--side-padding));
+  padding: 0 var(--side-padding);
+}
+
+
+/* ====================================================
+   RESPONSIVE
+   ==================================================== */
+@media (max-width: 1100px) {
+  .contacts-info__inner {
+    flex-direction: column;
+  }
+
+  .contacts-info__details {
+    flex: none;
+    width: 100%;
+  }
+
+  .contacts-info__map {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .contacts-info__phone,
+  .contacts-info__email {
+    font-size: 28px;
+  }
+
+  .contacts-info__label {
+    font-size: 20px;
+  }
+
+  .contacts-info__text,
+  .contacts-info__schedule {
+    font-size: 17px;
+  }
+
+  .contacts-info__map-img {
+    border-radius: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contacts-header__title {
+    font-size: 36px;
+  }
+
+  .contacts-info__phone,
+  .contacts-info__email {
+    font-size: 24px;
+  }
+}

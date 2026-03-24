@@ -1,0 +1,377 @@
+/* =====================================================
+   СТРАНИЦА «О КОМПАНИИ»
+   ===================================================== */
+
+
+/* ====================================================
+   ЗАГОЛОВОК СТРАНИЦЫ (.ac-page-title)
+   ==================================================== */
+.ac-page-title {
+  padding: 32px var(--side-padding) 0;
+}
+
+.ac-page-title__inner {
+  max-width: calc(var(--container-max) - 2 * var(--side-padding));
+  margin: 0 auto;
+}
+
+.ac-page-title__heading {
+  font-weight: 700;
+  font-size: clamp(40px, 4vw + 10px, 64px);
+  line-height: 1.1;
+  color: var(--color-black);
+}
+
+
+/* ====================================================
+   КТО МЫ (.ac-who)
+   ==================================================== */
+.ac-who {
+  padding: 40px var(--side-padding) 80px;
+}
+
+.ac-who__inner {
+  max-width: calc(var(--container-max) - 2 * var(--side-padding));
+  margin: 0 auto;
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+.ac-who__left {
+  flex: 1;
+  min-width: 0;
+}
+
+.ac-who__intro {
+  background: var(--color-secondary);
+  border-radius: 0 40px 40px 0;
+  padding: 28px 40px;
+  margin-left: calc(-1 * var(--side-padding) - 60px);
+  padding-left: calc(var(--side-padding) + 60px);
+  margin-bottom: 32px;
+}
+
+.ac-who__intro-text {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.5;
+  color: var(--color-white);
+  max-width: 660px;
+}
+
+.ac-who__body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-black);
+}
+
+.ac-who__right {
+  flex: 0 0 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.ac-who__stat {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.ac-who__stat-num {
+  font-weight: 700;
+  font-size: 100px;
+  line-height: 0.85;
+  background: linear-gradient(135deg, var(--color-secondary) 0%, #9394c9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  flex-shrink: 0;
+}
+
+.ac-who__stat-text {
+  font-size: 22px;
+  line-height: 1.3;
+  color: var(--color-black);
+  padding-top: 8px;
+}
+
+.ac-who__stat-text strong {
+  font-weight: 600;
+}
+
+.ac-who__photo-wrap {
+  background: linear-gradient(75deg, var(--color-bg-orange) 0%, var(--color-bg-orange-deep) 100%);
+  border-radius: 40px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.ac-who__photo {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 40px;
+  object-fit: cover;
+}
+
+.ac-who__download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 16px 20px 20px;
+}
+
+
+/* ====================================================
+   6 ПРИЧИН (.ac-reasons6)
+   Фиолетовый фон с 2×3 пилюлями
+   ==================================================== */
+.ac-reasons6 {
+  padding: 0 var(--side-padding);
+}
+
+.ac-reasons6__inner {
+  max-width: calc(var(--container-max) - 2 * var(--side-padding));
+  margin: 0 auto;
+  background: var(--color-secondary);
+  border-radius: 40px;
+  padding: 80px 60px;
+}
+
+.ac-reasons6__title {
+  font-weight: 600;
+  font-size: clamp(28px, 2vw + 10px, 36px);
+  line-height: 1.19;
+  color: var(--color-white);
+  margin-bottom: 48px;
+}
+
+.ac-reasons6__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.ac-reasons6__card {
+  background: var(--color-white);
+  border-radius: 40px;
+  padding: 28px 36px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.ac-reasons6__num {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg-orange);
+  border-radius: 50%;
+  font-weight: 500;
+  font-size: 24px;
+  color: var(--color-black);
+}
+
+.ac-reasons6__text {
+  font-size: 20px;
+  line-height: 1.4;
+  color: var(--color-black);
+}
+
+.ac-reasons6__text strong {
+  font-weight: 600;
+}
+
+
+/* ====================================================
+   О СИСТЕМЕ (.ac-system)
+   ==================================================== */
+.ac-system {
+  padding: 80px var(--side-padding);
+}
+
+.ac-system__inner {
+  max-width: calc(var(--container-max) - 2 * var(--side-padding));
+  margin: 0 auto;
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+.ac-system__content {
+  flex: 1;
+  min-width: 0;
+}
+
+.ac-system__title {
+  font-weight: 600;
+  font-size: clamp(28px, 2vw + 10px, 36px);
+  line-height: 1.19;
+  color: var(--color-black);
+  margin-bottom: 32px;
+}
+
+.ac-system__lead {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.5;
+  color: var(--color-black);
+  margin-bottom: 24px;
+}
+
+.ac-system__subtitle {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.5;
+  color: var(--color-black);
+  margin-bottom: 16px;
+}
+
+.ac-system__list {
+  list-style: disc;
+  padding-left: 24px;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ac-system__list li {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-black);
+}
+
+.ac-system__note {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-black);
+  margin-bottom: 12px;
+}
+
+.ac-system__buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.ac-system__visual {
+  flex: 0 0 552px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.ac-system__img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 40px;
+  filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.12));
+}
+
+
+/* ====================================================
+   RESPONSIVE
+   ==================================================== */
+@media (max-width: 1024px) {
+  .ac-who__inner {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .ac-who__right {
+    flex: none;
+    width: 100%;
+  }
+
+  .ac-who__intro {
+    margin-left: calc(-1 * var(--side-padding));
+    padding-left: var(--side-padding);
+  }
+
+  .ac-reasons6__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ac-system__inner {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .ac-system__visual {
+    flex: none;
+    width: 100%;
+    max-width: 552px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ac-who__stat-num {
+    font-size: 72px;
+  }
+
+  .ac-who__stat-text {
+    font-size: 18px;
+  }
+
+  .ac-who__intro-text {
+    font-size: 17px;
+  }
+
+  .ac-reasons6__inner {
+    padding: 48px 24px;
+  }
+
+  .ac-reasons6__card {
+    border-radius: 24px;
+    padding: 20px 24px;
+    gap: 16px;
+  }
+
+  .ac-reasons6__num {
+    width: 48px;
+    height: 48px;
+    font-size: 20px;
+  }
+
+  .ac-reasons6__text {
+    font-size: 17px;
+  }
+
+  .ac-system__lead,
+  .ac-system__subtitle {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ac-who__stat-num {
+    font-size: 56px;
+  }
+
+  .ac-who__stat-text {
+    font-size: 16px;
+  }
+
+  .ac-reasons6__card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .ac-system__buttons {
+    flex-direction: column;
+  }
+}

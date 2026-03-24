@@ -131,7 +131,7 @@
      3×2 карточки: иконка + текст
      ==================================================== */
   .acc-reasons {
-    padding: 80px var(--side-padding) 80px;
+    padding: 80px var(--side-padding) 40px;
   }
   
   .acc-reasons__inner {

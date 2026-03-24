@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <?php include 'includes/favicons.php'; ?>
+  <meta name="description" content="Вопрос-ответ: частые вопросы по бухгалтерии, налогам, кадрам и праву — ответы экспертов КонсультантПлюс" />
+  <title>Вопрос-ответ — КонсультантПлюс СПБ</title>
+  <link rel="stylesheet" href="./styles/global.css" />
+  <link rel="stylesheet" href="./styles/ui-kit.css" />
+  <link rel="stylesheet" href="./styles/blocks.css" />
+  <link rel="stylesheet" href="./styles/pages/buy.css" />
+  <link rel="stylesheet" href="./styles/pages/accountant.css" />
+  <link rel="stylesheet" href="./styles/pages/faq.css" />
+</head>
+<body>
+
+<?php include 'includes/header.php'; ?>
+
+
+<!-- ====== ХЛЕБНЫЕ КРОШКИ ====== -->
+<!-- Битрикс: bitrix:breadcrumb -->
+<nav class="breadcrumbs" aria-label="Хлебные крошки">
+  <div class="breadcrumbs__inner">
+    <a href="/" class="breadcrumbs__link">Главная</a>
+    <span class="breadcrumbs__sep">&gt;</span>
+    <span class="breadcrumbs__current">Вопрос-ответ</span>
+  </div>
+</nav>
+
+
+<!-- ====== ЗАГОЛОВОК ====== -->
+<section class="faq-header">
+  <div class="faq-header__inner">
+    <h1 class="faq-header__title">Вопрос-ответ</h1>
+  </div>
+</section>
+
+
+<!-- ====== FAQ СПИСОК ====== -->
+<!-- Битрикс: bitrix:iblock.element.list -->
+<section class="faq-list reveal">
+  <div class="faq-list__inner">
+
+    <!-- Фильтр-табы -->
+    <div class="faq-list__tabs" role="tablist">
+      <button class="faq-list__tab is-active" data-filter="all" role="tab" aria-selected="true">Все</button>
+      <button class="faq-list__tab" data-filter="taxes" role="tab">Налоги и&nbsp;налогообложение</button>
+      <button class="faq-list__tab" data-filter="hr" role="tab">Кадровый учёт</button>
+      <button class="faq-list__tab" data-filter="payments" role="tab">Уплата налогов и&nbsp;взносов в&nbsp;бюджет</button>
+      <button class="faq-list__tab" data-filter="kkt" role="tab">ККТ</button>
+      <button class="faq-list__tab" data-filter="payment-order" role="tab">Платёжное поручение</button>
+      <button class="faq-list__tab" data-filter="accounting" role="tab">Бухгалтерский учёт</button>
+      <button class="faq-list__tab" data-filter="eds" role="tab">ЭЦП</button>
+      <button class="faq-list__tab" data-filter="safety" role="tab">Охрана и&nbsp;безопасность труда</button>
+      <button class="faq-list__tab" data-filter="salary" role="tab">Расчёт среднего заработка</button>
+      <button class="faq-list__tab" data-filter="childcare" role="tab">Пособие по&nbsp;уходу за&nbsp;ребёнком</button>
+      <button class="faq-list__tab" data-filter="assets" role="tab">Чистые активы</button>
+      <button class="faq-list__tab" data-filter="trip" role="tab">Командировка</button>
+      <button class="faq-list__tab" data-filter="rights" role="tab">Передача исключительных прав</button>
+      <button class="faq-list__tab" data-filter="rights-reg" role="tab">Регистрация передачи исключительных прав</button>
+      <button class="faq-list__tab" data-filter="obligation" role="tab">Совокупная обязанность</button>
+    </div>
+
+    <!-- Список вопросов -->
+    <div class="faq-questions" id="faqQuestions">
+
+      <a href="/faq-detail.html" class="faq-questions__link" data-category="hr">
+        <span class="faq-questions__text">Каким образом работодатель может узнать, что иностранному работнику аннулировали патент?</span>
+        <svg class="faq-questions__arrow" viewBox="0 0 24 24" fill="none"><path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+
+      <a href="/faq-detail.html" class="faq-questions__link" data-category="accounting">
+        <span class="faq-questions__text">Как заполнить справку к&nbsp;акту инвентаризации (Приложение к&nbsp;форме N&nbsp;ИНВ-17)?</span>
+        <svg class="faq-questions__arrow" viewBox="0 0 24 24" fill="none"><path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+
+      <a href="/faq-detail.html" class="faq-questions__link" data-category="rights">
+        <span class="faq-questions__text">Обязательно&nbsp;ли оформлять дополнительное соглашение к&nbsp;договору аренды при изменении стоимости, или достаточно уведомления?</span>
+        <svg class="faq-questions__arrow" viewBox="0 0 24 24" fill="none"><path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+
+      <a href="/faq-detail.html" class="faq-questions__link" data-category="taxes">
+        <span class="faq-questions__text">Может&nbsp;ли индивидуальный предприниматель быть самозанятым и&nbsp;уплачивать НПД?</span>
+        <svg class="faq-questions__arrow" viewBox="0 0 24 24" fill="none"><path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+
+      <a href="/faq-detail.html" class="faq-questions__link" data-category="taxes">
+        <span class="faq-questions__text">Можно&nbsp;ли будет количество уведомлений об&nbsp;исчисленной сумме НДФЛ уменьшить с&nbsp;01.09.2026?</span>
+        <svg class="faq-questions__arrow" viewBox="0 0 24 24" fill="none"><path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+
+      <a href="/faq-detail.html" class="faq-questions__link" data-category="rights">
+        <span class="faq-questions__text">Вправе&nbsp;ли адвокат в&nbsp;период изменения членства в&nbsp;адвокатской палате региона осуществлять свою профессиональную деятельность?</span>
+        <svg class="faq-questions__arrow" viewBox="0 0 24 24" fill="none"><path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+
+      <a href="/faq-detail.html" class="faq-questions__link" data-category="taxes">
+        <span class="faq-questions__text">Нужно&nbsp;ли ИП&nbsp;подавать налоговую декларацию по&nbsp;УСН с&nbsp;объектом &laquo;доходы минус расходы&raquo; при ставке 0%?</span>
+        <svg class="faq-questions__arrow" viewBox="0 0 24 24" fill="none"><path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+
+      <a href="/faq-detail.html" class="faq-questions__link" data-category="accounting">
+        <span class="faq-questions__text">Может&nbsp;ли приказ о&nbsp;назначении на&nbsp;должность являться документом, подтверждающим полномочия главного бухгалтера действовать от&nbsp;имени юридического лица?</span>
+        <svg class="faq-questions__arrow" viewBox="0 0 24 24" fill="none"><path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+
+      <a href="/faq-detail.html" class="faq-questions__link" data-category="accounting">
+        <span class="faq-questions__text">Как отражать в&nbsp;бухгалтерском учёте подрядчика работы строительного подряда?</span>
+        <svg class="faq-questions__arrow" viewBox="0 0 24 24" fill="none"><path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+
+      <a href="/faq-detail.html" class="faq-questions__link" data-category="rights">
+        <span class="faq-questions__text">Можно&nbsp;ли оспорить согласие на&nbsp;передачу объекта аренды или арендных прав третьим лицам?</span>
+        <svg class="faq-questions__arrow" viewBox="0 0 24 24" fill="none"><path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+
+    </div>
+
+    <!-- Кнопка "Показать ещё" -->
+    <div class="faq-list__more-wrap">
+      <button class="btn btn--purple faq-list__more-btn" id="faqMoreBtn">Показать ещё</button>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ====== ОСТАЛИСЬ ВОПРОСЫ? ====== -->
+<!-- Битрикс: произвольный компонент -->
+<section class="acc-offer faq-offer reveal">
+  <div class="acc-offer__inner">
+    <div class="acc-offer__content">
+      <h2 class="acc-offer__title">Остались <strong>вопросы</strong>?</h2>
+      <p class="faq-offer__subtitle">Мы&nbsp;поможем разобраться в&nbsp;праве, бухгалтерии и&nbsp;налогах</p>
+      <span class="acc-offer__badge">напишите нам</span>
+      <div class="acc-offer__row">
+        <a href="/consultation.html" class="btn btn--purple acc-offer__btn">Задать вопрос</a>
+      </div>
+    </div>
+    <div class="acc-offer__image">
+      <img src="/img/faq-question-box.png" alt="Остались вопросы?" class="acc-offer__img faq-offer__img" loading="lazy" />
+    </div>
+  </div>
+</section>
+
+
+<!-- ====== ПОДВАЛ ====== -->
+<?php include 'includes/footer.php'; ?>
+
+
+<?php $suffix = '-faq'; $page = '/faq.html'; include 'includes/modals.php'; ?>
+
+<script type="module" src="./js/main.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const tabs = document.querySelectorAll('.faq-list__tab');
+  const links = document.querySelectorAll('.faq-questions__link');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => { t.classList.remove('is-active'); t.setAttribute('aria-selected', 'false'); });
+      tab.classList.add('is-active');
+      tab.setAttribute('aria-selected', 'true');
+
+      const f = tab.dataset.filter;
+      links.forEach(link => {
+        if (f === 'all' || link.dataset.category === f) {
+          link.style.display = '';
+        } else {
+          link.style.display = 'none';
+        }
+      });
+    });
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,321 @@
+/* =====================================================
+   СТРАНИЦА «СИСТЕМЫ КОНСУЛЬТАНТПЛЮС» — каталог комплектов
+   ===================================================== */
+
+
+/* ====================================================
+   HERO (.sc-hero)
+   ==================================================== */
+.sc-hero {
+  padding: 20px var(--side-padding) 0;
+}
+
+.sc-hero__inner {
+  max-width: calc(var(--container-max) - 2 * var(--side-padding));
+  margin: 0 auto;
+  background: linear-gradient(56deg, var(--color-bg-orange) 0%, var(--color-bg-orange-deep) 99%);
+  border-radius: 40px;
+  display: flex;
+  align-items: stretch;
+  overflow: hidden;
+  min-height: 506px;
+  position: relative;
+}
+
+.sc-hero__inner::before {
+  content: '';
+  position: absolute;
+  right: 20%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 840px;
+  height: 740px;
+  background: url('/img/hero-chdk-watermark-white.svg') no-repeat center / contain;
+  opacity: 0.28;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.sc-hero__content {
+  flex: 0 0 50%;
+  min-width: 0;
+  padding: 80px 40px 60px 58px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  z-index: 1;
+}
+
+.sc-hero__title {
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 1.21;
+  color: var(--color-black);
+  margin-bottom: 24px;
+}
+
+.sc-hero__title-accent {
+  color: var(--color-secondary);
+}
+
+.sc-hero__text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 20px;
+  line-height: 1.4;
+  color: var(--color-black);
+  margin-bottom: 40px;
+}
+
+.sc-hero__text strong {
+  font-weight: 600;
+}
+
+.sc-hero__visual {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  overflow: visible;
+  z-index: 1;
+  padding-right: 20px;
+}
+
+.sc-hero__img {
+  max-width: 460px;
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(0 16px 32px rgba(0, 0, 0, 0.15));
+}
+
+
+/* ====================================================
+   КАТАЛОГ (.sc-catalog)
+   ==================================================== */
+.sc-catalog {
+  padding: 80px var(--side-padding) 80px;
+}
+
+.sc-catalog__inner {
+  max-width: calc(var(--container-max) - 2 * var(--side-padding));
+  margin: 0 auto;
+}
+
+.sc-catalog__title {
+  font-weight: 600;
+  font-size: clamp(28px, 2vw + 10px, 36px);
+  line-height: 1.19;
+  color: var(--color-black);
+  margin-bottom: 32px;
+}
+
+/* --- Табы-фильтры --- */
+.sc-catalog__tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.sc-catalog__tab {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 20px;
+  border-radius: 76px;
+  border: none;
+  background: #f5f5f5;
+  color: var(--color-black);
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.sc-catalog__tab:hover {
+  background: var(--color-bg-purple);
+  color: var(--color-secondary);
+}
+
+.sc-catalog__tab.is-active {
+  background: var(--color-secondary);
+  color: var(--color-white);
+}
+
+/* --- Сетка карточек --- */
+.sc-catalog__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* --- Карточка комплекта --- */
+.sc-catalog__card {
+  background: var(--color-white);
+  border-radius: 40px;
+  box-shadow: 1px 5px 12px rgba(0, 0, 0, 0.16);
+  padding: 20px 16px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+  transition: transform var(--transition-card), box-shadow var(--transition-card), opacity 0.3s;
+}
+
+.sc-catalog__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+}
+
+.sc-catalog__card.is-hidden {
+  display: none;
+}
+
+.sc-catalog__card-img-wrap {
+  width: 206px;
+  height: 279px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.sc-catalog__card-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 5px rgba(0, 0, 0, 0.15));
+}
+
+.sc-catalog__card-name {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.3;
+  color: var(--color-black);
+}
+
+.sc-catalog__card-actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.sc-catalog__card-btn {
+  min-width: 180px;
+}
+
+.sc-catalog__card-link {
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--color-secondary);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color var(--transition-fast);
+}
+
+.sc-catalog__card-link:hover {
+  color: var(--color-primary);
+}
+
+
+/* ====================================================
+   RESPONSIVE
+   ==================================================== */
+@media (max-width: 1024px) {
+  .sc-hero__inner {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .sc-hero__content {
+    flex: none;
+    padding: 48px 32px;
+  }
+
+  .sc-hero__visual {
+    padding: 0 32px 32px;
+    justify-content: center;
+  }
+
+  .sc-hero__img {
+    max-width: 320px;
+  }
+
+  .sc-catalog__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .sc-hero__title {
+    font-size: 32px;
+  }
+
+  .sc-hero__text {
+    font-size: 17px;
+  }
+
+  .sc-hero__img {
+    max-width: 260px;
+  }
+
+  .sc-catalog__tabs {
+    gap: 8px;
+  }
+
+  .sc-catalog__tab {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+
+  .sc-catalog__card {
+    border-radius: 24px;
+    padding: 16px 12px 24px;
+  }
+
+  .sc-catalog__card-img-wrap {
+    width: 160px;
+    height: 220px;
+  }
+
+  .sc-catalog__card-name {
+    font-size: 17px;
+  }
+
+  .sc-catalog__card-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .sc-catalog__grid {
+    grid-template-columns: 1fr;
+    max-width: 440px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .sc-hero__title {
+    font-size: 28px;
+  }
+
+  .sc-hero__content {
+    padding: 36px 20px;
+  }
+
+  .sc-hero__text {
+    font-size: 16px;
+  }
+}

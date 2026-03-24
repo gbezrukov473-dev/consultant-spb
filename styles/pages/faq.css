@@ -1,0 +1,217 @@
+/* =====================================================
+   СТРАНИЦА «ВОПРОС-ОТВЕТ»
+   ===================================================== */
+
+
+/* ====================================================
+   ЗАГОЛОВОК (.faq-header)
+   ==================================================== */
+.faq-header {
+  padding: 32px var(--side-padding) 0;
+}
+
+.faq-header__inner {
+  max-width: calc(var(--container-max) - 2 * var(--side-padding));
+  margin: 0 auto;
+}
+
+.faq-header__title {
+  font-weight: 700;
+  font-size: clamp(40px, 4vw + 12px, 64px);
+  line-height: 1.1;
+  color: var(--color-black);
+}
+
+
+/* ====================================================
+   FAQ-СПИСОК (.faq-list)
+   ==================================================== */
+.faq-list {
+  padding: 40px var(--side-padding) 80px;
+}
+
+.faq-list__inner {
+  max-width: calc(var(--container-max) - 2 * var(--side-padding));
+  margin: 0 auto;
+}
+
+
+/* --- Табы --- */
+.faq-list__tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.faq-list__tab {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 20px;
+  border-radius: 76px;
+  border: none;
+  background: #f5f5f5;
+  color: var(--color-black);
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.faq-list__tab:hover {
+  background: var(--color-bg-purple);
+  color: var(--color-secondary);
+}
+
+.faq-list__tab.is-active {
+  background: var(--color-secondary);
+  color: var(--color-white);
+}
+
+
+/* ====================================================
+   СПИСОК ВОПРОСОВ (.faq-questions)
+   ==================================================== */
+.faq-questions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.faq-questions__link {
+  text-decoration: none;
+  border-radius: 154px;
+  padding: 24px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  transition: box-shadow var(--transition-fast);
+}
+
+.faq-questions__link:nth-child(odd) {
+  background: var(--color-bg-purple);
+}
+
+.faq-questions__link:nth-child(even) {
+  background: var(--color-gray-bg);
+}
+
+.faq-questions__link:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.faq-questions__link:hover .faq-questions__arrow {
+  transform: translateX(4px);
+}
+
+.faq-questions__text {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.35;
+  color: var(--color-black);
+}
+
+.faq-questions__arrow {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  color: var(--color-secondary);
+  transition: transform var(--transition-fast);
+}
+
+
+/* --- Кнопка "Показать ещё" --- */
+.faq-list__more-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.faq-list__more-btn {
+  min-width: 426px;
+}
+
+
+/* ====================================================
+   БЛОК «ОСТАЛИСЬ ВОПРОСЫ?» (переопределения acc-offer)
+   ==================================================== */
+.faq-offer__subtitle {
+  font-size: 20px;
+  line-height: 1.4;
+  color: var(--color-black);
+  margin-bottom: 16px;
+  max-width: 331px;
+}
+
+.faq-offer__img {
+  max-width: 420px;
+  transform: rotate(7.94deg);
+  margin-top: -60px;
+}
+
+
+/* ====================================================
+   RESPONSIVE
+   ==================================================== */
+@media (max-width: 1024px) {
+  .faq-questions__link {
+    padding: 20px 28px;
+    border-radius: 32px;
+  }
+
+  .faq-questions__text {
+    font-size: 20px;
+  }
+
+  .faq-list__more-btn {
+    min-width: 300px;
+  }
+
+  .faq-offer__img {
+    max-width: 300px;
+    margin-top: -30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .faq-list__tabs {
+    gap: 8px;
+  }
+
+  .faq-list__tab {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+
+  .faq-questions__link {
+    padding: 16px 20px;
+    border-radius: 24px;
+  }
+
+  .faq-questions__text {
+    font-size: 17px;
+  }
+
+  .faq-list__more-btn {
+    min-width: auto;
+    width: 100%;
+  }
+
+  .faq-offer__img {
+    max-width: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  .faq-header__title {
+    font-size: 36px;
+  }
+
+  .faq-questions__text {
+    font-size: 16px;
+  }
+}

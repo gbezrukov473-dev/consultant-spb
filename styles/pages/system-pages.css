@@ -1,0 +1,61 @@
+/* =====================================================
+   ОБЩИЕ ДОПОЛНЕНИЯ К СТРАНИЦАМ «СИСТЕМЫ»
+   Сравнение на 4 колонки (3 тарифа) — юрист/руководитель/бюджет
+   ===================================================== */
+
+/* --- 4-колоночная таблица (подпись + 3 тарифа) --- */
+.acc-compare--4 .acc-compare__head,
+.acc-compare--4 .acc-compare__row {
+  grid-template-columns: minmax(140px, 1.15fr) repeat(3, minmax(96px, 1fr));
+}
+
+@media (max-width: 900px) {
+  .acc-compare--4 .acc-compare__scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 8px;
+  }
+
+  .acc-compare--4 .acc-compare__head,
+  .acc-compare--4 .acc-compare__row {
+    min-width: 640px;
+  }
+
+  .acc-compare--4 .acc-compare__section {
+    min-width: 640px;
+  }
+
+  .acc-compare--4 .acc-compare__section-btn {
+    min-width: 640px;
+  }
+}
+
+@media (max-width: 600px) {
+  .acc-compare--4 .acc-compare__head,
+  .acc-compare--4 .acc-compare__row {
+    min-width: 540px;
+  }
+
+  .acc-compare--4 .acc-compare__section,
+  .acc-compare--4 .acc-compare__section-btn {
+    min-width: 540px;
+  }
+
+  .acc-compare--4 .acc-compare__head-name {
+    font-size: 12px;
+  }
+
+  .acc-compare--4 .acc-compare__head-btn {
+    font-size: 11px;
+    padding: 6px 10px;
+  }
+
+  .acc-compare--4 .acc-compare__row-label {
+    font-size: 12px;
+    padding: 10px 8px;
+  }
+
+  .acc-compare--4 .acc-compare__row-cell {
+    padding: 10px 6px;
+  }
+}

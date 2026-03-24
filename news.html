@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <?php include 'includes/favicons.php'; ?>
+  <meta name="description" content="Новости и статьи КонсультантПлюс от ЧДК-Право — актуальные изменения законодательства для бухгалтеров, юристов и руководителей" />
+  <title>Новости — КонсультантПлюс СПБ</title>
+  <link rel="stylesheet" href="./styles/global.css" />
+  <link rel="stylesheet" href="./styles/ui-kit.css" />
+  <link rel="stylesheet" href="./styles/blocks.css" />
+  <link rel="stylesheet" href="./styles/pages/buy.css" />
+  <link rel="stylesheet" href="./styles/pages/news.css" />
+</head>
+<body>
+
+<?php include 'includes/header.php'; ?>
+
+
+<!-- ====== ХЛЕБНЫЕ КРОШКИ ====== -->
+<!-- Битрикс: bitrix:breadcrumb -->
+<nav class="breadcrumbs" aria-label="Хлебные крошки">
+  <div class="breadcrumbs__inner">
+    <a href="/" class="breadcrumbs__link">Главная</a>
+    <span class="breadcrumbs__sep">&gt;</span>
+    <span class="breadcrumbs__current">Новости</span>
+  </div>
+</nav>
+
+
+<!-- ====== ЗАГОЛОВОК ====== -->
+<!-- Битрикс: bitrix:main.include -->
+<section class="news-header">
+  <div class="news-header__inner">
+    <h1 class="news-header__title">Новости</h1>
+  </div>
+</section>
+
+
+<!-- ====== СПИСОК НОВОСТЕЙ ====== -->
+<!-- Битрикс: bitrix:news.list, iblock="news" -->
+<section class="news-list reveal">
+  <div class="news-list__inner">
+
+    <!-- Фильтр-табы -->
+    <div class="news-list__tabs" role="tablist">
+      <button class="news-list__tab" data-filter="accountant" role="tab">Бухгалтеру</button>
+      <button class="news-list__tab" data-filter="lawyer" role="tab">Юристу</button>
+      <button class="news-list__tab" data-filter="manager" role="tab">Руководителю</button>
+      <button class="news-list__tab" data-filter="budget" role="tab">Бюджет</button>
+      <button class="news-list__tab" data-filter="hr" role="tab">Кадры</button>
+      <button class="news-list__tab" data-filter="procurement" role="tab">Закупки</button>
+    </div>
+
+    <!-- Карточки новостей -->
+    <div class="news-list__items" id="newsItems">
+
+      <!-- Новость 1 -->
+      <article class="news-card news-card--purple" data-category="accountant lawyer manager budget hr procurement">
+        <div class="news-card__img-wrap">
+          <img src="/img/news-1.png" alt="Как подключить Консультант Плюс" class="news-card__img" loading="lazy" />
+        </div>
+        <div class="news-card__body">
+          <time class="news-card__date" datetime="2026-02-26">26.02.2026</time>
+          <h2 class="news-card__title">
+            <a href="/news-detail.html" class="news-card__link">Как подключить Консультант Плюс: пошаговая инструкция для организаций</a>
+          </h2>
+          <p class="news-card__text">Пошаговая инструкция по&nbsp;подключению КонсультантПлюс для организаций и&nbsp;ИП: от&nbsp;выбора комплекта и&nbsp;формата доступа до&nbsp;получения готового решения за&nbsp;1&nbsp;рабочий день. Все, что нужно знать о&nbsp;быстром старте работы с&nbsp;системой.</p>
+        </div>
+      </article>
+
+      <!-- Новость 2 -->
+      <article class="news-card news-card--gray" data-category="accountant lawyer manager budget hr procurement">
+        <div class="news-card__img-wrap">
+          <img src="/img/news-2.png" alt="ИИ-помощник КонсультантПлюс" class="news-card__img" loading="lazy" />
+        </div>
+        <div class="news-card__body">
+          <time class="news-card__date" datetime="2026-02-24">24.02.2026</time>
+          <h2 class="news-card__title">
+            <a href="/news/ii-pomoshnik-konsultantplyus/" class="news-card__link">ИИ-помощник КонсультантПлюс: простой и&nbsp;быстрый поиск правовой информации</a>
+          </h2>
+          <p class="news-card__text">ИИ-помощник в&nbsp;КонсультантПлюс отвечает на&nbsp;правовые вопросы и&nbsp;сразу формирует подборку документов. Получите 2&nbsp;дня тестового доступа и&nbsp;оцените, как быстро можно находить актуальную информацию с&nbsp;помощью искусственного интеллекта.</p>
+        </div>
+      </article>
+
+      <!-- Новость 3 -->
+      <article class="news-card news-card--purple" data-category="accountant lawyer manager budget hr procurement">
+        <div class="news-card__img-wrap">
+          <img src="/img/news-3.png" alt="День защитника Отечества" class="news-card__img" loading="lazy" />
+        </div>
+        <div class="news-card__body">
+          <time class="news-card__date" datetime="2026-02-20">20.02.2026</time>
+          <h2 class="news-card__title">
+            <a href="/news/den-zashchitnika-otechestva-2026/" class="news-card__link">С&nbsp;наступающим Днём защитника Отечества!</a>
+          </h2>
+          <p class="news-card__text">Поздравляем с&nbsp;наступающим Днём защитника Отечества! Пусть в&nbsp;вашей жизни будет место для смелых свершений, а&nbsp;все цели покоряются с&nbsp;лёгкостью.</p>
+        </div>
+      </article>
+
+      <!-- Новость 4 -->
+      <article class="news-card news-card--gray" data-category="accountant">
+        <div class="news-card__img-wrap news-card__img-wrap--placeholder">
+        </div>
+        <div class="news-card__body">
+          <time class="news-card__date" datetime="2026-02-19">19.02.2026</time>
+          <h2 class="news-card__title">
+            <a href="/news/kak-vybrat-konsultantplyus-dlya-buhgaltera/" class="news-card__link">Как выбрать КонсультантПлюс для бухгалтера</a>
+          </h2>
+          <p class="news-card__text">Как выбрать правовую систему для бухгалтерии, чтобы не&nbsp;переплачивать и&nbsp;получить максимум пользы? Разбираем ключевые критерии: от&nbsp;состава информационных банков до&nbsp;формата доступа и&nbsp;количества пользователей. Поможем подобрать оптимальный комплект под реальные задачи вашего бизнеса.</p>
+        </div>
+      </article>
+
+      <!-- Новость 5 -->
+      <article class="news-card news-card--purple" data-category="accountant lawyer manager budget hr procurement">
+        <div class="news-card__img-wrap">
+          <img src="/img/news-5.png" alt="Сколько стоит Консультант Плюс в 2026 году" class="news-card__img" loading="lazy" />
+        </div>
+        <div class="news-card__body">
+          <time class="news-card__date" datetime="2026-02-17">17.02.2026</time>
+          <h2 class="news-card__title">
+            <a href="/news/skolko-stoit-konsultant-plyus-2026/" class="news-card__link">Сколько стоит Консультант Плюс в&nbsp;2026&nbsp;году и&nbsp;от&nbsp;чего зависит цена доступа</a>
+          </h2>
+          <p class="news-card__text">Сколько стоит Консультант Плюс и&nbsp;почему нет фиксированного прайса? Разбираем, из&nbsp;чего складывается цена, какие параметры влияют на&nbsp;стоимость и&nbsp;как выбрать оптимальный комплект без переплаты.</p>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Пагинация -->
+    <div class="news-pagination">
+      <p class="news-pagination__info">Новости 1–5 из 705</p>
+      <nav class="news-pagination__nav" aria-label="Страницы">
+        <a href="#" class="news-pagination__edge">Начало</a>
+        <span class="news-pagination__sep">|</span>
+        <a href="#" class="news-pagination__edge">Пред.</a>
+        <span class="news-pagination__sep">|</span>
+        <div class="news-pagination__pages">
+          <a href="#" class="news-pagination__page is-active" aria-current="page">1</a>
+          <a href="#" class="news-pagination__page">2</a>
+          <a href="#" class="news-pagination__page">3</a>
+          <a href="#" class="news-pagination__page">4</a>
+          <a href="#" class="news-pagination__page">5</a>
+        </div>
+        <span class="news-pagination__sep">|</span>
+        <a href="#" class="news-pagination__edge">След.</a>
+        <span class="news-pagination__sep">|</span>
+        <a href="#" class="news-pagination__edge">Конец</a>
+      </nav>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ====== БЕСПЛАТНЫЙ ДОСТУП ====== -->
+<!-- Битрикс: bitrix:form.result.new -->
+<section class="trial reveal">
+  <div class="trial__inner">
+    <div class="trial__card">
+      <div class="trial__left">
+        <h2 class="trial__title">
+          Получите бесплатный <span class="trial__title--orange">пробный доступ</span> и&nbsp;откройте все возможности системы <span class="trial__title--orange">КонсультантПлюс</span>
+        </h2>
+
+        <div class="trial__features">
+          <div class="trial__feature trial__feature--orange">
+            <div class="trial__feature-icon">
+              <img src="/img/logo-consultant-crop.svg" alt="" />
+            </div>
+            <div class="trial__feature-info">
+              <span class="trial__feature-name">Система КонсультантПлюс</span>
+              <span class="trial__feature-desc">Полный доступ на 2 дня</span>
+            </div>
+          </div>
+
+          <div class="trial__feature trial__feature--purple">
+            <div class="trial__feature-icon">
+              <img src="/img/lk-icon-big.svg" alt="" />
+            </div>
+            <div class="trial__feature-info">
+              <span class="trial__feature-name">Личный кабинет ЧДК-Онлайн</span>
+              <span class="trial__feature-desc">Эксклюзивный сервис для клиентов</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="trial__right">
+        <form class="trial__form js-lead-form" action="/api/lead.php" method="POST" novalidate data-form-id="trial-news" data-thanks="/thanks.html">
+          <input type="text" name="name" class="trial__input" placeholder="Ваше Имя" />
+          <p class="form-field-error hidden" data-error-for="name"></p>
+          <div class="trial__row">
+            <input type="tel" name="phone" class="trial__input mask-phone" placeholder="+7 (9__) ___-__-__" required />
+            <input type="email" name="email" class="trial__input" placeholder="Электронная почта" />
+          </div>
+          <p class="form-field-error hidden" data-error-for="phone"></p>
+          <label class="trial__checkbox">
+            <input type="checkbox" name="consent" required />
+            <span>Я ознакомлен с <a href="/polzovatelskoe_soglashenie.php" class="trial__policy-link">политикой конфиденциальности</a> и&nbsp;даю согласие на&nbsp;обработку персональных данных</span>
+          </label>
+          <p class="form-field-error hidden" data-error-for="consent"></p>
+          <div class="form-error-box hidden" data-form-error></div>
+          <div class="form-success-box hidden" data-form-success></div>
+          <input type="hidden" name="form_id" value="trial-news" />
+          <input type="hidden" name="page" value="/news.html" />
+          <input type="hidden" name="fill_time_ms" value="" />
+          <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <button type="submit" class="trial__submit">Попробовать бесплатно</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ====== ПОДВАЛ ====== -->
+<?php include 'includes/footer.php'; ?>
+
+
+<?php $suffix = '-news'; $page = '/news.html'; include 'includes/modals.php'; ?>
+
+<script type="module" src="./js/main.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const tabs = document.querySelectorAll('.news-list__tab');
+  const cards = document.querySelectorAll('.news-card');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => { t.classList.remove('is-active'); t.setAttribute('aria-selected', 'false'); });
+      tab.classList.add('is-active');
+      tab.setAttribute('aria-selected', 'true');
+
+      const filter = tab.dataset.filter;
+      let shown = 0;
+      cards.forEach(card => {
+        const cats = card.dataset.category ? card.dataset.category.split(' ') : [];
+        if (cats.includes(filter)) {
+          card.style.display = '';
+          shown++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+});
+</script>
+</body>
+</html>
