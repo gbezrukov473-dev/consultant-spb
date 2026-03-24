@@ -55,12 +55,12 @@
             </svg>
           </button>
           <div class="header-nav__dropdown">
-            <a href="/news.html" class="header-nav__dropdown-link">Новости</a>
-            <a href="/faq.html" class="header-nav__dropdown-link">Вопрос-ответ</a>
-            <a href="/collections.html" class="header-nav__dropdown-link">Правовые сборники</a>
+            <a href="/news/" class="header-nav__dropdown-link">Новости</a>
+            <a href="/faq/" class="header-nav__dropdown-link">Вопрос-ответ</a>
+            <a href="/collections/" class="header-nav__dropdown-link">Правовые сборники</a>
           </div>
         </li>
-        <li class="header-nav__item"><a href="/contacts.html" class="header-nav__link">Контакты</a></li>
+        <li class="header-nav__item"><a href="/contacts/" class="header-nav__link">Контакты</a></li>
         <li class="header-nav__item header-nav__item--lk">
           <a href="#" class="header-nav__link header-nav__link--lk">
             <svg class="icon lk-icon" aria-hidden="true"><use href="/img/sprite.svg#lk-icon"></use></svg>
@@ -81,10 +81,10 @@
         <li><a href="/systems/byudzhetnoy-organizatsii/" class="mobile-menu__link">Бюджету</a></li>
         <li><a href="/consult/" class="mobile-menu__link">Линия консультаций</a></li>
         <li><a href="/about/" class="mobile-menu__link">О нас</a></li>
-        <li><a href="/news.html" class="mobile-menu__link">Новости</a></li>
-        <li><a href="/faq.html" class="mobile-menu__link">Вопрос-ответ</a></li>
-        <li><a href="/collections.html" class="mobile-menu__link">Правовые сборники</a></li>
-        <li><a href="/contacts.html" class="mobile-menu__link">Контакты</a></li>
+        <li><a href="/news/" class="mobile-menu__link">Новости</a></li>
+        <li><a href="/faq/" class="mobile-menu__link">Вопрос-ответ</a></li>
+        <li><a href="/collections/" class="mobile-menu__link">Правовые сборники</a></li>
+        <li><a href="/contacts/" class="mobile-menu__link">Контакты</a></li>
         <li><a href="#" class="mobile-menu__link mobile-menu__link--lk">Личный кабинет</a></li>
       </ul>
       <div class="mobile-menu__contacts">

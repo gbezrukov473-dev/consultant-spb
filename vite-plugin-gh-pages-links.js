@@ -32,7 +32,8 @@ export function ghPagesLinksPlugin() {
       function patchText(text) {
         return text
           .replace(/href="\/(?!\/|consultant-spb)/g, `href="${prefix}/`)
-          .replace(/src="\/(?!\/|consultant-spb)/g, `src="${prefix}/`);
+          .replace(/src="\/(?!\/|consultant-spb)/g, `src="${prefix}/`)
+          .replace(/href="(\/consultant-spb\/[^"]*?)\.html"/g, 'href="$1/"');
       }
 
       // Phase 1: patch link prefixes in all HTML files

@@ -43,13 +43,13 @@
             <li><a href="/o-sisteme-konsultantplyus/" class="footer__nav-link">О СПС КонсультантПлюс</a></li>
             <li><a href="/systems/" class="footer__nav-link">Системы</a></li>
             <li><a href="/o-sisteme-konsultantplyus/dostup-konsultantplyus-na-2-dnya/" class="footer__nav-link">Пробный доступ</a></li>
-            <li class="footer__nav-item--mobile-only"><a href="/contacts.html" class="footer__nav-link">Контакты</a></li>
+            <li class="footer__nav-item--mobile-only"><a href="/contacts/" class="footer__nav-link">Контакты</a></li>
           </ul>
         </nav>
 
         <nav class="footer__nav footer__nav--col2">
           <ul class="footer__nav-list">
-            <li class="footer__nav-item--desktop-only"><a href="/contacts.html" class="footer__nav-link">Контакты</a></li>
+            <li class="footer__nav-item--desktop-only"><a href="/contacts/" class="footer__nav-link">Контакты</a></li>
             <li><a href="/services/obuchenie-rabote-s-konsultantplyus/" class="footer__nav-link">Обучение</a></li>
             <li><a href="/services/" class="footer__nav-link">Сервис для клиентов</a></li>
             <li class="footer__nav-item--mobile-only"><a href="/polzovatelskoe_soglashenie.php" class="footer__nav-link footer__nav-link--muted">Политика конфиденциальности</a></li>
