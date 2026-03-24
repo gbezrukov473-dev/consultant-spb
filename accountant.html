@@ -24,7 +24,7 @@
   <div class="breadcrumbs__inner">
     <a href="/" class="breadcrumbs__link">Главная</a>
     <span class="breadcrumbs__sep">&gt;</span>
-    <a href="/buy.html" class="breadcrumbs__link">Системы КонсультантПлюс</a>
+    <a href="/systems/" class="breadcrumbs__link">Системы КонсультантПлюс</a>
     <span class="breadcrumbs__sep">&gt;</span>
     <span class="breadcrumbs__current">КонсультантПлюс для бухгалтера</span>
   </div>
@@ -123,162 +123,165 @@
   <div class="acc-compare__inner">
     <h2 class="acc-compare__title">Сравнение комплектов КонсультантПлюс для&nbsp;бухгалтера</h2>
 
-    <div class="acc-compare__box">
+    <!-- Шапка -->
+    <div class="acc-compare__head">
+      <div class="acc-compare__head-label">Информационные банки</div>
+      <div class="acc-compare__head-col">
+        <span class="acc-compare__head-name">Бухгалтер Оптимальный</span>
+        <a href="#" class="btn acc-compare__head-btn" data-open-modal="modalPrice">Узнать цену</a>
+      </div>
+      <div class="acc-compare__head-col">
+        <span class="acc-compare__head-name">Бухгалтер Проф</span>
+        <a href="#" class="btn acc-compare__head-btn" data-open-modal="modalPrice">Узнать цену</a>
+      </div>
+    </div>
 
-      <!-- Шапка таблицы -->
-      <div class="acc-compare__head">
-        <div class="acc-compare__head-label">Информационные банки</div>
-        <div class="acc-compare__head-col">
-          <span class="acc-compare__head-name">Бухгалтер Оптимальный</span>
-          <a href="#" class="btn acc-compare__head-btn" data-open-modal="modalPrice">Узнать цену</a>
+    <!-- Аккордеон: Законодательство (открыт) -->
+    <div class="acc-compare__section is-open">
+      <button class="acc-compare__section-btn" aria-expanded="true">
+        <span class="acc-compare__section-name">Законодательство</span>
+        <svg class="acc-compare__chevron" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <div class="acc-compare__section-body">
+        <div class="acc-compare__row">
+          <span class="acc-compare__row-label">Российское законодательство (Версия Проф)</span>
+          <span class="acc-compare__row-cell"><img src="/img/krest.svg" alt="нет" class="acc-compare__icon" /></span>
+          <span class="acc-compare__row-cell"><img src="/img/galochka.svg" alt="есть" class="acc-compare__icon" /></span>
         </div>
-        <div class="acc-compare__head-col">
-          <span class="acc-compare__head-name">Бухгалтер Проф</span>
-          <a href="#" class="btn acc-compare__head-btn" data-open-modal="modalPrice">Узнать цену</a>
+        <div class="acc-compare__row">
+          <span class="acc-compare__row-label">Российское законодательство (расширенная версия)</span>
+          <span class="acc-compare__row-cell"><img src="/img/galochka.svg" alt="есть" class="acc-compare__icon" /></span>
+          <span class="acc-compare__row-cell"><img src="/img/krest.svg" alt="нет" class="acc-compare__icon" /></span>
+        </div>
+        <div class="acc-compare__row">
+          <span class="acc-compare__row-label">Санкт-Петербург и&nbsp;Ленинградская область (полный)</span>
+          <span class="acc-compare__row-cell"><img src="/img/galochka.svg" alt="есть" class="acc-compare__icon" /></span>
+          <span class="acc-compare__row-cell"><img src="/img/galochka.svg" alt="есть" class="acc-compare__icon" /></span>
         </div>
       </div>
+    </div>
 
-      <!-- Аккордеон: Законодательство (открыт) -->
-      <div class="acc-compare__section is-open">
-        <button class="acc-compare__section-btn" aria-expanded="true">
-          <span class="acc-compare__section-name">Законодательство</span>
-          <svg class="acc-compare__chevron" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </button>
-        <div class="acc-compare__section-body">
-          <div class="acc-compare__row acc-compare__row--alt">
-            <span class="acc-compare__row-label">Российское законодательство (Версия Проф)</span>
-            <span class="acc-compare__row-cell"><img src="/img/krest.svg" alt="нет" class="acc-compare__icon" /></span>
-            <span class="acc-compare__row-cell"><img src="/img/galochka.svg" alt="есть" class="acc-compare__icon" /></span>
-          </div>
-          <div class="acc-compare__row">
-            <span class="acc-compare__row-label">Российское законодательство (расширенная версия)</span>
-            <span class="acc-compare__row-cell"><img src="/img/galochka.svg" alt="есть" class="acc-compare__icon" /></span>
-            <span class="acc-compare__row-cell"><img src="/img/krest.svg" alt="нет" class="acc-compare__icon" /></span>
-          </div>
-          <div class="acc-compare__row acc-compare__row--alt">
-            <span class="acc-compare__row-label">Санкт-Петербург и&nbsp;Ленинградская область (полный)</span>
-            <span class="acc-compare__row-cell"><img src="/img/galochka.svg" alt="есть" class="acc-compare__icon" /></span>
-            <span class="acc-compare__row-cell"><img src="/img/galochka.svg" alt="есть" class="acc-compare__icon" /></span>
-          </div>
+    <!-- Административная практика -->
+    <div class="acc-compare__section">
+      <button class="acc-compare__section-btn" aria-expanded="false">
+        <span class="acc-compare__section-name">Административная практика</span>
+        <svg class="acc-compare__chevron" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <div class="acc-compare__section-body">
+        <div class="acc-compare__row">
+          <span class="acc-compare__row-label">Административная практика (Версия Проф)</span>
+          <span class="acc-compare__row-cell"><img src="/img/galochka.svg" alt="есть" class="acc-compare__icon" /></span>
+          <span class="acc-compare__row-cell"><img src="/img/galochka.svg" alt="есть" class="acc-compare__icon" /></span>
         </div>
       </div>
+    </div>
 
-      <!-- Аккордеон: остальные секции (свёрнуты) -->
-      <div class="acc-compare__section">
-        <button class="acc-compare__section-btn" aria-expanded="false">
-          <span class="acc-compare__section-name">Административная практика</span>
-          <svg class="acc-compare__chevron" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </button>
-        <div class="acc-compare__section-body">
-          <div class="acc-compare__row acc-compare__row--alt">
-            <span class="acc-compare__row-label">Административная практика (Версия Проф)</span>
-            <span class="acc-compare__row-cell"><img src="/img/galochka.svg" alt="есть" class="acc-compare__icon" /></span>
-            <span class="acc-compare__row-cell"><img src="/img/galochka.svg" alt="есть" class="acc-compare__icon" /></span>
-          </div>
+    <!-- Судебная практика -->
+    <div class="acc-compare__section">
+      <button class="acc-compare__section-btn" aria-expanded="false">
+        <span class="acc-compare__section-name">Судебная практика</span>
+        <svg class="acc-compare__chevron" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <div class="acc-compare__section-body">
+        <div class="acc-compare__row">
+          <span class="acc-compare__row-label">Судебная практика (базовая версия)</span>
+          <span class="acc-compare__row-cell"><img src="/img/krest.svg" alt="нет" class="acc-compare__icon" /></span>
+          <span class="acc-compare__row-cell"><img src="/img/galochka.svg" alt="есть" class="acc-compare__icon" /></span>
         </div>
       </div>
+    </div>
 
-      <div class="acc-compare__section">
-        <button class="acc-compare__section-btn" aria-expanded="false">
-          <span class="acc-compare__section-name">Судебная практика</span>
-          <svg class="acc-compare__chevron" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </button>
-        <div class="acc-compare__section-body">
-          <div class="acc-compare__row acc-compare__row--alt">
-            <span class="acc-compare__row-label">Судебная практика (базовая версия)</span>
-            <span class="acc-compare__row-cell"><img src="/img/krest.svg" alt="нет" class="acc-compare__icon" /></span>
-            <span class="acc-compare__row-cell"><img src="/img/galochka.svg" alt="есть" class="acc-compare__icon" /></span>
-          </div>
+    <!-- Финансовые и кадровые консультации -->
+    <div class="acc-compare__section">
+      <button class="acc-compare__section-btn" aria-expanded="false">
+        <span class="acc-compare__section-name">Финансовые и&nbsp;кадровые консультации</span>
+        <svg class="acc-compare__chevron" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <div class="acc-compare__section-body">
+        <div class="acc-compare__row">
+          <span class="acc-compare__row-label">Финансовые консультации</span>
+          <span class="acc-compare__row-cell"><img src="/img/galochka.svg" alt="есть" class="acc-compare__icon" /></span>
+          <span class="acc-compare__row-cell"><img src="/img/galochka.svg" alt="есть" class="acc-compare__icon" /></span>
         </div>
       </div>
+    </div>
 
-      <div class="acc-compare__section">
-        <button class="acc-compare__section-btn" aria-expanded="false">
-          <span class="acc-compare__section-name">Финансовые и&nbsp;кадровые консультации</span>
-          <svg class="acc-compare__chevron" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </button>
-        <div class="acc-compare__section-body">
-          <div class="acc-compare__row acc-compare__row--alt">
-            <span class="acc-compare__row-label">Финансовые консультации</span>
-            <span class="acc-compare__row-cell"><img src="/img/galochka.svg" alt="есть" class="acc-compare__icon" /></span>
-            <span class="acc-compare__row-cell"><img src="/img/galochka.svg" alt="есть" class="acc-compare__icon" /></span>
-          </div>
+    <!-- Формы документов -->
+    <div class="acc-compare__section">
+      <button class="acc-compare__section-btn" aria-expanded="false">
+        <span class="acc-compare__section-name">Формы документов</span>
+        <svg class="acc-compare__chevron" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <div class="acc-compare__section-body">
+        <div class="acc-compare__row">
+          <span class="acc-compare__row-label">Формы документов (стандарт)</span>
+          <span class="acc-compare__row-cell"><img src="/img/galochka.svg" alt="есть" class="acc-compare__icon" /></span>
+          <span class="acc-compare__row-cell"><img src="/img/galochka.svg" alt="есть" class="acc-compare__icon" /></span>
         </div>
       </div>
+    </div>
 
-      <div class="acc-compare__section">
-        <button class="acc-compare__section-btn" aria-expanded="false">
-          <span class="acc-compare__section-name">Формы документов</span>
-          <svg class="acc-compare__chevron" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </button>
-        <div class="acc-compare__section-body">
-          <div class="acc-compare__row acc-compare__row--alt">
-            <span class="acc-compare__row-label">Формы документов (стандарт)</span>
-            <span class="acc-compare__row-cell"><img src="/img/galochka.svg" alt="есть" class="acc-compare__icon" /></span>
-            <span class="acc-compare__row-cell"><img src="/img/galochka.svg" alt="есть" class="acc-compare__icon" /></span>
-          </div>
+    <!-- Проекты правовых актов -->
+    <div class="acc-compare__section">
+      <button class="acc-compare__section-btn" aria-expanded="false">
+        <span class="acc-compare__section-name">Проекты правовых актов</span>
+        <svg class="acc-compare__chevron" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <div class="acc-compare__section-body">
+        <div class="acc-compare__row">
+          <span class="acc-compare__row-label">Проекты правовых актов (базовый)</span>
+          <span class="acc-compare__row-cell"><img src="/img/galochka.svg" alt="есть" class="acc-compare__icon" /></span>
+          <span class="acc-compare__row-cell"><img src="/img/galochka.svg" alt="есть" class="acc-compare__icon" /></span>
         </div>
       </div>
+    </div>
 
-      <div class="acc-compare__section">
-        <button class="acc-compare__section-btn" aria-expanded="false">
-          <span class="acc-compare__section-name">Проекты правовых актов</span>
-          <svg class="acc-compare__chevron" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </button>
-        <div class="acc-compare__section-body">
-          <div class="acc-compare__row acc-compare__row--alt">
-            <span class="acc-compare__row-label">Проекты правовых актов (базовый)</span>
-            <span class="acc-compare__row-cell"><img src="/img/galochka.svg" alt="есть" class="acc-compare__icon" /></span>
-            <span class="acc-compare__row-cell"><img src="/img/galochka.svg" alt="есть" class="acc-compare__icon" /></span>
-          </div>
+    <!-- Архивы -->
+    <div class="acc-compare__section">
+      <button class="acc-compare__section-btn" aria-expanded="false">
+        <span class="acc-compare__section-name">Архивы</span>
+        <svg class="acc-compare__chevron" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <div class="acc-compare__section-body">
+        <div class="acc-compare__row">
+          <span class="acc-compare__row-label">Архивы законодательства</span>
+          <span class="acc-compare__row-cell"><img src="/img/galochka.svg" alt="есть" class="acc-compare__icon" /></span>
+          <span class="acc-compare__row-cell"><img src="/img/galochka.svg" alt="есть" class="acc-compare__icon" /></span>
         </div>
       </div>
+    </div>
 
-      <div class="acc-compare__section">
-        <button class="acc-compare__section-btn" aria-expanded="false">
-          <span class="acc-compare__section-name">Архивы</span>
-          <svg class="acc-compare__chevron" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </button>
-        <div class="acc-compare__section-body">
-          <div class="acc-compare__row acc-compare__row--alt">
-            <span class="acc-compare__row-label">Архивы законодательства</span>
-            <span class="acc-compare__row-cell"><img src="/img/galochka.svg" alt="есть" class="acc-compare__icon" /></span>
-            <span class="acc-compare__row-cell"><img src="/img/galochka.svg" alt="есть" class="acc-compare__icon" /></span>
-          </div>
+    <!-- Дополнительно -->
+    <div class="acc-compare__section">
+      <button class="acc-compare__section-btn" aria-expanded="false">
+        <span class="acc-compare__section-name">Дополнительно</span>
+        <svg class="acc-compare__chevron" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <div class="acc-compare__section-body">
+        <div class="acc-compare__row">
+          <span class="acc-compare__row-label">Дополнительные материалы</span>
+          <span class="acc-compare__row-cell"><img src="/img/galochka.svg" alt="есть" class="acc-compare__icon" /></span>
+          <span class="acc-compare__row-cell"><img src="/img/galochka.svg" alt="есть" class="acc-compare__icon" /></span>
         </div>
       </div>
+    </div>
 
-      <div class="acc-compare__section">
-        <button class="acc-compare__section-btn" aria-expanded="false">
-          <span class="acc-compare__section-name">Дополнительно</span>
-          <svg class="acc-compare__chevron" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </button>
-        <div class="acc-compare__section-body">
-          <div class="acc-compare__row acc-compare__row--alt">
-            <span class="acc-compare__row-label">Дополнительные материалы</span>
-            <span class="acc-compare__row-cell"><img src="/img/galochka.svg" alt="есть" class="acc-compare__icon" /></span>
-            <span class="acc-compare__row-cell"><img src="/img/galochka.svg" alt="есть" class="acc-compare__icon" /></span>
-          </div>
-        </div>
-      </div>
-
-    </div><!-- /.acc-compare__box -->
   </div>
 </section>
 
