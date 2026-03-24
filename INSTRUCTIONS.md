@@ -12,31 +12,45 @@
 
 ```
 consultant-spb/
-├── index.html                    # Главная страница
-├── buy.html                      # Страница «Купить КонсультантПлюс»
-├── trial.html                    # Страница «Пробный доступ»
-├── consultation.html             # Страница «Линия консультаций»
-├── collections.html              # Страница «Правовые сборники»
-├── collection-detail.html        # Страница детальная сборника (шаблон)
-├── personal-manager.html         # Страница «Персональный менеджер»
-├── education.html                # Страница «Обучение КонсультантПлюс»
-├── seminars.html                 # Страница «Семинары-тренинги»
-├── tech-support.html             # Страница «Техническая поддержка»
-├── counterparty-check.html       # Страница «Проверка контрагента»
-├── lk-online.html                # Страница «Личный кабинет ЧДК-Онлайн»
-├── services.html                 # Страница «Сервис ЧДК-Право» (агрегатор)
-├── about-sps.html                # Страница «О СПС КонсультантПлюс»
-├── ai-assistant.html             # Страница «ИИ-помощник»
-├── accountant.html               # Страница «КонсультантПлюс для бухгалтера»
-├── lawyer.html                   # «КонсультантПлюс для юриста»
-├── manager.html                  # «КонсультантПлюс для руководителя»
-├── budget.html                   # «КонсультантПлюс для бюджетной организации»
-├── hr.html                       # «КонсультантПлюс для кадрового специалиста»
-├── thanks.html                   # Страница «Спасибо» (в разработке)
+├── index.html                    # Главная страница          → /
+├── buy.html                      # «Купить КонсультантПлюс»  → /buy/
+├── consult.html                  # «Линия консультаций»       → /consult/
+├── about.html                    # «О компании»               → /about/
+├── collections.html              # «Правовые сборники»        → /collections/
+├── collection-detail.html        # Детальная сборника         → /collection-detail/
+├── lk-online.html                # «Личный кабинет ЧДК-Онлайн» → /lk-online/
+├── ai-assistant.html             # «ИИ-помощник»              → /ai-assistant/
+├── news.html                     # «Новости»                  → /news/
+├── news-detail.html              # Детальная новость          → /news-detail/
+├── faq.html                      # «Вопрос-ответ»             → /faq/
+├── faq-detail.html               # Детальный ответ            → /faq-detail/
+├── contacts.html                 # «Контакты»                 → /contacts/
+├── thanks.html                   # «Спасибо» (в разработке)
+│
+├── systems/                      # Системы (комплекты)        → /systems/
+│   ├── index.html                # Каталог систем             → /systems/
+│   ├── bukhgalteru.html          # Для бухгалтера             → /systems/bukhgalteru/
+│   ├── yuristu.html              # Для юриста                 → /systems/yuristu/
+│   ├── rukovoditelyu.html        # Для руководителя           → /systems/rukovoditelyu/
+│   ├── byudzhetnoy-organizatsii.html # Для бюджетной орг.     → /systems/byudzhetnoy-organizatsii/
+│   └── kadroviku.html            # Для кадрового специалиста  → /systems/kadroviku/
+│
+├── services/                     # Сервис ЧДК-Право           → /services/
+│   ├── index.html                # Агрегатор сервисов         → /services/
+│   ├── personalnyy-menedzher.html           # Персональный менеджер            → /services/personalnyy-menedzher/
+│   ├── obuchenie-rabote-s-konsultantplyus.html # Обучение                      → /services/obuchenie-rabote-s-konsultantplyus/
+│   ├── seminary-i-praktikumy.html           # Семинары-тренинги               → /services/seminary-i-praktikumy/
+│   ├── obsluzhivanie-programmy-konsultant-plyus.html # Техподдержка            → /services/obsluzhivanie-programmy-konsultant-plyus/
+│   └── proverka-kontragenta.html            # Проверка контрагента            → /services/proverka-kontragenta/
+│
+├── o-sisteme-konsultantplyus/    # О СПС КонсультантПлюс      → /o-sisteme-konsultantplyus/
+│   ├── index.html                # О системе                  → /o-sisteme-konsultantplyus/
+│   └── dostup-konsultantplyus-na-2-dnya.html # Пробный доступ → /o-sisteme-konsultantplyus/dostup-konsultantplyus-na-2-dnya/
+│
 ├── includes/
 │   ├── header.php                # PHP-шаблон шапки (переиспользуется на всех страницах)
 │   ├── footer.php                # PHP-шаблон подвала
-│   ├── modals.php                # PHP-шаблон модальных окон (параметры: $suffix, $page)
+│   ├── modals.php                # PHP-шаблон модальных окон (modalPrice, modalTrial, modalLk, modalService)
 │   └── favicons.php              # Ссылки на favicon / manifest (подключается в <head> каждой страницы)
 ├── styles/
 │   ├── variables.css             # Дизайн-токены: цвета, радиусы, тени, переходы
@@ -74,8 +88,12 @@ consultant-spb/
 │   └── fonts/                    # Шрифты Gilroy (woff2)
 ├── api/
 │   └── lead.php                  # Бэкенд обработки форм (в разработке)
-├── vite.config.js                # Конфигурация Vite
-├── vite-plugin-php-include.js    # Кастомный Vite-плагин для обработки <?php include ?>
+├── .htaccess                     # Apache rewrite-правила для clean URLs (production)
+├── vite.config.js                # Конфигурация Vite (MPA input, плагины)
+├── vite-plugin-php-include.js    # Кастомный Vite-плагин: обработка <?php include ?>
+├── vite-plugin-clean-urls.js     # Кастомный Vite-плагин: clean URLs в dev-режиме
+├── vite-plugin-gh-pages-links.js # Кастомный Vite-плагин: префикс для GitHub Pages
+├── build-sprite.js               # Скрипт: генерация SVG-спрайта из public/img/*.svg
 └── package.json
 ```
 
@@ -163,7 +181,7 @@ Figma: `https://www.figma.com/design/GFmp5kaM7zrQtRMRTzlzYO/СПБКонс`
 1. **Семантика:** `<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`, `<article>`.
 2. **Изображения:** `loading="lazy"` на всех кроме hero. `alt` обязательны.
 3. **Формы:** Все формы имеют класс `.js-lead-form`, скрытые поля (honeypot `website`, `fill_time_ms`, `form_id`, `page`), `data-thanks` для редиректа.
-4. **Модалки:** 3 модальных окна — `#modalPrice`, `#modalTrial`, `#modalLk` (с 3 шагами A→B/C).
+4. **Модалки:** 4 модальных окна — `#modalPrice`, `#modalTrial`, `#modalLk` (с 3 шагами A→B/C), `#modalService` (жёлтая кнопка «Отправить»).
 5. **Scroll Reveal:** Секции и карточки получают класс `.reveal`, задержки `.reveal--delay-1..4`.
 
 ### JavaScript
@@ -255,6 +273,7 @@ Figma-проект: `GFmp5kaM7zrQtRMRTzlzYO` (СПБКонс)
 | Попап 1 | `181-2` | Форма покупки К+ | `#modalPrice` | `inline/67/6na755` | Имя, Телефон, Email |
 | Попап 2 | `181-528` | Форма пробного доступа | `#modalTrial` | `inline/5/gd9kwc` | Имя, Телефон, Email |
 | Попап 4 | `186-894` | Форма сервиса / Узнать цену | `#modalPrice` | `WEB_FORM_ID=68` (форма Контакты) | Имя, Телефон, Email + скрытый коммент. |
+| Попап Сервис | — | Заполните форму (карточки ЧДК-Право) | `#modalService` | `WEB_FORM_ID=68` | Имя, Телефон, Email |
 | Попап Контакты | `963-4377` | Задать вопрос (Контакты, FAQ) | `#modalLk` шаг C | `WEB_FORM_ID=68` (форма Контакты) | Имя, Телефон, Email, **Ваш вопрос** |
 
 > **Попап 3** из первоначального ТЗ = **Попап 4** (та же форма `WEB_FORM_ID=68`, тот же визуал `186-894`). Различие только в скрытом комментарии: для «Узнать цену» в Системах передаётся название комплекта, для сервисных страниц — название услуги.
@@ -272,6 +291,7 @@ Figma-проект: `GFmp5kaM7zrQtRMRTzlzYO` (СПБКонс)
 
 - Попап 1 (`#modalPrice`) → CRM-форма `inline/67/6na755` (скрипт: `loader_67_6na755.js`)
 - Попап 2 (`#modalTrial`) → CRM-форма `inline/5/gd9kwc` (скрипт: `loader_5_gd9kwc.js`)
+- Попап Сервис (`#modalService`) → Форма Контакты `WEB_FORM_ID=68` + `<input type="hidden" name="COMMENT" value="Название услуги">`
 - Попап 4 → Форма Контакты `WEB_FORM_ID=68` + `<input type="hidden" name="COMMENT" value="Название услуги/комплекта">`
 - Попап Контакты → Та же форма `WEB_FORM_ID=68`, но с видимым полем «Ваш вопрос»
 - Inline-формы пробного доступа (на страницах) → CRM-форма `inline/5/gd9kwc` встроенная в страницу
@@ -285,18 +305,19 @@ Figma-проект: `GFmp5kaM7zrQtRMRTzlzYO` (СПБКонс)
 | `.js-open-modal-trial` | Открывает `#modalTrial` |
 | `[data-open-modal="modalPrice"]` | Открывает `#modalPrice` |
 | `[data-open-modal="modalTrial"]` | Открывает `#modalTrial` |
+| `[data-open-modal="modalService"]` | Открывает `#modalService` (карточки «Сервис ЧДК-Право») |
 | `.header-nav__link--lk` | Открывает `#modalLk` |
 
 ### Навигация шапки
 
 | Пункт | URL |
 |-------|-----|
-| Бухгалтеру | `/accountant.html` → Битрикс: `/systems/bukhgalteru/` |
-| Юристу | `/lawyer.html` → Битрикс: `/systems/yuristu/` |
-| Руководителю | `/manager.html` → Битрикс: `/systems/rukovoditelyu/` |
-| Бюджету | `/budget.html` → Битрикс: `/systems/byudzhetnoy-organizatsii/` |
-| Кадровику | `/hr.html` |
-| Линия консультаций | `/consultation.html` → Битрикс: `/consult/` |
+| Бухгалтеру | `/systems/bukhgalteru/` |
+| Юристу | `/systems/yuristu/` |
+| Руководителю | `/systems/rukovoditelyu/` |
+| Бюджету | `/systems/byudzhetnoy-organizatsii/` |
+| Кадровику | `/systems/kadroviku/` |
+| Линия консультаций | `/consult/` |
 | О нас | `/about/` |
 | Новости (dropdown, hover) → Новости | `/news/` |
 | Новости (dropdown, hover) → Вопрос-ответ | `/faq/` |
@@ -311,7 +332,7 @@ Figma-проект: `GFmp5kaM7zrQtRMRTzlzYO` (СПБКонс)
 |-------|-----|
 | О СПС КонсультантПлюс | `/o-sisteme-konsultantplyus/` |
 | Системы | `/systems/` |
-| Пробный доступ | `/trial.html` → Битрикс: `/o-sisteme-konsultantplyus/dostup-konsultantplyus-na-2-dnya/` |
+| Пробный доступ | `/o-sisteme-konsultantplyus/dostup-konsultantplyus-na-2-dnya/` |
 | Контакты | `/contacts/` |
 | Обучение | `/services/obuchenie-rabote-s-konsultantplyus/` |
 | Сервис ЧДК-Право | `/services/` |
@@ -333,14 +354,14 @@ Figma-проект: `GFmp5kaM7zrQtRMRTzlzYO` (СПБКонс)
 
 Все кнопки «Заказать/Задать вопрос/Обратиться/Записаться/Проверить» открывают **Попап 4** (`WEB_FORM_ID=68`). В Битриксе к лиду добавляется скрытый комментарий с названием услуги.
 
-| Мини-блок | Кнопка (Попап 4) | Ссылка «Подробнее» (Битрикс) | Локальная ссылка |
-|-----------|------------------|------------------------------|------------------|
-| Экспертная Линия консультаций | `data-open-modal="modalPrice"` | `/consult/` | `/consultation.html` |
-| Персональный менеджер | `data-open-modal="modalPrice"` | `/services/personalnyy-menedzher/` | `/personal-manager.html` |
-| Обучение работе с КонсультантПлюс | `data-open-modal="modalPrice"` | `/services/obuchenie-rabote-s-konsultantplyus/` | — |
-| Запись на семинары-тренинги | `data-open-modal="modalPrice"` | `/services/seminary-i-praktikumy/` | — |
-| Техподдержка | `data-open-modal="modalPrice"` | `/services/obsluzhivanie-programmy-konsultant-plyus/` | — |
-| Проверка контрагента | `data-open-modal="modalPrice"` | `/services/proverka-kontragenta/` | — |
+| Мини-блок | Кнопка | Ссылка «Подробнее» |
+|-----------|--------|---------------------|
+| Экспертная Линия консультаций | `data-open-modal="modalService"` | `/consult/` |
+| Персональный менеджер | `data-open-modal="modalService"` | `/services/personalnyy-menedzher/` |
+| Обучение работе с КонсультантПлюс | `data-open-modal="modalService"` | `/services/obuchenie-rabote-s-konsultantplyus/` |
+| Запись на семинары-тренинги | `data-open-modal="modalService"` | `/services/seminary-i-praktikumy/` |
+| Техподдержка | `data-open-modal="modalService"` | `/services/obsluzhivanie-programmy-konsultant-plyus/` |
+| Проверка контрагента | `data-open-modal="modalService"` | `/services/proverka-kontragenta/` |
 
 ### Страница «Купить КонсультантПлюс» (`buy.html`)
 

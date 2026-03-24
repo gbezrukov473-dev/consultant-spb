@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <?php include 'includes/favicons.php'; ?>
+  <?php include '../includes/favicons.php'; ?>
   <meta name="description" content="Личный кабинет ЧДК-Онлайн — эксклюзивный сервис для пользователей КонсультантПлюс, клиентов ЧДК-Право в Санкт-Петербурге." />
   <title>Личный кабинет ЧДК-Онлайн — КонсультантПлюс СПБ</title>
-  <link rel="stylesheet" href="./styles/global.css" />
-  <link rel="stylesheet" href="./styles/ui-kit.css" />
-  <link rel="stylesheet" href="./styles/blocks.css" />
-  <link rel="stylesheet" href="./styles/pages/buy.css" />
-  <link rel="stylesheet" href="./styles/pages/lk-online.css" />
+  <link rel="stylesheet" href="/styles/global.css" />
+  <link rel="stylesheet" href="/styles/ui-kit.css" />
+  <link rel="stylesheet" href="/styles/blocks.css" />
+  <link rel="stylesheet" href="/styles/pages/buy.css" />
+  <link rel="stylesheet" href="/styles/pages/lk-online.css" />
 </head>
 <body>
 
-<?php include 'includes/header.php'; ?>
+<?php include '../includes/header.php'; ?>
 
 
 <!-- ====== ХЛЕБНЫЕ КРОШКИ ====== -->
@@ -23,7 +23,7 @@
   <div class="breadcrumbs__inner">
     <a href="/" class="breadcrumbs__link">Главная</a>
     <span class="breadcrumbs__sep">&gt;</span>
-    <a href="/services.html" class="breadcrumbs__link">Сервис</a>
+    <a href="/services/" class="breadcrumbs__link">Сервис</a>
     <span class="breadcrumbs__sep">&gt;</span>
     <span class="breadcrumbs__current">Личный кабинет ЧДК-Онлайн</span>
   </div>
@@ -38,7 +38,7 @@
       <h1 class="lko-hero__title">Личный кабинет <span class="lko-hero__title-accent">ЧДК-Онлайн</span></h1>
       <p class="lko-hero__text">В&nbsp;личном кабинете ЧДК-Онлайн все под рукой.</p>
       <p class="lko-hero__subtext">Получайте консультации экспертов, участвуйте в&nbsp;семинарах, изучайте новости и&nbsp;полезные материалы, проверяйте надёжность контрагентов. Все устроено так, чтобы вы&nbsp;тратили меньше времени на&nbsp;поиск и&nbsp;больше&nbsp;&mdash; на&nbsp;решение задач.</p>
-      <a href="#" class="btn btn--purple lko-hero__btn" data-open-modal="modalPrice">Получить доступ</a>
+      <a href="#" class="btn btn--purple lko-hero__btn" data-open-modal="modalService">Получить доступ</a>
     </div>
     <div class="lko-hero__visual">
       <img src="/img/lk-chdk-hero.png" alt="Личный кабинет ЧДК-Онлайн" class="lko-hero__img" loading="lazy" />
@@ -56,42 +56,42 @@
 
     <div class="lko-features__grid">
       <div class="lko-features__card reveal reveal--delay-1">
-        <img src="/img/lk-chdk-semtr.svg" alt="" class="lko-features__icon" />
+        <svg class="icon lko-features__icon" aria-hidden="true"><use href="/img/sprite.svg#lk-chdk-semtr"></use></svg>
         <div class="lko-features__body">
           <h3 class="lko-features__name">Семинары-тренинги</h3>
           <p class="lko-features__desc">Актуальное расписание и&nbsp;удобная онлайн-регистрация, записи и&nbsp;сертификаты для&nbsp;участников</p>
         </div>
       </div>
       <div class="lko-features__card reveal reveal--delay-2">
-        <img src="/img/lk-chdk-linkons.svg" alt="" class="lko-features__icon" />
+        <svg class="icon lko-features__icon" aria-hidden="true"><use href="/img/sprite.svg#lk-chdk-linkons"></use></svg>
         <div class="lko-features__body">
           <h3 class="lko-features__name">Линия консультаций</h3>
           <p class="lko-features__desc">Задавайте вопросы экспертам по&nbsp;праву, налогам и&nbsp;бухгалтерии, запрашивайте нужные документы</p>
         </div>
       </div>
       <div class="lko-features__card reveal reveal--delay-3">
-        <img src="/img/lk-chdk-persman.svg" alt="" class="lko-features__icon" />
+        <svg class="icon lko-features__icon" aria-hidden="true"><use href="/img/sprite.svg#lk-chdk-persman"></use></svg>
         <div class="lko-features__body">
           <h3 class="lko-features__name">Персональный менеджер</h3>
           <p class="lko-features__desc">Ваш личный помощник, который поможет решить любой вопрос о&nbsp;работе с&nbsp;КонсультантПлюс</p>
         </div>
       </div>
       <div class="lko-features__card reveal reveal--delay-1">
-        <img src="/img/lk-chdk-material.svg" alt="" class="lko-features__icon" />
+        <svg class="icon lko-features__icon" aria-hidden="true"><use href="/img/sprite.svg#lk-chdk-material"></use></svg>
         <div class="lko-features__body">
           <h3 class="lko-features__name">Новости и&nbsp;материалы</h3>
           <p class="lko-features__desc">Новости законодательства, видео, подборки изменений и&nbsp;готовые решения по&nbsp;популярным темам</p>
         </div>
       </div>
       <div class="lko-features__card reveal reveal--delay-2">
-        <img src="/img/lk-chdk-prov-kontrag.svg" alt="" class="lko-features__icon" />
+        <svg class="icon lko-features__icon" aria-hidden="true"><use href="/img/sprite.svg#lk-chdk-prov-kontrag"></use></svg>
         <div class="lko-features__body">
           <h3 class="lko-features__name">Проверка контрагента</h3>
           <p class="lko-features__desc">Оценивайте надёжность по&nbsp;официальным источникам: финансы, суды, долги, госзакупки</p>
         </div>
       </div>
       <div class="lko-features__card reveal reveal--delay-3">
-        <img src="/img/lk-chdk-techsupp.svg" alt="" class="lko-features__icon" />
+        <svg class="icon lko-features__icon" aria-hidden="true"><use href="/img/sprite.svg#lk-chdk-techsupp"></use></svg>
         <div class="lko-features__body">
           <h3 class="lko-features__name">Техническая поддержка</h3>
           <p class="lko-features__desc">Оперативно решим проблемы с&nbsp;настройкой, обновлением или восстановлением системы</p>
@@ -158,7 +158,7 @@
         </h2>
 
         <div class="trial__features">
-          <div class="trial__feature trial__feature--orange">
+          <a href="/o-sisteme-konsultantplyus/dostup-konsultantplyus-na-2-dnya/" class="trial__feature trial__feature--orange">
             <div class="trial__feature-icon">
               <img src="/img/logo-consultant-crop.svg" alt="" />
             </div>
@@ -166,9 +166,9 @@
               <span class="trial__feature-name">Система КонсультантПлюс</span>
               <span class="trial__feature-desc">Полный доступ на 2 дня</span>
             </div>
-          </div>
+          </a>
 
-          <div class="trial__feature trial__feature--purple">
+          <a href="/services/chto-delat-onlayn/" class="trial__feature trial__feature--purple">
             <div class="trial__feature-icon">
               <img src="/img/lk-icon-big.svg" alt="" />
             </div>
@@ -176,7 +176,7 @@
               <span class="trial__feature-name">Личный кабинет ЧДК-Онлайн</span>
               <span class="trial__feature-desc">Эксклюзивный сервис для клиентов</span>
             </div>
-          </div>
+          </a>
         </div>
       </div>
 
@@ -197,7 +197,7 @@
           <div class="form-error-box hidden" data-form-error></div>
           <div class="form-success-box hidden" data-form-success></div>
           <input type="hidden" name="form_id" value="trial-lko" />
-          <input type="hidden" name="page" value="/lk-online.html" />
+          <input type="hidden" name="page" value="/services/chto-delat-onlayn/" />
           <input type="hidden" name="fill_time_ms" value="" />
           <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
           <button type="submit" class="trial__submit">Попробовать бесплатно</button>
@@ -208,10 +208,10 @@
 </section>
 
 
-<?php include 'includes/footer.php'; ?>
+<?php include '../includes/footer.php'; ?>
 
-<?php $suffix = '-lko'; $page = '/lk-online.html'; include 'includes/modals.php'; ?>
+<?php $suffix = '-lko'; $page = '/services/chto-delat-onlayn/'; include '../includes/modals.php'; ?>
 
-<script type="module" src="./js/main.js"></script>
+<script type="module" src="/js/main.js"></script>
 </body>
 </html>

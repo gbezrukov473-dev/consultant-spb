@@ -6,11 +6,11 @@
   <?php include 'includes/favicons.php'; ?>
   <meta name="description" content="Линия консультаций КонсультантПлюс — экспертные ответы по бухучету, налогам и праву от ЧДК-Право" />
   <title>Линия консультаций — КонсультантПлюс</title>
-  <link rel="stylesheet" href="./styles/global.css" />
-  <link rel="stylesheet" href="./styles/ui-kit.css" />
-  <link rel="stylesheet" href="./styles/blocks.css" />
-  <link rel="stylesheet" href="./styles/pages/buy.css" />
-  <link rel="stylesheet" href="./styles/pages/consultation.css" />
+  <link rel="stylesheet" href="/styles/global.css" />
+  <link rel="stylesheet" href="/styles/ui-kit.css" />
+  <link rel="stylesheet" href="/styles/blocks.css" />
+  <link rel="stylesheet" href="/styles/pages/buy.css" />
+  <link rel="stylesheet" href="/styles/pages/consultation.css" />
 </head>
 <body>
 
@@ -23,7 +23,7 @@
   <div class="breadcrumbs__inner">
     <a href="/" class="breadcrumbs__link">Главная</a>
     <span class="breadcrumbs__sep">&gt;</span>
-    <a href="/services.html" class="breadcrumbs__link">Сервис</a>
+    <a href="/services/" class="breadcrumbs__link">Сервис</a>
     <span class="breadcrumbs__sep">&gt;</span>
     <span class="breadcrumbs__current">Линия консультаций</span>
   </div>
@@ -87,7 +87,7 @@
 
     <div class="lk-services__grid">
       <div class="lk-services__card reveal reveal--delay-1">
-        <img src="/img/gor-lin.svg" alt="" class="lk-services__card-icon" />
+        <svg class="icon lk-services__card-icon" aria-hidden="true"><use href="/img/sprite.svg#gor-lin"></use></svg>
         <div class="lk-services__card-body">
           <h3 class="lk-services__card-title">Горячая линия</h3>
           <p class="lk-services__card-text">Быстрые ответы в&nbsp;чате онлайн-диалога в&nbsp;системе КонсультантПлюс</p>
@@ -95,7 +95,7 @@
       </div>
 
       <div class="lk-services__card reveal reveal--delay-2">
-        <img src="/img/pis-kons.svg" alt="" class="lk-services__card-icon" />
+        <svg class="icon lk-services__card-icon" aria-hidden="true"><use href="/img/sprite.svg#pis-kons"></use></svg>
         <div class="lk-services__card-body">
           <h3 class="lk-services__card-title">Устные и&nbsp;письменные консультации</h3>
           <p class="lk-services__card-text">Ответы на&nbsp;вопросы от&nbsp;ведущих специалистов по&nbsp;бухгалтерии, юриспруденции и&nbsp;налогам</p>
@@ -103,7 +103,7 @@
       </div>
 
       <div class="lk-services__card reveal reveal--delay-3">
-        <img src="/img/sprav-inf.svg" alt="" class="lk-services__card-icon" />
+        <svg class="icon lk-services__card-icon" aria-hidden="true"><use href="/img/sprite.svg#sprav-inf"></use></svg>
         <div class="lk-services__card-body">
           <h3 class="lk-services__card-title">Справочная информация</h3>
           <p class="lk-services__card-text">Подбор материалов из&nbsp;системы КонсультантПлюс по&nbsp;Вашему запросу</p>
@@ -111,7 +111,7 @@
       </div>
 
       <div class="lk-services__card reveal reveal--delay-4">
-        <img src="/img/doc-zapr.svg" alt="" class="lk-services__card-icon" />
+        <svg class="icon lk-services__card-icon" aria-hidden="true"><use href="/img/sprite.svg#doc-zapr"></use></svg>
         <div class="lk-services__card-body">
           <h3 class="lk-services__card-title">Документы по&nbsp;запросу</h3>
           <p class="lk-services__card-text">Поиск и&nbsp;предоставление документов, которых нет&nbsp;в&nbsp;Вашем комплекте</p>
@@ -139,19 +139,19 @@
       <div class="lk-howto__right">
         <div class="lk-howto__feature reveal reveal--delay-1">
           <div class="lk-howto__feature-circle lk-howto__feature-circle--purple">
-            <img src="/img/check-circle.svg" alt="" />
+            <svg class="icon" aria-hidden="true"><use href="/img/sprite.svg#check-circle"></use></svg>
           </div>
           <span class="lk-howto__feature-text">Быстро</span>
         </div>
         <div class="lk-howto__feature reveal reveal--delay-2">
           <div class="lk-howto__feature-circle lk-howto__feature-circle--orange">
-            <img src="/img/check-circle.svg" alt="" />
+            <svg class="icon" aria-hidden="true"><use href="/img/sprite.svg#check-circle"></use></svg>
           </div>
           <span class="lk-howto__feature-text">Надежные ответы</span>
         </div>
         <div class="lk-howto__feature reveal reveal--delay-3">
           <div class="lk-howto__feature-circle lk-howto__feature-circle--purple">
-            <img src="/img/check-circle.svg" alt="" />
+            <svg class="icon" aria-hidden="true"><use href="/img/sprite.svg#check-circle"></use></svg>
           </div>
           <span class="lk-howto__feature-text">Экспертность</span>
         </div>
@@ -364,8 +364,8 @@
 <?php include 'includes/footer.php'; ?>
 
 
-<?php $suffix = '-lk'; $page = '/consultation.html'; include 'includes/modals.php'; ?>
+<?php $suffix = '-lk'; $page = '/consult/'; include 'includes/modals.php'; ?>
 
-<script type="module" src="./js/main.js"></script>
+<script type="module" src="/js/main.js"></script>
 </body>
 </html>

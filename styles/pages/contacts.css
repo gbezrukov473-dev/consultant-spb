@@ -154,9 +154,7 @@
    ПЕРЕОПРЕДЕЛЕНИЯ ДЛЯ БЛОКА «ОСТАЛИСЬ ВОПРОСЫ?»
    ==================================================== */
 .contacts-offer {
-  margin: 0 auto 80px;
-  max-width: calc(var(--container-max) - 2 * var(--side-padding));
-  padding: 0 var(--side-padding);
+  padding-bottom: 80px;
 }
 
 

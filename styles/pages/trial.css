@@ -225,7 +225,8 @@
   background: var(--color-primary);
 }
 
-.tp-days__icon img {
+.tp-days__icon img,
+.tp-days__icon .icon {
   width: 40px;
   height: 40px;
   object-fit: contain;
@@ -627,7 +628,8 @@
     height: 56px;
   }
 
-  .tp-days__icon img {
+  .tp-days__icon img,
+  .tp-days__icon .icon {
     width: 28px;
     height: 28px;
   }

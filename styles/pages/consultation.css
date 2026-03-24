@@ -328,7 +328,8 @@
 .lk-howto__feature-circle--purple { background: var(--color-secondary); }
 .lk-howto__feature-circle--orange { background: var(--color-primary); }
 
-.lk-howto__feature-circle img {
+.lk-howto__feature-circle img,
+.lk-howto__feature-circle .icon {
   width: 40px;
   height: 40px;
 }

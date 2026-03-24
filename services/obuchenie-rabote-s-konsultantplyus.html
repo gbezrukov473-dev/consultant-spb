@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <?php include 'includes/favicons.php'; ?>
+  <?php include '../includes/favicons.php'; ?>
   <meta name="description" content="Обучение работе с КонсультантПлюс — бесплатные курсы для клиентов ЧДК-Право в Санкт-Петербурге." />
   <title>Обучение КонсультантПлюс — КонсультантПлюс СПБ</title>
-  <link rel="stylesheet" href="./styles/global.css" />
-  <link rel="stylesheet" href="./styles/ui-kit.css" />
-  <link rel="stylesheet" href="./styles/blocks.css" />
-  <link rel="stylesheet" href="./styles/pages/buy.css" />
-  <link rel="stylesheet" href="./styles/pages/education.css" />
+  <link rel="stylesheet" href="/styles/global.css" />
+  <link rel="stylesheet" href="/styles/ui-kit.css" />
+  <link rel="stylesheet" href="/styles/blocks.css" />
+  <link rel="stylesheet" href="/styles/pages/buy.css" />
+  <link rel="stylesheet" href="/styles/pages/education.css" />
 </head>
 <body>
 
-<?php include 'includes/header.php'; ?>
+<?php include '../includes/header.php'; ?>
 
 
 <!-- ====== ХЛЕБНЫЕ КРОШКИ ====== -->
@@ -23,7 +23,7 @@
   <div class="breadcrumbs__inner">
     <a href="/" class="breadcrumbs__link">Главная</a>
     <span class="breadcrumbs__sep">&gt;</span>
-    <a href="/services.html" class="breadcrumbs__link">Сервис</a>
+    <a href="/services/" class="breadcrumbs__link">Сервис</a>
     <span class="breadcrumbs__sep">&gt;</span>
     <span class="breadcrumbs__current">Обучение КонсультантПлюс</span>
   </div>
@@ -38,7 +38,7 @@
       <h1 class="edu-hero__title"><span class="edu-hero__title-accent">Обучение</span> КонсультантПлюс</h1>
       <p class="edu-hero__text">КонсультантПлюс&nbsp;&mdash; мощный инструмент, который раскрывается в&nbsp;руках опытного пользователя.</p>
       <p class="edu-hero__subtext">Обучение поможет вам освоить базовые и&nbsp;расширенные возможности системы, чтобы работать быстрее, находить точные ответы и&nbsp;использовать все преимущества профессиональной правовой поддержки.</p>
-      <a href="#" class="btn btn--purple edu-hero__btn" data-open-modal="modalPrice">Заказать</a>
+      <a href="#" class="btn btn--purple edu-hero__btn" data-open-modal="modalService">Заказать</a>
     </div>
     <div class="edu-hero__visual">
       <img src="/img/obuch-KP-hero.png" alt="Обучение КонсультантПлюс" class="edu-hero__img" loading="lazy" />
@@ -56,28 +56,28 @@
 
     <div class="edu-features__grid">
       <div class="edu-features__card reveal reveal--delay-1">
-        <img src="/img/obuch-KP-prof.svg" alt="" class="edu-features__icon" />
+        <svg class="icon edu-features__icon" aria-hidden="true"><use href="/img/sprite.svg#obuch-KP-prof"></use></svg>
         <div class="edu-features__body">
           <h3 class="edu-features__name">Работайте как&nbsp;профессионал</h3>
           <p class="edu-features__desc">Освойте все&nbsp;инструменты КонсультантПлюс&nbsp;&mdash; от&nbsp;быстрого поиска до&nbsp;глубокой аналитики и&nbsp;судебной практики</p>
         </div>
       </div>
       <div class="edu-features__card reveal reveal--delay-2">
-        <img src="/img/obuch-KP-kurs.svg" alt="" class="edu-features__icon" />
+        <svg class="icon edu-features__icon" aria-hidden="true"><use href="/img/sprite.svg#obuch-KP-kurs"></use></svg>
         <div class="edu-features__body">
           <h3 class="edu-features__name">Курсы под&nbsp;ваши задачи</h3>
           <p class="edu-features__desc">Обучение для&nbsp;бухгалтеров, юристов, руководителей и&nbsp;других специалистов с&nbsp;учётом особенностей именно вашей работы</p>
         </div>
       </div>
       <div class="edu-features__card reveal reveal--delay-3">
-        <img src="/img/obuch-KP-praktika.svg" alt="" class="edu-features__icon" />
+        <svg class="icon edu-features__icon" aria-hidden="true"><use href="/img/sprite.svg#obuch-KP-praktika"></use></svg>
         <div class="edu-features__body">
           <h3 class="edu-features__name">Практика на&nbsp;реальных примерах</h3>
           <p class="edu-features__desc">Разбираем ситуации, с&nbsp;которыми вы&nbsp;сталкиваетесь каждый день, и&nbsp;учим приёмам, экономящим часы поиска</p>
         </div>
       </div>
       <div class="edu-features__card reveal reveal--delay-4">
-        <img src="/img/obuch-KP-kvalif.svg" alt="" class="edu-features__icon" />
+        <svg class="icon edu-features__icon" aria-hidden="true"><use href="/img/sprite.svg#obuch-KP-kvalif"></use></svg>
         <div class="edu-features__body">
           <h3 class="edu-features__name">Подтвердите квалификацию</h3>
           <p class="edu-features__desc">По&nbsp;итогам обучения выдаём официальный документ, подтверждающий ваши навыки работы с&nbsp;КонсультантПлюс</p>
@@ -99,7 +99,7 @@
         </h2>
 
         <div class="trial__features">
-          <div class="trial__feature trial__feature--orange">
+          <a href="/o-sisteme-konsultantplyus/dostup-konsultantplyus-na-2-dnya/" class="trial__feature trial__feature--orange">
             <div class="trial__feature-icon">
               <img src="/img/logo-consultant-crop.svg" alt="" />
             </div>
@@ -107,9 +107,9 @@
               <span class="trial__feature-name">Система КонсультантПлюс</span>
               <span class="trial__feature-desc">Полный доступ на 2 дня</span>
             </div>
-          </div>
+          </a>
 
-          <div class="trial__feature trial__feature--purple">
+          <a href="/services/chto-delat-onlayn/" class="trial__feature trial__feature--purple">
             <div class="trial__feature-icon">
               <img src="/img/lk-icon-big.svg" alt="" />
             </div>
@@ -117,7 +117,7 @@
               <span class="trial__feature-name">Личный кабинет ЧДК-Онлайн</span>
               <span class="trial__feature-desc">Эксклюзивный сервис для клиентов</span>
             </div>
-          </div>
+          </a>
         </div>
       </div>
 
@@ -149,10 +149,10 @@
 </section>
 
 
-<?php include 'includes/footer.php'; ?>
+<?php include '../includes/footer.php'; ?>
 
-<?php $suffix = '-edu'; $page = '/education.html'; include 'includes/modals.php'; ?>
+<?php $suffix = '-edu'; $page = '/services/obuchenie-rabote-s-konsultantplyus/'; include '../includes/modals.php'; ?>
 
-<script type="module" src="./js/main.js"></script>
+<script type="module" src="/js/main.js"></script>
 </body>
 </html>

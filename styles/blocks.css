@@ -622,6 +622,8 @@
   gap: 14px;
   border-radius: 16px;
   padding: 18px 20px;
+  text-decoration: none;
+  transition: opacity var(--transition-fast);
   max-width: 380px;
 }
 
@@ -631,6 +633,10 @@
 
 .trial__feature--purple {
   background: var(--color-bg-purple);
+}
+
+a.trial__feature:hover {
+  opacity: 0.85;
 }
 
 .trial__feature-icon {

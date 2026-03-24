@@ -111,3 +111,28 @@
     </form>
   </div>
 </div>
+
+<!-- Сервис ЧДК-Право: заполните форму -->
+<div class="modal" id="modalService">
+  <button class="modal__close" aria-label="Закрыть">&times;</button>
+  <h2 class="modal__title">Заполните форму</h2>
+  <p class="modal__subtitle">Наш специалист свяжется с&nbsp;Вами в&nbsp;ближайшее время</p>
+  <form class="modal__form js-lead-form" action="/api/lead.php" method="POST" novalidate data-form-id="modal-service<?= $suffix ?>" data-thanks="/thanks.html">
+    <input type="text" name="name" class="modal__input" placeholder="Ваше Имя" />
+    <p class="form-field-error hidden" data-error-for="name"></p>
+    <input type="tel" name="phone" class="modal__input mask-phone" placeholder="+7 (9__) ___-__-__" required />
+    <p class="form-field-error hidden" data-error-for="phone"></p>
+    <input type="email" name="email" class="modal__input" placeholder="Электронная почта" />
+    <label class="modal__checkbox">
+      <input type="checkbox" name="consent" required />
+      <span>Я ознакомлен с <a href="/polzovatelskoe_soglashenie.php" class="modal__policy-link">политикой конфиденциальности</a> и&nbsp;даю согласие на&nbsp;обработку персональных данных</span>
+    </label>
+    <p class="form-field-error hidden" data-error-for="consent"></p>
+    <div class="form-error-box hidden" data-form-error></div>
+    <input type="hidden" name="form_id" value="modal-service<?= $suffix ?>" />
+    <input type="hidden" name="page" value="<?= $page ?>" />
+    <input type="hidden" name="fill_time_ms" value="" />
+    <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
+    <button type="submit" class="modal__submit modal__submit--yellow">Отправить</button>
+  </form>
+</div>

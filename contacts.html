@@ -6,13 +6,13 @@
   <?php include 'includes/favicons.php'; ?>
   <meta name="description" content="Контакты ООО «ЧДК-Право» — официальный партнёр КонсультантПлюс в Санкт-Петербурге. Телефон, адрес, e-mail, схема проезда." />
   <title>Контакты — КонсультантПлюс СПБ</title>
-  <link rel="stylesheet" href="./styles/global.css" />
-  <link rel="stylesheet" href="./styles/ui-kit.css" />
-  <link rel="stylesheet" href="./styles/blocks.css" />
-  <link rel="stylesheet" href="./styles/pages/buy.css" />
-  <link rel="stylesheet" href="./styles/pages/accountant.css" />
-  <link rel="stylesheet" href="./styles/pages/faq.css" />
-  <link rel="stylesheet" href="./styles/pages/contacts.css" />
+  <link rel="stylesheet" href="/styles/global.css" />
+  <link rel="stylesheet" href="/styles/ui-kit.css" />
+  <link rel="stylesheet" href="/styles/blocks.css" />
+  <link rel="stylesheet" href="/styles/pages/buy.css" />
+  <link rel="stylesheet" href="/styles/pages/accountant.css" />
+  <link rel="stylesheet" href="/styles/pages/faq.css" />
+  <link rel="stylesheet" href="/styles/pages/contacts.css" />
 </head>
 <body>
 
@@ -73,8 +73,8 @@
       <!-- Соцсети -->
       <div class="contacts-info__social">
         <span class="contacts-info__label">Мы в&nbsp;социальных сетях:</span>
-        <a href="https://vk.com/spbcons" class="contacts-info__social-link" aria-label="ВКонтакте" target="_blank" rel="noopener">
-          <img src="/img/icon-vk.svg" alt="ВКонтакте" class="contacts-info__social-icon" />
+        <a href="https://vk.com/consultantspb" class="contacts-info__social-link" aria-label="ВКонтакте" target="_blank" rel="noopener">
+          <svg class="icon contacts-info__social-icon" role="img" aria-label="ВКонтакте"><use href="/img/sprite.svg#icon-vk"></use></svg>
         </a>
       </div>
 
@@ -98,7 +98,7 @@
       <p class="faq-offer__subtitle">Мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время для обсуждения.</p>
       <span class="acc-offer__badge">напишите нам</span>
       <div class="acc-offer__row">
-        <a href="/consultation.html" class="btn btn--purple acc-offer__btn">Задать вопрос</a>
+        <a href="#" class="btn btn--purple acc-offer__btn" data-open-modal="modalService">Задать вопрос</a>
       </div>
     </div>
     <div class="acc-offer__image">
@@ -109,9 +109,9 @@
 
 
 <?php include 'includes/footer.php'; ?>
-<?php include 'includes/modals.php'; ?>
+<?php $suffix = '-cnt'; $page = '/contacts/'; include 'includes/modals.php'; ?>
 
-<script type="module" src="./js/main.js"></script>
+<script type="module" src="/js/main.js"></script>
 
 <!-- Яндекс.Карты API -->
 <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" defer></script>

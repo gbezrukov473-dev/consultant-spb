@@ -3,19 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <?php include 'includes/favicons.php'; ?>
+  <?php include '../includes/favicons.php'; ?>
   <meta name="description" content="КонсультантПлюс для бухгалтера — актуальные законы, готовые решения, путеводители и калькуляторы. Официальный представитель в Санкт-Петербурге." />
   <title>КонсультантПлюс для бухгалтера — КонсультантПлюс СПБ</title>
-  <link rel="stylesheet" href="./styles/global.css" />
-  <link rel="stylesheet" href="./styles/ui-kit.css" />
-  <link rel="stylesheet" href="./styles/blocks.css" />
-  <link rel="stylesheet" href="./styles/pages/buy.css" />
-  <link rel="stylesheet" href="./styles/pages/trial.css" />
-  <link rel="stylesheet" href="./styles/pages/accountant.css" />
+  <link rel="stylesheet" href="/styles/global.css" />
+  <link rel="stylesheet" href="/styles/ui-kit.css" />
+  <link rel="stylesheet" href="/styles/blocks.css" />
+  <link rel="stylesheet" href="/styles/pages/buy.css" />
+  <link rel="stylesheet" href="/styles/pages/trial.css" />
+  <link rel="stylesheet" href="/styles/pages/accountant.css" />
 </head>
 <body>
 
-<?php include 'includes/header.php'; ?>
+<?php include '../includes/header.php'; ?>
 
 
 <!-- ====== ХЛЕБНЫЕ КРОШКИ ====== -->
@@ -24,7 +24,7 @@
   <div class="breadcrumbs__inner">
     <a href="/" class="breadcrumbs__link">Главная</a>
     <span class="breadcrumbs__sep">&gt;</span>
-    <a href="/systems.html" class="breadcrumbs__link">Системы КонсультантПлюс</a>
+    <a href="/systems/" class="breadcrumbs__link">Системы КонсультантПлюс</a>
     <span class="breadcrumbs__sep">&gt;</span>
     <span class="breadcrumbs__current">КонсультантПлюс для бухгалтера</span>
   </div>
@@ -41,7 +41,7 @@
       <p class="acc-hero__subtext">В&nbsp;системе собраны актуальные законы, готовые формы и&nbsp;разъяснения экспертов по&nbsp;налогообложению, бухгалтерскому и&nbsp;кадровому учёту. Начните работать без рисков и&nbsp;ошибок уже сегодня.</p>
       <div class="acc-hero__buttons">
         <a href="#" class="btn btn--purple acc-hero__btn" data-open-modal="modalPrice">Узнать цену</a>
-        <a href="/trial.html" class="btn acc-hero__btn acc-hero__btn--outline">Получить демо-доступ</a>
+        <a href="#" data-open-modal="modalTrial" class="btn acc-hero__btn acc-hero__btn--outline">Получить демо-доступ</a>
       </div>
     </div>
     <div class="acc-hero__visual">
@@ -59,37 +59,37 @@
 
     <div class="acc-reasons__grid">
       <div class="acc-reasons__card reveal reveal--delay-1">
-        <img src="/img/icon-buhg-zakon-izm.svg" alt="" class="acc-reasons__icon" />
+        <svg class="icon acc-reasons__icon" aria-hidden="true"><use href="/img/sprite.svg#icon-buhg-zakon-izm"></use></svg>
         <div class="acc-reasons__body">
           <p class="acc-reasons__text"><span class="acc-reasons__accent acc-reasons__accent--purple">Актуальные изменения</span> налогового законодательства</p>
         </div>
       </div>
       <div class="acc-reasons__card reveal reveal--delay-2">
-        <img src="/img/icon-buhg-putevod.svg" alt="" class="acc-reasons__icon" />
+        <svg class="icon acc-reasons__icon" aria-hidden="true"><use href="/img/sprite.svg#icon-buhg-putevod"></use></svg>
         <div class="acc-reasons__body">
           <p class="acc-reasons__text"><span class="acc-reasons__accent acc-reasons__accent--orange">Готовые решения и&nbsp;путеводители</span> с&nbsp;проводками и&nbsp;формами документов</p>
         </div>
       </div>
       <div class="acc-reasons__card reveal reveal--delay-3">
-        <img src="/img/icon-buhg-politika.svg" alt="" class="acc-reasons__icon" />
+        <svg class="icon acc-reasons__icon" aria-hidden="true"><use href="/img/sprite.svg#icon-buhg-politika"></use></svg>
         <div class="acc-reasons__body">
           <p class="acc-reasons__text"><span class="acc-reasons__accent acc-reasons__accent--purple">Конструкторы</span> договоров и&nbsp;учётной политики</p>
         </div>
       </div>
       <div class="acc-reasons__card reveal reveal--delay-1">
-        <img src="/img/icon-buhg-calcul.svg" alt="" class="acc-reasons__icon" />
+        <svg class="icon acc-reasons__icon" aria-hidden="true"><use href="/img/sprite.svg#icon-buhg-calcul"></use></svg>
         <div class="acc-reasons__body">
           <p class="acc-reasons__text"><span class="acc-reasons__accent acc-reasons__accent--orange">Онлайн-калькуляторы</span> для&nbsp;расчёта налогов, пеней и&nbsp;выплат</p>
         </div>
       </div>
       <div class="acc-reasons__card reveal reveal--delay-2">
-        <img src="/img/icon-buhg-calend.svg" alt="" class="acc-reasons__icon" />
+        <svg class="icon acc-reasons__icon" aria-hidden="true"><use href="/img/sprite.svg#icon-buhg-calend"></use></svg>
         <div class="acc-reasons__body">
           <p class="acc-reasons__text"><span class="acc-reasons__accent acc-reasons__accent--purple">Календарь с&nbsp;напоминаниями</span> о&nbsp;сроках отчётности и&nbsp;уплаты налогов</p>
         </div>
       </div>
       <div class="acc-reasons__card reveal reveal--delay-3">
-        <img src="/img/icon-buhg-seminar.svg" alt="" class="acc-reasons__icon" />
+        <svg class="icon acc-reasons__icon" aria-hidden="true"><use href="/img/sprite.svg#icon-buhg-seminar"></use></svg>
         <div class="acc-reasons__body">
           <p class="acc-reasons__text"><span class="acc-reasons__accent acc-reasons__accent--orange">Видеосеминары</span> от&nbsp;ведущих лекторов по&nbsp;сложным темам</p>
         </div>
@@ -147,18 +147,18 @@
       <div class="acc-compare__section-body">
         <div class="acc-compare__row">
           <span class="acc-compare__row-label">Российское законодательство (Версия Проф)</span>
-          <span class="acc-compare__row-cell"><img src="/img/krest.svg" alt="нет" class="acc-compare__icon" /></span>
-          <span class="acc-compare__row-cell"><img src="/img/galochka.svg" alt="есть" class="acc-compare__icon" /></span>
+          <span class="acc-compare__row-cell"><svg class="icon acc-compare__icon" role="img" aria-label="нет"><use href="/img/sprite.svg#krest"></use></svg></span>
+          <span class="acc-compare__row-cell"><svg class="icon acc-compare__icon" role="img" aria-label="есть"><use href="/img/sprite.svg#galochka"></use></svg></span>
         </div>
         <div class="acc-compare__row">
           <span class="acc-compare__row-label">Российское законодательство (расширенная версия)</span>
-          <span class="acc-compare__row-cell"><img src="/img/galochka.svg" alt="есть" class="acc-compare__icon" /></span>
-          <span class="acc-compare__row-cell"><img src="/img/krest.svg" alt="нет" class="acc-compare__icon" /></span>
+          <span class="acc-compare__row-cell"><svg class="icon acc-compare__icon" role="img" aria-label="есть"><use href="/img/sprite.svg#galochka"></use></svg></span>
+          <span class="acc-compare__row-cell"><svg class="icon acc-compare__icon" role="img" aria-label="нет"><use href="/img/sprite.svg#krest"></use></svg></span>
         </div>
         <div class="acc-compare__row">
           <span class="acc-compare__row-label">Санкт-Петербург и&nbsp;Ленинградская область (полный)</span>
-          <span class="acc-compare__row-cell"><img src="/img/galochka.svg" alt="есть" class="acc-compare__icon" /></span>
-          <span class="acc-compare__row-cell"><img src="/img/galochka.svg" alt="есть" class="acc-compare__icon" /></span>
+          <span class="acc-compare__row-cell"><svg class="icon acc-compare__icon" role="img" aria-label="есть"><use href="/img/sprite.svg#galochka"></use></svg></span>
+          <span class="acc-compare__row-cell"><svg class="icon acc-compare__icon" role="img" aria-label="есть"><use href="/img/sprite.svg#galochka"></use></svg></span>
         </div>
       </div>
     </div>
@@ -174,8 +174,8 @@
       <div class="acc-compare__section-body">
         <div class="acc-compare__row">
           <span class="acc-compare__row-label">Административная практика (Версия Проф)</span>
-          <span class="acc-compare__row-cell"><img src="/img/galochka.svg" alt="есть" class="acc-compare__icon" /></span>
-          <span class="acc-compare__row-cell"><img src="/img/galochka.svg" alt="есть" class="acc-compare__icon" /></span>
+          <span class="acc-compare__row-cell"><svg class="icon acc-compare__icon" role="img" aria-label="есть"><use href="/img/sprite.svg#galochka"></use></svg></span>
+          <span class="acc-compare__row-cell"><svg class="icon acc-compare__icon" role="img" aria-label="есть"><use href="/img/sprite.svg#galochka"></use></svg></span>
         </div>
       </div>
     </div>
@@ -191,8 +191,8 @@
       <div class="acc-compare__section-body">
         <div class="acc-compare__row">
           <span class="acc-compare__row-label">Судебная практика (базовая версия)</span>
-          <span class="acc-compare__row-cell"><img src="/img/krest.svg" alt="нет" class="acc-compare__icon" /></span>
-          <span class="acc-compare__row-cell"><img src="/img/galochka.svg" alt="есть" class="acc-compare__icon" /></span>
+          <span class="acc-compare__row-cell"><svg class="icon acc-compare__icon" role="img" aria-label="нет"><use href="/img/sprite.svg#krest"></use></svg></span>
+          <span class="acc-compare__row-cell"><svg class="icon acc-compare__icon" role="img" aria-label="есть"><use href="/img/sprite.svg#galochka"></use></svg></span>
         </div>
       </div>
     </div>
@@ -208,8 +208,8 @@
       <div class="acc-compare__section-body">
         <div class="acc-compare__row">
           <span class="acc-compare__row-label">Финансовые консультации</span>
-          <span class="acc-compare__row-cell"><img src="/img/galochka.svg" alt="есть" class="acc-compare__icon" /></span>
-          <span class="acc-compare__row-cell"><img src="/img/galochka.svg" alt="есть" class="acc-compare__icon" /></span>
+          <span class="acc-compare__row-cell"><svg class="icon acc-compare__icon" role="img" aria-label="есть"><use href="/img/sprite.svg#galochka"></use></svg></span>
+          <span class="acc-compare__row-cell"><svg class="icon acc-compare__icon" role="img" aria-label="есть"><use href="/img/sprite.svg#galochka"></use></svg></span>
         </div>
       </div>
     </div>
@@ -225,8 +225,8 @@
       <div class="acc-compare__section-body">
         <div class="acc-compare__row">
           <span class="acc-compare__row-label">Формы документов (стандарт)</span>
-          <span class="acc-compare__row-cell"><img src="/img/galochka.svg" alt="есть" class="acc-compare__icon" /></span>
-          <span class="acc-compare__row-cell"><img src="/img/galochka.svg" alt="есть" class="acc-compare__icon" /></span>
+          <span class="acc-compare__row-cell"><svg class="icon acc-compare__icon" role="img" aria-label="есть"><use href="/img/sprite.svg#galochka"></use></svg></span>
+          <span class="acc-compare__row-cell"><svg class="icon acc-compare__icon" role="img" aria-label="есть"><use href="/img/sprite.svg#galochka"></use></svg></span>
         </div>
       </div>
     </div>
@@ -242,8 +242,8 @@
       <div class="acc-compare__section-body">
         <div class="acc-compare__row">
           <span class="acc-compare__row-label">Проекты правовых актов (базовый)</span>
-          <span class="acc-compare__row-cell"><img src="/img/galochka.svg" alt="есть" class="acc-compare__icon" /></span>
-          <span class="acc-compare__row-cell"><img src="/img/galochka.svg" alt="есть" class="acc-compare__icon" /></span>
+          <span class="acc-compare__row-cell"><svg class="icon acc-compare__icon" role="img" aria-label="есть"><use href="/img/sprite.svg#galochka"></use></svg></span>
+          <span class="acc-compare__row-cell"><svg class="icon acc-compare__icon" role="img" aria-label="есть"><use href="/img/sprite.svg#galochka"></use></svg></span>
         </div>
       </div>
     </div>
@@ -259,8 +259,8 @@
       <div class="acc-compare__section-body">
         <div class="acc-compare__row">
           <span class="acc-compare__row-label">Архивы законодательства</span>
-          <span class="acc-compare__row-cell"><img src="/img/galochka.svg" alt="есть" class="acc-compare__icon" /></span>
-          <span class="acc-compare__row-cell"><img src="/img/galochka.svg" alt="есть" class="acc-compare__icon" /></span>
+          <span class="acc-compare__row-cell"><svg class="icon acc-compare__icon" role="img" aria-label="есть"><use href="/img/sprite.svg#galochka"></use></svg></span>
+          <span class="acc-compare__row-cell"><svg class="icon acc-compare__icon" role="img" aria-label="есть"><use href="/img/sprite.svg#galochka"></use></svg></span>
         </div>
       </div>
     </div>
@@ -276,8 +276,8 @@
       <div class="acc-compare__section-body">
         <div class="acc-compare__row">
           <span class="acc-compare__row-label">Дополнительные материалы</span>
-          <span class="acc-compare__row-cell"><img src="/img/galochka.svg" alt="есть" class="acc-compare__icon" /></span>
-          <span class="acc-compare__row-cell"><img src="/img/galochka.svg" alt="есть" class="acc-compare__icon" /></span>
+          <span class="acc-compare__row-cell"><svg class="icon acc-compare__icon" role="img" aria-label="есть"><use href="/img/sprite.svg#galochka"></use></svg></span>
+          <span class="acc-compare__row-cell"><svg class="icon acc-compare__icon" role="img" aria-label="есть"><use href="/img/sprite.svg#galochka"></use></svg></span>
         </div>
       </div>
     </div>
@@ -298,8 +298,8 @@
         <h3 class="chdk-card__title chdk-card__title--yellow">Экспертная линия консультаций</h3>
         <p class="chdk-card__text">Развёрнутые ответы и&nbsp;разбор ситуации по&nbsp;правовым нормам</p>
         <div class="chdk-card__actions">
-          <a href="#" class="btn btn--sm chdk-card__btn chdk-card__btn--yellow" data-open-modal="modalPrice">Задать вопрос</a>
-          <a href="/consultation.html" class="btn btn--link-yellow btn--sm chdk-card__link">Подробнее</a>
+          <a href="#" class="btn btn--sm chdk-card__btn chdk-card__btn--yellow" data-open-modal="modalService">Задать вопрос</a>
+          <a href="/consult/" class="btn btn--link-yellow btn--sm chdk-card__link">Подробнее</a>
         </div>
       </div>
 
@@ -307,8 +307,8 @@
         <h3 class="chdk-card__title chdk-card__title--purple">Персональный менеджер</h3>
         <p class="chdk-card__text">Поможет решить любой вопрос и&nbsp;разобраться с&nbsp;системой КонсультантПлюс</p>
         <div class="chdk-card__actions">
-          <a href="#" class="btn btn--sm chdk-card__btn chdk-card__btn--purple" data-open-modal="modalPrice">Обратиться</a>
-          <a href="/personal-manager.html" class="btn btn--link-purple btn--sm chdk-card__link">Подробнее</a>
+          <a href="#" class="btn btn--sm chdk-card__btn chdk-card__btn--purple" data-open-modal="modalService">Обратиться</a>
+          <a href="/services/personalnyy-menedzher/" class="btn btn--link-purple btn--sm chdk-card__link">Подробнее</a>
         </div>
       </div>
 
@@ -316,8 +316,8 @@
         <h3 class="chdk-card__title chdk-card__title--yellow">Обучение работе с&nbsp;КонсультантПлюс</h3>
         <p class="chdk-card__text">Обучение эффективной работе с&nbsp;КонсультантПлюс</p>
         <div class="chdk-card__actions">
-          <a href="#" class="btn btn--sm chdk-card__btn chdk-card__btn--yellow" data-open-modal="modalPrice">Заказать</a>
-          <a href="/education.html" class="btn btn--link-yellow btn--sm chdk-card__link">Подробнее</a>
+          <a href="#" class="btn btn--sm chdk-card__btn chdk-card__btn--yellow" data-open-modal="modalService">Заказать</a>
+          <a href="/services/obuchenie-rabote-s-konsultantplyus/" class="btn btn--link-yellow btn--sm chdk-card__link">Подробнее</a>
         </div>
       </div>
 
@@ -325,8 +325,8 @@
         <h3 class="chdk-card__title chdk-card__title--purple">Запись на&nbsp;семинары-тренинги</h3>
         <p class="chdk-card__text">От экспертов КонсультантПлюс и&nbsp;ТОП-лекторов</p>
         <div class="chdk-card__actions">
-          <a href="#" class="btn btn--sm chdk-card__btn chdk-card__btn--purple" data-open-modal="modalPrice">Записаться</a>
-          <a href="/seminars.html" class="btn btn--link-purple btn--sm chdk-card__link">Подробнее</a>
+          <a href="#" class="btn btn--sm chdk-card__btn chdk-card__btn--purple" data-open-modal="modalService">Записаться</a>
+          <a href="/services/seminary-i-praktikumy/" class="btn btn--link-purple btn--sm chdk-card__link">Подробнее</a>
         </div>
       </div>
 
@@ -334,8 +334,8 @@
         <h3 class="chdk-card__title chdk-card__title--yellow">Техподдержка</h3>
         <p class="chdk-card__text">Адаптация, модификация и&nbsp;сопровождение системы</p>
         <div class="chdk-card__actions">
-          <a href="#" class="btn btn--sm chdk-card__btn chdk-card__btn--yellow" data-open-modal="modalPrice">Обратиться</a>
-          <a href="/tech-support.html" class="btn btn--link-yellow btn--sm chdk-card__link">Подробнее</a>
+          <a href="#" class="btn btn--sm chdk-card__btn chdk-card__btn--yellow" data-open-modal="modalService">Обратиться</a>
+          <a href="/services/obsluzhivanie-programmy-konsultant-plyus/" class="btn btn--link-yellow btn--sm chdk-card__link">Подробнее</a>
         </div>
       </div>
 
@@ -343,8 +343,8 @@
         <h3 class="chdk-card__title chdk-card__title--purple">Проверка контрагента</h3>
         <p class="chdk-card__text">Проверьте надёжность любой организации или&nbsp;ИП</p>
         <div class="chdk-card__actions">
-          <a href="#" class="btn btn--sm chdk-card__btn chdk-card__btn--purple" data-open-modal="modalPrice">Проверить</a>
-          <a href="/counterparty-check.html" class="btn btn--link-purple btn--sm chdk-card__link">Подробнее</a>
+          <a href="#" class="btn btn--sm chdk-card__btn chdk-card__btn--purple" data-open-modal="modalService">Проверить</a>
+          <a href="/services/proverka-kontragenta/" class="btn btn--link-purple btn--sm chdk-card__link">Подробнее</a>
         </div>
       </div>
     </div>
@@ -370,11 +370,11 @@
 </section>
 
 
-<?php include 'includes/footer.php'; ?>
+<?php include '../includes/footer.php'; ?>
 
-<?php $suffix = '-acc'; $page = '/accountant.html'; include 'includes/modals.php'; ?>
+<?php $suffix = '-acc'; $page = '/systems/bukhgalteru/'; include '../includes/modals.php'; ?>
 
-<script type="module" src="./js/main.js"></script>
+<script type="module" src="/js/main.js"></script>
 <script>
 /* Аккордеон сравнения комплектов */
 document.querySelectorAll('.acc-compare__section-btn').forEach(btn => {

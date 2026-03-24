@@ -238,7 +238,7 @@
 }
 
 .ac-system__list {
-  list-style: disc;
+  list-style: none;
   padding-left: 24px;
   margin-bottom: 24px;
   display: flex;
@@ -250,6 +250,19 @@
   font-size: 16px;
   line-height: 1.6;
   color: var(--color-black);
+  position: relative;
+  padding-left: 16px;
+}
+
+.ac-system__list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
 }
 
 .ac-system__note {

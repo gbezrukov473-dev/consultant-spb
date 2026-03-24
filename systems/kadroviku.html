@@ -3,27 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <?php include 'includes/favicons.php'; ?>
+  <?php include '../includes/favicons.php'; ?>
   <meta name="description" content="КонсультантПлюс для кадрового специалиста — трудовое право, документы, проверки ГИТ. Официальный представитель в Санкт-Петербурге." />
   <title>КонсультантПлюс для кадрового специалиста — КонсультантПлюс СПБ</title>
-  <link rel="stylesheet" href="./styles/global.css" />
-  <link rel="stylesheet" href="./styles/ui-kit.css" />
-  <link rel="stylesheet" href="./styles/blocks.css" />
-  <link rel="stylesheet" href="./styles/pages/buy.css" />
-  <link rel="stylesheet" href="./styles/pages/trial.css" />
-  <link rel="stylesheet" href="./styles/pages/accountant.css" />
-  <link rel="stylesheet" href="./styles/pages/system-pages.css" />
-  <link rel="stylesheet" href="./styles/pages/hr.css" />
+  <link rel="stylesheet" href="/styles/global.css" />
+  <link rel="stylesheet" href="/styles/ui-kit.css" />
+  <link rel="stylesheet" href="/styles/blocks.css" />
+  <link rel="stylesheet" href="/styles/pages/buy.css" />
+  <link rel="stylesheet" href="/styles/pages/trial.css" />
+  <link rel="stylesheet" href="/styles/pages/accountant.css" />
+  <link rel="stylesheet" href="/styles/pages/system-pages.css" />
+  <link rel="stylesheet" href="/styles/pages/hr.css" />
 </head>
 <body>
 
-<?php include 'includes/header.php'; ?>
+<?php include '../includes/header.php'; ?>
 
 <nav class="breadcrumbs" aria-label="Хлебные крошки">
   <div class="breadcrumbs__inner">
     <a href="/" class="breadcrumbs__link">Главная</a>
     <span class="breadcrumbs__sep">&gt;</span>
-    <a href="/systems.html" class="breadcrumbs__link">Системы КонсультантПлюс</a>
+    <a href="/systems/" class="breadcrumbs__link">Системы КонсультантПлюс</a>
     <span class="breadcrumbs__sep">&gt;</span>
     <span class="breadcrumbs__current">КонсультантПлюс для кадрового специалиста</span>
   </div>
@@ -37,7 +37,7 @@
       <p class="acc-hero__subtext">КонсультантПлюс поможет разобраться в&nbsp;изменениях трудового законодательства, составлять документы без ошибок и&nbsp;проходить проверки ГИТ. Все актуальные образцы и&nbsp;разъяснения&nbsp;&mdash; в&nbsp;одной системе.</p>
       <div class="acc-hero__buttons">
         <a href="#" class="btn btn--purple acc-hero__btn" data-open-modal="modalPrice">Узнать цену</a>
-        <a href="/trial.html" class="btn acc-hero__btn acc-hero__btn--outline">Получить демо-доступ</a>
+        <a href="#" data-open-modal="modalTrial" class="btn acc-hero__btn acc-hero__btn--outline">Получить демо-доступ</a>
       </div>
     </div>
     <div class="acc-hero__visual">
@@ -51,37 +51,37 @@
     <h2 class="acc-reasons__title">Почему кадровые специалисты выбирают КонсультантПлюс</h2>
     <div class="acc-reasons__grid">
       <div class="acc-reasons__card reveal reveal--delay-1">
-        <img src="/img/icon-hr-monitoring.svg" alt="" class="acc-reasons__icon" />
+        <svg class="icon acc-reasons__icon" aria-hidden="true"><use href="/img/sprite.svg#icon-hr-monitoring"></use></svg>
         <div class="acc-reasons__body">
           <p class="acc-reasons__text">Все изменения трудового законодательства и&nbsp;<span class="acc-reasons__accent acc-reasons__accent--purple">контроль важных документов</span></p>
         </div>
       </div>
       <div class="acc-reasons__card reveal reveal--delay-2">
-        <img src="/img/icon-hr-inspections.svg" alt="" class="acc-reasons__icon" />
+        <svg class="icon acc-reasons__icon" aria-hidden="true"><use href="/img/sprite.svg#icon-hr-inspections"></use></svg>
         <div class="acc-reasons__body">
           <p class="acc-reasons__text"><span class="acc-reasons__accent acc-reasons__accent--orange">Подготовка к проверкам</span> ГИТ и&nbsp;минимизация штрафов</p>
         </div>
       </div>
       <div class="acc-reasons__card reveal reveal--delay-3">
-        <img src="/img/icon-hr-templates.svg" alt="" class="acc-reasons__icon" />
+        <svg class="icon acc-reasons__icon" aria-hidden="true"><use href="/img/sprite.svg#icon-hr-templates"></use></svg>
         <div class="acc-reasons__body">
           <p class="acc-reasons__text"><span class="acc-reasons__accent acc-reasons__accent--purple">Готовые образцы документов:</span> от&nbsp;приёмов до&nbsp;договоров подряда</p>
         </div>
       </div>
       <div class="acc-reasons__card reveal reveal--delay-1">
-        <img src="/img/icon-hr-calculators.svg" alt="" class="acc-reasons__icon" />
+        <svg class="icon acc-reasons__icon" aria-hidden="true"><use href="/img/sprite.svg#icon-hr-calculators"></use></svg>
         <div class="acc-reasons__body">
           <p class="acc-reasons__text"><span class="acc-reasons__accent acc-reasons__accent--orange">Калькуляторы</span> для расчёта среднего заработка, компенсаций и&nbsp;пеней</p>
         </div>
       </div>
       <div class="acc-reasons__card reveal reveal--delay-2">
-        <img src="/img/icon-hr-guidelines.svg" alt="" class="acc-reasons__icon" />
+        <svg class="icon acc-reasons__icon" aria-hidden="true"><use href="/img/sprite.svg#icon-hr-guidelines"></use></svg>
         <div class="acc-reasons__body">
           <p class="acc-reasons__text"><span class="acc-reasons__accent acc-reasons__accent--purple">Разъяснения</span> по&nbsp;воинскому учёту, отпускам, больничным и&nbsp;декретам</p>
         </div>
       </div>
       <div class="acc-reasons__card reveal reveal--delay-3">
-        <img src="/img/icon-hr-disputes.svg" alt="" class="acc-reasons__icon" />
+        <svg class="icon acc-reasons__icon" aria-hidden="true"><use href="/img/sprite.svg#icon-hr-disputes"></use></svg>
         <div class="acc-reasons__body">
           <p class="acc-reasons__text"><span class="acc-reasons__accent acc-reasons__accent--orange">Актуальная судебная практика и&nbsp;путеводители</span> по&nbsp;трудовым спорам</p>
         </div>
@@ -128,28 +128,28 @@
       <div class="acc-compare__section-body">
         <div class="acc-compare__row">
           <span class="acc-compare__row-label">Российское законодательство (Версия Проф)</span>
-          <span class="acc-compare__row-cell"><img src="/img/krest.svg" alt="" class="acc-compare__icon" /></span>
-          <span class="acc-compare__row-cell"><img src="/img/galochka.svg" alt="" class="acc-compare__icon" /></span>
+          <span class="acc-compare__row-cell"><svg class="icon acc-compare__icon" aria-hidden="true"><use href="/img/sprite.svg#krest"></use></svg></span>
+          <span class="acc-compare__row-cell"><svg class="icon acc-compare__icon" aria-hidden="true"><use href="/img/sprite.svg#galochka"></use></svg></span>
         </div>
         <div class="acc-compare__row">
           <span class="acc-compare__row-label">Российское законодательство (расширенная версия)</span>
-          <span class="acc-compare__row-cell"><img src="/img/galochka.svg" alt="" class="acc-compare__icon" /></span>
-          <span class="acc-compare__row-cell"><img src="/img/krest.svg" alt="" class="acc-compare__icon" /></span>
+          <span class="acc-compare__row-cell"><svg class="icon acc-compare__icon" aria-hidden="true"><use href="/img/sprite.svg#galochka"></use></svg></span>
+          <span class="acc-compare__row-cell"><svg class="icon acc-compare__icon" aria-hidden="true"><use href="/img/sprite.svg#krest"></use></svg></span>
         </div>
         <div class="acc-compare__row">
           <span class="acc-compare__row-label">Санкт-Петербург и&nbsp;Ленинградская область (полный)</span>
-          <span class="acc-compare__row-cell"><img src="/img/galochka.svg" alt="" class="acc-compare__icon" /></span>
-          <span class="acc-compare__row-cell"><img src="/img/galochka.svg" alt="" class="acc-compare__icon" /></span>
+          <span class="acc-compare__row-cell"><svg class="icon acc-compare__icon" aria-hidden="true"><use href="/img/sprite.svg#galochka"></use></svg></span>
+          <span class="acc-compare__row-cell"><svg class="icon acc-compare__icon" aria-hidden="true"><use href="/img/sprite.svg#galochka"></use></svg></span>
         </div>
       </div>
     </div>
 
-    <div class="acc-compare__section"><button type="button" class="acc-compare__section-btn" aria-expanded="false"><span class="acc-compare__section-name">Административная практика</span><svg class="acc-compare__chevron" viewBox="0 0 12 7" fill="none"><path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="acc-compare__section-body"><div class="acc-compare__row"><span class="acc-compare__row-label">Административная практика</span><span class="acc-compare__row-cell"><img src="/img/galochka.svg" alt="" class="acc-compare__icon" /></span><span class="acc-compare__row-cell"><img src="/img/galochka.svg" alt="" class="acc-compare__icon" /></span></div></div></div>
-    <div class="acc-compare__section"><button type="button" class="acc-compare__section-btn" aria-expanded="false"><span class="acc-compare__section-name">Судебная практика</span><svg class="acc-compare__chevron" viewBox="0 0 12 7" fill="none"><path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="acc-compare__section-body"><div class="acc-compare__row"><span class="acc-compare__row-label">Судебная практика</span><span class="acc-compare__row-cell"><img src="/img/galochka.svg" alt="" class="acc-compare__icon" /></span><span class="acc-compare__row-cell"><img src="/img/galochka.svg" alt="" class="acc-compare__icon" /></span></div></div></div>
-    <div class="acc-compare__section"><button type="button" class="acc-compare__section-btn" aria-expanded="false"><span class="acc-compare__section-name">Финансовые и&nbsp;кадровые консультации</span><svg class="acc-compare__chevron" viewBox="0 0 12 7" fill="none"><path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="acc-compare__section-body"><div class="acc-compare__row"><span class="acc-compare__row-label">Финансовые и&nbsp;кадровые консультации</span><span class="acc-compare__row-cell"><img src="/img/galochka.svg" alt="" class="acc-compare__icon" /></span><span class="acc-compare__row-cell"><img src="/img/galochka.svg" alt="" class="acc-compare__icon" /></span></div></div></div>
-    <div class="acc-compare__section"><button type="button" class="acc-compare__section-btn" aria-expanded="false"><span class="acc-compare__section-name">Формы документов</span><svg class="acc-compare__chevron" viewBox="0 0 12 7" fill="none"><path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="acc-compare__section-body"><div class="acc-compare__row"><span class="acc-compare__row-label">Формы документов</span><span class="acc-compare__row-cell"><img src="/img/galochka.svg" alt="" class="acc-compare__icon" /></span><span class="acc-compare__row-cell"><img src="/img/galochka.svg" alt="" class="acc-compare__icon" /></span></div></div></div>
-    <div class="acc-compare__section"><button type="button" class="acc-compare__section-btn" aria-expanded="false"><span class="acc-compare__section-name">Проекты правовых актов</span><svg class="acc-compare__chevron" viewBox="0 0 12 7" fill="none"><path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="acc-compare__section-body"><div class="acc-compare__row"><span class="acc-compare__row-label">Проекты правовых актов</span><span class="acc-compare__row-cell"><img src="/img/galochka.svg" alt="" class="acc-compare__icon" /></span><span class="acc-compare__row-cell"><img src="/img/galochka.svg" alt="" class="acc-compare__icon" /></span></div></div></div>
-    <div class="acc-compare__section"><button type="button" class="acc-compare__section-btn" aria-expanded="false"><span class="acc-compare__section-name">Архивы</span><svg class="acc-compare__chevron" viewBox="0 0 12 7" fill="none"><path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="acc-compare__section-body"><div class="acc-compare__row"><span class="acc-compare__row-label">Архивы</span><span class="acc-compare__row-cell"><img src="/img/galochka.svg" alt="" class="acc-compare__icon" /></span><span class="acc-compare__row-cell"><img src="/img/galochka.svg" alt="" class="acc-compare__icon" /></span></div></div></div>
+    <div class="acc-compare__section"><button type="button" class="acc-compare__section-btn" aria-expanded="false"><span class="acc-compare__section-name">Административная практика</span><svg class="acc-compare__chevron" viewBox="0 0 12 7" fill="none"><path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="acc-compare__section-body"><div class="acc-compare__row"><span class="acc-compare__row-label">Административная практика</span><span class="acc-compare__row-cell"><svg class="icon acc-compare__icon" aria-hidden="true"><use href="/img/sprite.svg#galochka"></use></svg></span><span class="acc-compare__row-cell"><svg class="icon acc-compare__icon" aria-hidden="true"><use href="/img/sprite.svg#galochka"></use></svg></span></div></div></div>
+    <div class="acc-compare__section"><button type="button" class="acc-compare__section-btn" aria-expanded="false"><span class="acc-compare__section-name">Судебная практика</span><svg class="acc-compare__chevron" viewBox="0 0 12 7" fill="none"><path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="acc-compare__section-body"><div class="acc-compare__row"><span class="acc-compare__row-label">Судебная практика</span><span class="acc-compare__row-cell"><svg class="icon acc-compare__icon" aria-hidden="true"><use href="/img/sprite.svg#galochka"></use></svg></span><span class="acc-compare__row-cell"><svg class="icon acc-compare__icon" aria-hidden="true"><use href="/img/sprite.svg#galochka"></use></svg></span></div></div></div>
+    <div class="acc-compare__section"><button type="button" class="acc-compare__section-btn" aria-expanded="false"><span class="acc-compare__section-name">Финансовые и&nbsp;кадровые консультации</span><svg class="acc-compare__chevron" viewBox="0 0 12 7" fill="none"><path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="acc-compare__section-body"><div class="acc-compare__row"><span class="acc-compare__row-label">Финансовые и&nbsp;кадровые консультации</span><span class="acc-compare__row-cell"><svg class="icon acc-compare__icon" aria-hidden="true"><use href="/img/sprite.svg#galochka"></use></svg></span><span class="acc-compare__row-cell"><svg class="icon acc-compare__icon" aria-hidden="true"><use href="/img/sprite.svg#galochka"></use></svg></span></div></div></div>
+    <div class="acc-compare__section"><button type="button" class="acc-compare__section-btn" aria-expanded="false"><span class="acc-compare__section-name">Формы документов</span><svg class="acc-compare__chevron" viewBox="0 0 12 7" fill="none"><path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="acc-compare__section-body"><div class="acc-compare__row"><span class="acc-compare__row-label">Формы документов</span><span class="acc-compare__row-cell"><svg class="icon acc-compare__icon" aria-hidden="true"><use href="/img/sprite.svg#galochka"></use></svg></span><span class="acc-compare__row-cell"><svg class="icon acc-compare__icon" aria-hidden="true"><use href="/img/sprite.svg#galochka"></use></svg></span></div></div></div>
+    <div class="acc-compare__section"><button type="button" class="acc-compare__section-btn" aria-expanded="false"><span class="acc-compare__section-name">Проекты правовых актов</span><svg class="acc-compare__chevron" viewBox="0 0 12 7" fill="none"><path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="acc-compare__section-body"><div class="acc-compare__row"><span class="acc-compare__row-label">Проекты правовых актов</span><span class="acc-compare__row-cell"><svg class="icon acc-compare__icon" aria-hidden="true"><use href="/img/sprite.svg#galochka"></use></svg></span><span class="acc-compare__row-cell"><svg class="icon acc-compare__icon" aria-hidden="true"><use href="/img/sprite.svg#galochka"></use></svg></span></div></div></div>
+    <div class="acc-compare__section"><button type="button" class="acc-compare__section-btn" aria-expanded="false"><span class="acc-compare__section-name">Архивы</span><svg class="acc-compare__chevron" viewBox="0 0 12 7" fill="none"><path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="acc-compare__section-body"><div class="acc-compare__row"><span class="acc-compare__row-label">Архивы</span><span class="acc-compare__row-cell"><svg class="icon acc-compare__icon" aria-hidden="true"><use href="/img/sprite.svg#galochka"></use></svg></span><span class="acc-compare__row-cell"><svg class="icon acc-compare__icon" aria-hidden="true"><use href="/img/sprite.svg#galochka"></use></svg></span></div></div></div>
   </div>
 </section>
 
@@ -162,48 +162,48 @@
         <h3 class="chdk-card__title chdk-card__title--yellow">Экспертная линия консультаций</h3>
         <p class="chdk-card__text">Развёрнутые ответы и&nbsp;разбор ситуации по&nbsp;правовым нормам</p>
         <div class="chdk-card__actions">
-          <a href="#" class="btn btn--sm chdk-card__btn chdk-card__btn--yellow" data-open-modal="modalPrice">Задать вопрос</a>
-          <a href="/consultation.html" class="btn btn--link-yellow btn--sm chdk-card__link">Подробнее</a>
+          <a href="#" class="btn btn--sm chdk-card__btn chdk-card__btn--yellow" data-open-modal="modalService">Задать вопрос</a>
+          <a href="/consult/" class="btn btn--link-yellow btn--sm chdk-card__link">Подробнее</a>
         </div>
       </div>
       <div class="chdk-card chdk-card--purple reveal reveal--delay-2">
         <h3 class="chdk-card__title chdk-card__title--purple">Персональный менеджер</h3>
         <p class="chdk-card__text">Поможет решить любой вопрос и&nbsp;разобраться с&nbsp;системой КонсультантПлюс</p>
         <div class="chdk-card__actions">
-          <a href="#" class="btn btn--sm chdk-card__btn chdk-card__btn--purple" data-open-modal="modalPrice">Обратиться</a>
-          <a href="/personal-manager.html" class="btn btn--link-purple btn--sm chdk-card__link">Подробнее</a>
+          <a href="#" class="btn btn--sm chdk-card__btn chdk-card__btn--purple" data-open-modal="modalService">Обратиться</a>
+          <a href="/services/personalnyy-menedzher/" class="btn btn--link-purple btn--sm chdk-card__link">Подробнее</a>
         </div>
       </div>
       <div class="chdk-card chdk-card--yellow reveal reveal--delay-3">
         <h3 class="chdk-card__title chdk-card__title--yellow">Обучение работе с&nbsp;КонсультантПлюс</h3>
         <p class="chdk-card__text">Обучение эффективной работе с&nbsp;КонсультантПлюс</p>
         <div class="chdk-card__actions">
-          <a href="#" class="btn btn--sm chdk-card__btn chdk-card__btn--yellow" data-open-modal="modalPrice">Заказать</a>
-          <a href="/education.html" class="btn btn--link-yellow btn--sm chdk-card__link">Подробнее</a>
+          <a href="#" class="btn btn--sm chdk-card__btn chdk-card__btn--yellow" data-open-modal="modalService">Заказать</a>
+          <a href="/services/obuchenie-rabote-s-konsultantplyus/" class="btn btn--link-yellow btn--sm chdk-card__link">Подробнее</a>
         </div>
       </div>
       <div class="chdk-card chdk-card--purple reveal reveal--delay-1">
         <h3 class="chdk-card__title chdk-card__title--purple">Запись на&nbsp;семинары-тренинги</h3>
         <p class="chdk-card__text">От экспертов КонсультантПлюс и&nbsp;ТОП-лекторов</p>
         <div class="chdk-card__actions">
-          <a href="#" class="btn btn--sm chdk-card__btn chdk-card__btn--purple" data-open-modal="modalPrice">Записаться</a>
-          <a href="/seminars.html" class="btn btn--link-purple btn--sm chdk-card__link">Подробнее</a>
+          <a href="#" class="btn btn--sm chdk-card__btn chdk-card__btn--purple" data-open-modal="modalService">Записаться</a>
+          <a href="/services/seminary-i-praktikumy/" class="btn btn--link-purple btn--sm chdk-card__link">Подробнее</a>
         </div>
       </div>
       <div class="chdk-card chdk-card--yellow reveal reveal--delay-2">
         <h3 class="chdk-card__title chdk-card__title--yellow">Техподдержка</h3>
         <p class="chdk-card__text">Адаптация, модификация и&nbsp;сопровождение системы</p>
         <div class="chdk-card__actions">
-          <a href="#" class="btn btn--sm chdk-card__btn chdk-card__btn--yellow" data-open-modal="modalPrice">Обратиться</a>
-          <a href="/tech-support.html" class="btn btn--link-yellow btn--sm chdk-card__link">Подробнее</a>
+          <a href="#" class="btn btn--sm chdk-card__btn chdk-card__btn--yellow" data-open-modal="modalService">Обратиться</a>
+          <a href="/services/obsluzhivanie-programmy-konsultant-plyus/" class="btn btn--link-yellow btn--sm chdk-card__link">Подробнее</a>
         </div>
       </div>
       <div class="chdk-card chdk-card--purple reveal reveal--delay-3">
         <h3 class="chdk-card__title chdk-card__title--purple">Проверка контрагента</h3>
         <p class="chdk-card__text">Проверьте надёжность любой организации или&nbsp;ИП</p>
         <div class="chdk-card__actions">
-          <a href="#" class="btn btn--sm chdk-card__btn chdk-card__btn--purple" data-open-modal="modalPrice">Проверить</a>
-          <a href="/counterparty-check.html" class="btn btn--link-purple btn--sm chdk-card__link">Подробнее</a>
+          <a href="#" class="btn btn--sm chdk-card__btn chdk-card__btn--purple" data-open-modal="modalService">Проверить</a>
+          <a href="/services/proverka-kontragenta/" class="btn btn--link-purple btn--sm chdk-card__link">Подробнее</a>
         </div>
       </div>
     </div>
@@ -225,11 +225,11 @@
   </div>
 </section>
 
-<?php include 'includes/footer.php'; ?>
+<?php include '../includes/footer.php'; ?>
 
-<?php $suffix = '-hr'; $page = '/hr.html'; include 'includes/modals.php'; ?>
+<?php $suffix = '-hr'; $page = '/systems/kadroviku/'; include '../includes/modals.php'; ?>
 
-<script type="module" src="./js/main.js"></script>
+<script type="module" src="/js/main.js"></script>
 <script>
 document.querySelectorAll('.acc-compare__section-btn').forEach(btn => {
   btn.addEventListener('click', () => {

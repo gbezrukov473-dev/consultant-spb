@@ -1,8 +1,25 @@
 RewriteEngine On
 
-# Если запрос не указывает на существующий файл или директорию,
-# и URL не содержит расширения — пробуем добавить .html
+# Редирект: добавить trailing slash если URL без расширения
+# /about → /about/  |  /systems/bukhgalteru → /systems/bukhgalteru/
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !/$
 RewriteCond %{REQUEST_URI} !\.
-RewriteRule ^(.+)$ $1.html [L]
+RewriteRule ^(.+)$ /$1/ [R=301,L]
+
+# Каталоги: /systems/ → systems/index.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} ^/(systems|services|o-sisteme-konsultantplyus|ii-pomoshchnik-konsultant-plyus)/$
+RewriteRule ^(systems|services|o-sisteme-konsultantplyus|ii-pomoshchnik-konsultant-plyus)/$ $1/index.html [L]
+
+# Вложенные страницы: /systems/bukhgalteru/ → systems/bukhgalteru.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} ^/(systems|services|o-sisteme-konsultantplyus)/([^/]+)/$
+RewriteRule ^(systems|services|o-sisteme-konsultantplyus)/([^/]+)/$ $1/$2.html [L]
+
+# Корневые страницы: /about/ → about.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !\.
+RewriteCond %{REQUEST_URI} ^/([^/]+)/$
+RewriteRule ^([^/]+)/$ $1.html [L]

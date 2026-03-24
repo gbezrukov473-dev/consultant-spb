@@ -266,7 +266,8 @@
 .st-howto__feature-circle--purple { background: var(--color-secondary); }
 .st-howto__feature-circle--orange { background: var(--color-primary); }
 
-.st-howto__feature-circle img {
+.st-howto__feature-circle img,
+.st-howto__feature-circle .icon {
   width: 40px;
   height: 40px;
 }
@@ -382,7 +383,8 @@
     height: 64px;
   }
 
-  .st-howto__feature-circle img {
+  .st-howto__feature-circle img,
+  .st-howto__feature-circle .icon {
     width: 32px;
     height: 32px;
   }

@@ -31,12 +31,17 @@ export function ghPagesLinksPlugin() {
           .replace(/src="\/(?!\/|consultant-spb)/g, `src="${prefix}/`);
       }
 
-      for (const file of readdirSync(dist)) {
-        if (file.endsWith('.html')) {
-          const p = join(dist, file);
-          writeFileSync(p, patchText(readFileSync(p, 'utf-8')), 'utf-8');
+      function walkDir(dir) {
+        for (const entry of readdirSync(dir, { withFileTypes: true })) {
+          const full = join(dir, entry.name);
+          if (entry.isDirectory()) {
+            walkDir(full);
+          } else if (entry.name.endsWith('.html')) {
+            writeFileSync(full, patchText(readFileSync(full, 'utf-8')), 'utf-8');
+          }
         }
       }
+      walkDir(dist);
     },
   };
 }

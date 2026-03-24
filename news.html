@@ -6,11 +6,11 @@
   <?php include 'includes/favicons.php'; ?>
   <meta name="description" content="Новости и статьи КонсультантПлюс от ЧДК-Право — актуальные изменения законодательства для бухгалтеров, юристов и руководителей" />
   <title>Новости — КонсультантПлюс СПБ</title>
-  <link rel="stylesheet" href="./styles/global.css" />
-  <link rel="stylesheet" href="./styles/ui-kit.css" />
-  <link rel="stylesheet" href="./styles/blocks.css" />
-  <link rel="stylesheet" href="./styles/pages/buy.css" />
-  <link rel="stylesheet" href="./styles/pages/news.css" />
+  <link rel="stylesheet" href="/styles/global.css" />
+  <link rel="stylesheet" href="/styles/ui-kit.css" />
+  <link rel="stylesheet" href="/styles/blocks.css" />
+  <link rel="stylesheet" href="/styles/pages/buy.css" />
+  <link rel="stylesheet" href="/styles/pages/news.css" />
 </head>
 <body>
 
@@ -163,7 +163,7 @@
         </h2>
 
         <div class="trial__features">
-          <div class="trial__feature trial__feature--orange">
+          <a href="/o-sisteme-konsultantplyus/dostup-konsultantplyus-na-2-dnya/" class="trial__feature trial__feature--orange">
             <div class="trial__feature-icon">
               <img src="/img/logo-consultant-crop.svg" alt="" />
             </div>
@@ -171,9 +171,9 @@
               <span class="trial__feature-name">Система КонсультантПлюс</span>
               <span class="trial__feature-desc">Полный доступ на 2 дня</span>
             </div>
-          </div>
+          </a>
 
-          <div class="trial__feature trial__feature--purple">
+          <a href="/services/chto-delat-onlayn/" class="trial__feature trial__feature--purple">
             <div class="trial__feature-icon">
               <img src="/img/lk-icon-big.svg" alt="" />
             </div>
@@ -181,7 +181,7 @@
               <span class="trial__feature-name">Личный кабинет ЧДК-Онлайн</span>
               <span class="trial__feature-desc">Эксклюзивный сервис для клиентов</span>
             </div>
-          </div>
+          </a>
         </div>
       </div>
 
@@ -219,7 +219,7 @@
 
 <?php $suffix = '-news'; $page = '/news.html'; include 'includes/modals.php'; ?>
 
-<script type="module" src="./js/main.js"></script>
+<script type="module" src="/js/main.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', () => {
   const tabs = document.querySelectorAll('.news-list__tab');
