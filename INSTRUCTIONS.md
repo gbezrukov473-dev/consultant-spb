@@ -8,6 +8,40 @@
 
 ---
 
+## Синхронизация с боевым сервером (09.10.2026)
+
+После сдачи (11.06.2026) программисты заказчика правили сайт прямо на сервере (09.07–02.10.2026).
+Все их правки перенесены в этот проект:
+
+- **`public_html/` = копия сервера** для файлов шаблона `SPBCons_New_2026` и наших страниц. Правки делать
+  поверх этих файлов, свои старые версии header/footer/styles/modal_contact на сервер **не заливать**.
+- **Секреты не храним.** `public_html/local/php_interface/include/constants.php` (ключи SmartCaptcha,
+  токен webhook Битрикс24) не скопирован и добавлен в `.gitignore`. `init.php` и `Events.php` скопированы.
+- **Формы (с 28.09):** все формы — `bitrix:form.result.new`, шаблон `modal_contact`, `WEB_FORM_ID=68`,
+  `USE_YANDEX_SMART_CAPTCHA=Y`. Отправка AJAX (`modal_contact/ajax.js` + `ajax.php`), «Спасибо» показывается
+  в форме — **редиректа на `/thanks/` больше нет**. Капча — невидимая Yandex SmartCaptcha (`/include/smartcaptcha.php`,
+  проверка в `local/php_interface/include/lib/Events.php`). Лиды формы 68 дополнительно уходят webhook'ом
+  в Битрикс24 (p.spb4dk.ru) с UTM-метками. Имя, телефон, e-mail и согласие обязательны.
+- **Встроенные формы без заголовка** (`MODAL_TITLE` пустой) показывают первой строкой плашку
+  `.form-loc-info` «Мы работаем с юрлицами и ИП Санкт-Петербурга и Ленобласти» (`/include/loc_info.php`).
+  Та же надпись — в шапке (`.top-loc-info`, скрыта на ≤768px).
+- **Меню:** пункт «Личный кабинет» (`#modalLk`) заменён на ссылку «ИИ-сервисы» (`.islk`, оранжевый).
+  `#modalLk` остался в подвале, но открыть его теперь нечем. «Вопрос-ответ» — в выпадающем списке «Новости».
+- **Страница ИИ-сервисов** собирается из инфоблока 229 (компоненты `ai_banner`, `ai_tabs`, `ai_can`, `ai_start`).
+  Статика `ii-pomoshchnik-konsultant-plyus/index.html` повторяет живой контент на 09.10.2026.
+- **CSS вне `styles.css`/`template_styles.css`** (`css/custom.css` и `style.css` компонентов меню, формы, вкладок ИИ)
+  зеркалируется в `styles/bitrix-extras.css`. Он подключается **первым** на каждой странице (так на сервере),
+  уходит в main-чанк Vite и в Битрикс-сборку CSS не попадает.
+- **Проверка сборки против сервера:** `node build-bitrix-css.js --check` и `npm run build` →
+  `node build-bitrix-template-styles.js`. Ожидаемые отличия от серверных файлов: `.pereskaz` использует
+  `var(--color-white)` вместо `#fff` и дублируется в `template_styles.css`; в `styles.css` `.kits__tabs` = 450px
+  (на сервере там 400px, но последним грузится `template_styles.css`, где тоже 450px).
+- **SEO (09.07):** на 21 странице новые `title`/`description` и добавлен `keywords` — значения взяты из серверных `index.php`.
+- **Адрес офиса (17.08):** 191119, Санкт-Петербург, ул. Воронежская, д. 5 литера А, помещ. 21НС; координаты карты
+  `[59.917894, 30.348585]`.
+
+---
+
 ## Структура проекта
 
 ```
@@ -171,7 +205,7 @@ Figma: `https://www.figma.com/design/GFmp5kaM7zrQtRMRTzlzYO/СПБКонс`
 
 1. **ЗАПРЕЩЁН хардкод цветов.** Абсолютно все цвета, шрифты, радиусы, тени берутся из `var(--...)` в `variables.css`.
 2. **BEM-методология:** `.block__element--modifier`. Критично для будущей нарезки в Битрикс.
-3. **Файловая структура:** `variables.css` → `global.css` → `ui-kit.css` → `blocks.css`. Порядок подключения важен.
+3. **Файловая структура:** `bitrix-extras.css` (зеркало серверных стилей, см. «Синхронизация с боевым сервером») → `variables.css` → `global.css` → `ui-kit.css` → `blocks.css`. Порядок подключения важен.
 4. **Адаптивность:** Mobile-First не обязателен, но адаптив обязателен. Брейкпоинты: 1380px, 1200px, 1060px, 960px, 600px.
 5. **Отступы контейнера:** `--side-padding` (60px → 40px → 32px → 20px) — адаптивно через `:root` в медиазапросах.
 6. **Все переходы** через `transition` с переменными `--transition-fast` / `--transition-base` / `--transition-card`.
@@ -256,7 +290,7 @@ Figma-проект: `GFmp5kaM7zrQtRMRTzlzYO` (СПБКонс)
 | ~~Техническая поддержка~~ | `/services/obsluzhivanie-programmy-konsultant-plyus/` | `1244-5188` | **Свёрстана** → `tech-support.html` |
 | ~~Проверка контрагента~~ | `/services/proverka-kontragenta/` | `1283-5747` | **Свёрстана** → `counterparty-check.html` |
 | ~~Личный кабинет ЧДК-Онлайн~~ | `/services/chto-delat-onlayn/` | `1371-7436` | **Свёрстана** → `lk-online.html` |
-| Контакты | `/contacts/` | `962-4022` | Контакты + Яндекс-карта (59.916685564219, 30.379735999336), «Задать вопрос» (Попап Контакты с полем «Ваш вопрос») |
+| Контакты | `/contacts/` | `962-4022` | Контакты + Яндекс-карта (59.917894, 30.348585 — ул. Воронежская, 5А, с 17.08.2026), «Задать вопрос» (Попап Контакты с полем «Ваш вопрос») |
 | Новости (список) | `/news/` | — | Единый шаблон раздела |
 | Новость (шаблон) | `/news/{slug}/` | `943-4810` | Текст + гиперссылки, пробный доступ (inline-форма) |
 | Вопрос-ответ (список) | `/faq/` | `951-3017` | Фильтры по темам, «Показать ещё» (+10), «Задать вопрос» (Попап Контакты с полем «Ваш вопрос») |
@@ -306,9 +340,12 @@ Figma-проект: `GFmp5kaM7zrQtRMRTzlzYO` (СПБКонс)
 | `[data-open-modal="modalPrice"]` | Открывает `#modalPrice` |
 | `[data-open-modal="modalTrial"]` | Открывает `#modalTrial` |
 | `[data-open-modal="modalService"]` | Открывает `#modalService` (карточки «Сервис ЧДК-Право») |
-| `.header-nav__link--lk` | Открывает `#modalLk` |
+| `.header-nav__link--lk`, `.mobile-menu__link--lk` | Открывают `#modalLk`. **С 21.07.2026 этих классов в меню нет** — попап недоступен |
+| `[data-open-modal="modalVideo…"]` | Попап с роликом `.modal--video` (вкладки ИИ-сервисов) |
 
 ### Навигация шапки
+
+На сервере — `bitrix:menu` (шаблоны `header_nav` / `mobile_nav`), пункты в `/.top.menu.php`, подменю «Новости» — `/news/.left.menu.php`.
 
 | Пункт | URL |
 |-------|-----|
@@ -316,15 +353,14 @@ Figma-проект: `GFmp5kaM7zrQtRMRTzlzYO` (СПБКонс)
 | Юристу | `/systems/yuristu/` |
 | Руководителю | `/systems/rukovoditelyu/` |
 | Бюджету | `/systems/byudzhetnoy-organizatsii/` |
-| Кадровику | `/systems/kadroviku/` |
 | Линия консультаций | `/consult/` |
 | О нас | `/about/` |
-| Новости (dropdown, hover) → Новости | `/news/` |
-| Новости (dropdown, hover) → Вопрос-ответ | `/faq/` |
-| Новости (dropdown, hover) → Правовые сборники | `/collections.html` (пока нет URL на сайте) |
+| Новости (dropdown) → Новости | `/news/` |
+| Новости (dropdown) → Вопрос-ответ | `/faq/` |
+| Новости (dropdown) → Правовые сборники | `/collections/` |
 | Контакты | `/contacts/` |
-| Личный кабинет | Открывает `#modalLk` |
-| Купить (кнопка) | Открывает `#modalPrice` |
+| ИИ-сервисы (`.islk`, `is_lk=Y` в меню) | `/ii-pomoshchnik-konsultant-plyus/` (до 21.07.2026 — «Личный кабинет» → `#modalLk`) |
+| Узнать цену (кнопка) | Открывает `#modalPrice` |
 
 ### Навигация подвала
 

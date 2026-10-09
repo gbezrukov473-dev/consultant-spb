@@ -1,0 +1,21 @@
+.top-loc-info {
+	font-size: 12px;
+	font-weight: 500;
+	color: #fff;
+	border-left: 1px solid #fff;
+	padding: 12px 0 12px 15px;
+	margin-left: 15px;
+	max-width: 205px;
+}
+.form-loc-info {
+	font-size: 16px;
+	font-weight: 400;
+}
+.form-loc-info span{
+	color: var(--color-secondary);
+	font-weight: 600;
+}
+
+@media (width<=768px){
+.top-loc-info {  display: none;}
+}

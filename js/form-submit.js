@@ -53,9 +53,31 @@ function setSending(btn, isSending) {
   btn.textContent = isSending ? 'Отправляем...' : btn.dataset.text;
 }
 
+// Если в разметке нет <p data-error-for="…"> для поля (например, для e-mail), создаём его:
+// поле в общей строке с другими (телефон + e-mail в .trial__row / .tp-form__row) — после строки,
+// иначе — сразу после поля.
+function ensureErrorHolder(form, field, name) {
+  let holder = form.querySelector(`[data-error-for="${name}"]`);
+  if (holder || field.type === 'checkbox') return holder;
+
+  holder = document.createElement('p');
+  holder.className = 'form-field-error hidden';
+  holder.dataset.errorFor = name;
+
+  const parent = field.parentElement;
+  const sharesRow = parent && parent !== form && parent.querySelectorAll('input:not([type="hidden"])').length > 1;
+  if (sharesRow) {
+    const next = parent.nextElementSibling;
+    (next && next.matches('.form-field-error') ? next : parent).after(holder);
+  } else {
+    field.after(holder);
+  }
+  return holder;
+}
+
 function setFieldError(form, field, message) {
   const name = field.getAttribute('name');
-  const holder = name ? form.querySelector(`[data-error-for="${name}"]`) : null;
+  const holder = name ? ensureErrorHolder(form, field, name) : null;
 
   if (field.type !== 'checkbox') {
     field.classList.add('input-error');
@@ -147,6 +169,9 @@ function setupLeadForm(form) {
   if (consentEl) {
     consentEl.addEventListener('change', () => clearOneFieldError(form, consentEl));
   }
+  form.querySelectorAll('input[name="name"], input[name="email"]').forEach((el) => {
+    el.addEventListener('input', () => clearOneFieldError(form, el));
+  });
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -217,9 +242,22 @@ function setupLeadForm(form) {
 }
 
 function validateLeadForm(form, phoneEl, consentEl) {
+  // Имя и e-mail обязательны, если у поля стоит required (так на сервере в modal_contact с 28.09.2026)
+  const nameEl = form.querySelector('input[name="name"][required]');
+  if (nameEl && !nameEl.value.trim()) {
+    setFieldError(form, nameEl, 'Укажите, как к вам обращаться.');
+    return nameEl;
+  }
+
   if (phoneEl && !normalizeRuPhoneStrict(phoneEl.value).ok) {
     setFieldError(form, phoneEl, 'Похоже, номер неполный. Проверьте, пожалуйста.');
     return phoneEl;
+  }
+
+  const emailEl = form.querySelector('input[name="email"][required]');
+  if (emailEl && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailEl.value.trim())) {
+    setFieldError(form, emailEl, 'Укажите корректный e-mail.');
+    return emailEl;
   }
 
   if (consentEl && !consentEl.checked) {

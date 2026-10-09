@@ -6,6 +6,7 @@
   <?php include 'includes/favicons.php'; ?>
   <meta name="description" content="Налоговые изменения 2026 — правовой сборник от ЧДК-Право. НДС, УСН, МРОТ, взносы и проверки." />
   <title>Налоговые изменения 2026 — Правовые сборники КонсультантПлюс</title>
+  <link rel="stylesheet" href="/styles/bitrix-extras.css" /><!-- зеркало серверных стилей вне styles.css, грузится первым как на сервере -->
   <link rel="stylesheet" href="/styles/global.css" />
   <link rel="stylesheet" href="/styles/ui-kit.css" />
   <link rel="stylesheet" href="/styles/blocks.css" />
@@ -142,11 +143,13 @@
       <p class="tp-form__desc">Заполните форму, и&nbsp;мы&nbsp;пришлём вам сборник, который сэкономит часы поиска информации. Все ключевые изменения, актуальные цифры и&nbsp;важные сроки&nbsp;– в&nbsp;одном месте.</p>
       <div class="tp-form__card">
         <form class="tp-form__form js-lead-form" action="/api/lead.php" method="POST" novalidate data-form-id="collection-get" data-thanks="/thanks.html">
-          <input type="text" name="name" class="tp-form__input" placeholder="Ваше Имя" />
+          <!-- Битрикс: bitrix:main.include PATH="/include/loc_info.php" (форма без заголовка, шаблон modal_contact) -->
+          <div class="form-loc-info">Мы работаем с юрлицами и ИП <span>Санкт-Петербурга и Ленобласти</span></div>
+          <input type="text" name="name" class="tp-form__input" placeholder="Ваше Имя *" required />
           <p class="form-field-error hidden" data-error-for="name"></p>
           <div class="tp-form__row">
             <input type="tel" name="phone" class="tp-form__input mask-phone" placeholder="+7 (9__) ___-__-__" required />
-            <input type="email" name="email" class="tp-form__input" placeholder="Электронная почта" />
+            <input type="email" name="email" class="tp-form__input" placeholder="Электронная почта *" required />
           </div>
           <p class="form-field-error hidden" data-error-for="phone"></p>
           <label class="tp-form__checkbox">

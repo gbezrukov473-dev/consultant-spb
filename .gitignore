@@ -15,3 +15,6 @@ bitrix-template.zip
 # Рабочие материалы (исходники картинок, макеты) — в сборку сайта не входят
 СЖАТЫЕ/
 Доработка элементов для сайта/
+
+# Секреты сервера (ключи SmartCaptcha, токен webhook Битрикс24) — не коммитить
+public_html/local/php_interface/include/constants.php

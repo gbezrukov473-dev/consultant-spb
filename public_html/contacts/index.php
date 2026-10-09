@@ -1,8 +1,9 @@
 <?php
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
-$APPLICATION->SetPageProperty("title", "Контакты — КонсультантПлюс СПБ");
-$APPLICATION->SetPageProperty("description", "Контакты ООО «ЧДК» — официальный партнёр КонсультантПлюс в Санкт-Петербурге. Телефон, адрес, e-mail, схема проезда.");
-$APPLICATION->SetTitle("Контакты");
+$APPLICATION->SetPageProperty("keywords", "чдк спб, консультант плюс спб, телефон официального представителя консультант плюс, реквизиты чдк, режим работы чдк");
+$APPLICATION->SetPageProperty("title", "Контакты ЧДК — официальный представитель КонсультантПлюс в СПб");
+$APPLICATION->SetPageProperty("description", "Адрес ЧДК — официального представителя КонсультантПлюс в Санкт-Петербурге: ул. Воронежская, д. 5  литера А, помещ. 21НС. ИНН, ОГРН, телефон, e-mail, реквизиты, карта проезда.");
+$APPLICATION->SetTitle("Контакты ЧДК");
 ?>
 <?php include(\Bitrix\Main\Application::getDocumentRoot()."/include/contacts.php"); ?>
 
@@ -43,7 +44,7 @@ $APPLICATION->SetTitle("Контакты");
       <!-- Адрес -->
       <div class="contacts-info__block">
         <h2 class="contacts-info__label">Адрес:</h2>
-        <p class="contacts-info__text">191167, г.&nbsp;Санкт-Петербург, наб.&nbsp;Обводного канала, д.23, лит.Б, пом.1-Н</p>
+        <p class="contacts-info__text">191119, г.&nbsp;Санкт-Петербург, ул. Воронежская, д. 5 литера А, помещ. 21НС</p>
       </div>
 
       <!-- Реквизиты -->
@@ -92,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function() {
   function initMap() {
     if (typeof ymaps === 'undefined') return;
     ymaps.ready(function() {
-      var coords = [59.916685, 30.380053];
+      var coords = [59.917894, 30.348585];
       var map = new ymaps.Map('contacts-map', {
         center: coords,
         zoom: 16,
@@ -101,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       var placemark = new ymaps.Placemark(coords, {
         balloonContentHeader: 'ООО «ЧДК»',
-        balloonContentBody: 'наб. Обводного канала, д.23, лит.Б, пом.1-Н',
+        balloonContentBody: 'ул. Воронежская, д. 5 литера А, помещ. 21НС',
         balloonContentFooter: '<a href="tel:+78123344481">8 812 334 44 81</a>',
         hintContent: 'ООО «ЧДК»'
       }, {

@@ -4,8 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <?php include '../includes/favicons.php'; ?>
-  <meta name="description" content="ИИ-помощник КонсультантПлюс — интеллектуальный сервис для быстрого решения правовых вопросов." />
-  <title>ИИ-помощник — КонсультантПлюс СПБ</title>
+  <meta name="description" content="Используйте ИИ-сервисы КонсультантПлюс для поиска ответов на правовые и налоговые вопросы, сложного анализа и оценки рисков. Доступен глубокий поиск, проверка договоров и краткий пересказ документов. Получите доступ к системе и ИИ-сервису от официального представителя в СПб и ЛО" />
+  <meta name="keywords" content="ии помощник консультант, консультант плюс ии помощник, ии помощник консультантплюс, ии помощник договоры консультант плюс, консультант плюс ии, ии договоры консультант плюс, нейросеть консультант, нейросеть консультант плюс, аи консультант плюс, ии проверка договоров консультант плюс, ии глубокий поиск консультант плюс, ии консультант юрист, ии для бухгалтера, правовой ии" />
+  <title>ИИ-сервисы КонсультантПлюс – нейросеть для бухгалтеров и юристов</title>
+  <link rel="stylesheet" href="/styles/bitrix-extras.css" /><!-- зеркало серверных стилей вне styles.css, грузится первым как на сервере -->
   <link rel="stylesheet" href="/styles/global.css" />
   <link rel="stylesheet" href="/styles/ui-kit.css" />
   <link rel="stylesheet" href="/styles/blocks.css" />
@@ -18,72 +20,247 @@
 
 
 <!-- ====== ХЛЕБНЫЕ КРОШКИ ====== -->
-<!-- Битрикс: bitrix:breadcrumb -->
+<!-- Битрикс: на сервере пока свёрстаны прямо в index.php («интегрировать и убрать в шаблон») -->
 <nav class="breadcrumbs" aria-label="Хлебные крошки">
   <div class="breadcrumbs__inner">
     <a href="/" class="breadcrumbs__link">Главная</a>
     <span class="breadcrumbs__sep">&gt;</span>
     <a href="/o-sisteme-konsultantplyus/" class="breadcrumbs__link">О СПС КонсультантПлюс</a>
     <span class="breadcrumbs__sep">&gt;</span>
-    <span class="breadcrumbs__current">ИИ-помощник</span>
+    <span class="breadcrumbs__current">ИИ-сервисы</span>
   </div>
 </nav>
 
+<!--
+  Контент страницы с 26.07.2026 хранится в инфоблоке 229 (тип spbcons) и выводится компонентами
+  шаблона SPBCons_New_2026. Тексты ниже скопированы с живого сайта 09.10.2026 — при правках
+  в админке Битрикса статика сама не обновится.
+-->
 
 <!-- ====== HERO ====== -->
-<!-- Битрикс: произвольный компонент -->
+<!-- Битрикс: bitrix:news.detail, шаблон ai_banner, ELEMENT_ID=252272.
+     H1 и абзацы — это PREVIEW_TEXT элемента, картинка — PREVIEW_PICTURE. -->
 <section class="aip-hero reveal">
   <div class="aip-hero__inner">
     <div class="aip-hero__content">
-      <h1 class="aip-hero__title">
-        <span class="aip-hero__title-accent">ИИ-помощник</span><br />
-        КонсультантПлюс
-      </h1>
-      <p class="aip-hero__text">Задайте вопрос по&nbsp;праву или налогам в&nbsp;свободной форме и&nbsp;получите развёрнутый ответ со&nbsp;ссылками на&nbsp;актуальные документы.</p>
-      <p class="aip-hero__subtext">ИИ-помощник учитывает контекст диалога, формирует подборку материалов из&nbsp;системы КонсультантПлюс и&nbsp;сохраняет историю обсуждения. Все, чтобы вы&nbsp;быстро нашли решение и&nbsp;опирались на&nbsp;проверенные источники.</p>
-      <a href="#" class="btn btn--purple aip-hero__btn" data-open-modal="modalService">Получить доступ</a>
+      <div class="aip-hero__text">
+        <h1 class="aip-hero__title">
+          <span class="aip-hero__title-accent">ИИ-сервисы</span><br />
+          КонсультантПлюс
+        </h1>
+        <p class="aip-hero__text">Получайте ответы на&nbsp;правовые и&nbsp;налоговые вопросы, анализируйте сложные ситуации и&nbsp;проверяйте документы с&nbsp;помощью современных ИИ-сервисов.</p>
+        <p class="aip-hero__subtext">В&nbsp;основе работы ИИ-сервисов&nbsp;&mdash; надежная и&nbsp;самая полная справочно-правовая система КонсультантПлюс. Система использует только актуальное законодательство, судебную практику и&nbsp;проверенные фирменные материалы, полностью исключая риски использования недостоверных данных.</p>
+      </div>
+      <a href="#" class="btn btn--purple aip-hero__btn" data-open-modal="modalService" data-lead-comment="Запрос по ИИ-сервису">Получить доступ</a>
     </div>
     <div class="aip-hero__visual">
-      <img src="/img/ai-pomoschnik-hero.png" alt="ИИ-помощник КонсультантПлюс" class="aip-hero__img" loading="lazy" />
+      <img src="/img/ai-pomoschnik-hero.png" alt="ИИ-сервисы КонсультантПлюс" class="aip-hero__img" loading="lazy" />
     </div>
   </div>
 </section>
 
 
-<!-- ====== ВОЗМОЖНОСТИ ИИ-ПОМОЩНИКА ====== -->
-<!-- Битрикс: bitrix:news.list, iblock="aip_features" -->
+<!-- ====== ВКЛАДКИ ИИ-СЕРВИСОВ ====== -->
+<!-- Битрикс: bitrix:news.list, шаблон ai_tabs, раздел 811. Заголовок/подзаголовок — NAME/DESCRIPTION раздела;
+     вкладка = элемент (PREVIEW_PICTURE, NAME, PREVIEW_TEXT), «Что умеет» = свойство CAN, «Как работает» = HELP,
+     ролик = файл в свойстве VIDEO. Вёрстка вкладок переиспользует блок .kits со страницы /buy/. -->
+<section class="kits reveal ii">
+  <div class="kits__inner">
+    <h2 class="kits__title">ИИ-сервисы КонсультантПлюс для решения правовых задач</h2>
+    <p class="aip-features__subtitle">Решайте профессиональные задачи быстрее с&nbsp;помощью специализированных ИИ-инструментов КонсультантПлюс</p>
+
+    <div class="kits__layout">
+      <div class="kits__tabs">
+        <button class="kits__tab is-active" data-tab="0">
+          <img src="/img/box-question.png" alt="Задать вопрос" class="kits__tab-img" loading="lazy" />
+          <div class="kits__tab-info">
+            <h3 class="kits__tab-title">Задать вопрос</h3>
+            <p class="kits__tab-desc">Получайте ответы на&nbsp;правовые и&nbsp;налоговые вопросы в&nbsp;формате диалога. ИИ-помощник учитывает контекст диалога и&nbsp;подбирает документы КонсультантПлюс по&nbsp;теме.</p>
+          </div>
+        </button>
+        <button class="kits__tab" data-tab="1">
+          <img src="/img/box-search.png" alt="Глубокий поиск" class="kits__tab-img" loading="lazy" />
+          <div class="kits__tab-info">
+            <h3 class="kits__tab-title">Глубокий поиск</h3>
+            <p class="kits__tab-desc">Проводите глубокий анализ сложных правовых и&nbsp;налоговых вопросов с&nbsp;учётом законодательства и&nbsp;судебной практики. Получайте оценку рисков и&nbsp;рекомендации.</p>
+          </div>
+        </button>
+        <button class="kits__tab" data-tab="2">
+          <img src="/img/box-dogovor.png" alt="Проверка договоров" class="kits__tab-img" loading="lazy" />
+          <div class="kits__tab-info">
+            <h3 class="kits__tab-title">Проверка договоров</h3>
+            <p class="kits__tab-desc">Проверяйте договоры на&nbsp;риски и&nbsp;спорные условия, получайте комментарии по&nbsp;выявленным замечаниям и&nbsp;рекомендации для дополнительной проверки.</p>
+          </div>
+        </button>
+        <button class="kits__tab" data-tab="3">
+          <img src="/img/box-pereskaz.png" alt="Краткий пересказ" class="kits__tab-img" loading="lazy" />
+          <div class="kits__tab-info">
+            <h3 class="kits__tab-title">Краткий пересказ</h3>
+            <p class="kits__tab-desc">Получайте структурированную выжимку судебных решений и&nbsp;документов административной практики, экономя время на&nbsp;изучении полного текста.</p>
+          </div>
+        </button>
+      </div>
+
+      <div class="kits__content">
+        <div class="kits__pane is-active" data-content="0">
+          <h3 class="kits__content-title">Задать вопрос</h3>
+          <h3 class="kits__tab-title iit">Что умеет сервис:</h3>
+          <ul class="kits__list">
+            <li>Отвечает на&nbsp;вопросы с&nbsp;учётом актуальных НПА, судебной практики и&nbsp;материалов КонсультантПлюс</li>
+            <li>Формирует подборку документов по&nbsp;теме запроса для дополнительного изучения вопроса</li>
+            <li>Позволяет задавать уточняющие вопросы в&nbsp;рамках одного диалога с&nbsp;сохранением контекста</li>
+            <li>Сохраняет историю запросов, ответов и&nbsp;подобранных документов</li>
+            <li>Помогает быстрее разобраться в&nbsp;вопросе без необходимости формулировать сложные поисковые запросы</li>
+          </ul>
+          <h3 class="kits__tab-title iit">Как это работает:</h3>
+          1. Задайте вопрос в&nbsp;свободной форме&nbsp;&mdash; так, как сформулировали&nbsp;бы его коллеге.<br>
+          2. Получите ответ с&nbsp;пояснениями и&nbsp;подборкой документов КонсультантПлюс по&nbsp;теме.<br>
+          3. Уточняйте детали и&nbsp;развивайте тему в&nbsp;диалоге&nbsp;&mdash; сервис учитывает предыдущие сообщения.<br>
+          <br>
+          <div class="kits__content-actions">
+            <a href="#" class="btn btn--purple aip-hero__btn" data-open-modal="modalService" data-lead-comment="Запрос по ИИ-сервису">Получить доступ</a>
+            <a href="#" class="btn btn--link-purple btn--sm chdk-card__link" data-open-modal="modalVideoAsk">Смотреть видеоролик</a>
+          </div>
+        </div>
+
+        <div class="kits__pane" data-content="1">
+          <h3 class="kits__content-title">Глубокий поиск</h3>
+          <h3 class="kits__tab-title iit">Что умеет сервис:</h3>
+          <ul class="kits__list">
+            <li>Анализирует сложные правовые ситуации на&nbsp;основе нормативных актов и&nbsp;судебной практики</li>
+            <li>Готовит развёрнутый ответ в&nbsp;формате правового заключения</li>
+            <li>Подбирает релевантную судебную практику и&nbsp;показывает позиции судов</li>
+            <li>Оценивает возможные риски, перспективы и&nbsp;аргументы сторон</li>
+            <li>Формирует рекомендации для защиты интересов и&nbsp;выбора оптимального варианта действий</li>
+          </ul>
+          <h3 class="kits__tab-title iit">Как это работает:</h3>
+          1. Задайте вопрос по&nbsp;сложной правовой или налоговой ситуации.<br>
+          2. Сервис анализирует нормативные акты, судебную практику и&nbsp;материалы КонсультантПлюс.<br>
+          3. Получите структурированный ответ с&nbsp;выводами, правовым анализом и&nbsp;практическими рекомендациями.<br>
+          <br>
+          <div class="kits__content-actions">
+            <a href="#" class="btn btn--purple aip-hero__btn" data-open-modal="modalService" data-lead-comment="Запрос по ИИ-сервису">Получить доступ</a>
+            <a href="#" class="btn btn--link-purple btn--sm chdk-card__link" data-open-modal="modalVideoSearch">Смотреть видеоролик</a>
+          </div>
+        </div>
+
+        <div class="kits__pane" data-content="2">
+          <h3 class="kits__content-title">Проверка договоров</h3>
+          <h3 class="kits__tab-title iit">Что умеет сервис:</h3>
+          <ul class="kits__list">
+            <li>Анализирует 10&nbsp;видов договоров на&nbsp;юридические, коммерческие и&nbsp;технические риски</li>
+            <li>Выявляет условия, которые могут быть невыгодны именно для вашей стороны договора</li>
+            <li>Подсвечивает риски непосредственно в&nbsp;тексте документа</li>
+            <li>Формирует комментарии и&nbsp;пояснения по&nbsp;выявленным замечаниям</li>
+            <li>Подбирает правовые акты и&nbsp;материалы КонсультантПлюс для дополнительной проверки</li>
+          </ul>
+          <h3 class="kits__tab-title iit">Как это работает:</h3>
+          1. Загрузите договор в&nbsp;сервис для автоматической проверки.<br>
+          2. Сервис самостоятельно определит тип договора или позволит выбрать его вручную. Затем укажите сторону договора.<br>
+          3. Получите результаты проверки. Сервис подсветит риски, сгруппирует их по&nbsp;категориям и&nbsp;предоставит рекомендации для дополнительной проверки.<br>
+          <br>
+          <div class="kits__content-actions">
+            <a href="#" class="btn btn--purple aip-hero__btn" data-open-modal="modalService" data-lead-comment="Запрос по ИИ-сервису">Получить доступ</a>
+            <a href="#" class="btn btn--link-purple btn--sm chdk-card__link" data-open-modal="modalVideoDeals">Смотреть видеоролик</a>
+          </div>
+        </div>
+
+        <div class="kits__pane" data-content="3">
+          <h3 class="kits__content-title">Краткий пересказ</h3>
+          <h3 class="kits__tab-title iit">Что умеет сервис:</h3>
+          <ul class="kits__list">
+            <li>Формирует краткую выжимку документа за&nbsp;несколько секунд</li>
+            <li>Выделяет ключевые обстоятельства дела и&nbsp;выводы</li>
+            <li>Показывает аргументы сторон и&nbsp;позицию суда или госоргана</li>
+            <li>Позволяет быстро перейти к&nbsp;нужному фрагменту полного текста</li>
+            <li>Переводит сложные юридические формулировки на&nbsp;понятный язык</li>
+          </ul>
+          <h3 class="kits__tab-title iit">Как это работает:</h3>
+          1. Откройте документ судебной или административной практики в&nbsp;системе КонсультантПлюс.<br>
+          2. Нажмите кнопку «Краткий пересказ»&nbsp;&ndash; сервис проанализирует текст документа.<br>
+          3. Получите структурированную выжимку с&nbsp;основными обстоятельствами дела, аргументами сторон, позицией суда или госоргана и&nbsp;выводами. При необходимости перейдите к&nbsp;нужному фрагменту полного текста документа.<br>
+          <br>
+          <div class="kits__content-actions">
+            <a href="#" class="btn btn--purple aip-hero__btn" data-open-modal="modalService" data-lead-comment="Запрос по ИИ-сервису">Получить доступ</a>
+            <a href="#" class="btn btn--link-purple btn--sm chdk-card__link" data-open-modal="modalVideoPereskaz">Смотреть видеоролик</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Попапы с роликами. На сервере id = modalVideo<ID элемента>, ролики лежат в /upload/iblock/…
+     В статике ссылки абсолютные на spbcons.ru — локальных копий роликов в проекте нет. -->
+<div class="modal modal--video" id="modalVideoAsk">
+  <button class="modal__close" aria-label="Закрыть">&times;</button>
+  <div class="modal__video-wrapper">
+    <video controls preload="metadata" playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain;">
+      <source src="https://spbcons.ru/upload/iblock/790/4850vj79qwgz6b7vq4l3q92y5q9l2prm/ai_helper_ask_a_question.mp4" type="video/mp4">
+    </video>
+  </div>
+</div>
+<div class="modal modal--video" id="modalVideoSearch">
+  <button class="modal__close" aria-label="Закрыть">&times;</button>
+  <div class="modal__video-wrapper">
+    <video controls preload="metadata" playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain;">
+      <source src="https://spbcons.ru/upload/iblock/820/9y2ikkw101jvc3of7ac8ozdqzk5ox2ij/ai_helper_deep_search.mp4" type="video/mp4">
+    </video>
+  </div>
+</div>
+<div class="modal modal--video" id="modalVideoDeals">
+  <button class="modal__close" aria-label="Закрыть">&times;</button>
+  <div class="modal__video-wrapper">
+    <video controls preload="metadata" playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain;">
+      <source src="https://spbcons.ru/upload/iblock/81f/7ql12dsxo1l3dndud49j4ehegou2s6h5/ai_helper_deals_check.mp4" type="video/mp4">
+    </video>
+  </div>
+</div>
+<div class="modal modal--video" id="modalVideoPereskaz">
+  <button class="modal__close" aria-label="Закрыть">&times;</button>
+  <div class="modal__video-wrapper">
+    <video controls preload="metadata" playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain;">
+      <source src="https://spbcons.ru/upload/iblock/066/w0l4mk2s754870nawnkqtxj35jekytwu/kratky_pereskaz.mp4" type="video/mp4">
+    </video>
+  </div>
+</div>
+
+
+<!-- ====== ПРЕИМУЩЕСТВА ИИ-СЕРВИСОВ ====== -->
+<!-- Битрикс: bitrix:news.list, шаблон ai_can, раздел 812. Иконка — файл в свойстве PREVIEW_PICTURE_SVG
+     (копии иконок с сервера — public/img/ai-services/, в спрайт не входят). -->
 <section class="aip-features reveal">
   <div class="aip-features__inner">
-    <h2 class="aip-features__title">Что умеет ИИ-помощник Консультант&nbsp;Плюс</h2>
-    <p class="aip-features__subtitle">Это современный сервис на&nbsp;основе искусственного интеллекта для&nbsp;работы с&nbsp;правовой информацией</p>
+    <h2 class="aip-features__title">Преимущества ИИ-сервисов КонсультантПлюс</h2>
+    <p class="aip-features__subtitle">Инструменты помогают быстрее находить ответы, анализировать правовые ситуации и&nbsp;работать с&nbsp;документами</p>
 
     <div class="aip-features__grid">
       <div class="aip-features__card reveal reveal--delay-1">
-        <svg class="icon aip-features__icon" aria-hidden="true"><use href="/img/sprite.svg#ai-pom-vopros"></use></svg>
+        <img class="icon aip-features__icon" src="/img/ai-services/question.svg" alt="" aria-hidden="true" loading="lazy" />
         <div class="aip-features__body">
-          <h3 class="aip-features__name">Отвечает на&nbsp;ваши вопросы</h3>
-          <p class="aip-features__desc">Получите ответ на&nbsp;сложный правовой или налоговый вопрос&nbsp;&mdash; с&nbsp;актуальными НПА, судебной практикой и&nbsp;комментариями экспертов</p>
+          <h3 class="aip-features__name">Отвечают на&nbsp;ваши вопросы</h3>
+          <p class="aip-features__desc">Получайте ответы на&nbsp;правовые и&nbsp;налоговые вопросы с&nbsp;учётом актуальных НПА, судебной практики и&nbsp;комментариев экспертов</p>
         </div>
       </div>
       <div class="aip-features__card reveal reveal--delay-2">
-        <svg class="icon aip-features__icon" aria-hidden="true"><use href="/img/sprite.svg#ai-pom-obuch"></use></svg>
+        <img class="icon aip-features__icon" src="/img/ai-services/time.svg" alt="" aria-hidden="true" loading="lazy" />
         <div class="aip-features__body">
-          <h3 class="aip-features__name">Постоянно обучается</h3>
-          <p class="aip-features__desc">В&nbsp;основе технологии&nbsp;&mdash; более чем 360&nbsp;млн документов, судебных актов и&nbsp;аналитических материалов КонсультантПлюс</p>
+          <h3 class="aip-features__name">Экономят ваше время</h3>
+          <p class="aip-features__desc">Сокращают время на&nbsp;поиск и&nbsp;обработку правовой информации, помогая быстрее решать профессиональные задачи</p>
         </div>
       </div>
       <div class="aip-features__card reveal reveal--delay-3">
-        <svg class="icon aip-features__icon" aria-hidden="true"><use href="/img/sprite.svg#ai-pom-material"></use></svg>
+        <img class="icon aip-features__icon" src="/img/ai-services/book.svg" alt="" aria-hidden="true" loading="lazy" />
         <div class="aip-features__body">
-          <h3 class="aip-features__name">Формирует подборку материалов</h3>
-          <p class="aip-features__desc">Дополнительно показывает документы из&nbsp;системы КонсультантПлюс, которые помогут глубже изучить вопрос</p>
+          <h3 class="aip-features__name">Работают на&nbsp;базе КонсультантПлюс</h3>
+          <p class="aip-features__desc">В&nbsp;основе сервисов&nbsp;&mdash; более 360&nbsp;млн документов, судебных актов и&nbsp;аналитических материалов КонсультантПлюс</p>
         </div>
       </div>
       <div class="aip-features__card reveal reveal--delay-4">
-        <svg class="icon aip-features__icon" aria-hidden="true"><use href="/img/sprite.svg#ai-pom-dialogue"></use></svg>
+        <img class="icon aip-features__icon" src="/img/ai-services/risk.svg" alt="" aria-hidden="true" loading="lazy" />
         <div class="aip-features__body">
-          <h3 class="aip-features__name">Учитывает контекст диалога</h3>
-          <p class="aip-features__desc">Можно уточнять и&nbsp;развивать тему&nbsp;&mdash; ИИ-помощник помнит историю обсуждения и&nbsp;отвечает с&nbsp;учётом сказанного ранее</p>
+          <h3 class="aip-features__name">Помогают оценивать риски</h3>
+          <p class="aip-features__desc">Анализируют правовые ситуации, выявляют возможные риски и&nbsp;помогают принимать взвешенные решения</p>
         </div>
       </div>
     </div>
@@ -91,16 +268,18 @@
 </section>
 
 
-<!-- ====== КАК ПОЛЬЗОВАТЬСЯ ИИ-ПОМОЩНИКОМ ====== -->
-<!-- Битрикс: включаемая область или custom component -->
-<section class="aip-howto reveal">
+<!-- ====== КАК НАЧАТЬ РАБОТУ ====== -->
+<!-- Битрикс: bitrix:news.list, шаблон ai_start, раздел 813. Заголовок/подзаголовок/картинка — NAME/DESCRIPTION/PICTURE
+     раздела, шаг = PREVIEW_TEXT элемента, оранжевая плашка .pereskaz — UF-поле раздела UF_VIDEO_LINK. -->
+<section class="aip-howto reveal ii">
   <div class="aip-howto__inner">
-    <h2 class="aip-howto__title">Как пользоваться ИИ-помощником Консультант&nbsp;Плюс</h2>
+    <h2 class="aip-howto__title">Как начать работу с&nbsp;ИИ-сервисами КонсультантПлюс</h2>
+    <p class="aip-features__subtitle">Используйте ИИ-сервисы прямо из&nbsp;привычного интерфейса КонсультантПлюс</p>
 
     <div class="aip-howto__body">
       <div class="aip-howto__left">
         <div class="aip-howto__screenshot-wrap">
-          <img src="/img/ai-pom-kak-polzovats.png" alt="Скриншот — ИИ-помощник в системе КонсультантПлюс" class="aip-howto__screenshot" loading="lazy" />
+          <img src="/img/ai-pom-kak-polzovats.png" alt="Как начать работу с ИИ-сервисами КонсультантПлюс" class="aip-howto__screenshot" loading="lazy" />
         </div>
       </div>
 
@@ -110,7 +289,7 @@
             <span class="aip-howto__step-num">1</span>
           </div>
           <div class="aip-howto__step-content">
-            <p class="aip-howto__step-text"><strong>Задайте вопрос в&nbsp;свободной форме.</strong> Напишите его своими словами, как спросили&nbsp;бы у&nbsp;коллеги&nbsp;&mdash; специальные формулировки и&nbsp;точные запросы не&nbsp;обязательны.</p>
+            <p class="aip-howto__step-text">Перейдите в&nbsp;раздел ИИ-помощника через интерфейс системы. Здесь доступны сервисы: Задать вопрос, Глубокий поиск и&nbsp;Проверка договоров.</p>
           </div>
         </div>
         <div class="aip-howto__step reveal reveal--delay-2">
@@ -118,7 +297,7 @@
             <span class="aip-howto__step-num">2</span>
           </div>
           <div class="aip-howto__step-content">
-            <p class="aip-howto__step-text"><strong>Получите ответ и&nbsp;подборку документов.</strong> ИИ-помощник подготовит ответ, а&nbsp;также покажет дополнительные материалы по&nbsp;теме, в&nbsp;том числе похожие запросы пользователей.</p>
+            <p class="aip-howto__step-text">Выберите подходящий инструмент в&nbsp;зависимости от&nbsp;задачи: получите ответ на&nbsp;вопрос, проведите анализ ситуации или проверьте договор на&nbsp;риски.</p>
           </div>
         </div>
         <div class="aip-howto__step reveal reveal--delay-3">
@@ -126,11 +305,11 @@
             <span class="aip-howto__step-num">3</span>
           </div>
           <div class="aip-howto__step-content">
-            <p class="aip-howto__step-text"><strong>Уточняйте и&nbsp;развивайте тему.</strong> Задавайте дополнительные вопросы&nbsp;&mdash; помощник помнит историю вашего общения. Все диалоги сохраняются&nbsp;&mdash; вы&nbsp;сможете вернуться к&nbsp;ним позже.</p>
+            <p class="aip-howto__step-text">Работайте с&nbsp;результатами: изучайте ответы, переходите к&nbsp;документам КонсультантПлюс и&nbsp;используйте рекомендации сервисов в&nbsp;работе.</p>
           </div>
         </div>
 
-        <a href="https://spbcons.ru/upload/rolik_ii_pomoshnik-dialog_20260224.mp4" class="btn btn--purple aip-howto__action-btn" target="_blank" rel="noopener">Как это работает</a>
+        <p class="pereskaz">Краткий пересказ работает отдельно&nbsp;&mdash; откройте документ судебной или административной практики и&nbsp;получите выжимку по&nbsp;ключевым выводам.</p>
       </div>
     </div>
   </div>
@@ -174,11 +353,13 @@
 
       <div class="trial__right">
         <form class="trial__form js-lead-form" action="/api/lead.php" method="POST" novalidate data-form-id="trial-aip" data-thanks="/thanks.html">
-          <input type="text" name="name" class="trial__input" placeholder="Ваше Имя" />
+          <!-- Битрикс: bitrix:main.include PATH="/include/loc_info.php" (форма без заголовка, шаблон modal_contact) -->
+          <div class="form-loc-info">Мы работаем с юрлицами и ИП <span>Санкт-Петербурга и Ленобласти</span></div>
+          <input type="text" name="name" class="trial__input" placeholder="Ваше Имя *" required />
           <p class="form-field-error hidden" data-error-for="name"></p>
           <div class="trial__row">
             <input type="tel" name="phone" class="trial__input mask-phone" placeholder="+7 (9__) ___-__-__" required />
-            <input type="email" name="email" class="trial__input" placeholder="Электронная почта" />
+            <input type="email" name="email" class="trial__input" placeholder="Электронная почта *" required />
           </div>
           <p class="form-field-error hidden" data-error-for="phone"></p>
           <label class="trial__checkbox">

@@ -1,0 +1,8 @@
+.icon.lk-icon {
+	display: none;
+}
+.islk .header-nav__link {
+	color: var(--color-primary);
+	gap: 4.5px;
+	font-weight: 700;
+}

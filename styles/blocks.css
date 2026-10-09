@@ -226,6 +226,12 @@
   text-shadow: 0 0 0.5px currentColor, 0 0 0.5px currentColor;
 }
 
+/* Пункт «ИИ-сервисы» (.islk) — оранжевый, при наведении фиолетовый.
+   Базовый цвет задан в зеркале styles/bitrix-extras.css (header_nav/style.css). */
+.islk .header-nav__link:hover {
+  color: var(--color-secondary);
+}
+
 /* --- Стрелка «Новости» --- */
 .header-nav__link--dropdown {
   gap: 4px;
@@ -1373,6 +1379,7 @@ a.trial__feature:hover {
 }
 
 .modal__submit {
+  min-height: 63px; /* чтобы кнопка не схлопывалась, когда текст скрыт спиннером «Отправка…» */
   font-family: var(--font-family);
   font-weight: 700;
   font-size: 18px;
@@ -2160,6 +2167,7 @@ body.modal-open {
   .modal__submit {
     font-size: 16px;
     padding: 18px;
+    min-height: 56px;
   }
 
   .modal__choice {

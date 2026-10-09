@@ -14,7 +14,7 @@
 | 5.2 sticky-header | `styles/blocks.css` (.header) | `position: sticky` + сжатие высот (120→96, 64→56), белый фон nav |
 | ~~5.3 exit-intent popup~~ | — | **удалён 11.06.2026 по решению клиента** (раздражал посетителей); вычищен из `includes/modals.php`, `js/main.js`, обоих Bitrix-шаблонов; `js/exit-intent.js` удалён |
 | 5.4 сквозная форма перед футером | `includes/lead-form-pre-footer.php` + 8 страниц (systems/*, faq.html, faq-detail.html) | новый компактный лид-форма блок |
-| 2.1 Organization JSON-LD | `index.html`, `contacts.html` | реальный адрес: 191167, наб. Обводного канала, 23 |
+| 2.1 Organization JSON-LD | `index.html`, `contacts.html` | реальный адрес: 191119, ул. Воронежская, д. 5 литера А, помещ. 21НС (с 17.08.2026; было наб. Обводного канала, 23) |
 | 2.2 SiteNavigationElement | `includes/header.php` | разметка на каждом пункте десктопного меню |
 
 ---
@@ -28,7 +28,7 @@
 | --- | --- | --- |
 | 1.1 description (главная) | `index.php` | `$APPLICATION->SetPageProperty("description", …)` — `ShowHead()` уже выводит meta |
 | 1.1 description (/systems/) | `systems/index.php` | то же |
-| 2.1 Organization+PostalAddress | `local/templates/SPBCons_New_2026/footer.php` | JSON-LD (site-wide). Адрес: 191167, наб. Обводного канала, 23; email info@spbcons.ru |
+| 2.1 Organization+PostalAddress | `local/templates/SPBCons_New_2026/footer.php` | JSON-LD (site-wide). Адрес: 191119, ул. Воронежская, д. 5 литера А, помещ. 21НС (с 17.08.2026); email info@spbcons.ru |
 | 2.4 SiteNavigationElement | `local/templates/SPBCons_New_2026/footer.php` | JSON-LD `ItemList` из 9 пунктов меню (компонент `bitrix:menu` не трогали) |
 | 4.1 FAQ на главной | `index.php` | секция `.faq-home` (`<details>/<summary>`, +/−) + FAQPage JSON-LD |
 | ~~4.4 exit-intent~~ | — | **удалён 11.06.2026** из `footer.php` обоих шаблонов (модалка `#modalExit` + inline-скрипт) |
@@ -215,11 +215,11 @@ curl -sI "https://spbcons.ru//////news/" | grep -i ^location
 > **В репозитории применено** — см. `index.html`, `contacts.html`, `includes/header.php`.
 > На прод они попадают вместе с шаблоном; ниже оставлены как справка и проверочные ссылки.
 >
-> **Внимание по адресу:** в `contacts.html` указан реальный адрес офиса — **191167, наб. Обводного
-> канала, д. 23, лит. Б, пом. 1-Н**. В исходном брифе аудита был «Шпалерная, 36, м. Чернышевская»
-> — мы взяли актуальный из вёрстки. Если фактический адрес другой — поправить в:
-> `index.html` (JSON-LD), `contacts.html` (JSON-LD + видимый блок `.contacts-info`),
-> и в скрипте Яндекс-карты (`contacts.html` строка ~123, координаты).
+> **Адрес офиса (обновлено 09.10.2026):** программисты заказчика 17.08.2026 сменили адрес на сервере —
+> **191119, Санкт-Петербург, ул. Воронежская, д. 5 литера А, помещ. 21НС**, координаты карты `[59.917894, 30.348585]`.
+> Перенесено в `index.html` (JSON-LD), `contacts.html` (JSON-LD, блок `.contacts-info`, Яндекс-карта)
+> и `public_html/local/templates/SPBCons_New_2026/footer.php` (JSON-LD). Старый адрес (наб. Обводного канала, 23)
+> остался только в серверной копии `/pages-other/contacts-integration/` — она не используется.
 
 ### 2.1 Organization + PostalAddress + ContactPoint
 

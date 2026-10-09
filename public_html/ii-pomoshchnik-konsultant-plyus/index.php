@@ -1,125 +1,296 @@
 <?php
-require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
-$APPLICATION->SetPageProperty("title", "ИИ-помощник КонсультантПлюс — интеллектуальный сервис для правовых вопросов");
-$APPLICATION->SetPageProperty("description", "ИИ-помощник КонсультантПлюс — интеллектуальный сервис для быстрого решения правовых вопросов.");
-$APPLICATION->SetTitle("ИИ-помощник КонсультантПлюс");
-?>
+  require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
+  $APPLICATION->SetPageProperty("keywords", "ии помощник консультант, консультант плюс ии помощник, ии помощник консультантплюс, ии помощник договоры консультант плюс, консультант плюс ии, ии договоры консультант плюс, нейросеть консультант, нейросеть консультант плюс, аи консультант плюс, ии проверка договоров консультант плюс, ии глубокий поиск консультант плюс, ии консультант юрист, ии для бухгалтера, правовой ии");
+  $APPLICATION->SetPageProperty("title", "ИИ-сервисы КонсультантПлюс – нейросеть для бухгалтеров и юристов");
+  $APPLICATION->SetPageProperty("description", "Используйте ИИ-сервисы КонсультантПлюс для поиска ответов на правовые и налоговые вопросы, сложного анализа и оценки рисков. Доступен глубокий поиск, проверка договоров и краткий пересказ документов. Получите доступ к системе и ИИ-сервису от официального представителя в СПб и ЛО");
+  $APPLICATION->SetTitle("ИИ-сервисы КонсультантПлюс");?>
 
 
-<!-- ====== ХЛЕБНЫЕ КРОШКИ ====== -->
+<?/* ====== ХЛЕБНЫЕ КРОШКИ интегрировать и убрать в шаблон ====== */?>
 <nav class="breadcrumbs" aria-label="Хлебные крошки">
   <div class="breadcrumbs__inner">
     <a href="/" class="breadcrumbs__link">Главная</a>
     <span class="breadcrumbs__sep">&gt;</span>
     <a href="/o-sisteme-konsultantplyus/" class="breadcrumbs__link">О СПС КонсультантПлюс</a>
     <span class="breadcrumbs__sep">&gt;</span>
-    <span class="breadcrumbs__current">ИИ-помощник</span>
+    <span class="breadcrumbs__current">ИИ-сервисы</span>
   </div>
 </nav>
 
 
 <!-- ====== HERO ====== -->
-<section class="aip-hero reveal">
-  <div class="aip-hero__inner">
-    <div class="aip-hero__content">
-      <h1 class="aip-hero__title">
-        <span class="aip-hero__title-accent">ИИ-помощник</span><br />
-        КонсультантПлюс
-      </h1>
-      <p class="aip-hero__text">Задайте вопрос по&nbsp;праву или налогам в&nbsp;свободной форме и&nbsp;получите развёрнутый ответ со&nbsp;ссылками на&nbsp;актуальные документы.</p>
-      <p class="aip-hero__subtext">ИИ-помощник учитывает контекст диалога, формирует подборку материалов из&nbsp;системы КонсультантПлюс и&nbsp;сохраняет историю обсуждения. Все, чтобы вы&nbsp;быстро нашли решение и&nbsp;опирались на&nbsp;проверенные источники.</p>
-      <a href="#" class="btn btn--purple aip-hero__btn" data-open-modal="modalService" data-lead-comment="Запрос по ИИ-помощнику">Получить доступ</a>
-    </div>
-    <div class="aip-hero__visual">
-      <img src="<?=SITE_TEMPLATE_PATH?>/images/ai-pomoschnik-hero.png" alt="ИИ-помощник КонсультантПлюс" class="aip-hero__img" loading="lazy" />
-    </div>
-  </div>
-</section>
+<?$APPLICATION->IncludeComponent(
+  "bitrix:news.detail",
+  "ai_banner",
+  [
+    "ACTIVE_DATE_FORMAT" => "d.m.Y",
+    "ADD_ELEMENT_CHAIN" => "N",
+    "ADD_SECTIONS_CHAIN" => "N",
+    "AJAX_MODE" => "N",
+    "AJAX_OPTION_ADDITIONAL" => "",
+    "AJAX_OPTION_HISTORY" => "N",
+    "AJAX_OPTION_JUMP" => "N",
+    "AJAX_OPTION_STYLE" => "Y",
+    "BROWSER_TITLE" => "-",
+    "CACHE_GROUPS" => "N",
+    "CACHE_TIME" => "36000000",
+    "CACHE_TYPE" => "A",
+    "CHECK_DATES" => "Y",
+    "COMPOSITE_FRAME_MODE" => "A",
+    "COMPOSITE_FRAME_TYPE" => "AUTO",
+    "DETAIL_URL" => "",
+    "DISPLAY_BOTTOM_PAGER" => "N",
+    "DISPLAY_DATE" => "N",
+    "DISPLAY_NAME" => "N",
+    "DISPLAY_PICTURE" => "N",
+    "DISPLAY_PREVIEW_TEXT" => "Y",
+    "DISPLAY_TOP_PAGER" => "N",
+    "ELEMENT_CODE" => "",
+    "ELEMENT_ID" => "252272",
+    "FIELD_CODE" => [
+      0 => "",
+      1 => "",
+    ],
+    "IBLOCK_ID" => "229",
+    "IBLOCK_TYPE" => "spbcons",
+    "IBLOCK_URL" => "",
+    "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+    "MESSAGE_404" => "",
+    "META_DESCRIPTION" => "-",
+    "META_KEYWORDS" => "-",
+    "PAGER_BASE_LINK_ENABLE" => "N",
+    "PAGER_SHOW_ALL" => "N",
+    "PAGER_TEMPLATE" => ".default",
+    "PAGER_TITLE" => "Страница",
+    "PROPERTY_CODE" => [
+      0 => "",
+      1 => "",
+    ],
+    "SET_BROWSER_TITLE" => "N",
+    "SET_CANONICAL_URL" => "N",
+    "SET_LAST_MODIFIED" => "N",
+    "SET_META_DESCRIPTION" => "N",
+    "SET_META_KEYWORDS" => "N",
+    "SET_STATUS_404" => "N",
+    "SET_TITLE" => "N",
+    "SHOW_404" => "N",
+    "STRICT_SECTION_CHECK" => "N",
+    "USE_PERMISSIONS" => "N",
+    "USE_SHARE" => "N"
+  ],
+  false
+);?>
 
 
+<!-- ====== вкладки ИИ-ПОМОЩНИКА ====== -->
+<?$APPLICATION->IncludeComponent(
+	"bitrix:news.list", 
+	"ai_tabs", 
+	[
+		"ACTIVE_DATE_FORMAT" => "d.m.Y",
+		"ADD_SECTIONS_CHAIN" => "N",
+		"AJAX_MODE" => "N",
+		"AJAX_OPTION_ADDITIONAL" => "",
+		"AJAX_OPTION_HISTORY" => "N",
+		"AJAX_OPTION_JUMP" => "N",
+		"AJAX_OPTION_STYLE" => "N",
+		"CACHE_FILTER" => "N",
+		"CACHE_GROUPS" => "Y",
+		"CACHE_TIME" => "36000000",
+		"CACHE_TYPE" => "A",
+		"CHECK_DATES" => "Y",
+		"COMPOSITE_FRAME_MODE" => "A",
+		"COMPOSITE_FRAME_TYPE" => "AUTO",
+		"DETAIL_URL" => "",
+		"DISPLAY_BOTTOM_PAGER" => "N",
+		"DISPLAY_DATE" => "N",
+		"DISPLAY_NAME" => "Y",
+		"DISPLAY_PICTURE" => "Y",
+		"DISPLAY_PREVIEW_TEXT" => "Y",
+		"DISPLAY_TOP_PAGER" => "N",
+		"FIELD_CODE" => [
+			0 => "DETAIL_TEXT",
+			1 => "",
+		],
+		"FILTER_NAME" => "",
+		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
+		"IBLOCK_ID" => "229",
+		"IBLOCK_TYPE" => "spbcons",
+		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+		"INCLUDE_SUBSECTIONS" => "Y",
+		"MESSAGE_404" => "",
+		"NEWS_COUNT" => "20",
+		"PAGER_BASE_LINK_ENABLE" => "N",
+		"PAGER_DESC_NUMBERING" => "N",
+		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+		"PAGER_SHOW_ALL" => "N",
+		"PAGER_SHOW_ALWAYS" => "N",
+		"PAGER_TEMPLATE" => "",
+		"PAGER_TITLE" => "Новости",
+		"PARENT_SECTION" => "811",
+		"PARENT_SECTION_CODE" => "",
+		"PREVIEW_TRUNCATE_LEN" => "",
+		"PROPERTY_CODE" => [
+			0 => "CAN",
+			1 => "HELP",
+			2 => "VIDEO",
+		],
+		"SET_BROWSER_TITLE" => "N",
+		"SET_LAST_MODIFIED" => "N",
+		"SET_META_DESCRIPTION" => "N",
+		"SET_META_KEYWORDS" => "N",
+		"SET_STATUS_404" => "N",
+		"SET_TITLE" => "N",
+		"SHOW_404" => "N",
+		"SORT_BY1" => "SORT",
+		"SORT_BY2" => "ID",
+		"SORT_ORDER1" => "ASC",
+		"SORT_ORDER2" => "DESC",
+		"STRICT_SECTION_CHECK" => "N",
+		"COMPONENT_TEMPLATE" => "ai_tabs"
+	],
+	false
+);?>
 <!-- ====== ВОЗМОЖНОСТИ ИИ-ПОМОЩНИКА ====== -->
-<section class="aip-features reveal">
-  <div class="aip-features__inner">
-    <h2 class="aip-features__title">Что умеет ИИ-помощник Консультант&nbsp;Плюс</h2>
-    <p class="aip-features__subtitle">Это современный сервис на&nbsp;основе искусственного интеллекта для&nbsp;работы с&nbsp;правовой информацией</p>
-
-    <div class="aip-features__grid">
-      <div class="aip-features__card reveal reveal--delay-1">
-        <svg class="icon aip-features__icon" aria-hidden="true"><use href="<?=SITE_TEMPLATE_PATH?>/images/sprite.svg#ai-pom-vopros"></use></svg>
-        <div class="aip-features__body">
-          <h3 class="aip-features__name">Отвечает на&nbsp;ваши вопросы</h3>
-          <p class="aip-features__desc">Получите ответ на&nbsp;сложный правовой или налоговый вопрос&nbsp;&mdash; с&nbsp;актуальными НПА, судебной практикой и&nbsp;комментариями экспертов</p>
-        </div>
-      </div>
-      <div class="aip-features__card reveal reveal--delay-2">
-        <svg class="icon aip-features__icon" aria-hidden="true"><use href="<?=SITE_TEMPLATE_PATH?>/images/sprite.svg#ai-pom-obuch"></use></svg>
-        <div class="aip-features__body">
-          <h3 class="aip-features__name">Постоянно обучается</h3>
-          <p class="aip-features__desc">В&nbsp;основе технологии&nbsp;&mdash; более чем 360&nbsp;млн документов, судебных актов и&nbsp;аналитических материалов КонсультантПлюс</p>
-        </div>
-      </div>
-      <div class="aip-features__card reveal reveal--delay-3">
-        <svg class="icon aip-features__icon" aria-hidden="true"><use href="<?=SITE_TEMPLATE_PATH?>/images/sprite.svg#ai-pom-material"></use></svg>
-        <div class="aip-features__body">
-          <h3 class="aip-features__name">Формирует подборку материалов</h3>
-          <p class="aip-features__desc">Дополнительно показывает документы из&nbsp;системы КонсультантПлюс, которые помогут глубже изучить вопрос</p>
-        </div>
-      </div>
-      <div class="aip-features__card reveal reveal--delay-4">
-        <svg class="icon aip-features__icon" aria-hidden="true"><use href="<?=SITE_TEMPLATE_PATH?>/images/sprite.svg#ai-pom-dialogue"></use></svg>
-        <div class="aip-features__body">
-          <h3 class="aip-features__name">Учитывает контекст диалога</h3>
-          <p class="aip-features__desc">Можно уточнять и&nbsp;развивать тему&nbsp;&mdash; ИИ-помощник помнит историю обсуждения и&nbsp;отвечает с&nbsp;учётом сказанного ранее</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<?$APPLICATION->IncludeComponent(
+  "bitrix:news.list",
+  "ai_can",
+  [
+    "ACTIVE_DATE_FORMAT" => "d.m.Y",
+    "ADD_SECTIONS_CHAIN" => "N",
+    "AJAX_MODE" => "N",
+    "AJAX_OPTION_ADDITIONAL" => "",
+    "AJAX_OPTION_HISTORY" => "N",
+    "AJAX_OPTION_JUMP" => "N",
+    "AJAX_OPTION_STYLE" => "N",
+    "CACHE_FILTER" => "N",
+    "CACHE_GROUPS" => "Y",
+    "CACHE_TIME" => "36000000",
+    "CACHE_TYPE" => "A",
+    "CHECK_DATES" => "Y",
+    "COMPOSITE_FRAME_MODE" => "A",
+    "COMPOSITE_FRAME_TYPE" => "AUTO",
+    "DETAIL_URL" => "",
+    "DISPLAY_BOTTOM_PAGER" => "N",
+    "DISPLAY_DATE" => "N",
+    "DISPLAY_NAME" => "Y",
+    "DISPLAY_PICTURE" => "Y",
+    "DISPLAY_PREVIEW_TEXT" => "Y",
+    "DISPLAY_TOP_PAGER" => "N",
+    "FIELD_CODE" => [
+      0 => "",
+      1 => "",
+    ],
+    "FILTER_NAME" => "",
+    "HIDE_LINK_WHEN_NO_DETAIL" => "N",
+    "IBLOCK_ID" => "229",
+    "IBLOCK_TYPE" => "spbcons",
+    "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+    "INCLUDE_SUBSECTIONS" => "Y",
+    "MESSAGE_404" => "",
+    "NEWS_COUNT" => "20",
+    "PAGER_BASE_LINK_ENABLE" => "N",
+    "PAGER_DESC_NUMBERING" => "N",
+    "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+    "PAGER_SHOW_ALL" => "N",
+    "PAGER_SHOW_ALWAYS" => "N",
+    "PAGER_TEMPLATE" => "",
+    "PAGER_TITLE" => "Новости",
+    "PARENT_SECTION" => "812",
+    "PARENT_SECTION_CODE" => "",
+    "PREVIEW_TRUNCATE_LEN" => "",
+    "PROPERTY_CODE" => [
+      0 => "",
+      1 => "PREVIEW_PICTURE_SVG",
+      2 => "",
+    ],
+    "SET_BROWSER_TITLE" => "N",
+    "SET_LAST_MODIFIED" => "N",
+    "SET_META_DESCRIPTION" => "N",
+    "SET_META_KEYWORDS" => "N",
+    "SET_STATUS_404" => "N",
+    "SET_TITLE" => "N",
+    "SHOW_404" => "N",
+    "SORT_BY1" => "SORT",
+    "SORT_BY2" => "NAME",
+    "SORT_ORDER1" => "ASC",
+    "SORT_ORDER2" => "ASC",
+    "STRICT_SECTION_CHECK" => "N",
+    "COMPONENT_TEMPLATE" => "ai_can"
+  ],
+  false
+);?>
 
 
 <!-- ====== КАК ПОЛЬЗОВАТЬСЯ ИИ-ПОМОЩНИКОМ ====== -->
-<section class="aip-howto reveal">
-  <div class="aip-howto__inner">
-    <h2 class="aip-howto__title">Как пользоваться ИИ-помощником Консультант&nbsp;Плюс</h2>
-
-    <div class="aip-howto__body">
-      <div class="aip-howto__left">
-        <div class="aip-howto__screenshot-wrap">
-          <img src="<?=SITE_TEMPLATE_PATH?>/images/ai-pom-kak-polzovats.png" alt="Скриншот — ИИ-помощник в системе КонсультантПлюс" class="aip-howto__screenshot" loading="lazy" />
-        </div>
-      </div>
-
-      <div class="aip-howto__right">
-        <div class="aip-howto__step reveal reveal--delay-1">
-          <div class="aip-howto__step-circle aip-howto__step-circle--purple">
-            <span class="aip-howto__step-num">1</span>
-          </div>
-          <div class="aip-howto__step-content">
-            <p class="aip-howto__step-text"><strong>Задайте вопрос в&nbsp;свободной форме.</strong> Напишите его своими словами, как спросили&nbsp;бы у&nbsp;коллеги&nbsp;&mdash; специальные формулировки и&nbsp;точные запросы не&nbsp;обязательны.</p>
-          </div>
-        </div>
-        <div class="aip-howto__step reveal reveal--delay-2">
-          <div class="aip-howto__step-circle aip-howto__step-circle--orange">
-            <span class="aip-howto__step-num">2</span>
-          </div>
-          <div class="aip-howto__step-content">
-            <p class="aip-howto__step-text"><strong>Получите ответ и&nbsp;подборку документов.</strong> ИИ-помощник подготовит ответ, а&nbsp;также покажет дополнительные материалы по&nbsp;теме, в&nbsp;том числе похожие запросы пользователей.</p>
-          </div>
-        </div>
-        <div class="aip-howto__step reveal reveal--delay-3">
-          <div class="aip-howto__step-circle aip-howto__step-circle--purple">
-            <span class="aip-howto__step-num">3</span>
-          </div>
-          <div class="aip-howto__step-content">
-            <p class="aip-howto__step-text"><strong>Уточняйте и&nbsp;развивайте тему.</strong> Задавайте дополнительные вопросы&nbsp;&mdash; помощник помнит историю вашего общения. Все диалоги сохраняются&nbsp;&mdash; вы&nbsp;сможете вернуться к&nbsp;ним позже.</p>
-          </div>
-        </div>
-
-        <a href="https://spbcons.ru/upload/rolik_ii_pomoshnik-dialog_20260224.mp4" class="btn btn--purple aip-howto__action-btn" target="_blank" rel="noopener">Как это работает</a>
-      </div>
-    </div>
-  </div>
-</section>
+<?$APPLICATION->IncludeComponent(
+  "bitrix:news.list",
+  "ai_start",
+  [
+    "ACTIVE_DATE_FORMAT" => "d.m.Y",
+    "ADD_SECTIONS_CHAIN" => "N",
+    "AJAX_MODE" => "N",
+    "AJAX_OPTION_ADDITIONAL" => "",
+    "AJAX_OPTION_HISTORY" => "N",
+    "AJAX_OPTION_JUMP" => "N",
+    "AJAX_OPTION_STYLE" => "N",
+    "CACHE_FILTER" => "N",
+    "CACHE_GROUPS" => "Y",
+    "CACHE_TIME" => "36000000",
+    "CACHE_TYPE" => "A",
+    "CHECK_DATES" => "Y",
+    "COMPOSITE_FRAME_MODE" => "A",
+    "COMPOSITE_FRAME_TYPE" => "AUTO",
+    "DETAIL_URL" => "",
+    "DISPLAY_BOTTOM_PAGER" => "N",
+    "DISPLAY_DATE" => "N",
+    "DISPLAY_NAME" => "N",
+    "DISPLAY_PICTURE" => "N",
+    "DISPLAY_PREVIEW_TEXT" => "Y",
+    "DISPLAY_TOP_PAGER" => "N",
+    "FIELD_CODE" => [
+      0 => "",
+      1 => "",
+    ],
+    "FILTER_NAME" => "",
+    "HIDE_LINK_WHEN_NO_DETAIL" => "N",
+    "IBLOCK_ID" => "229",
+    "IBLOCK_TYPE" => "spbcons",
+    "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+    "INCLUDE_SUBSECTIONS" => "Y",
+    "MESSAGE_404" => "",
+    "NEWS_COUNT" => "20",
+    "PAGER_BASE_LINK_ENABLE" => "N",
+    "PAGER_DESC_NUMBERING" => "N",
+    "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+    "PAGER_SHOW_ALL" => "N",
+    "PAGER_SHOW_ALWAYS" => "N",
+    "PAGER_TEMPLATE" => "",
+    "PAGER_TITLE" => "Новости",
+    "PARENT_SECTION" => "813",
+    "PARENT_SECTION_CODE" => "",
+    "PREVIEW_TRUNCATE_LEN" => "",
+    "PROPERTY_CODE" => [
+      0 => "",
+      1 => "",
+      2 => "",
+    ],
+    "SET_BROWSER_TITLE" => "N",
+    "SET_LAST_MODIFIED" => "N",
+    "SET_META_DESCRIPTION" => "N",
+    "SET_META_KEYWORDS" => "N",
+    "SET_STATUS_404" => "N",
+    "SET_TITLE" => "N",
+    "SHOW_404" => "N",
+    "SORT_BY1" => "SORT",
+    "SORT_BY2" => "NAME",
+    "SORT_ORDER1" => "ASC",
+    "SORT_ORDER2" => "ASC",
+    "STRICT_SECTION_CHECK" => "N",
+    "COMPONENT_TEMPLATE" => "ai_can"
+  ],
+  false
+);?>
 
 
 <!-- ====== БЕСПЛАТНЫЙ ДОСТУП ====== -->
@@ -132,7 +303,7 @@ $APPLICATION->SetTitle("ИИ-помощник КонсультантПлюс");
           <span class="aip-trial__line"><span class="aip-trial__accent">помощник </span>с&nbsp;вашим вопросом?</span>
           <span class="aip-trial__sub">Проверьте сами&nbsp;&mdash; оставьте заявку на&nbsp;пробный доступ</span>
         </h2>
-
+        
         <div class="trial__features">
           <a href="/o-sisteme-konsultantplyus/dostup-konsultantplyus-na-2-dnya/" class="trial__feature trial__feature--orange">
             <div class="trial__feature-icon">
@@ -143,7 +314,7 @@ $APPLICATION->SetTitle("ИИ-помощник КонсультантПлюс");
               <span class="trial__feature-desc">Полный доступ на 2 дня</span>
             </div>
           </a>
-
+          
           <a href="/services/chto-delat-onlayn/" class="trial__feature trial__feature--purple">
             <div class="trial__feature-icon">
               <img src="<?=SITE_TEMPLATE_PATH?>/images/lk-icon-big.svg" alt="" />
@@ -155,7 +326,7 @@ $APPLICATION->SetTitle("ИИ-помощник КонсультантПлюс");
           </a>
         </div>
       </div>
-
+      
       <div class="trial__right">
         <?$APPLICATION->IncludeComponent(
           "bitrix:form.result.new",
@@ -184,6 +355,4 @@ $APPLICATION->SetTitle("ИИ-помощник КонсультантПлюс");
     </div>
   </div>
 </section>
-
-
 <?php require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>

@@ -1,0 +1,97 @@
+.iit.kits__tab-title {
+	padding-bottom: 15px;
+}
+.kits__layout {
+	display: flex;
+	align-items: stretch;
+	gap: 30px;
+}
+
+.kits__tabs,
+.kits__content {
+	flex: 1;
+}
+
+.kits__content {
+	display: flex;
+	flex-direction: column;
+}
+
+.kits__pane {
+	display: none;
+}
+
+.kits__pane.is-active {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	animation: fadeEffect 0.3s ease-in-out forwards;
+}
+
+.kits__content-actions {
+	margin-top: auto;
+	padding-top: 24px;
+}
+
+@keyframes fadeEffect {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
+@media (max-width: 768px) {
+	.kits__layout {
+		flex-direction: column;
+		align-items: initial;
+	}
+}
+
+.modal--video .modal__close {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	z-index: 10;
+	color: #fff;
+	background: var(--color-primary);
+	border-radius: 50%;
+	width: 36px;
+	height: 36px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: none;
+	cursor: pointer;
+	transition: background .2s, color .2s, transform .2s;
+}
+
+.modal--video .modal__close:hover {
+	background: var(--color-secondary);
+	color: #fff;
+	transform: scale(1.05);
+}
+
+.modal.modal--video {
+	max-width: 860px;
+	padding: 0;
+	overflow: hidden;
+	background: #000;
+}
+
+.modal__video-wrapper {
+	position: relative;
+	padding-bottom: 56.25%;
+	height: 0;
+	width: 100%;
+}
+
+.modal__video-wrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border: 0;
+}
+
+.ii .aip-features__subtitle {
+	color: black;
+}

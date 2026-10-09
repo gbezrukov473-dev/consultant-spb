@@ -11,7 +11,7 @@
       <form class="lead-pre-footer__form js-lead-form" action="/api/lead.php" method="POST" novalidate data-form-id="<?= $form_id ?>" data-thanks="/thanks.html">
         <div class="lead-pre-footer__fields">
           <div class="lead-pre-footer__field">
-            <input type="text" name="name" class="lead-pre-footer__input" placeholder="Ваше Имя" />
+            <input type="text" name="name" class="lead-pre-footer__input" placeholder="Ваше Имя *" required />
             <p class="form-field-error hidden" data-error-for="name"></p>
           </div>
           <div class="lead-pre-footer__field">
@@ -19,7 +19,7 @@
             <p class="form-field-error hidden" data-error-for="phone"></p>
           </div>
           <div class="lead-pre-footer__field">
-            <input type="email" name="email" class="lead-pre-footer__input" placeholder="Электронная почта" />
+            <input type="email" name="email" class="lead-pre-footer__input" placeholder="Электронная почта *" required />
           </div>
         </div>
 

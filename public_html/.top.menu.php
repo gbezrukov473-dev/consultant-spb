@@ -1,0 +1,67 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"Бухгалтеру", 
+		"/systems/bukhgalteru/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Юристу", 
+		"/systems/yuristu/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Руководителю", 
+		"/systems/rukovoditelyu/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Бюджету", 
+		"/systems/byudzhetnoy-organizatsii/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Линия консультаций", 
+		"/consult/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"О нас", 
+		"/about/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Новости", 
+		"/news/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Контакты", 
+		"/contacts/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"ИИ-сервисы", 
+		"/ii-pomoshchnik-konsultant-plyus/", 
+		Array(), 
+		Array("is_lk"=>"Y"), 
+		"" 
+	)
+);
+?>

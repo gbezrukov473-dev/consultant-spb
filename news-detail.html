@@ -6,6 +6,7 @@
   <?php include 'includes/favicons.php'; ?>
   <meta name="description" content="Как подключить Консультант Плюс — пошаговая инструкция для организаций и ИП от ЧДК-Право. Выбор комплекта, формат доступа, оформление за 1 день." />
   <title>Как подключить Консультант Плюс: пошаговая инструкция для организаций — КонсультантПлюс СПБ</title>
+  <link rel="stylesheet" href="/styles/bitrix-extras.css" /><!-- зеркало серверных стилей вне styles.css, грузится первым как на сервере -->
   <link rel="stylesheet" href="/styles/global.css" />
   <link rel="stylesheet" href="/styles/ui-kit.css" />
   <link rel="stylesheet" href="/styles/blocks.css" />
@@ -139,11 +140,13 @@
 
       <div class="trial__right">
         <form class="trial__form js-lead-form" action="/api/lead.php" method="POST" novalidate data-form-id="trial-news-detail" data-thanks="/thanks.html">
-          <input type="text" name="name" class="trial__input" placeholder="Ваше Имя" />
+          <!-- Битрикс: bitrix:main.include PATH="/include/loc_info.php" (форма без заголовка, шаблон modal_contact) -->
+          <div class="form-loc-info">Мы работаем с юрлицами и ИП <span>Санкт-Петербурга и Ленобласти</span></div>
+          <input type="text" name="name" class="trial__input" placeholder="Ваше Имя *" required />
           <p class="form-field-error hidden" data-error-for="name"></p>
           <div class="trial__row">
             <input type="tel" name="phone" class="trial__input mask-phone" placeholder="+7 (9__) ___-__-__" required />
-            <input type="email" name="email" class="trial__input" placeholder="Электронная почта" />
+            <input type="email" name="email" class="trial__input" placeholder="Электронная почта *" required />
           </div>
           <p class="form-field-error hidden" data-error-for="phone"></p>
           <label class="trial__checkbox">

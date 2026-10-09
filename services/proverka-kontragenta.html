@@ -4,8 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <?php include '../includes/favicons.php'; ?>
-  <meta name="description" content="Проверка контрагента — оцените риски сотрудничества с компанией или ИП через сервис ЧДК-Право для клиентов КонсультантПлюс." />
-  <title>Проверка контрагента — КонсультантПлюс СПБ</title>
+  <meta name="description" content="Проверяйте контрагентов с помощью сервиса ЧДК: сведения о компании, судебные споры, исполнительные производства, банкротство и другие данные для оценки надежности партнеров. Уникальный сервис для клиентов Консультант Плюс компании ЧДК" />
+  <meta name="keywords" content="проверка контрагента, проверка контрагента чдк, проверка организации по ИНН, проверка юридического лица, проверка надежности контрагента, анализ контрагента" />
+  <title>Проверка контрагента от ЧДК – анализ и оценка рисков</title>
+  <link rel="stylesheet" href="/styles/bitrix-extras.css" /><!-- зеркало серверных стилей вне styles.css, грузится первым как на сервере -->
   <link rel="stylesheet" href="/styles/global.css" />
   <link rel="stylesheet" href="/styles/ui-kit.css" />
   <link rel="stylesheet" href="/styles/blocks.css" />
@@ -168,11 +170,13 @@
 
       <div class="trial__right">
         <form class="trial__form js-lead-form" action="/api/lead.php" method="POST" novalidate data-form-id="trial-pk" data-thanks="/thanks.html">
-          <input type="text" name="name" class="trial__input" placeholder="Ваше Имя" />
+          <!-- Битрикс: bitrix:main.include PATH="/include/loc_info.php" (форма без заголовка, шаблон modal_contact) -->
+          <div class="form-loc-info">Мы работаем с юрлицами и ИП <span>Санкт-Петербурга и Ленобласти</span></div>
+          <input type="text" name="name" class="trial__input" placeholder="Ваше Имя *" required />
           <p class="form-field-error hidden" data-error-for="name"></p>
           <div class="trial__row">
             <input type="tel" name="phone" class="trial__input mask-phone" placeholder="+7 (9__) ___-__-__" required />
-            <input type="email" name="email" class="trial__input" placeholder="Электронная почта" />
+            <input type="email" name="email" class="trial__input" placeholder="Электронная почта *" required />
           </div>
           <p class="form-field-error hidden" data-error-for="phone"></p>
           <label class="trial__checkbox">

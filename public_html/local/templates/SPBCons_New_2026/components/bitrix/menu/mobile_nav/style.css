@@ -1,0 +1,5 @@
+.mobile-menu__link.islk {
+	color: var(--color-primary);
+	border-bottom: none;
+	font-weight: 700;
+}

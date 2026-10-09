@@ -21,6 +21,9 @@
           </div>
         </div>
 
+        <!-- Битрикс: bitrix:main.include, PATH="/include/loc_info.php" (на ≤768px скрыто) -->
+        <div class="top-loc-info">Мы работаем с юрлицами и ИП <span>Санкт-Петербурга и Ленобласти</span></div>
+
         <a href="#" class="btn btn--yellow-on-purple header-top__cta-btn">Узнать цену</a>
       </div>
 
@@ -67,23 +70,25 @@
             </svg>
           </button>
           <div class="header-nav__dropdown">
+            <!-- Битрикс: подменю из /news/.left.menu.php -->
             <a href="/news/" class="header-nav__dropdown-link" itemscope itemtype="https://schema.org/SiteNavigationElement" itemprop="url"><span itemprop="name">Новости</span></a>
+            <a href="/faq/" class="header-nav__dropdown-link" itemscope itemtype="https://schema.org/SiteNavigationElement" itemprop="url"><span itemprop="name">Вопрос-ответ</span></a>
             <a href="/collections/" class="header-nav__dropdown-link" itemscope itemtype="https://schema.org/SiteNavigationElement" itemprop="url"><span itemprop="name">Правовые сборники</span></a>
           </div>
-        </li>
-        <li class="header-nav__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/SiteNavigationElement">
-          <a href="/faq/" itemprop="url" class="header-nav__link">Вопрос-ответ</a>
-          <meta itemprop="name" content="Вопрос-ответ" />
         </li>
         <li class="header-nav__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/SiteNavigationElement">
           <a href="/contacts/" itemprop="url" class="header-nav__link">Контакты</a>
           <meta itemprop="name" content="Контакты" />
         </li>
-        <li class="header-nav__item header-nav__item--lk">
-          <a href="#" class="header-nav__link header-nav__link--lk">
+        <!-- Битрикс: пункт из .top.menu.php с параметром is_lk=Y → шаблон header_nav рендерит .islk.
+             С 21.07.2026 вместо «Личный кабинет» (#modalLk) — ссылка на «ИИ-сервисы».
+             Иконка lk-icon оставлена в разметке, но скрыта (.icon.lk-icon в bitrix-extras.css). -->
+        <li class="header-nav__item islk header-nav__item--lk" itemprop="itemListElement" itemscope itemtype="https://schema.org/SiteNavigationElement">
+          <a href="/ii-pomoshchnik-konsultant-plyus/" itemprop="url" class="header-nav__link">
             <svg class="icon lk-icon" aria-hidden="true"><use href="/img/sprite.svg#lk-icon"></use></svg>
-            Личный кабинет
+            ИИ-сервисы
           </a>
+          <meta itemprop="name" content="ИИ-сервисы" />
         </li>
       </ul>
     </div>
@@ -103,7 +108,7 @@
         <li><a href="/faq/" class="mobile-menu__link">Вопрос-ответ</a></li>
         <li><a href="/collections/" class="mobile-menu__link">Правовые сборники</a></li>
         <li><a href="/contacts/" class="mobile-menu__link">Контакты</a></li>
-        <li><a href="#" class="mobile-menu__link mobile-menu__link--lk">Личный кабинет</a></li>
+        <li><a href="/ii-pomoshchnik-konsultant-plyus/" class="mobile-menu__link islk">ИИ-сервисы</a></li>
       </ul>
       <div class="mobile-menu__contacts">
         <a href="tel:+78123344481" class="mobile-menu__phone">8 812 334 44 81</a>

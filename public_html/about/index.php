@@ -1,7 +1,8 @@
 <?php
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
-$APPLICATION->SetPageProperty("title", "О компании — КонсультантПлюс СПБ");
-$APPLICATION->SetPageProperty("description", "О компании ЧДК — официальный представитель КонсультантПлюс в Санкт-Петербурге с 1996 года");
+$APPLICATION->SetPageProperty("keywords", "чдк, чдк официальный представитель, региональный центр консультант плюс спб, обслуживание консультант плюс спб");
+$APPLICATION->SetPageProperty("title", "О компании ЧДК — официальный представитель КонсультантПлюс в СПб");
+$APPLICATION->SetPageProperty("description", "Официальный представитель КонсультантПлюс в Санкт-Петербурге с 1996 года — компания ЧДК. 30 лет безупречной поддержки бизнеса. Начните работу с надежным партнером.");
 $APPLICATION->SetTitle("О компании");
 ?>
 
@@ -40,7 +41,7 @@ $APPLICATION->SetTitle("О компании");
       </div>
 
       <div class="ac-who__photo-wrap">
-        <a href="https://rutube.ru/video/private/82cc6c41b67c407a5a31b83aef119c71/?r=wd&p=86Fv8xfy7bkwDsox8KtFLA" target="_blank" rel="noopener" class="ac-who__video-link">
+        <a href="https://rutube.ru/video/private/886a39e1a9c5eef5d6877cb8dc91bd6c/?r=wd&p=ruUB_-TTP6qIt07Z8OnKbA" target="_blank" rel="noopener" class="ac-who__video-link">
           <img src="<?=SITE_TEMPLATE_PATH?>/images/about-team.png" alt="Презентация ЧДК — смотреть видео" class="ac-who__photo" loading="lazy" />
           <span class="ac-who__video-play" aria-hidden="true">
             <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -49,7 +50,7 @@ $APPLICATION->SetTitle("О компании");
             </svg>
           </span>
         </a>
-        <a href="https://p.spb4dk.ru/docs/pub/2160cdc05c88e89b599639d3cacd9605/default/?&" target="_blank" rel="noopener" class="btn btn--purple ac-who__download-btn">
+        <a href="https://p.spb4dk.ru/docs/pub/15682a7093b6af4009c147ae4fb3f23f/default/?&" target="_blank" rel="noopener" class="btn btn--purple ac-who__download-btn">
           Скачать презентацию
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M21 15V19C21 20.1 20.1 21 19 21H5C3.9 21 3 20.1 3 19V15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>

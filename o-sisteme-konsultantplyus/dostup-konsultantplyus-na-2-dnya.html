@@ -4,8 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <?php include '../includes/favicons.php'; ?>
-  <meta name="description" content="Бесплатный пробный доступ к КонсультантПлюс на 2 дня для организаций и ИП Санкт-Петербурга. Полный функционал системы, эксперты на связи, оформление за 5 минут." />
-  <title>Пробный доступ — КонсультантПлюс</title>
+  <meta name="description" content="Бесплатный пробный доступ к КонсультантПлюс на 2 дня. Полная версия: документы, судебная практика, экспертные материалы и линия консультаций. Оцените все возможности системы. Официальный представитель в СПб." />
+  <meta name="keywords" content="тестовый доступ консультант плюс, демо версия консультант плюс, попробовать консультант плюс бесплатно, бесплатный период консультант плюс спб, пробный консультант плюс, консультант плюс бесплатно" />
+  <title>Пробный доступ к КонсультантПлюс на 2 дня бесплатно</title>
+  <link rel="stylesheet" href="/styles/bitrix-extras.css" /><!-- зеркало серверных стилей вне styles.css, грузится первым как на сервере -->
   <link rel="stylesheet" href="/styles/global.css" />
   <link rel="stylesheet" href="/styles/ui-kit.css" />
   <link rel="stylesheet" href="/styles/blocks.css" />
@@ -128,11 +130,13 @@
       <p class="tp-form__desc">Протестируйте систему и&nbsp;убедитесь в&nbsp;её&nbsp;удобстве. Наш&nbsp;специалист подберёт для&nbsp;вас&nbsp;подходящий комплект&nbsp;— это&nbsp;займёт не&nbsp;более 5&nbsp;минут, и&nbsp;проведёт персональную презентацию.</p>
       <div class="tp-form__card">
         <form class="tp-form__form js-lead-form" action="/api/lead.php" method="POST" novalidate data-form-id="trial-page-form" data-thanks="/thanks.html">
-          <input type="text" name="name" class="tp-form__input" placeholder="Ваше Имя" />
+          <!-- Битрикс: bitrix:main.include PATH="/include/loc_info.php" (форма без заголовка, шаблон modal_contact) -->
+          <div class="form-loc-info">Мы работаем с юрлицами и ИП <span>Санкт-Петербурга и Ленобласти</span></div>
+          <input type="text" name="name" class="tp-form__input" placeholder="Ваше Имя *" required />
           <p class="form-field-error hidden" data-error-for="name"></p>
           <div class="tp-form__row">
             <input type="tel" name="phone" class="tp-form__input mask-phone" placeholder="+7 (9__) ___-__-__" required />
-            <input type="email" name="email" class="tp-form__input" placeholder="Электронная почта" />
+            <input type="email" name="email" class="tp-form__input" placeholder="Электронная почта *" required />
           </div>
           <p class="form-field-error hidden" data-error-for="phone"></p>
           <label class="tp-form__checkbox">

@@ -1,0 +1,236 @@
+/* =====================================================
+   ЗЕРКАЛО СЕРВЕРНЫХ СТИЛЕЙ ВНЕ styles.css / template_styles.css
+   -----------------------------------------------------
+   На сервере эти правила живут в отдельных файлах шаблона SPBCons_New_2026
+   и подключаются Битриксом ДО styles.css и template_styles.css
+   (проверено по склейке /bitrix/cache/css/ на живом сайте, 09.10.2026):
+
+     1. components/bitrix/news.list/ai_tabs/style.css        (только страница ИИ-сервисов)
+     2. components/bitrix/form.result.new/modal_contact/style.css
+     3. css/custom.css                                        (Asset::addCss в header.php)
+     4. components/bitrix/menu/header_nav/style.css
+     5. components/bitrix/menu/mobile_nav/style.css
+
+   Поэтому файл подключается ПЕРВЫМ в <head> (до global.css) — так каскад
+   совпадает с живым сайтом.
+
+   ⚠ Файл НЕ входит в Битрикс-сборку: build-bitrix-css.js его не читает,
+   а Vite кладёт его в общий main-чанк, который build-bitrix-template-styles.js
+   пропускает. Правки отсюда на сервер переносить руками в соответствующий файл.
+
+   Правила скопированы с сервера как есть (включая hex-цвета — исключение из
+   правила «цвета только в variables.css», чтобы сверка с сервером была 1:1).
+   Отличия от оригинала помечены «[static]».
+   ===================================================== */
+
+
+/* ---------- 1. ai_tabs/style.css ---------- */
+.iit.kits__tab-title {
+	padding-bottom: 15px;
+}
+.kits__layout {
+	display: flex;
+	align-items: stretch;
+	gap: 30px;
+}
+
+.kits__tabs,
+.kits__content {
+	flex: 1;
+}
+
+/* [static] на сервере без .ii — файл грузится только на странице ИИ-сервисов.
+   Здесь он глобальный, поэтому ограничено секцией .ii, чтобы не задеть /buy/. */
+.ii .kits__content {
+	display: flex;
+	flex-direction: column;
+}
+
+.kits__pane {
+	display: none;
+}
+
+.kits__pane.is-active {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	animation: fadeEffect 0.3s ease-in-out forwards;
+}
+
+/* [static] на сервере без .ii — см. комментарий выше */
+.ii .kits__content-actions {
+	margin-top: auto;
+	padding-top: 24px;
+}
+
+@keyframes fadeEffect {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
+@media (max-width: 768px) {
+	.kits__layout {
+		flex-direction: column;
+		align-items: initial;
+	}
+}
+
+.modal--video .modal__close {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	z-index: 10;
+	color: #fff;
+	background: var(--color-primary);
+	border-radius: 50%;
+	width: 36px;
+	height: 36px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: none;
+	cursor: pointer;
+	transition: background .2s, color .2s, transform .2s;
+}
+
+.modal--video .modal__close:hover {
+	background: var(--color-secondary);
+	color: #fff;
+	transform: scale(1.05);
+}
+
+.modal.modal--video {
+	max-width: 860px;
+	padding: 0;
+	overflow: hidden;
+	background: #000;
+}
+
+.modal__video-wrapper {
+	position: relative;
+	padding-bottom: 56.25%;
+	height: 0;
+	width: 100%;
+}
+
+.modal__video-wrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border: 0;
+}
+
+.ii .aip-features__subtitle {
+	color: black;
+}
+
+
+/* ---------- 2. modal_contact/style.css ---------- */
+.modal__submit {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.modal__submit.modal__submit--loading {
+    cursor: not-allowed;
+    opacity: 0.85;
+    color: transparent !important;
+}
+
+.modal__submit.modal__submit--loading::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+    margin-left: -10px;
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    border-left-color: #ffffff;
+    border-radius: 50%;
+    animation: button-spinner 0.6s linear infinite;
+    pointer-events: none;
+    z-index: 2;
+}
+
+@keyframes button-spinner {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+
+.modal__input {
+	margin: 3px 0;
+}
+.form-description {
+	font-size: 12px;
+	color: var(--color-gray-placeholder);
+	line-height: 12px;
+	padding: 10px 0 0 0;
+}
+.modal__checkbox-text {
+	padding-top: 3px;
+}
+.modal__checkbox {
+  margin-bottom: 10px;
+	align-items: center;
+}
+label[for="1302"] {
+    display: none;
+}
+.modal__success--green {
+    padding: 20px;
+    text-align: center;
+    color: #2e6a2e;
+}
+.modal__success--green .modal__title {
+    color: #2e6a2e;
+}
+.modal__success--green .modal__subtitle {
+    color: #3e7e3e;
+}
+
+
+/* ---------- 3. css/custom.css ---------- */
+.top-loc-info {
+	font-size: 12px;
+	font-weight: 500;
+	color: #fff;
+	border-left: 1px solid #fff;
+	padding: 12px 0 12px 15px;
+	margin-left: 15px;
+	max-width: 205px;
+}
+.form-loc-info {
+	font-size: 16px;
+	font-weight: 400;
+}
+.form-loc-info span{
+	color: var(--color-secondary);
+	font-weight: 600;
+}
+
+@media (width<=768px){
+.top-loc-info {  display: none;}
+}
+
+
+/* ---------- 4. menu/header_nav/style.css ---------- */
+.icon.lk-icon {
+	display: none;
+}
+.islk .header-nav__link {
+	color: var(--color-primary);
+	gap: 4.5px;
+	font-weight: 700;
+}
+
+
+/* ---------- 5. menu/mobile_nav/style.css ---------- */
+.mobile-menu__link.islk {
+	color: var(--color-primary);
+	border-bottom: none;
+	font-weight: 700;
+}

@@ -9,6 +9,11 @@ if (document.querySelector('.kits__tab')) {
   import('./buy-tabs.js');
 }
 
+// Вкладки «ИИ-сервисы» (страница /ii-pomoshchnik-konsultant-plyus/)
+if (document.querySelector('.kits__pane')) {
+  import('./ai-tabs.js');
+}
+
 // ===== Dropdown «Новости» =====
 const dropdownItem = document.querySelector('.header-nav__item--dropdown');
 const dropdownBtn = dropdownItem?.querySelector('.header-nav__link--dropdown');

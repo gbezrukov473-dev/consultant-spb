@@ -4,8 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <?php include 'includes/favicons.php'; ?>
-  <meta name="description" content="Линия консультаций КонсультантПлюс — экспертные ответы по бухучету, налогам и праву от ЧДК-Право" />
-  <title>Линия консультаций — КонсультантПлюс</title>
+  <meta name="description" content="Линия консультаций КонсультантПлюс в Санкт-Петербурге. Быстрые ответы на вопросы от экспертов по бухучету, налогам и праву. Получите доступ к Консультант Плюс и оцените преимущества надежной правовой поддержки." />
+  <meta name="keywords" content="линия консультаций консультант плюс, горячая линия консультаций, вопросы консультант плюс, задать вопрос бухгалтеру онлайн, юридическая консультация спб, горячая линия консультант плюс спб, консультации по 44-фз" />
+  <title>Линия консультаций КонсультантПлюс — быстрые ответы экспертов</title>
+  <link rel="stylesheet" href="/styles/bitrix-extras.css" /><!-- зеркало серверных стилей вне styles.css, грузится первым как на сервере -->
   <link rel="stylesheet" href="/styles/global.css" />
   <link rel="stylesheet" href="/styles/ui-kit.css" />
   <link rel="stylesheet" href="/styles/blocks.css" />
@@ -335,11 +337,13 @@
 
       <div class="lk-form__card">
         <form class="lk-form__card-inner js-lead-form" action="/api/lead.php" method="POST" novalidate data-form-id="lk-question" data-thanks="/thanks.html">
-          <input type="text" name="name" class="lk-form__input" placeholder="Ваше Имя" />
+          <!-- Битрикс: bitrix:main.include PATH="/include/loc_info.php" (форма без заголовка, шаблон modal_contact) -->
+          <div class="form-loc-info">Мы работаем с юрлицами и ИП <span>Санкт-Петербурга и Ленобласти</span></div>
+          <input type="text" name="name" class="lk-form__input" placeholder="Ваше Имя *" required />
           <p class="form-field-error hidden" data-error-for="name"></p>
           <input type="tel" name="phone" class="lk-form__input mask-phone" placeholder="+7 (9__) ___ - __ - __" required />
           <p class="form-field-error hidden" data-error-for="phone"></p>
-          <input type="email" name="email" class="lk-form__input" placeholder="Электронная почта" />
+          <input type="email" name="email" class="lk-form__input" placeholder="Электронная почта *" required />
           <p class="form-field-error hidden" data-error-for="email"></p>
           <button type="submit" class="btn btn--purple lk-form__submit">Попробовать</button>
           <label class="lk-form__checkbox">

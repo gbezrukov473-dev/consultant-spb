@@ -4,8 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <?php include 'includes/favicons.php'; ?>
-  <meta name="description" content="О компании ЧДК-Право — официальный представитель КонсультантПлюс в Санкт-Петербурге с 1996 года" />
-  <title>О компании — КонсультантПлюс СПБ</title>
+  <meta name="description" content="Официальный представитель КонсультантПлюс в Санкт-Петербурге с 1996 года — компания ЧДК. 30 лет безупречной поддержки бизнеса. Начните работу с надежным партнером." />
+  <meta name="keywords" content="чдк, чдк официальный представитель, региональный центр консультант плюс спб, обслуживание консультант плюс спб" />
+  <title>О компании ЧДК — официальный представитель КонсультантПлюс в СПб</title>
+  <link rel="stylesheet" href="/styles/bitrix-extras.css" /><!-- зеркало серверных стилей вне styles.css, грузится первым как на сервере -->
   <link rel="stylesheet" href="/styles/global.css" />
   <link rel="stylesheet" href="/styles/ui-kit.css" />
   <link rel="stylesheet" href="/styles/blocks.css" />
@@ -53,7 +55,7 @@
       </div>
 
       <div class="ac-who__photo-wrap">
-        <a href="https://rutube.ru/video/private/82cc6c41b67c407a5a31b83aef119c71/?r=wd&amp;p=86Fv8xfy7bkwDsox8KtFLA" class="ac-who__video-link" target="_blank" rel="noopener noreferrer">
+        <a href="https://rutube.ru/video/private/886a39e1a9c5eef5d6877cb8dc91bd6c/?r=wd&amp;p=ruUB_-TTP6qIt07Z8OnKbA" class="ac-who__video-link" target="_blank" rel="noopener noreferrer">
           <img src="/img/about-team.png" alt="Презентация ЧДК-Право — смотреть видео" class="ac-who__photo" loading="lazy" />
           <span class="ac-who__video-play" aria-hidden="true">
             <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -62,7 +64,7 @@
             </svg>
           </span>
         </a>
-        <a href="https://p.spb4dk.ru/docs/pub/2160cdc05c88e89b599639d3cacd9605/default/?&amp;" class="btn btn--purple ac-who__download-btn" target="_blank" rel="noopener noreferrer">
+        <a href="https://p.spb4dk.ru/docs/pub/15682a7093b6af4009c147ae4fb3f23f/default/?&amp;" class="btn btn--purple ac-who__download-btn" target="_blank" rel="noopener noreferrer">
           Скачать презентацию
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M21 15V19C21 20.1 20.1 21 19 21H5C3.9 21 3 20.1 3 19V15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -177,11 +179,13 @@
 
       <div class="trial__right">
         <form class="trial__form js-lead-form" action="/api/lead.php" method="POST" novalidate data-form-id="trial-about-company" data-thanks="/thanks.html">
-          <input type="text" name="name" class="trial__input" placeholder="Ваше Имя" />
+          <!-- Битрикс: bitrix:main.include PATH="/include/loc_info.php" (форма без заголовка, шаблон modal_contact) -->
+          <div class="form-loc-info">Мы работаем с юрлицами и ИП <span>Санкт-Петербурга и Ленобласти</span></div>
+          <input type="text" name="name" class="trial__input" placeholder="Ваше Имя *" required />
           <p class="form-field-error hidden" data-error-for="name"></p>
           <div class="trial__row">
             <input type="tel" name="phone" class="trial__input mask-phone" placeholder="+7 (9__) ___-__-__" required />
-            <input type="email" name="email" class="trial__input" placeholder="Электронная почта" />
+            <input type="email" name="email" class="trial__input" placeholder="Электронная почта *" required />
           </div>
           <p class="form-field-error hidden" data-error-for="phone"></p>
           <label class="trial__checkbox">

@@ -4,8 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <?php include '../includes/favicons.php'; ?>
-  <meta name="description" content="О справочно-правовой системе КонсультантПлюс — более 360 миллионов документов, 9 профессиональных профилей, интеллектуальные сервисы." />
-  <title>О СПС КонсультантПлюс — КонсультантПлюс СПБ</title>
+  <meta name="description" content="Справочно-правовая система КонсультантПлюс: 360 млн документов, ежедневное обновление, 9 профессиональных профилей. Узнайте, как система помогает юристам и бухгалтерам. Официальный представитель в СПб." />
+  <meta name="keywords" content="спс консультант плюс описание, что входит в консультант плюс, возможности консультант плюс, для чего нужна система консультант плюс" />
+  <title>Что такое КонсультантПлюс — преимущества системы</title>
+  <link rel="stylesheet" href="/styles/bitrix-extras.css" /><!-- зеркало серверных стилей вне styles.css, грузится первым как на сервере -->
   <link rel="stylesheet" href="/styles/global.css" />
   <link rel="stylesheet" href="/styles/ui-kit.css" />
   <link rel="stylesheet" href="/styles/blocks.css" />
@@ -142,11 +144,13 @@
 
       <div class="trial__right">
         <form class="trial__form js-lead-form" action="/api/lead.php" method="POST" novalidate data-form-id="trial-sps" data-thanks="/thanks.html">
-          <input type="text" name="name" class="trial__input" placeholder="Ваше Имя" />
+          <!-- Битрикс: bitrix:main.include PATH="/include/loc_info.php" (форма без заголовка, шаблон modal_contact) -->
+          <div class="form-loc-info">Мы работаем с юрлицами и ИП <span>Санкт-Петербурга и Ленобласти</span></div>
+          <input type="text" name="name" class="trial__input" placeholder="Ваше Имя *" required />
           <p class="form-field-error hidden" data-error-for="name"></p>
           <div class="trial__row">
             <input type="tel" name="phone" class="trial__input mask-phone" placeholder="+7 (9__) ___-__-__" required />
-            <input type="email" name="email" class="trial__input" placeholder="Электронная почта" />
+            <input type="email" name="email" class="trial__input" placeholder="Электронная почта *" required />
           </div>
           <p class="form-field-error hidden" data-error-for="phone"></p>
           <label class="trial__checkbox">

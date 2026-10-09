@@ -5,14 +5,15 @@
 <!-- Узнать цену -->
 <div class="modal" id="modalPrice">
   <button class="modal__close" aria-label="Закрыть">&times;</button>
-  <h2 class="modal__title">Заполните форму</h2>
-  <p class="modal__subtitle">Чтобы получить <span class="modal__accent--purple">персональное предложение</span> на&nbsp;КонсультантПлюс</p>
+  <!-- Тексты = footer.php на сервере (MODAL_TITLE / MODAL_SUBTITLE / SUBMIT_TEXT), обновлено 28.09.2026 -->
+  <h2 class="modal__title">Узнать цену</h2>
+  <p class="modal__subtitle">Оставьте заявку, чтобы получить актуальный прайс-лист на&nbsp;КонсультантПлюс для юрлиц и&nbsp;ИП в&nbsp;Санкт-Петербурге и&nbsp;Ленобласти</p>
   <form class="modal__form js-lead-form" action="/api/lead.php" method="POST" novalidate data-form-id="modal-price<?= $suffix ?>" data-thanks="/thanks.html">
-    <input type="text" name="name" class="modal__input" placeholder="Ваше Имя" />
+    <input type="text" name="name" class="modal__input" placeholder="Ваше Имя *" required />
     <p class="form-field-error hidden" data-error-for="name"></p>
     <input type="tel" name="phone" class="modal__input mask-phone" placeholder="+7 (9__) ___-__-__" required />
     <p class="form-field-error hidden" data-error-for="phone"></p>
-    <input type="email" name="email" class="modal__input" placeholder="Электронная почта" />
+    <input type="email" name="email" class="modal__input" placeholder="Электронная почта *" required />
     <label class="modal__checkbox">
       <input type="checkbox" name="consent" required />
       <span>Я ознакомлен с <a href="/polzovatelskoe_soglashenie.php" class="modal__policy-link">политикой конфиденциальности</a> и&nbsp;даю согласие на&nbsp;обработку персональных данных</span>
@@ -23,21 +24,21 @@
     <input type="hidden" name="page" value="<?= $page ?>" />
     <input type="hidden" name="fill_time_ms" value="" />
     <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
-    <button type="submit" class="modal__submit modal__submit--purple">Узнать цену</button>
+    <button type="submit" class="modal__submit modal__submit--yellow">Получить прайс-лист</button>
   </form>
 </div>
 
 <!-- Пробный доступ -->
 <div class="modal" id="modalTrial">
   <button class="modal__close" aria-label="Закрыть">&times;</button>
-  <h2 class="modal__title">Заполните форму</h2>
-  <p class="modal__subtitle">Чтобы получить <span class="modal__accent--yellow">пробный доступ</span> к&nbsp;КонсультантПлюс и&nbsp;сервису ЧДК-Право</p>
+  <h2 class="modal__title">Бесплатный доступ</h2>
+  <p class="modal__subtitle">Попробуйте КонсультантПлюс бесплатно в&nbsp;течение 2&nbsp;дней. Мы работаем с&nbsp;юрлицами и&nbsp;ИП Санкт-Петербурга и&nbsp;Ленобласти</p>
   <form class="modal__form js-lead-form" action="/api/lead.php" method="POST" novalidate data-form-id="modal-trial<?= $suffix ?>" data-thanks="/thanks.html">
-    <input type="text" name="name" class="modal__input" placeholder="Ваше Имя" />
+    <input type="text" name="name" class="modal__input" placeholder="Ваше Имя *" required />
     <p class="form-field-error hidden" data-error-for="name"></p>
     <input type="tel" name="phone" class="modal__input mask-phone" placeholder="+7 (9__) ___-__-__" required />
     <p class="form-field-error hidden" data-error-for="phone"></p>
-    <input type="email" name="email" class="modal__input" placeholder="Электронная почта" />
+    <input type="email" name="email" class="modal__input" placeholder="Электронная почта *" required />
     <label class="modal__checkbox">
       <input type="checkbox" name="consent" required />
       <span>Я ознакомлен с <a href="/polzovatelskoe_soglashenie.php" class="modal__policy-link">политикой конфиденциальности</a> и&nbsp;даю согласие на&nbsp;обработку персональных данных</span>
@@ -66,13 +67,13 @@
 
   <div class="modal__step" data-step="b">
     <h2 class="modal__title">Заполните форму</h2>
-    <p class="modal__subtitle">Наш специалист свяжется с&nbsp;Вами в&nbsp;ближайшее время</p>
+    <p class="modal__subtitle">Наш специалист свяжется с&nbsp;Вами в&nbsp;ближайшее время. Мы работаем с&nbsp;юрлицами и&nbsp;ИП Санкт-Петербурга и&nbsp;Ленобласти</p>
     <form class="modal__form js-lead-form" action="/api/lead.php" method="POST" novalidate data-form-id="modal-lk-client<?= $suffix ?>" data-thanks="/thanks.html">
-      <input type="text" name="name" class="modal__input" placeholder="Ваше Имя" />
+      <input type="text" name="name" class="modal__input" placeholder="Ваше Имя *" required />
       <p class="form-field-error hidden" data-error-for="name"></p>
       <input type="tel" name="phone" class="modal__input mask-phone" placeholder="+7 (9__) ___-__-__" required />
       <p class="form-field-error hidden" data-error-for="phone"></p>
-      <input type="email" name="email" class="modal__input" placeholder="Электронная почта" />
+      <input type="email" name="email" class="modal__input" placeholder="Электронная почта *" required />
       <label class="modal__checkbox">
         <input type="checkbox" name="consent" required />
         <span>Я ознакомлен с <a href="/polzovatelskoe_soglashenie.php" class="modal__policy-link">политикой конфиденциальности</a> и&nbsp;даю согласие на&nbsp;обработку персональных данных</span>
@@ -89,13 +90,13 @@
 
   <div class="modal__step" data-step="c">
     <h2 class="modal__title">Заполните форму</h2>
-    <p class="modal__subtitle">Наш специалист свяжется с&nbsp;Вами в&nbsp;ближайшее время</p>
+    <p class="modal__subtitle">Наш специалист свяжется с&nbsp;Вами в&nbsp;ближайшее время. Мы работаем с&nbsp;юрлицами и&nbsp;ИП Санкт-Петербурга и&nbsp;Ленобласти</p>
     <form class="modal__form js-lead-form" action="/api/lead.php" method="POST" novalidate data-form-id="modal-lk-new<?= $suffix ?>" data-thanks="/thanks.html">
-      <input type="text" name="name" class="modal__input" placeholder="Ваше Имя" />
+      <input type="text" name="name" class="modal__input" placeholder="Ваше Имя *" required />
       <p class="form-field-error hidden" data-error-for="name"></p>
       <input type="tel" name="phone" class="modal__input mask-phone" placeholder="+7 (9__) ___-__-__" required />
       <p class="form-field-error hidden" data-error-for="phone"></p>
-      <input type="email" name="email" class="modal__input" placeholder="Электронная почта" />
+      <input type="email" name="email" class="modal__input" placeholder="Электронная почта *" required />
       <textarea name="comment" class="modal__input modal__textarea" placeholder="Ваш вопрос"></textarea>
       <label class="modal__checkbox">
         <input type="checkbox" name="consent" required />
@@ -116,13 +117,13 @@
 <div class="modal" id="modalService">
   <button class="modal__close" aria-label="Закрыть">&times;</button>
   <h2 class="modal__title">Заполните форму</h2>
-  <p class="modal__subtitle">Наш специалист свяжется с&nbsp;Вами в&nbsp;ближайшее время</p>
+  <p class="modal__subtitle">Наш специалист свяжется с&nbsp;Вами в&nbsp;ближайшее время. Мы работаем с&nbsp;юрлицами и&nbsp;ИП Санкт-Петербурга и&nbsp;Ленобласти</p>
   <form class="modal__form js-lead-form" action="/api/lead.php" method="POST" novalidate data-form-id="modal-service<?= $suffix ?>" data-thanks="/thanks.html">
-    <input type="text" name="name" class="modal__input" placeholder="Ваше Имя" />
+    <input type="text" name="name" class="modal__input" placeholder="Ваше Имя *" required />
     <p class="form-field-error hidden" data-error-for="name"></p>
     <input type="tel" name="phone" class="modal__input mask-phone" placeholder="+7 (9__) ___-__-__" required />
     <p class="form-field-error hidden" data-error-for="phone"></p>
-    <input type="email" name="email" class="modal__input" placeholder="Электронная почта" />
+    <input type="email" name="email" class="modal__input" placeholder="Электронная почта *" required />
     <label class="modal__checkbox">
       <input type="checkbox" name="consent" required />
       <span>Я ознакомлен с <a href="/polzovatelskoe_soglashenie.php" class="modal__policy-link">политикой конфиденциальности</a> и&nbsp;даю согласие на&nbsp;обработку персональных данных</span>
