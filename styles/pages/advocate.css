@@ -1,0 +1,313 @@
+/* =====================================================
+   СТРАНИЦА «КОНСУЛЬТАНТПЛЮС ДЛЯ АДВОКАТА» (/systems/advokatu/)
+   Источник контента: листовки «КонсультантПлюс Адвокат» (ЧДК, вариант 2)
+   и «Консультант Адвокат» (ИПК). Макета в Figma нет — страница собрана
+   из блоков страниц «Юристу»/«Бухгалтеру» (acc-hero, tp-banner, acc-offer, chdk)
+   + два новых блока ниже: .adv-benefits и .adv-includes.
+   ===================================================== */
+
+
+/* ====================================================
+   HERO — модификатор для иллюстрации из листовки
+   Картинка прижата к правому краю карточки: фиолетовый круг
+   в исходнике обрезан краем листа, здесь обрез совпадает с краем hero.
+   ==================================================== */
+.acc-hero--advocate .acc-hero__visual {
+  padding-right: 0;
+  align-items: flex-end;
+}
+
+.acc-hero--advocate .acc-hero__img {
+  max-width: 500px;
+  margin-right: 0;
+  filter: none;
+}
+
+
+/* ====================================================
+   ПРЕИМУЩЕСТВА (.adv-benefits)
+   3 карточки: иконка + заголовок + текст (листовка ЧДК)
+   ==================================================== */
+.adv-benefits {
+  padding: 80px var(--side-padding) 40px;
+}
+
+.adv-benefits__inner {
+  max-width: calc(var(--container-max) - 2 * var(--side-padding));
+  margin: 0 auto;
+}
+
+.adv-benefits__title {
+  font-weight: 600;
+  font-size: clamp(28px, 2vw + 10px, 36px);
+  line-height: 1.19;
+  color: var(--color-black);
+  margin-bottom: 16px;
+}
+
+.adv-benefits__subtitle {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.4;
+  color: var(--color-black);
+  max-width: 900px;
+  margin-bottom: 48px;
+}
+
+.adv-benefits__accent {
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.adv-benefits__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.adv-benefits__card {
+  background: var(--color-white);
+  border-radius: var(--radius-card);
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  box-shadow: var(--shadow-card);
+  transition: transform var(--transition-card), box-shadow var(--transition-card);
+}
+
+.adv-benefits__card:hover {
+  transform: translateY(-4px);
+}
+
+.adv-benefits__icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 4px;
+}
+
+.adv-benefits__name {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.25;
+  color: var(--color-black);
+}
+
+.adv-benefits__text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-text-muted);
+}
+
+
+/* ====================================================
+   СОСТАВ КОМПЛЕКТА (.adv-includes)
+   4 группы со списками (листовка ИПК) + плашка
+   «Информационные банки в составе комплекта» (листовка ЧДК)
+   ==================================================== */
+.adv-includes {
+  padding: 80px var(--side-padding) 0;
+}
+
+.adv-includes__inner {
+  max-width: calc(var(--container-max) - 2 * var(--side-padding));
+  margin: 0 auto;
+}
+
+.adv-includes__title {
+  font-weight: 600;
+  font-size: clamp(28px, 2vw + 10px, 36px);
+  line-height: 1.19;
+  color: var(--color-black);
+  margin-bottom: 16px;
+}
+
+.adv-includes__subtitle {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.4;
+  color: var(--color-black);
+  margin-bottom: 40px;
+}
+
+.adv-includes__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.adv-includes__card {
+  background: var(--color-gray-light);
+  border-radius: var(--radius-card);
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.adv-includes__card--accent {
+  background: var(--color-bg-purple);
+}
+
+.adv-includes__head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.adv-includes__icon {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+}
+
+.adv-includes__name {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.25;
+  color: var(--color-black);
+}
+
+.adv-includes__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.adv-includes__list li {
+  position: relative;
+  padding-left: 22px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.45;
+  color: var(--color-black);
+}
+
+.adv-includes__list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-secondary);
+}
+
+.adv-includes__list b {
+  font-weight: 700;
+}
+
+.adv-includes__link {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+/* --- Информационные банки в составе комплекта --- */
+.adv-includes__bundle {
+  margin-top: 20px;
+  background: var(--color-white);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  padding: 36px 32px;
+}
+
+.adv-includes__bundle-title {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.25;
+  color: var(--color-primary);
+  margin-bottom: 24px;
+}
+
+.adv-includes__bundle-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px 40px;
+}
+
+.adv-includes__bundle-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.45;
+  color: var(--color-black);
+}
+
+.adv-includes__bundle-list li::before {
+  content: '';
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  background: url('/img/icon-check-yellow.svg') no-repeat center / contain;
+  margin-top: 1px;
+}
+
+.adv-includes__bundle-list b {
+  font-weight: 600;
+}
+
+
+/* ====================================================
+   RESPONSIVE
+   ==================================================== */
+@media (max-width: 1024px) {
+  .acc-hero--advocate .acc-hero__visual {
+    padding: 0;
+    justify-content: center;
+  }
+
+  .acc-hero--advocate .acc-hero__img {
+    max-width: 380px;
+  }
+
+  .adv-benefits__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .adv-includes__grid,
+  .adv-includes__bundle-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .adv-benefits {
+    padding-top: 48px;
+  }
+
+  .adv-benefits__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .adv-benefits__subtitle,
+  .adv-includes__subtitle {
+    font-size: 17px;
+    margin-bottom: 32px;
+  }
+
+  .adv-benefits__card,
+  .adv-includes__card,
+  .adv-includes__bundle {
+    border-radius: var(--radius-card-sm);
+    padding: 28px 24px;
+  }
+
+  .adv-benefits__name,
+  .adv-includes__name {
+    font-size: 20px;
+  }
+
+  .adv-includes__bundle-title {
+    font-size: 24px;
+  }
+}

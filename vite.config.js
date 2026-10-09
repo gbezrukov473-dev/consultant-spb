@@ -33,6 +33,7 @@ export default defineConfig({
         'systems-rukovoditelyu': 'systems/rukovoditelyu.html',
         'systems-byudzhetnoy': 'systems/byudzhetnoy-organizatsii.html',
         'systems-kadroviku': 'systems/kadroviku.html',
+        'systems-advokatu': 'systems/advokatu.html',
 
         'services-index': 'services/index.html',
         'services-pm': 'services/personalnyy-menedzher.html',
