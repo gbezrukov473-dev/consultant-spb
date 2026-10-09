@@ -21,12 +21,6 @@
           </div>
         </div>
 
-        <div class="header-top__messengers">
-          <a href="https://max.ru/u/f9LHodD0cOIevbLN7WToeY90aC9RgJCNUl7v8Z3J5L1adS2-OklcZcPVMF8" class="messenger-link" aria-label="MAX" target="_blank" rel="noopener">
-            <img src="/img/logo-max.svg" alt="MAX" class="messenger-icon" />
-          </a>
-        </div>
-
         <a href="#" class="btn btn--yellow-on-purple header-top__cta-btn">Узнать цену</a>
       </div>
 
@@ -38,15 +32,33 @@
     </div>
   </div>
 
-  <nav class="header-nav">
+  <nav class="header-nav" aria-label="Основная навигация">
     <div class="header-nav__inner">
-      <ul class="header-nav__list">
-        <li class="header-nav__item"><a href="/systems/bukhgalteru/" class="header-nav__link">Бухгалтеру</a></li>
-        <li class="header-nav__item"><a href="/systems/yuristu/" class="header-nav__link">Юристу</a></li>
-        <li class="header-nav__item"><a href="/systems/rukovoditelyu/" class="header-nav__link">Руководителю</a></li>
-        <li class="header-nav__item"><a href="/systems/byudzhetnoy-organizatsii/" class="header-nav__link">Бюджету</a></li>
-        <li class="header-nav__item"><a href="/consult/" class="header-nav__link">Линия консультаций</a></li>
-        <li class="header-nav__item"><a href="/about/" class="header-nav__link">О нас</a></li>
+      <ul class="header-nav__list" itemscope itemtype="https://schema.org/ItemList">
+        <li class="header-nav__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/SiteNavigationElement">
+          <a href="/systems/bukhgalteru/" itemprop="url" class="header-nav__link">Бухгалтеру</a>
+          <meta itemprop="name" content="Бухгалтеру" />
+        </li>
+        <li class="header-nav__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/SiteNavigationElement">
+          <a href="/systems/yuristu/" itemprop="url" class="header-nav__link">Юристу</a>
+          <meta itemprop="name" content="Юристу" />
+        </li>
+        <li class="header-nav__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/SiteNavigationElement">
+          <a href="/systems/rukovoditelyu/" itemprop="url" class="header-nav__link">Руководителю</a>
+          <meta itemprop="name" content="Руководителю" />
+        </li>
+        <li class="header-nav__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/SiteNavigationElement">
+          <a href="/systems/byudzhetnoy-organizatsii/" itemprop="url" class="header-nav__link">Бюджету</a>
+          <meta itemprop="name" content="Бюджету" />
+        </li>
+        <li class="header-nav__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/SiteNavigationElement">
+          <a href="/consult/" itemprop="url" class="header-nav__link">Линия консультаций</a>
+          <meta itemprop="name" content="Линия консультаций" />
+        </li>
+        <li class="header-nav__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/SiteNavigationElement">
+          <a href="/about/" itemprop="url" class="header-nav__link">О нас</a>
+          <meta itemprop="name" content="О нас" />
+        </li>
         <li class="header-nav__item header-nav__item--dropdown">
           <button class="header-nav__link header-nav__link--dropdown" aria-expanded="false">
             Новости
@@ -55,12 +67,18 @@
             </svg>
           </button>
           <div class="header-nav__dropdown">
-            <a href="/news/" class="header-nav__dropdown-link">Новости</a>
-            <a href="/faq/" class="header-nav__dropdown-link">Вопрос-ответ</a>
-            <a href="/collections/" class="header-nav__dropdown-link">Правовые сборники</a>
+            <a href="/news/" class="header-nav__dropdown-link" itemscope itemtype="https://schema.org/SiteNavigationElement" itemprop="url"><span itemprop="name">Новости</span></a>
+            <a href="/collections/" class="header-nav__dropdown-link" itemscope itemtype="https://schema.org/SiteNavigationElement" itemprop="url"><span itemprop="name">Правовые сборники</span></a>
           </div>
         </li>
-        <li class="header-nav__item"><a href="/contacts/" class="header-nav__link">Контакты</a></li>
+        <li class="header-nav__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/SiteNavigationElement">
+          <a href="/faq/" itemprop="url" class="header-nav__link">Вопрос-ответ</a>
+          <meta itemprop="name" content="Вопрос-ответ" />
+        </li>
+        <li class="header-nav__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/SiteNavigationElement">
+          <a href="/contacts/" itemprop="url" class="header-nav__link">Контакты</a>
+          <meta itemprop="name" content="Контакты" />
+        </li>
         <li class="header-nav__item header-nav__item--lk">
           <a href="#" class="header-nav__link header-nav__link--lk">
             <svg class="icon lk-icon" aria-hidden="true"><use href="/img/sprite.svg#lk-icon"></use></svg>
@@ -90,9 +108,6 @@
       <div class="mobile-menu__contacts">
         <a href="tel:+78123344481" class="mobile-menu__phone">8 812 334 44 81</a>
         <span class="mobile-menu__hours">пн-пт 9:00-19:00</span>
-        <div class="mobile-menu__messengers">
-          <a href="https://max.ru/u/f9LHodD0cOIevbLN7WToeY90aC9RgJCNUl7v8Z3J5L1adS2-OklcZcPVMF8" aria-label="MAX" target="_blank" rel="noopener"><img src="/img/logo-max.svg" alt="MAX" class="messenger-icon" /></a>
-        </div>
         <a href="#" class="btn btn--yellow mobile-menu__cta">Узнать цену</a>
       </div>
     </div>

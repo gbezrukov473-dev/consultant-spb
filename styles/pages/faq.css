@@ -92,11 +92,16 @@
   transition: box-shadow var(--transition-fast);
 }
 
-.faq-questions__link:nth-child(odd) {
+/* Чередование цветов задаётся по видимой позиции (классами из JS),
+   чтобы при фильтрации по табам сохранялось правильное чередование.
+   nth-child — фолбэк для случая без JS / до инициализации. */
+.faq-questions__link:nth-child(odd),
+#faqQuestions .faq-questions__link--odd {
   background: var(--color-bg-purple);
 }
 
-.faq-questions__link:nth-child(even) {
+.faq-questions__link:nth-child(even),
+#faqQuestions .faq-questions__link--even {
   background: var(--color-gray-bg);
 }
 
@@ -138,19 +143,45 @@
 
 /* ====================================================
    БЛОК «ОСТАЛИСЬ ВОПРОСЫ?» (переопределения acc-offer)
+   Заголовок в одну строку, под ним — строка «подзаголовок + badge»,
+   кнопка ниже. Геометрия по образцу .tp-banner / .acc-offer.
    ==================================================== */
+.faq-offer__subrow {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 12px;
+}
+
 .faq-offer__subtitle {
+  font-family: 'Gilroy', sans-serif;
   font-size: 20px;
-  line-height: 1.4;
+  line-height: 1.3;
   color: var(--color-black);
-  margin-bottom: 16px;
   max-width: 331px;
 }
 
+/* Подзаголовок «Остались вопросы?» на контактах длиннее — даём ему ширину,
+   чтобы «…ближайшее время» оставалось на первой строке, а «для обсуждения» — на второй. */
+.contacts-offer .faq-offer__subtitle {
+  width: 460px;
+  max-width: none;
+}
+
+/* Десктоп: наклейка фиксированного размера (220.8×53) и чуть правее. */
+.faq-offer__subrow .acc-offer__badge {
+  width: 220.8px;
+  margin-left: 8px;
+}
+
+.faq-offer .acc-offer__btn.btn,
+.contacts-offer .acc-offer__btn.btn {
+  top: 150px;
+}
+
 .faq-offer__img {
-  max-width: 420px;
+  max-height: 500px;
   transform: rotate(7.94deg);
-  margin-top: -60px;
 }
 
 
@@ -171,9 +202,24 @@
     min-width: 300px;
   }
 
+  .faq-offer__subrow {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  /* Десктопные уточнения наклейки/подзаголовка — только для широких экранов. */
+  .faq-offer__subrow .acc-offer__badge {
+    width: auto;
+    margin-left: 0;
+  }
+
+  .contacts-offer .faq-offer__subtitle {
+    width: auto;
+    max-width: 331px;
+  }
+
   .faq-offer__img {
-    max-width: 300px;
-    margin-top: -30px;
+    max-height: 300px;
   }
 }
 
@@ -202,7 +248,7 @@
   }
 
   .faq-offer__img {
-    max-width: 220px;
+    max-height: 200px;
   }
 }
 

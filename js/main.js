@@ -132,25 +132,38 @@ function initInfiniteCarousel(viewportSel, trackSel, prevSel, nextSel, total) {
     return parseInt(getComputedStyle(track).gap) || 16;
   }
 
+  // Центральная карточка крупнее боковых (как в макете). На мобильном
+  // (1 видимая) масштаб 1 — одна карточка во всю ширину.
+  function getCenterScale() {
+    return getVisibleCount() === 1 ? 1 : 1.3;
+  }
+
+  // Боковая ширина считается так, чтобы увеличенный центр + боковые карточки
+  // ровно умещались в viewport (иначе крайние карточки обрезались бы по краям).
   function getSlideWidth() {
     var vw = viewport.offsetWidth;
     var visible = getVisibleCount();
     var gap = getGap();
-    return (vw - (visible - 1) * gap) / visible;
+    return (vw - (visible - 1) * gap) / (visible - 1 + getCenterScale());
   }
 
   function applyWidths() {
     var sw = getSlideWidth();
-    allSlides.forEach(function (s) {
-      s.style.width = sw + 'px';
+    var cw = sw * getCenterScale();
+    allSlides.forEach(function (s, i) {
+      s.style.width = (i === currentIndex ? cw : sw) + 'px';
     });
+    // Фиксируем высоту viewport под центральную карточку (отзывы 566×808),
+    // чтобы переключение не меняло высоту блока и низ страницы не дёргался.
+    viewport.style.height = Math.round(cw * 808 / 566) + 'px';
   }
 
   function getOffset(index) {
     var sw = getSlideWidth();
     var gap = getGap();
     var vw = viewport.offsetWidth;
-    return index * (sw + gap) - (vw - sw) / 2;
+    // слайды до текущего — обычной ширины, текущий — увеличенный
+    return index * (sw + gap) + (sw * getCenterScale()) / 2 - vw / 2;
   }
 
   function updateCenterClass() {
@@ -160,6 +173,7 @@ function initInfiniteCarousel(viewportSel, trackSel, prevSel, nextSel, total) {
   }
 
   function positionTrack(animate) {
+    applyWidths();
     var offset = getOffset(currentIndex);
 
     if (!animate) {

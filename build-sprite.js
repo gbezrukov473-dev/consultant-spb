@@ -10,7 +10,6 @@ const CSS_BG_ONLY = new Set([
   'hero-bg-pattern.svg',
   'icon-check-yellow.svg',
   'phone-icon.svg',
-  'logo-max.svg',
 ]);
 
 const HAS_STYLE = new Set([

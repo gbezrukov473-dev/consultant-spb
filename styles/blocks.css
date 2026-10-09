@@ -4,11 +4,61 @@
    ===================================================== */
 
 /* ====================================================
+   ХЛЕБНЫЕ КРОШКИ (.breadcrumbs)
+   Битрикс: bitrix:breadcrumb
+   Внутренний контейнер выровнен по левой границе
+   контентных блоков страницы (тот же контейнер, что и
+   .*__inner у секций) — без лишнего отступа от края.
+   ==================================================== */
+.breadcrumbs {
+  padding: 24px var(--side-padding) 0;
+}
+
+.breadcrumbs__inner {
+  max-width: calc(var(--container-max) - 2 * var(--side-padding));
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.breadcrumbs__link {
+  color: var(--color-black);
+  transition: color var(--transition-base);
+}
+
+.breadcrumbs__link:hover {
+  color: var(--color-primary);
+}
+
+.breadcrumbs__sep {
+  color: var(--color-gray-placeholder);
+  font-size: 12px;
+}
+
+.breadcrumbs__current {
+  color: var(--color-gray-placeholder);
+}
+
+/* ====================================================
+   ШАПКА (sticky на всех страницах)
+   ==================================================== */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--color-white);
+}
+
+/* ====================================================
    ВЕРХНЯЯ ФИОЛЕТОВАЯ ЧАСТЬ ШАПКИ
    ==================================================== */
 .header-top {
   background-color: var(--color-secondary);
-  border-radius: 0 0 40px 40px;
+  border-radius: 0 0 32px 32px;
   position: relative;
   z-index: 100;
 }
@@ -16,7 +66,7 @@
 .header-top__inner {
   max-width: var(--container-max);
   margin: 0 auto;
-  height: 120px;
+  height: 96px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -88,13 +138,6 @@
   color: var(--color-primary);
 }
 
-.header-top__messengers {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-left: 20px;
-}
-
 .header-top__cta-btn {
   margin-left: 32px;
   flex-shrink: 0;
@@ -138,6 +181,7 @@
 .header-nav {
   position: relative;
   z-index: 90;
+  background: var(--color-white);
 }
 
 .header-nav__inner {
@@ -150,7 +194,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 64px;
+  height: 56px;
 }
 
 .header-nav__item:first-child .header-nav__link {
@@ -355,17 +399,6 @@
   color: #888;
 }
 
-.mobile-menu__messengers {
-  display: flex;
-  gap: 12px;
-  margin-top: 8px;
-}
-
-.mobile-menu__messengers .messenger-icon {
-  width: 36px;
-  height: 36px;
-}
-
 .mobile-menu__cta {
   margin-top: 12px;
   margin-left: 0;
@@ -484,10 +517,10 @@
 }
 
 .sk__title {
-  font-weight: 700;
-  font-size: 40px;
+  font-weight: 600;
+  font-size: 36px;
   line-height: 1.2;
-  color: var(--color-text);
+  color: var(--color-black);
   margin-bottom: 40px;
 }
 
@@ -506,42 +539,72 @@
 }
 
 .sk-card__header {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 12px;
-  min-height: 180px;
-  margin-bottom: 16px;
+  position: relative;
+  z-index: 1;
+  min-height: 165px;
+  padding-right: 38%;
+  margin-bottom: 8px;
 }
 
 .sk-card__title {
   font-weight: 500;
-  font-size: clamp(22px, 2.5vw, 36px);
+  font-size: 32px;
   line-height: 1.15;
-  color: var(--color-text);
+  color: var(--color-black);
   text-transform: uppercase;
-  min-width: 0;
   white-space: nowrap;
 }
 
-.sk-card__title--ruk {
-  font-size: clamp(19px, 2.1vw, 30.5px);
-}
-
 .sk-card__title--sm {
-  font-size: clamp(21px, 2.3vw, 32px);
   white-space: normal;
 }
 
+/* Иконка — декоративная картинка, обрезанная по контенту: ставится в правый
+   верхний угол карточки. Координаты подобраны под фикс-ширину карточек
+   (верхние ~427px, нижние 650px) и идентичны для всех десктоп-разрешений. */
 .sk-card__icon {
-  width: 48%;
-  max-width: 200px;
+  position: absolute;
+  top: 0;
+  right: 0;
   height: auto;
-  flex-shrink: 0;
-  align-self: flex-start;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+}
+
+.sk-card__icon--buh {
+  top: 40px;
+  right: 28px;
+  width: 150px;
+}
+
+.sk-card__icon--jur {
+  top: 36px;
+  right: 30px;
+  width: 184px;
+}
+
+.sk-card__icon--ruk {
+  top: 32px;
+  right: -8px;
+  width: 154px;
+}
+
+.sk-card__icon--byudzhet {
+  top: 28px;
+  right: 30px;
+  width: 260px;
+}
+
+.sk-card__icon--kadry {
+  top: 22px;
+  right: 30px;
+  width: 184px;
 }
 
 .sk-card__body {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -551,7 +614,8 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
-  color: var(--color-text);
+  color: var(--color-black);
+  opacity: 0.8;
   margin-bottom: 24px;
   flex: 1;
 }
@@ -559,7 +623,7 @@
 .sk-card__actions {
   display: flex;
   align-items: center !important;
-  gap: 16px;
+  gap: 24px;
   flex-direction: row !important;
   flex-wrap: nowrap !important;
 }
@@ -586,21 +650,22 @@
 
 .trial__card {
   background: var(--gradient-trial);
-  border-radius: var(--radius-section);
-  padding: 56px 52px;
+  border-radius: var(--radius-card-lg);
+  padding: 100px 60px;
   display: flex;
   align-items: stretch;
-  gap: 48px;
+  gap: 8px;
 }
 
 .trial__left {
   flex: 1;
   min-width: 0;
+  max-width: 542px;
 }
 
 .trial__title {
-  font-weight: 500;
-  font-size: 32px;
+  font-weight: 600;
+  font-size: 30px;
   line-height: 1.3;
   color: var(--color-white);
   margin-bottom: 36px;
@@ -619,12 +684,12 @@
 .trial__feature {
   display: flex;
   align-items: center;
-  gap: 14px;
-  border-radius: 16px;
-  padding: 18px 20px;
+  gap: 16px;
+  border-radius: 12px;
+  padding: 15px 12px;
   text-decoration: none;
   transition: opacity var(--transition-fast);
-  max-width: 380px;
+  max-width: 427px;
 }
 
 .trial__feature--orange {
@@ -640,10 +705,10 @@ a.trial__feature:hover {
 }
 
 .trial__feature-icon {
-  width: 48px;
-  height: 48px;
+  width: 62px;
+  height: 62px;
   border-radius: 12px;
-  background: var(--color-white);
+  background: var(--color-gray-light);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -651,45 +716,46 @@ a.trial__feature:hover {
 }
 
 .trial__feature-icon img {
-  width: 42px;
-  height: 42px;
+  width: 48px;
+  height: 48px;
   object-fit: contain;
 }
 
 .trial__feature-info {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 4px;
 }
 
 .trial__feature-name {
   font-weight: 600;
-  font-size: 18px;
-  color: var(--color-text);
+  font-size: 20px;
+  color: var(--color-black);
 }
 
 .trial__feature-desc {
   font-weight: 400;
-  font-size: 14px;
-  color: var(--color-text-muted);
+  font-size: 16px;
+  color: var(--color-black);
 }
 
 /* --- Форма --- */
 .trial__right {
-  flex: 0 0 540px;
+  flex: 0 0 650px;
   display: flex;
 }
 
 .trial__form {
-  background: var(--color-gray-bg);
-  border-radius: 20px;
-  padding: 32px 28px;
+  background: var(--color-gray-light);
+  border-radius: var(--radius-card-lg);
+  padding: 40px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 12px;
   height: 100%;
   width: 100%;
   justify-content: center;
+  box-shadow: var(--shadow-form);
 }
 
 .trial__input {
@@ -698,9 +764,9 @@ a.trial__feature:hover {
   font-size: 16px;
   color: var(--color-text);
   background: var(--color-white);
-  border: 1.5px solid var(--color-gray);
+  border: 1px solid var(--color-gray);
   border-radius: var(--radius-input);
-  padding: 16px 20px;
+  padding: 20px 32px;
   width: 100%;
   outline: none;
   transition: border-color var(--transition-base);
@@ -721,7 +787,7 @@ a.trial__feature:hover {
 
 .trial__row {
   display: flex;
-  gap: 12px;
+  gap: 20px;
 }
 
 .trial__row .trial__input {
@@ -732,16 +798,16 @@ a.trial__feature:hover {
 .trial__checkbox {
   display: flex;
   align-items: flex-start;
-  gap: 10px;
-  font-size: 13px;
-  line-height: 1.4;
-  color: var(--color-text-muted);
+  gap: 8px;
+  font-size: 14px;
+  line-height: 1.3;
+  color: var(--color-black);
   cursor: pointer;
 }
 
 .trial__checkbox input[type="checkbox"] {
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
   margin-top: 1px;
   flex-shrink: 0;
   accent-color: var(--color-secondary);
@@ -761,12 +827,12 @@ a.trial__feature:hover {
 .trial__submit {
   font-family: var(--font-family);
   font-weight: 600;
-  font-size: 18px;
+  font-size: 16px;
   color: var(--color-white);
   background: var(--color-secondary);
   border: none;
-  border-radius: var(--radius-btn-lg);
-  padding: 18px;
+  border-radius: var(--radius-btn);
+  padding: 20px;
   width: 100%;
   cursor: pointer;
   transition: background-color var(--transition-base), transform var(--transition-fast);
@@ -778,6 +844,24 @@ a.trial__feature:hover {
 
 .trial__submit:active {
   transform: scale(0.98);
+}
+
+/* Битрикс: вместо статической .trial__form форму выводит компонент
+   form.result.new (.bx-form-card). Возвращаем ему белую подложку формы. */
+.trial__right .bx-form-card {
+  background: var(--color-gray-light);
+  border-radius: var(--radius-card-lg);
+  padding: 40px;
+  gap: 12px;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  box-shadow: var(--shadow-form);
+}
+
+/* Кнопка фиолетовая (--purple), на наведении — оранжевая */
+.trial__right .modal__submit:hover {
+  background-color: var(--color-primary);
 }
 
 /* ====================================================
@@ -795,17 +879,17 @@ a.trial__feature:hover {
 
 .chdk__title {
   font-weight: 600;
-  font-size: 40px;
+  font-size: 36px;
   line-height: 1.2;
-  color: var(--color-text);
+  color: var(--color-black);
   margin-bottom: 16px;
 }
 
 .chdk__subtitle {
   font-weight: 400;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.5;
-  color: var(--color-text);
+  color: var(--color-black);
   margin-bottom: 40px;
 }
 
@@ -818,8 +902,13 @@ a.trial__feature:hover {
 /* ====================================================
    ОТЗЫВЫ КЛИЕНТОВ
    ==================================================== */
+/* Полноширинный градиент, скруглён только сверху, примыкает к подвалу */
 .reviews {
-  padding-top: 80px;
+  margin-top: 80px;
+  background: var(--gradient-reviews);
+  border-radius: var(--reviews-radius) var(--reviews-radius) 0 0;
+  overflow: hidden;
+  padding-bottom: 24px;
 }
 
 .reviews__container {
@@ -829,18 +918,15 @@ a.trial__feature:hover {
 }
 
 .reviews__inner {
-  background: var(--gradient-reviews);
-  border-radius: var(--reviews-radius);
-  padding: 48px 0 56px;
+  padding: 60px 0 0;
   position: relative;
-  overflow: hidden;
 }
 
 .reviews__title {
   font-weight: 600;
-  font-size: 40px;
+  font-size: 36px;
   line-height: 1.2;
-  color: var(--color-text);
+  color: var(--color-black);
   margin-bottom: 36px;
   padding: 0 var(--reviews-padding);
 }
@@ -852,14 +938,20 @@ a.trial__feature:hover {
   padding: 0 var(--reviews-padding);
 }
 
+/* Высота viewport фиксируется из main.js (= высота увеличенной центральной
+   карточки) и трек центрируется по вертикали — поэтому переключение карточек
+   не меняет высоту секции и низ страницы не «тянется». */
 .reviews__viewport {
   width: 100%;
   overflow: hidden;
-  padding: 20px 0;
+  display: flex;
+  align-items: center;
 }
 
 .reviews__track {
   display: flex;
+  align-items: center;
+  flex-shrink: 0;
   gap: var(--reviews-gap);
   transition: transform var(--transition-slide);
   will-change: transform;
@@ -869,23 +961,22 @@ a.trial__feature:hover {
   transition: none !important;
 }
 
+/* Ширина слайдов (в т.ч. увеличенный центральный) задаётся из main.js,
+   поэтому промежутки между всеми карточками одинаковы (flex gap). */
 .reviews__slide {
   flex-shrink: 0;
-  transition: transform var(--transition-slide), opacity 0.5s ease;
-  transform: scale(0.92);
-  opacity: 0.85;
+  transition: width var(--transition-slide), opacity 0.5s ease;
+  opacity: 1;
 }
 
 .reviews__slide.is-center {
-  transform: scale(1.05);
   opacity: 1;
   z-index: 2;
 }
 
 .reviews__card {
   background: var(--color-white);
-  border-radius: 16px;
-  box-shadow: var(--shadow-review);
+  border-radius: 20px;
   overflow: hidden;
   height: 100%;
 }
@@ -949,6 +1040,18 @@ a.trial__feature:hover {
   background-color: var(--color-secondary);
   border-radius: var(--radius-section) var(--radius-section) 0 0;
   color: var(--color-white);
+}
+
+/* Когда подвал идёт сразу за блоком отзывов — основной фон становится
+   продолжением градиента, чтобы углы скруглённого подвала не были белыми.
+   Первый селектор — для исходной плоской вёрстки (Vite), второй — для
+   Bitrix, где контент обёрнут в <main id="content">, а футер идёт после него.
+   В Bitrix отзывы должны быть ПОСЛЕДНИМ блоком (:last-child), иначе на
+   страницах, где после отзывов идут ещё секции (Купить, Линия консультаций),
+   подвал ошибочно красился в оранжевый. */
+.reviews + .footer,
+#content:has(> .reviews:last-child) + .footer {
+  background: var(--gradient-reviews);
 }
 
 .footer__inner {
@@ -1062,21 +1165,6 @@ a.trial__feature:hover {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.footer__messengers--desktop {
-  display: flex;
-  gap: 12px;
-  margin-top: 8px;
-}
-
-.footer__messengers--desktop .messenger-icon {
-  width: 36px;
-  height: 36px;
-}
-
-.footer__messengers--mobile {
-  display: none;
-}
-
 .footer__nav-list {
   display: flex;
   flex-direction: column;
@@ -1113,6 +1201,10 @@ a.trial__feature:hover {
 
 .footer__nav--desktop-only {
   display: block;
+}
+
+.footer__nav--col3 {
+  text-align: left;
 }
 
 /* ====================================================
@@ -1205,6 +1297,14 @@ a.trial__feature:hover {
 }
 
 .modal__form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Битрикс: компонент form.result.new (шаблон modal_contact) оборачивает поля
+   в .bx-form-card — это эквивалент статической .modal__form при нарезке. */
+.bx-form-card {
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -1403,30 +1503,17 @@ body.modal-open {
     min-height: 480px;
   }
 
-  .sk-card__title {
-    font-size: 32px;
-  }
-
-  .sk-card__title--sm {
-    font-size: 24px;
-  }
-
   .sk-card__header {
-    min-height: 170px;
-  }
-
-  .sk-card__icon {
-    width: 44%;
-    max-width: 180px;
+    min-height: 165px;
   }
 
   .trial__card {
-    padding: 48px 40px;
-    gap: 36px;
+    padding: 72px 48px;
+    gap: 24px;
   }
 
   .trial__right {
-    flex: 0 0 480px;
+    flex: 0 0 520px;
   }
 
   .trial__title {
@@ -1480,12 +1567,7 @@ body.modal-open {
   }
 
   .sk-card__header {
-    min-height: 160px;
-  }
-
-  .sk-card__icon {
-    width: 40%;
-    max-width: 160px;
+    min-height: 165px;
   }
 }
 
@@ -1574,11 +1656,12 @@ body.modal-open {
   }
 
   .sk-card {
-    padding: 28px 24px 32px;
+    padding: 48px 32px;
   }
 
   .sk-card__header {
-    min-height: 140px;
+    min-height: 178px;
+    padding-right: 0;
   }
 
   .sk-card__title {
@@ -1587,8 +1670,12 @@ body.modal-open {
 
   .trial__card {
     flex-direction: column;
-    padding: 40px 32px;
+    padding: 48px 40px;
     gap: 32px;
+  }
+
+  .trial__left {
+    max-width: none;
   }
 
   .trial__right {
@@ -1739,7 +1826,7 @@ body.modal-open {
   }
 
   .sk__title {
-    font-size: 28px;
+    font-size: 24px;
     margin-bottom: 28px;
   }
 
@@ -1756,31 +1843,61 @@ body.modal-open {
   }
 
   .sk-card {
-    padding: 24px 20px 28px;
-    border-radius: 20px;
+    padding: 40px 24px;
   }
 
   .sk-card__header {
-    min-height: auto;
+    min-height: 110px;
+    padding-right: 0;
   }
 
   .sk-card__title {
     font-size: 24px;
   }
 
-  .sk-card__icon {
-    width: 40%;
-    max-width: 180px;
+  /* Картинки в правом верхнем углу — координаты под мобильную карточку 343px */
+  .sk-card__icon--buh {
+    top: 16px;
+    right: 10px;
+    width: 122px;
+  }
+
+  .sk-card__icon--jur {
+    top: 14px;
+    right: 12px;
+    width: 136px;
+  }
+
+  .sk-card__icon--ruk {
+    top: 12px;
+    right: -4px;
+    width: 112px;
+  }
+
+  .sk-card__icon--byudzhet {
+    top: 14px;
+    right: -2px;
+    width: 166px;
+  }
+
+  .sk-card__icon--kadry {
+    top: 14px;
+    right: 10px;
+    width: 132px;
   }
 
   .sk-card__text {
-    font-size: 14px;
+    font-size: 16px;
   }
 
+  /* Кнопка и ссылка в одну строку (180px + 12px + «Подробнее»).
+     На макетных 375px помещаются в строку; на более узких экранах
+     ссылка переносится под кнопку (override nowrap из базового правила). */
   .sk-card__actions {
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap !important;
     gap: 12px;
-    align-items: flex-start;
+    align-items: center;
   }
 
   .trial {
@@ -1788,18 +1905,19 @@ body.modal-open {
   }
 
   .trial__card {
-    padding: 32px 20px;
-    border-radius: 24px;
-    gap: 28px;
+    padding: 40px 16px;
+    border-radius: var(--radius-card-lg);
+    gap: 24px;
   }
 
   .trial__title {
-    font-size: 22px;
-    margin-bottom: 28px;
+    font-size: 24px;
+    margin-bottom: 24px;
   }
 
   .trial__feature {
-    padding: 14px 16px;
+    padding: 12px;
+    gap: 12px;
     max-width: none;
     width: 100%;
   }
@@ -1808,9 +1926,13 @@ body.modal-open {
     font-size: 16px;
   }
 
+  .trial__feature-desc {
+    font-size: 14px;
+  }
+
   .trial__feature-icon {
-    width: 40px;
-    height: 40px;
+    width: 48px;
+    height: 48px;
   }
 
   .trial__feature-icon img {
@@ -1820,16 +1942,19 @@ body.modal-open {
 
   .trial__row {
     flex-direction: column;
-    gap: 16px;
+    gap: 8px;
   }
 
-  .trial__form {
-    padding: 24px 20px;
+  .trial__form,
+  .trial__right .bx-form-card {
+    padding: 20px;
+    gap: 8px;
+    border-radius: var(--radius-card-lg);
   }
 
   .trial__submit {
     font-size: 16px;
-    padding: 16px;
+    padding: 20px;
   }
 
   .chdk {
@@ -1841,7 +1966,7 @@ body.modal-open {
   }
 
   .chdk__title {
-    font-size: 28px;
+    font-size: 24px;
     margin-bottom: 12px;
   }
 
@@ -1851,29 +1976,37 @@ body.modal-open {
   }
 
   .chdk-card {
-    padding: 24px 20px 28px;
-    border-radius: 16px;
+    padding: 40px 24px;
+    border-radius: var(--radius-card-lg);
   }
 
   .chdk-card__title {
-    font-size: 18px;
+    font-size: 24px;
     min-height: auto;
   }
 
+  .chdk-card__actions {
+    gap: 12px;
+  }
+
   .reviews {
-    padding-top: 48px;
+    margin-top: 48px;
+    background: var(--gradient-reviews-mob);
+    padding-bottom: 0;
   }
 
   .reviews__inner {
-    background: var(--gradient-reviews-mob);
-    border-radius: 20px;
-    padding: 32px 0 40px;
+    padding: 36px 0 0;
   }
 
   .reviews__title {
-    font-size: 28px;
-    text-align: center;
+    font-size: 24px;
+    text-align: left;
     margin-bottom: 28px;
+  }
+
+  .reviews + .footer {
+    background: var(--gradient-reviews-mob);
   }
 
   .reviews__carousel {
@@ -1895,16 +2028,6 @@ body.modal-open {
   .reviews__btn svg {
     width: 18px;
     height: 18px;
-  }
-
-  .reviews__slide {
-    transform: scale(0.88);
-    opacity: 0.6;
-  }
-
-  .reviews__slide.is-center {
-    transform: scale(1);
-    opacity: 1;
   }
 
   .footer {
@@ -1973,21 +2096,6 @@ body.modal-open {
   .footer__phone-icon {
     width: 24px;
     height: 24px;
-  }
-
-  .footer__messengers--desktop {
-    display: none;
-  }
-
-  .footer__messengers--mobile {
-    display: flex;
-    gap: 12px;
-    flex-shrink: 0;
-  }
-
-  .footer__messengers--mobile .messenger-icon {
-    width: 44px;
-    height: 44px;
   }
 
   .footer__phone-hours {
@@ -2062,5 +2170,550 @@ body.modal-open {
   .modal__choice-btn {
     font-size: 18px;
     padding: 18px;
+  }
+}
+
+
+/* ====================================================
+   ПОПАП СОГЛАСИЯ НА ОБРАБОТКУ ПЕРСОНАЛЬНЫХ ДАННЫХ
+   ==================================================== */
+.consent-popup {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.consent-popup.is-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.consent-popup__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.consent-popup__dialog {
+  position: relative;
+  background: var(--color-white);
+  border-radius: var(--radius-modal);
+  padding: 40px 36px 32px;
+  width: 90%;
+  max-width: 680px;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
+  transform: scale(0.95);
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.consent-popup.is-active .consent-popup__dialog {
+  transform: scale(1);
+}
+
+.consent-popup__close {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 32px;
+  line-height: 1;
+  color: var(--color-gray-placeholder);
+  cursor: pointer;
+  padding: 4px 8px;
+  transition: color var(--transition-base);
+  font-family: var(--font-family);
+}
+
+.consent-popup__close:hover {
+  color: var(--color-text);
+}
+
+.consent-popup__body {
+  overflow-y: auto;
+  flex: 1;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--color-text);
+  margin-bottom: 24px;
+  padding-right: 8px;
+}
+
+.consent-popup__body h1,
+.consent-popup__body h2,
+.consent-popup__body h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--color-black);
+}
+
+.consent-popup__body p {
+  margin-bottom: 10px;
+}
+
+.consent-popup__body a {
+  color: var(--color-secondary);
+  text-decoration: underline;
+}
+
+.consent-popup__buttons {
+  display: flex;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.consent-popup__accept {
+  flex: 1;
+  padding: 16px 24px;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 16px;
+  border: none;
+  border-radius: var(--radius-btn);
+  cursor: pointer;
+  transition: background var(--transition-base);
+  background: var(--color-secondary);
+  color: var(--color-white);
+}
+
+.consent-popup__accept:hover {
+  background: var(--color-secondary-hover);
+}
+
+.consent-popup__decline {
+  flex: 1;
+  padding: 16px 24px;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 16px;
+  border: 2px solid var(--color-gray);
+  border-radius: var(--radius-btn);
+  cursor: pointer;
+  transition: background var(--transition-base), border-color var(--transition-base);
+  background: var(--color-white);
+  color: var(--color-text);
+}
+
+.consent-popup__decline:hover {
+  background: var(--color-gray-light);
+  border-color: var(--color-gray-muted);
+}
+
+.consent-trigger {
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .consent-popup__dialog {
+    padding: 32px 20px 24px;
+    max-height: 85vh;
+    border-radius: 24px;
+  }
+
+  .consent-popup__body {
+    font-size: 13px;
+  }
+
+  .consent-popup__buttons {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .consent-popup__accept,
+  .consent-popup__decline {
+    font-size: 15px;
+    padding: 14px 20px;
+  }
+}
+
+/* ====================================================
+   СКВОЗНАЯ ФОРМА ПЕРЕД ФУТЕРОМ (.lead-pre-footer)
+   ==================================================== */
+.lead-pre-footer {
+  padding: 56px 0 80px;
+}
+
+.lead-pre-footer__inner {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--side-padding);
+}
+
+.lead-pre-footer__card {
+  background: var(--gradient-trial);
+  color: var(--color-white);
+  border-radius: var(--radius-card);
+  padding: 48px 56px;
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 48px;
+  align-items: center;
+}
+
+.lead-pre-footer__intro {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.lead-pre-footer__title {
+  font-weight: 700;
+  font-size: clamp(26px, 3vw, 40px);
+  line-height: 1.15;
+  margin: 0;
+}
+
+.lead-pre-footer__title--accent {
+  color: var(--color-primary);
+}
+
+.lead-pre-footer__text {
+  font-weight: 400;
+  font-size: clamp(15px, 1.2vw, 17px);
+  line-height: 1.5;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.lead-pre-footer__form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.lead-pre-footer__fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.lead-pre-footer__field:first-child {
+  grid-column: 1 / -1;
+}
+
+.lead-pre-footer__input {
+  width: 100%;
+  height: 52px;
+  padding: 0 18px;
+  background: var(--color-white);
+  border: 1px solid transparent;
+  border-radius: var(--radius-input);
+  font-family: var(--font-family);
+  font-size: 16px;
+  color: var(--color-text);
+  outline: none;
+  transition: border-color var(--transition-base);
+}
+
+.lead-pre-footer__input::placeholder {
+  color: var(--color-gray-placeholder);
+}
+
+.lead-pre-footer__input:focus {
+  border-color: var(--color-primary);
+}
+
+.lead-pre-footer__input.input-error {
+  border-color: var(--color-error);
+}
+
+.lead-pre-footer__checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13px;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.85);
+  cursor: pointer;
+}
+
+.lead-pre-footer__checkbox input {
+  margin-top: 3px;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  accent-color: var(--color-primary);
+}
+
+.lead-pre-footer__policy-link {
+  color: var(--color-white);
+  text-decoration: underline;
+}
+
+.lead-pre-footer__policy-link:hover {
+  color: var(--color-primary);
+}
+
+.lead-pre-footer__submit {
+  width: 100%;
+  max-width: 320px;
+  margin-top: 4px;
+}
+
+@media (max-width: 960px) {
+  .lead-pre-footer {
+    padding: 40px 0 56px;
+  }
+
+  .lead-pre-footer__card {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 36px 32px;
+  }
+
+  .lead-pre-footer__submit {
+    max-width: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .lead-pre-footer__card {
+    padding: 28px 20px;
+    border-radius: 20px;
+  }
+
+  .lead-pre-footer__fields {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ====================================================
+   FAQ-АККОРДЕОН НА ГЛАВНОЙ (.faq-home)
+   ==================================================== */
+.faq-home {
+  padding: 60px 0 80px;
+}
+
+.faq-home__inner {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--side-padding);
+}
+
+.faq-home__title {
+  font-weight: 600;
+  font-size: clamp(28px, 3.4vw, 48px);
+  line-height: 1.15;
+  color: var(--color-text);
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.faq-home__list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.faq-home__item {
+  background: var(--color-white);
+  border: 1px solid var(--color-gray);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  transition: border-color var(--transition-base), box-shadow var(--transition-base);
+}
+
+.faq-home__item[open] {
+  border-color: var(--color-secondary);
+  box-shadow: var(--shadow-card);
+}
+
+.faq-home__question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 22px 28px;
+  cursor: pointer;
+  list-style: none;
+  font-weight: 600;
+  font-size: clamp(16px, 1.4vw, 20px);
+  line-height: 1.35;
+  color: var(--color-text);
+  user-select: none;
+}
+
+.faq-home__question::-webkit-details-marker { display: none; }
+.faq-home__question::marker { display: none; }
+
+.faq-home__q-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.faq-home__icon {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  position: relative;
+  border-radius: 50%;
+  background: var(--color-bg-purple);
+  transition: background var(--transition-base);
+}
+
+.faq-home__icon::before,
+.faq-home__icon::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 2px;
+  background: var(--color-secondary);
+  border-radius: 1px;
+  transform: translate(-50%, -50%);
+  transition: transform var(--transition-base), background var(--transition-base);
+}
+
+.faq-home__icon::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.faq-home__item[open] .faq-home__icon {
+  background: var(--color-secondary);
+}
+
+.faq-home__item[open] .faq-home__icon::before,
+.faq-home__item[open] .faq-home__icon::after {
+  background: var(--color-white);
+}
+
+.faq-home__item[open] .faq-home__icon::after {
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.faq-home__question:hover {
+  color: var(--color-secondary);
+}
+
+.faq-home__answer {
+  padding: 0 28px 24px;
+  font-size: clamp(15px, 1.15vw, 17px);
+  line-height: 1.55;
+  color: var(--color-text-muted);
+}
+
+.faq-home__answer p {
+  margin: 0;
+}
+
+.faq-home__footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px 32px;
+  margin-top: 32px;
+}
+
+@media (max-width: 768px) {
+  .faq-home {
+    padding: 40px 0 56px;
+  }
+
+  .faq-home__title {
+    margin-bottom: 24px;
+  }
+
+  .faq-home__list {
+    gap: 12px;
+  }
+
+  .faq-home__question {
+    padding: 18px 20px;
+    gap: 14px;
+  }
+
+  .faq-home__answer {
+    padding: 0 20px 20px;
+  }
+
+  .faq-home__icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .faq-home__icon::before,
+  .faq-home__icon::after {
+    width: 10px;
+  }
+
+  .faq-home__footer {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+/* ====================================================
+   COOKIE BANNER (production-only, рендерится в footer.php)
+   ==================================================== */
+.cookie-banner {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 200;
+  padding: 16px var(--side-padding);
+  background: var(--color-black);
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.25);
+}
+
+.cookie-banner.is-hidden {
+  display: none;
+}
+
+.cookie-banner__inner {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.cookie-banner__text {
+  color: var(--color-white);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.cookie-banner__text a {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+.cookie-banner__text a:hover {
+  color: var(--color-primary-hover);
+}
+
+.cookie-banner__btn {
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .cookie-banner {
+    padding: 14px 20px;
+  }
+
+  .cookie-banner__inner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+  }
+
+  .cookie-banner__text {
+    font-size: 14px;
   }
 }

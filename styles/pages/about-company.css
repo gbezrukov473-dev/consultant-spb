@@ -47,8 +47,8 @@
   background: var(--color-secondary);
   border-radius: 0 40px 40px 0;
   padding: 28px 40px;
-  margin-left: calc(-1 * var(--side-padding) - 60px);
-  padding-left: calc(var(--side-padding) + 60px);
+  margin-left: calc(-1 * max(var(--side-padding), 50vw - (var(--container-max) - 2 * var(--side-padding)) / 2));
+  padding-left: max(var(--side-padding), 50vw - (var(--container-max) - 2 * var(--side-padding)) / 2);
   margin-bottom: 32px;
 }
 
@@ -78,13 +78,13 @@
 
 .ac-who__stat {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 12px;
 }
 
 .ac-who__stat-num {
   font-weight: 700;
-  font-size: 100px;
+  font-size: 150px;
   line-height: 0.85;
   background: linear-gradient(135deg, var(--color-secondary) 0%, #9394c9 100%);
   -webkit-background-clip: text;
@@ -97,7 +97,6 @@
   font-size: 22px;
   line-height: 1.3;
   color: var(--color-black);
-  padding-top: 8px;
 }
 
 .ac-who__stat-text strong {
@@ -106,11 +105,39 @@
 
 .ac-who__photo-wrap {
   background: linear-gradient(75deg, var(--color-bg-orange) 0%, var(--color-bg-orange-deep) 100%);
-  border-radius: 40px;
+  /* Скруглён только слева — справа уходит в край страницы */
+  border-radius: 40px 0 0 40px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  padding: 32px;
+  /* Оранжевый фон тянется до правого края экрана при любой ширине */
+  margin-right: calc(-1 * max(var(--side-padding), 50vw - (var(--container-max) - 2 * var(--side-padding)) / 2));
+  padding-right: calc(32px + max(var(--side-padding), 50vw - (var(--container-max) - 2 * var(--side-padding)) / 2));
+}
+
+.ac-who__video-link {
+  position: relative;
+  display: block;
+  width: 100%;
+  line-height: 0;
+  border-radius: 40px;
+  overflow: hidden;
+}
+
+.ac-who__video-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  pointer-events: none;
+  transition: transform 0.2s ease;
+}
+
+.ac-who__video-link:hover .ac-who__video-play {
+  transform: translate(-50%, -50%) scale(1.08);
 }
 
 .ac-who__photo {
@@ -125,7 +152,7 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  margin: 16px 20px 20px;
+  margin-top: 20px;
 }
 
 
@@ -134,15 +161,14 @@
    Фиолетовый фон с 2×3 пилюлями
    ==================================================== */
 .ac-reasons6 {
-  padding: 0 var(--side-padding);
+  background: var(--color-secondary);
+  border-radius: 40px;
+  padding: 80px var(--side-padding);
 }
 
 .ac-reasons6__inner {
   max-width: calc(var(--container-max) - 2 * var(--side-padding));
   margin: 0 auto;
-  background: var(--color-secondary);
-  border-radius: 40px;
-  padding: 80px 60px;
 }
 
 .ac-reasons6__title {
@@ -156,19 +182,25 @@
 .ac-reasons6__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  column-gap: 48px;
+  row-gap: 20px;
 }
 
 .ac-reasons6__card {
+  position: relative;
+  min-height: 115px;
   background: var(--color-white);
   border-radius: 40px;
-  padding: 28px 36px;
+  padding: 20px 40px 20px 76px;
   display: flex;
   align-items: center;
-  gap: 20px;
 }
 
 .ac-reasons6__num {
+  position: absolute;
+  left: -28px;
+  top: 50%;
+  transform: translateY(-50%);
   flex-shrink: 0;
   width: 60px;
   height: 60px;
@@ -332,7 +364,7 @@
 
 @media (max-width: 768px) {
   .ac-who__stat-num {
-    font-size: 72px;
+    font-size: 108px;
   }
 
   .ac-who__stat-text {
@@ -343,19 +375,21 @@
     font-size: 17px;
   }
 
-  .ac-reasons6__inner {
-    padding: 48px 24px;
+  .ac-reasons6 {
+    border-radius: 24px;
+    padding: 48px var(--side-padding);
   }
 
   .ac-reasons6__card {
+    min-height: 0;
     border-radius: 24px;
-    padding: 20px 24px;
-    gap: 16px;
+    padding: 18px 20px 18px 56px;
   }
 
   .ac-reasons6__num {
     width: 48px;
     height: 48px;
+    left: -20px;
     font-size: 20px;
   }
 
@@ -371,7 +405,7 @@
 
 @media (max-width: 480px) {
   .ac-who__stat-num {
-    font-size: 56px;
+    font-size: 84px;
   }
 
   .ac-who__stat-text {
@@ -379,9 +413,11 @@
   }
 
   .ac-reasons6__card {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
+    padding: 16px 18px 16px 52px;
+  }
+
+  .ac-reasons6__num {
+    left: -16px;
   }
 
   .ac-system__buttons {

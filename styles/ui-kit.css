@@ -372,17 +372,17 @@
    ===================================================== */
 .chdk-card {
   background: var(--color-white);
-  border-radius: var(--radius-card-sm);
-  padding: 32px 28px 36px;
+  border-radius: var(--radius-card-lg);
+  padding: 40px 30px;
   display: flex;
   flex-direction: column;
-  box-shadow: var(--shadow-card);
+  box-shadow: var(--shadow-chdk);
   transition: background-color var(--transition-card);
 }
 
 .chdk-card__title {
   font-weight: 600;
-  font-size: 22px;
+  font-size: 24px;
   line-height: 1.25;
   text-transform: uppercase;
   margin-bottom: auto;
@@ -411,9 +411,18 @@
 .chdk-card__actions {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 24px;
   flex-wrap: nowrap;
   margin-top: auto;
+}
+
+/* --- Кнопка внутри карточки (180px, 16px, скругление 12px) --- */
+.chdk-card__btn {
+  width: 180px;
+  padding: 12px 40px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: var(--radius-btn);
 }
 
 /* --- Жёлтая кнопка внутри карточки --- */
@@ -443,6 +452,7 @@
 }
 
 .chdk-card__link {
+  font-size: 16px;
   transition: color var(--transition-card);
 }
 
@@ -523,8 +533,9 @@
    Чередование кнопок: нечётные — фиолетовые, чётные — оранжевые
    ===================================================== */
 .sk-card {
-  border-radius: var(--radius-card);
-  padding: 32px 28px 36px;
+  position: relative;
+  border-radius: var(--radius-card-lg);
+  padding: 60px 40px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -538,42 +549,45 @@
   background-color: var(--color-bg-orange);
 }
 
-/* Нечётные: фиолетовая кнопка → при hover оранжевая */
-.sk-card:nth-child(odd) .btn--yellow.btn--sm {
+/* Цвет кнопки/ссылки следует за цветом карточки (как в макете) */
+/* Фиолетовые карточки → фиолетовая кнопка (hover — оранжевая) */
+.sk-card--purple .btn--yellow.btn--sm {
   background-color: var(--color-secondary);
   color: var(--color-white);
+  min-width: 180px;
 }
 
-.sk-card:nth-child(odd) .btn--yellow.btn--sm:hover {
+.sk-card--purple .btn--yellow.btn--sm:hover {
   background-color: var(--color-primary);
   color: var(--color-white);
 }
 
-/* Чётные: оранжевая кнопка → при hover фиолетовая */
-.sk-card:nth-child(even) .btn--yellow.btn--sm {
+/* Оранжевые карточки → оранжевая кнопка (hover — фиолетовая) */
+.sk-card--orange .btn--yellow.btn--sm {
   background-color: var(--color-primary);
   color: var(--color-white);
+  min-width: 180px;
 }
 
-.sk-card:nth-child(even) .btn--yellow.btn--sm:hover {
+.sk-card--orange .btn--yellow.btn--sm:hover {
   background-color: var(--color-secondary);
   color: var(--color-white);
 }
 
-/* Текстовые ссылки «Подробнее»: чередование */
-.sk-card:nth-child(odd) .btn--link-yellow {
+/* Текстовые ссылки «Подробнее» — в цвет карточки */
+.sk-card--purple .btn--link-yellow {
   color: var(--color-secondary);
 }
 
-.sk-card:nth-child(odd) .btn--link-yellow:hover {
+.sk-card--purple .btn--link-yellow:hover {
   color: var(--color-primary);
 }
 
-.sk-card:nth-child(even) .btn--link-yellow {
+.sk-card--orange .btn--link-yellow {
   color: var(--color-primary);
 }
 
-.sk-card:nth-child(even) .btn--link-yellow:hover {
+.sk-card--orange .btn--link-yellow:hover {
   color: var(--color-secondary);
 }
 
@@ -640,26 +654,6 @@
   background: var(--color-bg-purple);
   border-radius: 8px;
   padding: 12px 16px;
-}
-
-/* =====================================================
-   МЕССЕНДЖЕРЫ
-   ===================================================== */
-.messenger-link {
-  display: flex;
-  transition:
-    opacity var(--transition-base),
-    transform var(--transition-base);
-}
-
-.messenger-link:hover {
-  opacity: 1;
-  transform: scale(1.15);
-}
-
-.messenger-icon {
-  width: 32px;
-  height: 32px;
 }
 
 

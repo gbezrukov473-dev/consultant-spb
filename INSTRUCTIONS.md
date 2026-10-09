@@ -345,7 +345,7 @@ Figma-проект: `GFmp5kaM7zrQtRMRTzlzYO` (СПБКонс)
 | Канал | URL | Где отображается |
 |-------|-----|------------------|
 | Телефон | `tel:+78123344481` | Шапка, футер |
-| MAX | `https://max.ru/u/f9LHodD0cOIevbLN7WToeY90aC9RgJCNUl7v8Z3J5L1adS2-OklcZcPVMF8` | Шапка, футер |
+| MAX | `https://max.ru/u/f9LHodD0cOIevbLN7WToeY90aC9RgJCNUl7v8Z3J5L1adS2-OklcZcPVMF8` | **Убран из вёрстки по решению заказчика** |
 | Telegram | `https://t.me/+79219505756` | **Убран из вёрстки по решению заказчика** (в ТЗ PDF присутствует, но не используется) |
 | Email | `mailto:info@spbcons.ru` | Страница Контакты |
 | ВКонтакте | `https://vk.com/consultantspb` | Страница Контакты |

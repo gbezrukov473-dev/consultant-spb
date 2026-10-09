@@ -13,6 +13,44 @@
   <link rel="stylesheet" href="/styles/pages/accountant.css" />
   <link rel="stylesheet" href="/styles/pages/faq.css" />
   <link rel="stylesheet" href="/styles/pages/contacts.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "ЧДК-Право",
+    "alternateName": "СПБ Консультант",
+    "url": "https://spbcons.ru/",
+    "logo": "https://spbcons.ru/img/logo-chdk.svg",
+    "telephone": "+7-812-334-44-81",
+    "email": "info@spbcons.ru",
+    "taxID": "7842527584",
+    "vatID": "7842527584",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "наб. Обводного канала, д. 23, лит. Б, пом. 1-Н",
+      "addressLocality": "Санкт-Петербург",
+      "postalCode": "191167",
+      "addressCountry": "RU"
+    },
+    "contactPoint": [{
+      "@type": "ContactPoint",
+      "telephone": "+7-812-334-44-81",
+      "contactType": "sales",
+      "areaServed": "RU",
+      "availableLanguage": ["ru"],
+      "hoursAvailable": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "09:00",
+        "closes": "19:00"
+      }
+    }],
+    "sameAs": [
+      "https://vk.com/consultantspb"
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -49,13 +87,6 @@
       <div class="contacts-info__block">
         <a href="tel:+78123344481" class="contacts-info__phone">8 812 334 44 81</a>
         <span class="contacts-info__schedule">пн-пт 9:00-19:00</span>
-      </div>
-
-      <!-- Мессенджер -->
-      <div class="contacts-info__messengers">
-        <a href="https://max.ru/u/f9LHodD0cOIevbLN7WToeY90aC9RgJCNUl7v8Z3J5L1adS2-OklcZcPVMF8" class="messenger-link" aria-label="MAX" target="_blank" rel="noopener">
-          <img src="/img/logo-max.svg" alt="MAX" class="messenger-icon" />
-        </a>
       </div>
 
       <!-- E-mail -->
@@ -95,11 +126,11 @@
   <div class="acc-offer__inner">
     <div class="acc-offer__content">
       <h2 class="acc-offer__title">Остались <strong>вопросы</strong>?</h2>
-      <p class="faq-offer__subtitle">Мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время для обсуждения.</p>
-      <span class="acc-offer__badge">напишите нам</span>
-      <div class="acc-offer__row">
-        <a href="#" class="btn btn--purple acc-offer__btn" data-open-modal="modalService">Задать вопрос</a>
+      <div class="faq-offer__subrow">
+        <p class="faq-offer__subtitle">Мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время для&nbsp;обсуждения.</p>
+        <span class="acc-offer__badge">напишите нам</span>
       </div>
+      <a href="#" class="btn btn--purple acc-offer__btn" data-open-modal="modalService">Задать вопрос</a>
     </div>
     <div class="acc-offer__image">
       <img src="/img/faq-question-box.png" alt="Остались вопросы?" class="acc-offer__img faq-offer__img" loading="lazy" />

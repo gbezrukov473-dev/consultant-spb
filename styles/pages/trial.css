@@ -104,64 +104,101 @@
 .tp-banner__inner {
   max-width: calc(var(--container-max) - 2 * var(--side-padding));
   margin: 0 auto;
-  background: var(--gradient-trial);
+  background: linear-gradient(to right, #6263a5, #8a8ceb);
   border-radius: 40px;
   position: relative;
   overflow: hidden;
-  height: 340px;
+  height: 257px;
 }
 
 .tp-banner__content {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 60%;
-  height: 100%;
-  padding: 40px 0 40px 60px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  top: 40px;
+  left: 60px;
   z-index: 1;
 }
 
 .tp-banner__title {
+  font-family: 'Gilroy', sans-serif;
   font-weight: 500;
-  font-size: clamp(24px, 3.3vw, 48px);
-  line-height: 1.18;
-  color: var(--color-white);
+  font-size: 47.73px;
+  line-height: 100%;
+  letter-spacing: 0;
   text-transform: uppercase;
-  max-width: 860px;
+  color: #fff;
+}
+
+.tp-banner__title b,
+.tp-banner__title strong {
+  font-weight: 700;
+}
+
+.tp-banner__title-row2 {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 4px;
 }
 
 .tp-banner__badge {
-  display: inline-block;
-  background: var(--color-white);
-  color: var(--color-primary);
-  font-weight: 700;
-  font-size: 24px;
-  text-transform: uppercase;
-  padding: 12px 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 298px;
+  height: 53px;
   border-radius: 64.44px;
-  margin-top: 12px;
+  background: #fff;
+  color: #e8a830;
+  font-family: 'Gilroy', sans-serif;
+  font-weight: 700;
+  font-size: 23.87px;
+  text-transform: uppercase;
+  padding: 11.93px 35.8px;
   transform: rotate(-3.45deg);
-  align-self: flex-start;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
-.tp-banner__row {
-  margin-top: 14px;
+.tp-banner__btn.btn {
+  position: absolute;
+  top: 134px;
+  left: 0;
+  width: 203px;
+  height: 43px;
+  border-radius: 12px;
+  background: #e8a830;
+  color: #fff;
+  font-family: 'Gilroy', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: background 0.2s;
+}
+
+.tp-banner__btn.btn:hover {
+  background: #d49520;
 }
 
 .tp-banner__image {
   position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-  width: 34%;
+  top: -23px;
+  left: 865px;
+  width: 370px;
+  height: auto;
+  pointer-events: none;
   z-index: 0;
 }
 
 .tp-banner__img {
-  width: 110%;
+  width: 100%;
+  height: auto;
   display: block;
 }
 
@@ -465,9 +502,41 @@
 /* ====================================================
    АДАПТИВНОСТЬ — СТРАНИЦА «ПРОБНЫЙ ДОСТУП»
    ==================================================== */
-@media (max-width: 1100px) {
+/* Планшет (769–1024) */
+@media (max-width: 1024px) {
+  .tp-banner__inner {
+    height: 210px;
+    border-radius: 30px;
+  }
+
+  .tp-banner__title {
+    font-size: 36px;
+  }
+
+  .tp-banner__title-row2 {
+    gap: 14px;
+  }
+
   .tp-banner__badge {
-    align-self: flex-start;
+    width: 230px;
+    height: 42px;
+    font-size: 18px;
+    padding: 10px 24px;
+  }
+
+  .tp-banner__btn.btn {
+    top: 102px;
+    left: 0;
+    width: 180px;
+    height: 40px;
+    font-size: 14px;
+  }
+
+  .tp-banner__image {
+    top: -15px;
+    left: auto;
+    right: 20px;
+    width: 300px;
   }
 }
 
@@ -504,41 +573,43 @@
     right: 0;
   }
 
-  .tp-banner {
-    padding-top: 60px;
-  }
-
   .tp-banner__inner {
-    height: auto;
-    min-height: 200px;
+    height: 260px;
+    border-radius: 24px;
   }
 
-  .tp-banner__content {
-    position: relative;
-    width: 100%;
-    padding: 32px 28px;
+  .tp-banner__title {
+    font-size: 26px;
+  }
+
+  .tp-banner__title-row2 {
+    flex-wrap: wrap;
+    gap: 8px;
   }
 
   .tp-banner__badge {
-    align-self: flex-start;
-    font-size: 18px;
+    width: auto;
+    height: 36px;
+    font-size: 15px;
+    padding: 8px 18px;
     transform: rotate(-2deg);
   }
 
-  .tp-banner__image {
-    position: relative;
-    top: auto;
-    right: auto;
-    transform: none;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding: 0 20px 20px;
+  .tp-banner__btn.btn {
+    position: static;
+    width: 165px;
+    height: 38px;
+    font-size: 13px;
+    border-radius: 10px;
+    margin-top: 16px;
   }
 
-  .tp-banner__img {
-    width: 70%;
-    max-width: 360px;
+  .tp-banner__image {
+    top: auto;
+    left: auto;
+    bottom: -20px;
+    right: -20px;
+    width: 280px;
   }
 
   .tp-days {
@@ -597,18 +668,51 @@
     font-size: 16px;
   }
 
-  .tp-banner {
-    padding-top: 40px;
+  .tp-banner__inner {
+    height: auto;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 24px 20px;
+  }
+
+  .tp-banner__content {
+    position: static;
   }
 
   .tp-banner__title {
-    font-size: 20px;
+    font-size: 22px;
+  }
+
+  .tp-banner__title-row2 {
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 4px;
   }
 
   .tp-banner__badge {
-    font-size: 14px;
-    padding: 8px 18px;
+    width: auto;
+    height: 32px;
+    font-size: 13px;
+    padding: 6px 16px;
     transform: rotate(-2deg);
+  }
+
+  .tp-banner__btn.btn {
+    position: static;
+    width: 160px;
+    height: 38px;
+    font-size: 13px;
+    border-radius: 10px;
+    margin-top: 16px;
+  }
+
+  .tp-banner__image {
+    position: static;
+    width: 85%;
+    max-width: 300px;
+    margin: 16px auto 0;
+    display: block;
   }
 
   .tp-days {

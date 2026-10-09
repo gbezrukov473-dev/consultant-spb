@@ -46,6 +46,7 @@
   --radius-input:         12px;
   --radius-card:          24px;
   --radius-card-sm:       20px;
+  --radius-card-lg:       40px;
   --radius-section:       32px;
   --radius-modal:         30px;
 
@@ -53,6 +54,8 @@
   --shadow-card:          0 4px 24px rgba(0, 0, 0, 0.12);
   --shadow-dropdown:      0 4px 20px rgba(0, 0, 0, 0.25);
   --shadow-review:        0 4px 20px rgba(0, 0, 0, 0.1);
+  --shadow-form:          0 2px 6.5px rgba(0, 0, 0, 0.15);
+  --shadow-chdk:          1px 5px 5.95px rgba(0, 0, 0, 0.16);
 
   /* --- Переходы --- */
   --transition-fast:      0.15s ease;
@@ -61,8 +64,8 @@
   --transition-slide:     0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
   /* --- Отзывы (карусель) --- */
-  --reviews-radius:       32px;
+  --reviews-radius:       40px;
   --reviews-btn-size:     48px;
-  --reviews-gap:          16px;
+  --reviews-gap:          20px;
   --reviews-padding:      52px;
 }

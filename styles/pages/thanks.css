@@ -1,0 +1,65 @@
+/* =====================================================
+   Страница «Спасибо за обращение!» (/thanks/)
+   ===================================================== */
+
+.thanks-page {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 100px var(--side-padding) 140px;
+}
+
+.thanks-page__inner {
+  max-width: 640px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.thanks-page__icon {
+  margin-bottom: 32px;
+}
+
+.thanks-page__icon svg {
+  display: block;
+}
+
+.thanks-page__title {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 1.2;
+  color: var(--color-black);
+  margin-bottom: 20px;
+}
+
+.thanks-page__text {
+  font-size: 20px;
+  line-height: 1.4;
+  color: var(--color-text);
+  margin-bottom: 8px;
+}
+
+.thanks-page__hours {
+  font-size: 16px;
+  color: var(--color-text-muted);
+  margin-bottom: 36px;
+}
+
+.thanks-page__btn {
+  min-width: 280px;
+}
+
+@media (max-width: 768px) {
+  .thanks-page {
+    padding: 64px 20px 90px;
+  }
+
+  .thanks-page__title {
+    font-size: 32px;
+  }
+
+  .thanks-page__text {
+    font-size: 18px;
+  }
+}

@@ -73,12 +73,6 @@
   color: var(--color-black);
 }
 
-.contacts-info__messengers {
-  display: flex;
-  gap: 12px;
-  align-items: center;
-}
-
 .contacts-info__email {
   font-weight: 700;
   font-size: 36px;

@@ -4,3 +4,14 @@ dist/
 *.log
 .env
 .env.*
+
+# Локальные настройки Claude Code
+.claude/
+
+# Пакет для загрузки шаблона (дубль public_html/local/templates/SPBCons_New_2026, собирается локально)
+bitrix-template/
+bitrix-template.zip
+
+# Рабочие материалы (исходники картинок, макеты) — в сборку сайта не входят
+СЖАТЫЕ/
+Доработка элементов для сайта/

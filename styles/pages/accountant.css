@@ -378,81 +378,117 @@
   
   /* ====================================================
      СПЕЦПРЕДЛОЖЕНИЕ (.acc-offer)
-     Оранжевый градиент + изображение справа
+     Оранжевый градиент-баннер по образцу .tp-banner: фикс-высота 257px,
+     контент абсолютом, badge в строке заголовка, изображение справа
      ==================================================== */
   .acc-offer {
     padding: 80px var(--side-padding) 0;
   }
-  
+
   .acc-offer__inner {
     max-width: calc(var(--container-max) - 2 * var(--side-padding));
     margin: 0 auto;
-    background: linear-gradient(56deg, var(--color-bg-orange) 0%, var(--color-bg-orange-deep) 100%);
+    background: linear-gradient(48deg, var(--color-bg-orange) 1%, var(--color-bg-orange-deep) 95%);
     border-radius: 40px;
     position: relative;
     overflow: hidden;
-    display: flex;
-    align-items: stretch;
-    min-height: 260px;
+    height: 257px;
   }
-  
+
   .acc-offer__content {
-    position: relative;
+    position: absolute;
+    top: 40px;
+    left: 60px;
     z-index: 1;
-    padding: 48px 40px 48px 58px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    flex: 0 0 55%;
   }
-  
+
   .acc-offer__title {
+    font-family: 'Gilroy', sans-serif;
     font-weight: 500;
-    font-size: clamp(24px, 3.3vw, 48px);
-    line-height: 1.15;
-    color: var(--color-black);
+    font-size: 47.73px;
+    line-height: 100%;
+    letter-spacing: 0;
     text-transform: uppercase;
-    margin-bottom: 16px;
+    color: var(--color-black);
   }
-  
+
+  .acc-offer__title b,
+  .acc-offer__title strong {
+    font-weight: 700;
+  }
+
+  .acc-offer__title-row2 {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 4px;
+  }
+
   .acc-offer__badge {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 53px;
+    border-radius: 64.44px;
     background: var(--color-white);
     color: var(--color-secondary);
+    font-family: 'Gilroy', sans-serif;
     font-weight: 700;
-    font-size: 22px;
+    font-size: 23.87px;
     text-transform: uppercase;
-    padding: 10px 28px;
-    border-radius: 64px;
+    padding: 11.93px 35.8px;
     transform: rotate(-3.45deg);
-    margin-bottom: 16px;
+    white-space: nowrap;
+    flex-shrink: 0;
   }
-  
-  .acc-offer__row {
-    margin-top: 8px;
+
+  .acc-offer__btn.btn {
+    position: absolute;
+    top: 134px;
+    left: 0;
+    min-width: 203px;
+    height: 43px;
+    border-radius: 12px;
+    background: var(--color-secondary);
+    color: var(--color-white);
+    font-family: 'Gilroy', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: background var(--transition-fast);
   }
-  
-  .acc-offer__btn {
-    transition: background var(--transition-fast), color var(--transition-fast);
+
+  .acc-offer__btn.btn:hover {
+    background: var(--color-secondary-hover);
   }
-  
+
   .acc-offer__image {
-    flex: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 46%;
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    position: relative;
-    z-index: 1;
-    padding-right: 20px;
+    padding-right: 24px;
+    pointer-events: none;
+    z-index: 0;
   }
-  
+
   .acc-offer__img {
-    max-width: 320px;
-    width: 100%;
+    max-height: 360px;
+    max-width: 100%;
+    width: auto;
     height: auto;
     display: block;
-    filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.15));
   }
   
   
@@ -496,25 +532,41 @@
     }
   
     .acc-offer__inner {
-      flex-direction: column;
-      min-height: auto;
+      height: 210px;
+      border-radius: 30px;
     }
-  
-    .acc-offer__content {
-      flex: none;
-      padding: 40px 32px;
+
+    .acc-offer__title {
+      font-size: 36px;
     }
-  
+
+    .acc-offer__title-row2 {
+      gap: 14px;
+    }
+
+    .acc-offer__badge {
+      height: 42px;
+      font-size: 18px;
+      padding: 10px 24px;
+    }
+
+    .acc-offer__btn.btn {
+      top: 102px;
+      min-width: 180px;
+      height: 40px;
+      font-size: 14px;
+    }
+
     .acc-offer__image {
-      padding: 0 32px 32px;
-      justify-content: center;
+      width: 40%;
+      padding-right: 28px;
     }
-  
+
     .acc-offer__img {
-      max-width: 260px;
+      max-height: 230px;
     }
   }
-  
+
   @media (max-width: 768px) {
     .acc-hero__content {
       padding: 36px 20px;
@@ -602,21 +654,51 @@
     .acc-offer {
       padding-top: 48px;
     }
-  
+
     .acc-offer__inner {
+      height: 260px;
       border-radius: 24px;
     }
-  
+
     .acc-offer__title {
-      font-size: 24px;
+      font-size: 26px;
     }
-  
+
+    .acc-offer__title-row2 {
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
     .acc-offer__badge {
-      font-size: 16px;
-      padding: 8px 20px;
+      height: 36px;
+      font-size: 15px;
+      padding: 8px 18px;
+      transform: rotate(-2deg);
+    }
+
+    .acc-offer__btn.btn {
+      position: static;
+      min-width: 165px;
+      width: max-content;
+      height: 38px;
+      font-size: 13px;
+      border-radius: 10px;
+      margin-top: 16px;
+    }
+
+    .acc-offer__image {
+      width: auto;
+      top: auto;
+      bottom: -20px;
+      right: -20px;
+      padding-right: 0;
+    }
+
+    .acc-offer__img {
+      max-height: 220px;
     }
   }
-  
+
   @media (max-width: 600px) {
     .acc-compare__head {
       padding: 0 4px 16px;
@@ -680,7 +762,51 @@
       flex-direction: column;
     }
   
+    .acc-offer__inner {
+      height: auto;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      padding: 24px 20px 24px 10px;
+    }
+
+    .acc-offer__content {
+      position: static;
+    }
+
     .acc-offer__title {
-      font-size: 20px;
+      font-size: 22px;
+    }
+
+    .acc-offer__title-row2 {
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 4px;
+    }
+
+    .acc-offer__badge {
+      height: 32px;
+      font-size: 13px;
+      padding: 6px 16px;
+      transform: rotate(-2deg);
+    }
+
+    .acc-offer__btn.btn {
+      position: static;
+      min-width: 160px;
+      width: max-content;
+      height: 38px;
+      font-size: 13px;
+      border-radius: 10px;
+      margin-top: 16px;
+    }
+
+    .acc-offer__image {
+      position: static;
+      width: 85%;
+      max-width: 300px;
+      margin: 16px auto 0;
+      padding-right: 0;
+      justify-content: center;
     }
   }

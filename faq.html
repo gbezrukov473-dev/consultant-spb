@@ -132,11 +132,11 @@
   <div class="acc-offer__inner">
     <div class="acc-offer__content">
       <h2 class="acc-offer__title">Остались <strong>вопросы</strong>?</h2>
-      <p class="faq-offer__subtitle">Мы&nbsp;поможем разобраться в&nbsp;праве, бухгалтерии и&nbsp;налогах</p>
-      <span class="acc-offer__badge">напишите нам</span>
-      <div class="acc-offer__row">
-        <a href="#" class="btn btn--purple acc-offer__btn" data-open-modal="modalService">Задать вопрос</a>
+      <div class="faq-offer__subrow">
+        <p class="faq-offer__subtitle">Мы&nbsp;поможем разобраться в&nbsp;праве, бухгалтерии и&nbsp;налогах</p>
+        <span class="acc-offer__badge">напишите нам</span>
       </div>
+      <a href="#" class="btn btn--purple acc-offer__btn" data-open-modal="modalService">Задать вопрос</a>
     </div>
     <div class="acc-offer__image">
       <img src="/img/faq-question-box.png" alt="Остались вопросы?" class="acc-offer__img faq-offer__img" loading="lazy" />
@@ -146,6 +146,9 @@
 
 
 <!-- ====== ПОДВАЛ ====== -->
+<?php $form_id = 'pre-footer-faq'; $page = '/faq/'; include 'includes/lead-form-pre-footer.php'; ?>
+
+
 <?php include 'includes/footer.php'; ?>
 
 
@@ -156,6 +159,18 @@
 document.addEventListener('DOMContentLoaded', () => {
   const tabs = document.querySelectorAll('.faq-list__tab');
   const links = document.querySelectorAll('.faq-questions__link');
+
+  // Перекрашиваем видимые карточки по их позиции, чтобы чередование
+  // цветов сохранялось после фильтрации (nth-child считает и скрытые).
+  const recolor = () => {
+    let i = 0;
+    links.forEach(link => {
+      link.classList.remove('faq-questions__link--odd', 'faq-questions__link--even');
+      if (link.style.display === 'none') return;
+      link.classList.add(i % 2 === 0 ? 'faq-questions__link--odd' : 'faq-questions__link--even');
+      i++;
+    });
+  };
 
   tabs.forEach(tab => {
     tab.addEventListener('click', () => {
@@ -171,8 +186,11 @@ document.addEventListener('DOMContentLoaded', () => {
           link.style.display = 'none';
         }
       });
+      recolor();
     });
   });
+
+  recolor();
 });
 </script>
 </body>

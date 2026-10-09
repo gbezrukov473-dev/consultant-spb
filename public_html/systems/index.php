@@ -1,0 +1,222 @@
+<?php
+require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
+$APPLICATION->SetTitle("Системы КонсультантПлюс — СПБ Консультант");
+$APPLICATION->SetPageProperty("title", "Системы КонсультантПлюс — СПБ Консультант");
+$APPLICATION->SetPageProperty("description", "Системы КонсультантПлюс для бухгалтера, юриста, руководителя, кадровика и бюджетных организаций. Готовые смарт-комплекты, подбор под задачи бизнеса и расчёт цены. Официальный представитель в Санкт-Петербурге.");
+?>
+
+
+<!-- ====== ХЛЕБНЫЕ КРОШКИ ====== -->
+<nav class="breadcrumbs" aria-label="Хлебные крошки">
+  <div class="breadcrumbs__inner">
+    <a href="/" class="breadcrumbs__link">Главная</a>
+    <span class="breadcrumbs__sep">&gt;</span>
+    <span class="breadcrumbs__current">Системы КонсультантПлюс</span>
+  </div>
+</nav>
+
+
+<!-- ====== HERO ====== -->
+<section class="sc-hero reveal">
+  <div class="sc-hero__inner">
+    <div class="sc-hero__content">
+      <h1 class="sc-hero__title"><span class="sc-hero__title-accent">Комплекты</span> КонсультантПлюс</h1>
+      <div class="sc-hero__text">
+        <p>В&nbsp;КонсультантПлюс представлены комплекты <strong>для бухгалтера, юриста и&nbsp;других специалистов коммерческих и&nbsp;бюджетных организаций.</strong></p>
+        <p>Узнайте, какой комплект подойдёт именно вам. Заполните форму, и&nbsp;мы&nbsp;подготовим персональное предложение с&nbsp;учётом ваших задач. Это быстро&nbsp;&mdash; всего несколько минут.</p>
+      </div>
+      <a href="#" class="btn btn--purple sc-hero__btn" data-open-modal="modalPrice">Получить предложение</a>
+    </div>
+    <div class="sc-hero__visual">
+      <img src="<?=SITE_TEMPLATE_PATH?>/images/komplekt-hero.png" alt="Комплекты КонсультантПлюс" class="sc-hero__img" loading="lazy" />
+    </div>
+  </div>
+</section>
+
+
+<!-- ====== КАТАЛОГ КОМПЛЕКТОВ (из инфоблока) ====== -->
+<section class="sc-catalog reveal">
+  <div class="sc-catalog__inner">
+    <h2 class="sc-catalog__title">Выберите профиль</h2>
+
+    <div class="sc-catalog__tabs" role="tablist">
+      <button class="sc-catalog__tab is-active" data-filter="all" role="tab" aria-selected="true">Все</button>
+      <button class="sc-catalog__tab" data-filter="accountant" role="tab">Бухгалтеру</button>
+      <button class="sc-catalog__tab" data-filter="lawyer" role="tab">Юристу</button>
+      <button class="sc-catalog__tab" data-filter="manager" role="tab">Руководителю</button>
+      <button class="sc-catalog__tab" data-filter="hr" role="tab">Специалисту по&nbsp;кадрам</button>
+      <button class="sc-catalog__tab" data-filter="procurement" role="tab">Специалисту по&nbsp;закупкам</button>
+      <button class="sc-catalog__tab" data-filter="budget" role="tab">Бюджетной организации</button>
+      <button class="sc-catalog__tab" data-filter="universal" role="tab">Универсальный</button>
+    </div>
+
+    <div class="sc-catalog__grid">
+
+      <div class="sc-catalog__card" data-profile="accountant">
+        <div class="sc-catalog__card-img-wrap">
+          <img src="<?=SITE_TEMPLATE_PATH?>/images/box-buh-opt.png" alt="Бухгалтер Оптимальный" class="sc-catalog__card-img" loading="lazy" />
+        </div>
+        <h3 class="sc-catalog__card-name">Бухгалтер Оптимальный</h3>
+        <div class="sc-catalog__card-actions">
+          <a href="#" class="btn btn--orange sc-catalog__card-btn" data-open-modal="modalPrice">Узнать цену</a>
+          <a href="/systems/bukhgalteru/" class="sc-catalog__card-link">Подробнее &rarr;</a>
+        </div>
+      </div>
+
+      <div class="sc-catalog__card" data-profile="accountant">
+        <div class="sc-catalog__card-img-wrap">
+          <img src="<?=SITE_TEMPLATE_PATH?>/images/box-buh-prof.png" alt="Бухгалтер Проф" class="sc-catalog__card-img" loading="lazy" />
+        </div>
+        <h3 class="sc-catalog__card-name">Бухгалтер Проф</h3>
+        <div class="sc-catalog__card-actions">
+          <a href="#" class="btn btn--orange sc-catalog__card-btn" data-open-modal="modalPrice">Узнать цену</a>
+          <a href="/systems/bukhgalteru/" class="sc-catalog__card-link">Подробнее &rarr;</a>
+        </div>
+      </div>
+
+      <div class="sc-catalog__card" data-profile="lawyer">
+        <div class="sc-catalog__card-img-wrap">
+          <img src="<?=SITE_TEMPLATE_PATH?>/images/box-jurist-opt.png" alt="Юрист Оптимальный" class="sc-catalog__card-img" loading="lazy" />
+        </div>
+        <h3 class="sc-catalog__card-name">Юрист Оптимальный</h3>
+        <div class="sc-catalog__card-actions">
+          <a href="#" class="btn btn--orange sc-catalog__card-btn" data-open-modal="modalPrice">Узнать цену</a>
+          <a href="/systems/yuristu/" class="sc-catalog__card-link">Подробнее &rarr;</a>
+        </div>
+      </div>
+
+      <div class="sc-catalog__card" data-profile="lawyer">
+        <div class="sc-catalog__card-img-wrap">
+          <img src="<?=SITE_TEMPLATE_PATH?>/images/box-jurist-prof.png" alt="Юрист Проф" class="sc-catalog__card-img" loading="lazy" />
+        </div>
+        <h3 class="sc-catalog__card-name">Юрист Проф</h3>
+        <div class="sc-catalog__card-actions">
+          <a href="#" class="btn btn--orange sc-catalog__card-btn" data-open-modal="modalPrice">Узнать цену</a>
+          <a href="/systems/yuristu/" class="sc-catalog__card-link">Подробнее &rarr;</a>
+        </div>
+      </div>
+
+      <div class="sc-catalog__card" data-profile="lawyer">
+        <div class="sc-catalog__card-img-wrap">
+          <img src="<?=SITE_TEMPLATE_PATH?>/images/box-jurist-expert.png" alt="Юрист Эксперт" class="sc-catalog__card-img" loading="lazy" />
+        </div>
+        <h3 class="sc-catalog__card-name">Юрист Эксперт</h3>
+        <div class="sc-catalog__card-actions">
+          <a href="#" class="btn btn--orange sc-catalog__card-btn" data-open-modal="modalPrice">Узнать цену</a>
+          <a href="/systems/yuristu/" class="sc-catalog__card-link">Подробнее &rarr;</a>
+        </div>
+      </div>
+
+      <div class="sc-catalog__card" data-profile="budget procurement">
+        <div class="sc-catalog__card-img-wrap">
+          <img src="<?=SITE_TEMPLATE_PATH?>/images/box-budget-opt.png" alt="Бюджетные организации Оптимальный" class="sc-catalog__card-img" loading="lazy" />
+        </div>
+        <h3 class="sc-catalog__card-name">Бюджетные организации Оптимальный</h3>
+        <div class="sc-catalog__card-actions">
+          <a href="#" class="btn btn--orange sc-catalog__card-btn" data-open-modal="modalPrice">Узнать цену</a>
+          <a href="/systems/byudzhetnoy-organizatsii/" class="sc-catalog__card-link">Подробнее &rarr;</a>
+        </div>
+      </div>
+
+      <div class="sc-catalog__card" data-profile="budget procurement">
+        <div class="sc-catalog__card-img-wrap">
+          <img src="<?=SITE_TEMPLATE_PATH?>/images/box-budget-prof.png" alt="Бюджетные организации Проф" class="sc-catalog__card-img" loading="lazy" />
+        </div>
+        <h3 class="sc-catalog__card-name">Бюджетные организации Проф</h3>
+        <div class="sc-catalog__card-actions">
+          <a href="#" class="btn btn--orange sc-catalog__card-btn" data-open-modal="modalPrice">Узнать цену</a>
+          <a href="/systems/byudzhetnoy-organizatsii/" class="sc-catalog__card-link">Подробнее &rarr;</a>
+        </div>
+      </div>
+
+      <div class="sc-catalog__card" data-profile="budget procurement">
+        <div class="sc-catalog__card-img-wrap">
+          <img src="<?=SITE_TEMPLATE_PATH?>/images/box-budget-expert.png" alt="Бюджетные организации Эксперт" class="sc-catalog__card-img" loading="lazy" />
+        </div>
+        <h3 class="sc-catalog__card-name">Бюджетные организации Эксперт</h3>
+        <div class="sc-catalog__card-actions">
+          <a href="#" class="btn btn--orange sc-catalog__card-btn" data-open-modal="modalPrice">Узнать цену</a>
+          <a href="/systems/byudzhetnoy-organizatsii/" class="sc-catalog__card-link">Подробнее &rarr;</a>
+        </div>
+      </div>
+
+      <div class="sc-catalog__card" data-profile="budget">
+        <div class="sc-catalog__card-img-wrap">
+          <img src="<?=SITE_TEMPLATE_PATH?>/images/box-health-opt.png" alt="Здравоохранение Оптимальный" class="sc-catalog__card-img" loading="lazy" />
+        </div>
+        <h3 class="sc-catalog__card-name">Здравоохранение Оптимальный</h3>
+        <div class="sc-catalog__card-actions">
+          <a href="#" class="btn btn--orange sc-catalog__card-btn" data-open-modal="modalPrice">Узнать цену</a>
+          <a href="/systems/byudzhetnoy-organizatsii/" class="sc-catalog__card-link">Подробнее &rarr;</a>
+        </div>
+      </div>
+
+      <div class="sc-catalog__card" data-profile="universal manager hr">
+        <div class="sc-catalog__card-img-wrap">
+          <img src="<?=SITE_TEMPLATE_PATH?>/images/box-universal-opt.png" alt="Универсал Оптимальный" class="sc-catalog__card-img" loading="lazy" />
+        </div>
+        <h3 class="sc-catalog__card-name">Универсал Оптимальный</h3>
+        <div class="sc-catalog__card-actions">
+          <a href="#" class="btn btn--orange sc-catalog__card-btn" data-open-modal="modalPrice">Узнать цену</a>
+          <a href="/systems/rukovoditelyu/" class="sc-catalog__card-link">Подробнее &rarr;</a>
+        </div>
+      </div>
+
+      <div class="sc-catalog__card" data-profile="universal manager hr">
+        <div class="sc-catalog__card-img-wrap">
+          <img src="<?=SITE_TEMPLATE_PATH?>/images/box-universal-prof.png" alt="Универсал Проф" class="sc-catalog__card-img" loading="lazy" />
+        </div>
+        <h3 class="sc-catalog__card-name">Универсал Проф</h3>
+        <div class="sc-catalog__card-actions">
+          <a href="#" class="btn btn--orange sc-catalog__card-btn" data-open-modal="modalPrice">Узнать цену</a>
+          <a href="/systems/rukovoditelyu/" class="sc-catalog__card-link">Подробнее &rarr;</a>
+        </div>
+      </div>
+
+      <div class="sc-catalog__card" data-profile="universal manager">
+        <div class="sc-catalog__card-img-wrap">
+          <img src="<?=SITE_TEMPLATE_PATH?>/images/box-universal-expert.png" alt="Универсал Эксперт" class="sc-catalog__card-img" loading="lazy" />
+        </div>
+        <h3 class="sc-catalog__card-name">Универсал Эксперт</h3>
+        <div class="sc-catalog__card-actions">
+          <a href="#" class="btn btn--orange sc-catalog__card-btn" data-open-modal="modalPrice">Узнать цену</a>
+          <a href="/systems/rukovoditelyu/" class="sc-catalog__card-link">Подробнее &rarr;</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var tabs = document.querySelectorAll('.sc-catalog__tab');
+  var cards = document.querySelectorAll('.sc-catalog__card');
+
+  tabs.forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      tabs.forEach(function (t) {
+        t.classList.remove('is-active');
+        t.setAttribute('aria-selected', 'false');
+      });
+      tab.classList.add('is-active');
+      tab.setAttribute('aria-selected', 'true');
+
+      var filter = tab.dataset.filter;
+      cards.forEach(function (card) {
+        if (filter === 'all' || card.dataset.profile.split(' ').includes(filter)) {
+          card.style.display = '';
+          card.classList.remove('is-hidden');
+        } else {
+          card.style.display = 'none';
+          card.classList.add('is-hidden');
+        }
+      });
+    });
+  });
+});
+</script>
+
+
+<?php require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>
