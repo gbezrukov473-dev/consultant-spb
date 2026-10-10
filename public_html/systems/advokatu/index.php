@@ -28,13 +28,16 @@ $APPLICATION->SetTitle("КонсультантПлюс для адвоката")
       <h1 class="acc-hero__title">КонсультантПлюс <span class="acc-hero__title-accent">Адвокат</span></h1>
       <p class="acc-hero__text">Комплект от&nbsp;официального партнёра адвокатской палаты</p>
       <p class="acc-hero__subtext">Оптимальный объём информации для адвокатов и&nbsp;три ИИ-сервиса от&nbsp;КонсультантПлюс: Глубокий поиск, Проверка договоров и&nbsp;Задать вопрос.</p>
-      <p class="adv-perk">
-        <svg class="adv-perk__mark" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="20" fill="currentColor"/><g class="adv-perk__glyph" fill="none" stroke-width="2.6" stroke-linecap="round"><circle cx="14.5" cy="14.5" r="3.2"/><circle cx="25.5" cy="25.5" r="3.2"/><path d="M27 13 13 27"/></g></svg>
-        <span class="adv-perk__text"><b>Максимальная скидка</b> для&nbsp;членов адвокатской палаты</span>
-      </p>
-      <div class="acc-hero__buttons">
-        <a href="#" class="btn btn--purple acc-hero__btn" data-open-modal="modalPrice" data-lead-comment="Запрос по КонсультантПлюс Адвокат">Узнать цену со&nbsp;скидкой</a>
-        <a href="#" data-open-modal="modalTrial" class="btn acc-hero__btn acc-hero__btn--outline" data-lead-comment="Запрос по КонсультантПлюс Адвокат — демо-доступ">Попробовать 2&nbsp;дня бесплатно</a>
+      <!-- .adv-cta: плашка и кнопки одной ширины (плашка = ширина ряда кнопок, на мобильном кнопки = ширина плашки) -->
+      <div class="adv-cta">
+        <p class="adv-perk">
+          <svg class="adv-perk__mark" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="20" fill="currentColor"/><g class="adv-perk__glyph" fill="none" stroke-width="2.6" stroke-linecap="round"><circle cx="14.5" cy="14.5" r="3.2"/><circle cx="25.5" cy="25.5" r="3.2"/><path d="M27 13 13 27"/></g></svg>
+          <span class="adv-perk__text"><b>Максимальная скидка</b> для&nbsp;членов адвокатской палаты</span>
+        </p>
+        <div class="acc-hero__buttons">
+          <a href="#" class="btn btn--purple acc-hero__btn" data-open-modal="modalPrice" data-lead-comment="Запрос по КонсультантПлюс Адвокат">Узнать цену со&nbsp;скидкой</a>
+          <a href="#" data-open-modal="modalTrial" class="btn acc-hero__btn acc-hero__btn--outline" data-lead-comment="Запрос по КонсультантПлюс Адвокат — демо-доступ">Попробовать 2&nbsp;дня бесплатно</a>
+        </div>
       </div>
     </div>
     <div class="acc-hero__visual">
@@ -206,8 +209,9 @@ $APPLICATION->SetTitle("КонсультантПлюс для адвоката")
 </section>
 
 
-<!-- ====== СКИДКА ДЛЯ ЧЛЕНОВ ПАЛАТЫ (блок acc-offer: заголовок держим не длиннее «Получите спецпредложение») ====== -->
-<section class="acc-offer reveal">
+<!-- ====== СКИДКА ДЛЯ ЧЛЕНОВ ПАЛАТЫ (блок acc-offer: заголовок держим не длиннее «Получите спецпредложение»)
+     --advocate: на мобильном (≤600px) — колонкой, как .tp-banner выше ====== -->
+<section class="acc-offer acc-offer--advocate reveal">
   <div class="acc-offer__inner">
     <div class="acc-offer__content">
       <h2 class="acc-offer__title">

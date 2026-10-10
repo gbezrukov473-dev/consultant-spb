@@ -37,15 +37,30 @@
 
 
 /* ====================================================
-   ОФФЕР ДЛЯ ЧЛЕНОВ ПАЛАТЫ В HERO (.adv-perk)
-   Белая плашка: знак «%» + «Максимальная скидка для членов палаты»
+   ОФФЕР ДЛЯ ЧЛЕНОВ ПАЛАТЫ В HERO (.adv-cta + .adv-perk)
+   .adv-cta — колонка по ширине содержимого: плашка тянется до ширины ряда
+   кнопок, а когда кнопки переносятся/встают столбиком — кнопки тянутся
+   до ширины плашки. Белая плашка: знак «%» + «Максимальная скидка…».
    ==================================================== */
-.adv-perk {
-  display: inline-flex;
-  align-items: center;
+.adv-cta {
+  display: flex;
+  flex-direction: column;
   align-self: flex-start;
-  gap: 14px;
   max-width: 100%;
+}
+
+/* Боковые поля кнопок 24px (вместо 46/20): обе кнопки помещаются в ряд
+   в колонке hero от 1366px; при переносе кнопки тянутся на всю ширину */
+.acc-hero--advocate .acc-hero__btn {
+  flex: 1 1 auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.adv-perk {
+  display: flex;
+  align-items: center;
+  gap: 14px;
   margin-bottom: 32px;
   padding: 10px 22px 10px 10px;
   background: var(--color-white);
@@ -468,6 +483,12 @@
 }
 
 @media (max-width: 768px) {
+  /* 601–768: раскладка как у .tp-banner (текст слева, картинка справа снизу),
+     но маскот ниже — иначе плашка «Партнёр палаты» наезжает на него */
+  .acc-offer--advocate .acc-offer__img {
+    max-height: 150px;
+  }
+
   .adv-includes__list {
     columns: 1;
   }
@@ -478,10 +499,70 @@
 }
 
 @media (max-width: 600px) {
+  /* Узкий экран: плашка и кнопки — во всю ширину карточки */
+  .adv-cta {
+    align-self: stretch;
+  }
+
   .adv-perk {
     margin-bottom: 28px;
     padding-right: 16px;
     font-size: 15px;
+  }
+
+  /* Скидка членам палаты — колонкой, как .tp-banner на этой ширине:
+     заголовок → плашка → кнопка → картинка по центру снизу.
+     Общий .acc-offer до 480px держит десктопную раскладку (картинка справа
+     наезжает на плашку), а с 480px даёт отступ слева 10px — здесь 20px. */
+  .acc-offer--advocate .acc-offer__inner {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 24px 20px;
+    border-radius: 20px;
+  }
+
+  .acc-offer--advocate .acc-offer__content {
+    position: static;
+  }
+
+  .acc-offer--advocate .acc-offer__title {
+    font-size: 22px;
+  }
+
+  .acc-offer--advocate .acc-offer__title-row2 {
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 4px;
+  }
+
+  .acc-offer--advocate .acc-offer__badge {
+    height: 32px;
+    font-size: 13px;
+    padding: 6px 16px;
+    transform: rotate(-2deg);
+  }
+
+  .acc-offer--advocate .acc-offer__btn.btn {
+    position: static;
+    min-width: 160px;
+    width: max-content;
+    height: 38px;
+    font-size: 13px;
+    border-radius: 10px;
+    margin-top: 16px;
+  }
+
+  .acc-offer--advocate .acc-offer__image {
+    position: static;
+    width: 100%;
+    margin: 16px 0 0;
+    padding-right: 0;
+    justify-content: center;
+  }
+
+  .acc-offer--advocate .acc-offer__img {
+    max-height: 200px;
   }
 
   .adv-benefits {
