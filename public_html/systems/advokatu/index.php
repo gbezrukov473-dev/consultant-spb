@@ -20,20 +20,25 @@ $APPLICATION->SetTitle("КонсультантПлюс для адвоката")
 
 
 <!-- ====== HERO ====== -->
-<!-- Иллюстрация — фрагмент листовки «Консультант Адвокат» (ИПК), отрисован из PDF с прозрачным фоном -->
-<section class="acc-hero acc-hero--img acc-hero--advocate reveal">
+<!-- Иллюстрация — фрагмент листовки «Консультант Адвокат» (ИПК), отрисован из PDF с прозрачным фоном.
+     Без .reveal и без lazy: это первый экран (LCP), он должен быть виден сразу. -->
+<section class="acc-hero acc-hero--img acc-hero--advocate">
   <div class="acc-hero__inner">
     <div class="acc-hero__content">
       <h1 class="acc-hero__title">КонсультантПлюс <span class="acc-hero__title-accent">Адвокат</span></h1>
       <p class="acc-hero__text">Комплект от&nbsp;официального партнёра адвокатской палаты</p>
-      <p class="acc-hero__subtext">Оптимальный объём информации для адвокатов и&nbsp;три ИИ-сервиса от&nbsp;КонсультантПлюс: вся судебная практика, фирменная аналитика и&nbsp;ИИ-помощник Юрист Проф.</p>
+      <p class="acc-hero__subtext">Оптимальный объём информации для адвокатов и&nbsp;три ИИ-сервиса от&nbsp;КонсультантПлюс: Глубокий поиск, Проверка договоров и&nbsp;Задать вопрос.</p>
+      <p class="adv-perk">
+        <svg class="adv-perk__mark" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="20" fill="currentColor"/><g class="adv-perk__glyph" fill="none" stroke-width="2.6" stroke-linecap="round"><circle cx="14.5" cy="14.5" r="3.2"/><circle cx="25.5" cy="25.5" r="3.2"/><path d="M27 13 13 27"/></g></svg>
+        <span class="adv-perk__text"><b>Максимальная скидка</b> для&nbsp;членов адвокатской палаты</span>
+      </p>
       <div class="acc-hero__buttons">
-        <a href="#" class="btn btn--purple acc-hero__btn" data-open-modal="modalPrice" data-lead-comment="Запрос по КонсультантПлюс Адвокат">Узнать цену</a>
-        <a href="#" data-open-modal="modalTrial" class="btn acc-hero__btn acc-hero__btn--outline" data-lead-comment="Запрос по КонсультантПлюс Адвокат — демо-доступ">Получить демо-доступ</a>
+        <a href="#" class="btn btn--purple acc-hero__btn" data-open-modal="modalPrice" data-lead-comment="Запрос по КонсультантПлюс Адвокат">Узнать цену со&nbsp;скидкой</a>
+        <a href="#" data-open-modal="modalTrial" class="btn acc-hero__btn acc-hero__btn--outline" data-lead-comment="Запрос по КонсультантПлюс Адвокат — демо-доступ">Попробовать 2&nbsp;дня бесплатно</a>
       </div>
     </div>
     <div class="acc-hero__visual">
-      <img src="<?=SITE_TEMPLATE_PATH?>/images/advocate-hero.png" alt="КонсультантПлюс Адвокат" class="acc-hero__img" loading="lazy" />
+      <img src="<?=SITE_TEMPLATE_PATH?>/images/advocate-hero.png" alt="КонсультантПлюс Адвокат" class="acc-hero__img" width="935" height="849" fetchpriority="high" />
     </div>
   </div>
 </section>
@@ -57,9 +62,124 @@ $APPLICATION->SetTitle("КонсультантПлюс для адвоката")
         <p class="adv-benefits__text">Работает на&nbsp;верифицированном правовом массиве КонсультантПлюс, риск ошибок сведён к&nbsp;минимуму. Вместо общих ответов&nbsp;&mdash; глубокий анализ сложных вопросов, заключения с&nbsp;оценкой рисков и&nbsp;ссылками на&nbsp;законы.</p>
       </div>
       <div class="adv-benefits__card reveal reveal--delay-3">
-        <svg class="icon adv-benefits__icon" aria-hidden="true"><use href="<?=SITE_TEMPLATE_PATH?>/images/sprite.svg#icon-buhg-putevod"></use></svg>
+        <svg class="icon adv-benefits__icon" aria-hidden="true"><use href="<?=SITE_TEMPLATE_PATH?>/images/sprite.svg#icon-hr-templates"></use></svg>
         <h3 class="adv-benefits__name">Полноценная юридическая аналитика</h3>
         <p class="adv-benefits__text">Экономия часов на&nbsp;подготовке: путеводители по&nbsp;судебной практике, договорной работе и&nbsp;спорам, экспертные комментарии, образцы документов и&nbsp;готовые решения по&nbsp;актуальным вопросам.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ====== ТРИ ИИ-СЕРВИСА (листовка ИПК; 3D-иконки — те же, что на /ii-pomoshchnik-konsultant-plyus/) ====== -->
+<section class="adv-ai reveal">
+  <div class="adv-ai__inner">
+    <div class="adv-ai__intro">
+      <h2 class="adv-ai__title">Три ИИ-сервиса в&nbsp;комплекте</h2>
+      <p class="adv-ai__text">ИИ-помощник Юрист Проф с&nbsp;доступом к&nbsp;трём ИИ-сервисам&nbsp;&mdash; лучший юридический ИИ на&nbsp;рынке.</p>
+      <a href="/ii-pomoshchnik-konsultant-plyus/" class="btn btn--link-purple btn--sm adv-ai__link">Подробнее об&nbsp;ИИ-сервисах</a>
+    </div>
+
+    <ul class="adv-ai__list">
+      <li class="adv-ai__item">
+        <img src="<?=SITE_TEMPLATE_PATH?>/images/box-search.png" alt="" class="adv-ai__img" width="92" height="120" loading="lazy" />
+        <div class="adv-ai__body">
+          <h3 class="adv-ai__name">Глубокий поиск</h3>
+          <p class="adv-ai__desc">Для сложных юридических кейсов, где нужен анализ многих источников и&nbsp;судебной практики.</p>
+        </div>
+      </li>
+      <li class="adv-ai__item">
+        <img src="<?=SITE_TEMPLATE_PATH?>/images/box-dogovor.png" alt="" class="adv-ai__img" width="92" height="120" loading="lazy" />
+        <div class="adv-ai__body">
+          <h3 class="adv-ai__name">Проверка договоров</h3>
+          <p class="adv-ai__desc">Подсветит слабые места договора: юридические и&nbsp;финансовые риски, технические нестыковки.</p>
+        </div>
+      </li>
+      <li class="adv-ai__item">
+        <img src="<?=SITE_TEMPLATE_PATH?>/images/box-question.png" alt="" class="adv-ai__img" width="92" height="120" loading="lazy" />
+        <div class="adv-ai__body">
+          <h3 class="adv-ai__name">Задать вопрос</h3>
+          <p class="adv-ai__desc">Для повседневных рабочих ситуаций и&nbsp;правовых вопросов. Быстро даст ответ, подкрепив его ссылками на&nbsp;актуальные материалы из&nbsp;КонсультантПлюс.</p>
+        </div>
+      </li>
+    </ul>
+
+    <p class="adv-ai__note">
+      <img src="<?=SITE_TEMPLATE_PATH?>/images/box-pereskaz.png" alt="" class="adv-ai__note-img" width="92" height="120" loading="lazy" />
+      <span>В&nbsp;судебной практике&nbsp;&mdash; ИИ-функции <b>«Краткий пересказ»</b> и&nbsp;<b>«Выводы суда»</b> для быстрого анализа сути дела.</span>
+    </p>
+  </div>
+</section>
+
+
+<!-- ====== СОСТАВ КОМПЛЕКТА (листовка ИПК + «В составе комплекта» из листовки ЧДК) ======
+     Справочник: группа = строка «иконка + название | список в 2 колонки», как в листовке.
+     ИИ-сервисы отсюда убраны — у них своя секция .adv-ai выше. -->
+<section class="adv-includes reveal">
+  <div class="adv-includes__inner">
+    <h2 class="adv-includes__title">Что включает КонсультантПлюс Адвокат</h2>
+    <p class="adv-includes__subtitle">Информационно-правовой комплекс с&nbsp;оптимальным объёмом информации для адвокатов</p>
+
+    <div class="adv-includes__panel">
+      <div class="adv-includes__group">
+        <div class="adv-includes__head">
+          <svg class="icon adv-includes__icon" aria-hidden="true"><use href="<?=SITE_TEMPLATE_PATH?>/images/sprite.svg#icon-budget-legislation"></use></svg>
+          <h3 class="adv-includes__name">Вся судебная практика</h3>
+        </div>
+        <ul class="adv-includes__list">
+          <li>Решения высших судов</li>
+          <li>Арбитражные суды всех округов</li>
+          <li>Все апелляционные суды</li>
+          <li>Суды общей юрисдикции</li>
+          <li>Суд по&nbsp;интеллектуальным правам</li>
+        </ul>
+      </div>
+
+      <div class="adv-includes__group">
+        <div class="adv-includes__head">
+          <svg class="icon adv-includes__icon" aria-hidden="true"><use href="<?=SITE_TEMPLATE_PATH?>/images/sprite.svg#icon-lawyer-prospects"></use></svg>
+          <h3 class="adv-includes__name">Фирменные аналитические продукты для юриста</h3>
+        </div>
+        <ul class="adv-includes__list">
+          <li>Перспективы и&nbsp;риски арбитражных споров</li>
+          <li>Перспективы и&nbsp;риски споров в&nbsp;суде общей юрисдикции</li>
+          <li>Правовые позиции высших судов</li>
+          <li>Готовые решения по&nbsp;самым актуальным вопросам для юристов</li>
+          <li>Путеводители КонсультантПлюс для юристов (по&nbsp;судебной практике, договорной работе, корпоративным процедурам и&nbsp;спорам, по&nbsp;госуслугам для юрлиц, трудовым спорам, контрактной системе и&nbsp;спорам в&nbsp;сфере закупок)</li>
+        </ul>
+      </div>
+
+      <div class="adv-includes__group">
+        <div class="adv-includes__head">
+          <svg class="icon adv-includes__icon" aria-hidden="true"><use href="<?=SITE_TEMPLATE_PATH?>/images/sprite.svg#icon-buhg-putevod"></use></svg>
+          <h3 class="adv-includes__name">Законодательство, консультации, формы</h3>
+        </div>
+        <ul class="adv-includes__list">
+          <li>Федеральное и&nbsp;региональное законодательство</li>
+          <li>Решения госорганов по&nbsp;спорным ситуациям</li>
+          <li>Проекты законов и&nbsp;НПА</li>
+          <li>Комментарии законодательства</li>
+          <li>Материалы юридической прессы, книги</li>
+          <li>Официальные формы, образцы заполнения документов</li>
+          <li>Подборки и&nbsp;консультации Горячей линии</li>
+          <li>Архивы судов, ФАС и&nbsp;УФАС, муниципальных образований</li>
+          <li>Конструктор договоров</li>
+        </ul>
+      </div>
+
+      <div class="adv-includes__group adv-includes__group--bundle">
+        <div class="adv-includes__head">
+          <span class="adv-includes__check" aria-hidden="true"></span>
+          <h3 class="adv-includes__name adv-includes__name--accent">В&nbsp;составе комплекта</h3>
+        </div>
+        <ul class="adv-includes__bundle-list">
+          <li><span><b>СПС Консультант Юрист</b>, комплект «Оптимальный»</span></li>
+          <li><span><b>КонсультантСудебнаяПрактика</b>: Суды общей юрисдикции всех округов</span></li>
+          <li><span><b>КонсультантАрбитраж</b>: Арбитражные суды всех округов</span></li>
+          <li><span><b>Перспективы и&nbsp;риски арбитражных споров</b></span></li>
+          <li><span><b>КонсультантАрбитраж</b>: Все апелляционные суды</span></li>
+          <li><span><b>Перспективы и&nbsp;риски споров в&nbsp;суде общей юрисдикции</b></span></li>
+        </ul>
       </div>
     </div>
   </div>
@@ -86,83 +206,21 @@ $APPLICATION->SetTitle("КонсультантПлюс для адвоката")
 </section>
 
 
-<!-- ====== СОСТАВ КОМПЛЕКТА (листовка ИПК + «В составе комплекта» из листовки ЧДК) ====== -->
-<section class="adv-includes reveal">
-  <div class="adv-includes__inner">
-    <h2 class="adv-includes__title">Что включает КонсультантПлюс Адвокат</h2>
-    <p class="adv-includes__subtitle">Информационно-правовой комплекс с&nbsp;оптимальным объёмом информации для адвокатов</p>
-
-    <div class="adv-includes__grid">
-      <div class="adv-includes__card reveal reveal--delay-1">
-        <div class="adv-includes__head">
-          <svg class="icon adv-includes__icon" aria-hidden="true"><use href="<?=SITE_TEMPLATE_PATH?>/images/sprite.svg#icon-budget-legislation"></use></svg>
-          <h3 class="adv-includes__name">Вся судебная практика</h3>
+<!-- ====== СКИДКА ДЛЯ ЧЛЕНОВ ПАЛАТЫ (блок acc-offer: заголовок держим не длиннее «Получите спецпредложение») ====== -->
+<section class="acc-offer reveal">
+  <div class="acc-offer__inner">
+    <div class="acc-offer__content">
+      <h2 class="acc-offer__title">
+        <div>Максимальная <strong>скидка</strong></div>
+        <div class="acc-offer__title-row2">
+          <span>членам палаты</span>
+          <span class="acc-offer__badge">Партнёр палаты</span>
         </div>
-        <ul class="adv-includes__list">
-          <li>Решения высших судов</li>
-          <li>Арбитражные суды всех округов</li>
-          <li>Все апелляционные суды</li>
-          <li>Суды общей юрисдикции</li>
-          <li>Суд по&nbsp;интеллектуальным правам</li>
-        </ul>
-      </div>
-
-      <div class="adv-includes__card reveal reveal--delay-2">
-        <div class="adv-includes__head">
-          <svg class="icon adv-includes__icon" aria-hidden="true"><use href="<?=SITE_TEMPLATE_PATH?>/images/sprite.svg#icon-lawyer-prospects"></use></svg>
-          <h3 class="adv-includes__name">Фирменные аналитические продукты для юриста</h3>
-        </div>
-        <ul class="adv-includes__list">
-          <li>Перспективы и&nbsp;риски арбитражных споров</li>
-          <li>Перспективы и&nbsp;риски споров в&nbsp;суде общей юрисдикции</li>
-          <li>Правовые позиции высших судов</li>
-          <li>Путеводители КонсультантПлюс для юристов (по&nbsp;судебной практике, договорной работе, корпоративным процедурам и&nbsp;спорам, по&nbsp;госуслугам для юрлиц, трудовым спорам, контрактной системе и&nbsp;спорам в&nbsp;сфере закупок)</li>
-          <li>Готовые решения по&nbsp;самым актуальным вопросам для юристов</li>
-        </ul>
-      </div>
-
-      <div class="adv-includes__card adv-includes__card--accent reveal reveal--delay-1">
-        <div class="adv-includes__head">
-          <svg class="icon adv-includes__icon" aria-hidden="true"><use href="<?=SITE_TEMPLATE_PATH?>/images/sprite.svg#ai-pom-dialogue"></use></svg>
-          <h3 class="adv-includes__name">ИИ-помощник Юрист Проф с&nbsp;доступом к&nbsp;трём ИИ-сервисам</h3>
-        </div>
-        <ul class="adv-includes__list">
-          <li><b>«Глубокий поиск»</b>&nbsp;&mdash; для сложных юридических кейсов, где нужен анализ многих источников и&nbsp;судебной практики.</li>
-          <li><b>«Проверка договоров»</b>&nbsp;&mdash; подсветит слабые места договора: юридические и&nbsp;финансовые риски, технические нестыковки.</li>
-          <li><b>«Задать вопрос»</b>&nbsp;&mdash; для повседневных рабочих ситуаций и&nbsp;правовых вопросов. Быстро даст ответ, подкрепив его ссылками на&nbsp;актуальные материалы из&nbsp;КонсультантПлюс.</li>
-        </ul>
-        <a href="/ii-pomoshchnik-konsultant-plyus/" class="btn btn--link-purple btn--sm adv-includes__link">Подробнее об&nbsp;ИИ-сервисах</a>
-      </div>
-
-      <div class="adv-includes__card reveal reveal--delay-2">
-        <div class="adv-includes__head">
-          <svg class="icon adv-includes__icon" aria-hidden="true"><use href="<?=SITE_TEMPLATE_PATH?>/images/sprite.svg#icon-lawyer-database"></use></svg>
-          <h3 class="adv-includes__name">Законодательство, консультации, формы</h3>
-        </div>
-        <ul class="adv-includes__list">
-          <li>Федеральное и&nbsp;региональное законодательство</li>
-          <li>Решения госорганов по&nbsp;спорным ситуациям</li>
-          <li>Проекты законов и&nbsp;НПА</li>
-          <li>Комментарии законодательства</li>
-          <li>Материалы юридической прессы, книги</li>
-          <li>Официальные формы, образцы заполнения документов</li>
-          <li>Подборки и&nbsp;консультации Горячей линии</li>
-          <li>Архивы судов, ФАС и&nbsp;УФАС, муниципальных образований</li>
-          <li>Конструктор договоров</li>
-        </ul>
-      </div>
+      </h2>
+      <a href="#" class="btn btn--purple acc-offer__btn" data-open-modal="modalPrice" data-lead-comment="Запрос по КонсультантПлюс Адвокат — скидка членам палаты">Узнать цену со&nbsp;скидкой</a>
     </div>
-
-    <div class="adv-includes__bundle reveal">
-      <h3 class="adv-includes__bundle-title">В составе комплекта</h3>
-      <ul class="adv-includes__bundle-list">
-        <li><span><b>СПС Консультант Юрист</b>, комплект «Оптимальный»</span></li>
-        <li><span><b>КонсультантСудебнаяПрактика</b>: Суды общей юрисдикции всех округов</span></li>
-        <li><span><b>КонсультантАрбитраж</b>: Арбитражные суды всех округов</span></li>
-        <li><span><b>Перспективы и&nbsp;риски арбитражных споров</b></span></li>
-        <li><span><b>КонсультантАрбитраж</b>: Все апелляционные суды</span></li>
-        <li><span><b>Перспективы и&nbsp;риски споров в&nbsp;суде общей юрисдикции</b></span></li>
-      </ul>
+    <div class="acc-offer__image">
+      <img src="<?=SITE_TEMPLATE_PATH?>/images/o-sps-kp-hero.png" alt="КонсультантПлюс Адвокат — скидка для членов адвокатской палаты" class="acc-offer__img" loading="lazy" />
     </div>
   </div>
 </section>
@@ -228,26 +286,6 @@ $APPLICATION->SetTitle("КонсультантПлюс для адвоката")
           <a href="/services/proverka-kontragenta/" class="btn btn--link-purple btn--sm chdk-card__link">Подробнее</a>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ====== СКИДКА ДЛЯ ЧЛЕНОВ ПАЛАТЫ (блок acc-offer: заголовок держим не длиннее «Получите спецпредложение») ====== -->
-<section class="acc-offer reveal">
-  <div class="acc-offer__inner">
-    <div class="acc-offer__content">
-      <h2 class="acc-offer__title">
-        <div>Максимальная <strong>скидка</strong></div>
-        <div class="acc-offer__title-row2">
-          <span>членам палаты</span>
-          <span class="acc-offer__badge">За 5 минут</span>
-        </div>
-      </h2>
-      <a href="#" class="btn btn--purple acc-offer__btn" data-open-modal="modalPrice" data-lead-comment="Запрос по КонсультантПлюс Адвокат — скидка членам палаты">Узнать цену</a>
-    </div>
-    <div class="acc-offer__image">
-      <img src="<?=SITE_TEMPLATE_PATH?>/images/o-sps-kp-hero.png" alt="КонсультантПлюс Адвокат — скидка для членов адвокатской палаты" class="acc-offer__img" loading="lazy" />
     </div>
   </div>
 </section>
